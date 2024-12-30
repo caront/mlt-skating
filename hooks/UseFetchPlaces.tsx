@@ -6,6 +6,7 @@ import { Neibordhoods, Place } from '../models/Place';
 import XMLParser from 'react-xml-parser'
 import axios from 'axios';
 import { PlaceNameCleaner } from '../utils/stringCleaner';
+import getPlace from '../data/place';
 
 interface UseFetchPlacesReturn {
     places: Place[];
@@ -32,7 +33,7 @@ const useFetchPlaces = (): UseFetchPlacesReturn => {
                 const { data } = await axios.get(placesEndPoint);
                 const dataParsed = new XMLParser().parseFromString(data);
 
-                dataParsed.children.map((patinoire: any) => {
+                const places = dataParsed.children.map((patinoire: any) => {
                     const [
                         typeName,
                         neibordhoods,
@@ -43,25 +44,28 @@ const useFetchPlaces = (): UseFetchPlacesReturn => {
                         condition] = patinoire.children;
                     const [type, name] = typeName.value.split(',');
                     const [neibordHoodName, ABV, lastUpdate] = neibordhoods.children;
-
-                    setPlaces((places) => [
-                        ...places,
-                        {
-                            type,
-                            name: PlaceNameCleaner(name),
-                            neibordhoods: {
-                                name: neibordHoodName.value,
-                                abv: ABV.value
-                            },
-                            open: open.value === '1',
-                            cleared: cleared.value === '1',
-                            watered: watered.value === '1',
-                            resurfaced: resurfaced.value === '1',
-                            condition: condition.value,
-                            lastUpdate: lastUpdate.value
+                    const locations = getPlace(ABV.value, typeName.value).coordinates;
+                    console.log(locations);
+                    return {
+                        type,
+                        name: PlaceNameCleaner(name),
+                        neibordhoods: {
+                            name: neibordHoodName.value,
+                            abv: ABV.value
+                        },
+                        open: open.value === '1',
+                        cleared: cleared.value === '1',
+                        watered: watered.value === '1',
+                        resurfaced: resurfaced.value === '1',
+                        condition: condition.value,
+                        lastUpdate: lastUpdate.value,
+                        locations : {
+                            lat: locations.latitude,
+                            lng: locations.longitude
                         }
-                    ]);
+                    }
                 });
+                setPlaces(places);
             }
             catch (err) {
                 setError(err instanceof Error ? err.message : 'An error occurred');

@@ -8,11 +8,18 @@ export interface Place {
   resurfaced: boolean;
   condition: Condition;
   lastUpdate: string;
+  locations: Location;
+}
+
+export interface Location {
+  lat: number;
+  lng: number;
 }
 
 export interface Neibordhoods {
   name: string;
   abv: string;
+  locations: Location;
 }
 
 export interface PlaceHistory {

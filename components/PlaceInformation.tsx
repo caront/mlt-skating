@@ -8,6 +8,7 @@ import { BLUE_DARK, BLUE_LIGHT, RED_LIGHT, useColors } from "../colors";
 import Chip from "./shared/Chip";
 import { Icon } from "@rneui/base";
 import FontAnesome from 'react'
+import MapsViewImage from "./shared/MapsViewImage";
 
 
 interface PlaceInformationProps {
@@ -78,15 +79,9 @@ const PlaceInformation: FunctionComponent<PlaceInformationProps> = ({ place }) =
             <Resurfaced place={place} />
             <Neibordhoods place={place} />
         </View>
-        {/* <View style={styles.row}>
-            <Text style={styles.property}>neibordhood</Text>
-            <Text style={styles.propertyValue}>{place.neibordhoods.name}</Text>
-        </View> */}
-
-
-        {/* <Property name="Cleared" value={place.cleared} valueFalse="Not Cleared" valueTrue="Cleared" />
-        <Property name="Watered" value={place.watered} valueFalse="Not Watered" valueTrue="Watered" />
-        <Property name="Resurfaced" value={place.resurfaced} valueFalse="Not Resurfaced" valueTrue="Resurfaced" /> */}
+        <View style={[styles.row]}>
+            <MapsViewImage label={place.name} lat={place.locations.lat} lng={place.locations.lng}/>
+        </View>
     </View>
 }
 
