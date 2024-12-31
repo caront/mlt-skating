@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import ConditionChip from "./shared/ConditionChip";
 import { Row } from "./shared/Flex";
 import DayJs from "dayjs";
-import { BLUE_DARK, BLUE_LIGHT, RED_LIGHT, useColors } from "../colors";
+import {useColors } from "../colors";
 import Chip from "./shared/Chip";
 import { Icon } from "@rneui/base";
 import FontAnesome from 'react'
@@ -59,9 +59,10 @@ const Resurfaced: FunctionComponent<{ place: Place }> = ({ place }) => {
 }
 
 const Neibordhoods: FunctionComponent<{ place: Place }> = ({ place }) => {
+    const colors = useColors();
     return <Chip
         title={place.neibordhoods.name}
-        background={BLUE_LIGHT}
+        background={colors.primary.midnightBlue}
         icon={<Icon name='map' size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
 }

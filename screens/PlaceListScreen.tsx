@@ -25,6 +25,10 @@ export const PlaceListScreen = ({ }) => {
         navigation.navigate('PlaceInformation', { place });
     }
 
+    const handleOnMapPressed = () => {
+        
+    }
+
     if (loading) {
         return <ActivityIndicator />
     }
@@ -37,7 +41,7 @@ export const PlaceListScreen = ({ }) => {
 
     return <View style={styles.container}>
         <View style={styles.searchBar}>
-            <SkyListSearch onSearchPropChanged={setSearchParam} searchProp={searchParam} />
+            <SkyListSearch onSearchPropChanged={setSearchParam} onMapSearchPressed={handleOnMapPressed} searchProp={searchParam} />
         </View>
         <View style={styles.list}>
             <SkyList places={places} onPlacePress={handleOnPlacePressed} />

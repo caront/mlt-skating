@@ -4,14 +4,17 @@ import { SearchBar, Switch } from "@rneui/themed";
 import { UseFetchPlacesProps } from "../hooks/UseFetchPlaces";
 import { Filters } from '../hooks/UsePlaceFilter';
 import { Icon } from '@rneui/themed';
+import { useColors } from '../colors';
 
 
 interface SkyListSearchProps {
     searchProp: Filters;
+    onMapSearchPressed: () => void;
     onSearchPropChanged: (searchProp: UseFetchPlacesProps) => void;
 }
 
 const SkyListSearch = ({ searchProp, onSearchPropChanged }: SkyListSearchProps) => {
+    const colors = useColors();
     const [isExtended, setIsExtended] = useState(false);
 
     const handleSearchTermChanged = (search: string) => {
@@ -19,22 +22,19 @@ const SkyListSearch = ({ searchProp, onSearchPropChanged }: SkyListSearchProps) 
     };
 
     return (
-        <View style={{ ...styles.container }}>
+        <View style={{ ...styles.container}}>
             <View style={styles.row}>
                 <SearchBar
                     platform="ios"
                     searchIcon={<Icon name="ice-skating" type='material' />}
                     clearIcon={<Icon name="close" type='material' />}
-                    containerStyle={styles.searchBarContainer}
+                    containerStyle={[styles.searchBarContainer]}
                     inputContainerStyle={styles.searchBarInputContainer}
                     onChangeText={handleSearchTermChanged}
                     placeholder="Search for a place..."
                     placeholderTextColor="#888"
                     value={searchProp.searchTerm}
                 />
-                <TouchableOpacity onPress={() => setIsExtended(true)} >
-                    <Text >{isExtended ? '-' : '+'}</Text>
-                </TouchableOpacity>
             </View>
         </View>
     );

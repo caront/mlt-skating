@@ -1,9 +1,10 @@
 import { Button, Text } from '@rneui/base';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Platform } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useColors } from '../../colors';
 import { openMap } from '../../utils/openMaps';
+
 
 interface MapsViewImageProps {
     label: string;
@@ -13,9 +14,9 @@ interface MapsViewImageProps {
 
 const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
     const colors = useColors();
+    const isIos = Platform.OS === 'ios';
 
     const handleOnMapButtonPressed = () => {
-        console.log('pressed');
         openMap({ lat, lng, label });
     }
 
@@ -48,7 +49,10 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
                     }}
                 />
             </MapView>
-            <Button buttonStyle={styles.button} title="Open in Maps" onPress={handleOnMapButtonPressed} />
+            <Button buttonStyle={[styles.button, {backgroundColor: colors.primary.midnightBlue}]} 
+            onPress={handleOnMapButtonPressed} >
+                    <Text style={{color: colors.primary.snowWhite}} >{isIos ? 'Open in Maps' : 'Open in Google Maps'}</Text>
+                </Button>
         </View>
     );
 };
@@ -77,6 +81,7 @@ const styles = StyleSheet.create({
     },
     button: {
         width: '100%',
+        
         display: 'flex',
         flexDirection: 'row',
         alignContent: 'stretch',
