@@ -9,8 +9,8 @@ import {
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PlaceListScreen } from './screens/PlaceListScreen';
-import PlaceInformationScreen from './screens/PlaceInformationScreen';
+import { RinkListScreen } from './screens/RinkListScreen';
+import RinkInformationScreen from './screens/RinkInformationScreen';
 import { RootStackParamList } from './screens/types';
 import { createTheme, ThemeProvider } from '@rneui/themed';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -50,15 +50,15 @@ function App(): React.JSX.Element {
               <NavigationContainer>
                 <Stack.Navigator>
                   <Stack.Screen
-                    name="PlaceList"
-                    component={PlaceListScreen}
-                    options={{ headerShown: false, title: 'Places' }}
+                    name="RinkList"
+                    component={RinkListScreen}
+                    options={{ headerShown: false, title: 'Rinks' }}
                   />
                   <Stack.Screen
-                    name="PlaceInformation"
-                    component={PlaceInformationScreen}
+                    name="RinkInformation"
+                    component={RinkInformationScreen}
                     options={({ route }) => ({
-                      title: route.params?.place?.name,
+                      title: route.params?.rink?.name,
                     })}
                   />
                 </Stack.Navigator>

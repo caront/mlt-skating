@@ -1,6 +1,8 @@
-const placesSources: { [key: string]: any } = {
+import { Coordinate, District, DistrictWithRinks, RinkWithDistrict } from "../models/Rink";
+
+const rinkSource: { [key: string]: any } = {
   cdn: {
-    arrondissement: "Côte-des-Neiges - Notre-Dame-de-Grâce",
+    district: "Côte-des-Neiges - Notre-Dame-de-Grâce",
     rinks: [
       {
         name: "Georges-Saint-Pierre",
@@ -179,7 +181,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   sle: {
-    arrondissement: "Saint-Léonard",
+    district: "Saint-Léonard",
     rinks: [
       {
         name: "C.C.S.L.",
@@ -288,7 +290,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   ibi: {
-    arrondissement: "L'Île-Bizard - Sainte-Geneviève",
+    district: "L'Île-Bizard - Sainte-Geneviève",
     rinks: [
       {
         name: "Parc Eugène-Dostie",
@@ -367,7 +369,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   anj: {
-    arrondissement: "Anjou",
+    district: "Anjou",
     rinks: [
       {
         name: "Parc Lucie-Bruneau",
@@ -436,7 +438,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   pmr: {
-    arrondissement: "Le Plateau-Mont-Royal",
+    district: "Le Plateau-Mont-Royal",
     rinks: [
       {
         name: "La Fontaine",
@@ -575,7 +577,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   out: {
-    arrondissement: "Outremont",
+    district: "Outremont",
     rinks: [
       {
         name: "Parc Beaubien",
@@ -644,7 +646,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   lch: {
-    arrondissement: "Lachine",
+    district: "Lachine",
     rinks: [
       {
         name: "parc LaSalle",
@@ -763,7 +765,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   mhm: {
-    arrondissement: "Mercier - Hochelaga-Maisonneuve",
+    district: "Mercier - Hochelaga-Maisonneuve",
     rinks: [
       {
         name: "Liébert",
@@ -942,7 +944,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   ver: {
-    arrondissement: "Verdun",
+    district: "Verdun",
     rinks: [
       {
         name: "Parc de la Fontaine",
@@ -1051,7 +1053,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   pir: {
-    arrondissement: "Pierrefonds - Roxboro",
+    district: "Pierrefonds - Roxboro",
     rinks: [
       {
         name: "Parc Grier",
@@ -1210,7 +1212,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   vsp: {
-    arrondissement: "Villeray-Saint-Michel - Parc-Extension",
+    district: "Villeray-Saint-Michel - Parc-Extension",
     rinks: [
       {
         name: "Villeray",
@@ -1339,7 +1341,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   mno: {
-    arrondissement: "Montréal-Nord",
+    district: "Montréal-Nord",
     rinks: [
       {
         name: "parc Charleroi",
@@ -1418,7 +1420,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   rpp: {
-    arrondissement: "Rosemont - La Petite-Patrie",
+    district: "Rosemont - La Petite-Patrie",
     rinks: [
       {
         name: "Beaubien",
@@ -1607,7 +1609,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   ahc: {
-    arrondissement: "Ahuntsic - Cartierville",
+    district: "Ahuntsic - Cartierville",
     rinks: [
       {
         name: "Berthe-Louard",
@@ -1806,7 +1808,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   sou: {
-    arrondissement: "Le Sud-Ouest",
+    district: "Le Sud-Ouest",
     rinks: [
       {
         name: "Campbell-Ouest",
@@ -1935,7 +1937,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   rdp: {
-    arrondissement: "Rivière-des-Prairies - Pointe-aux-Trembles",
+    district: "Rivière-des-Prairies - Pointe-aux-Trembles",
     rinks: [
       {
         name: "Des Cageux",
@@ -2084,7 +2086,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   vma: {
-    arrondissement: "Ville-Marie",
+    district: "Ville-Marie",
     rinks: [
       {
         name: "Des Vétérans",
@@ -2193,7 +2195,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   sla: {
-    arrondissement: "Saint-Laurent",
+    district: "Saint-Laurent",
     rinks: [
       {
         name: "Parc Beaudet",
@@ -2452,7 +2454,7 @@ const placesSources: { [key: string]: any } = {
     },
   },
   lsl: {
-    arrondissement: "LaSalle",
+    district: "LaSalle",
     rinks: [
       {
         name: "parc Hayward",
@@ -2522,18 +2524,41 @@ const placesSources: { [key: string]: any } = {
   },
 };
 
-const getPlace = (arrondissementName: string, placeName: string) => {
-  if (!(arrondissementName in placesSources)) {
-    throw new Error(`Arrondissement ${arrondissementName} not found`);
-  }
-  const arrondissement = placesSources[arrondissementName];
-  const place = arrondissement.rinks.find(
-    (rink: any) => rink.rink_name === placeName
+
+export type RinksSources = { [key: string]: DistrictWithRinks };
+
+export const getRink = (
+  districtName: string,
+  rinkName: string
+): RinkWithDistrict => {
+  const district = getDistrict(districtName);
+  const rink = district.rinks.find(
+    (rink: any) => rink.rink_name === rinkName
   );
-  if (!place) {
-    throw new Error(`Place ${placeName} not found in ${arrondissementName}`);
+  if (!rink) {
+    throw new Error(`rink ${rinkName} not found in ${districtName}`);
   }
-  return place;
+  return {
+    ...rink,
+    district: district.district,
+    districtAbv: districtName,
+  };
 };
 
-export default getPlace;
+export const getDistrict = (
+  districtName: string
+): DistrictWithRinks => {
+  if (!(districtName in rinkSource)) {
+    throw new Error(`District ${districtName} not found`);
+  }
+  return rinkSource[districtName];
+};
+
+export const getAllDistrict = (): District[] => {
+  return Object.keys(rinkSource).map((key) => {
+    return {
+      ...rinkSource[key],
+      districtAbv: key,
+    };
+  });
+};

@@ -1,40 +1,60 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { SearchBar, Switch } from "@rneui/themed";
-import { UseFetchPlacesProps } from "../hooks/UseFetchPlaces";
-import { Filters } from '../hooks/UsePlaceFilter';
+import { CheckBox, SearchBar, Switch } from "@rneui/themed";
+
 import { Icon } from '@rneui/themed';
 import { useColors } from '../colors';
+import DistrictSelector from './DistrictSelector';
+import { getAllDistrict } from '../data/rinks';
+import { Filters } from '../hooks/UseRinkFilter';
 
 
 interface SkyListSearchProps {
     searchProp: Filters;
     onMapSearchPressed: () => void;
-    onSearchPropChanged: (searchProp: UseFetchPlacesProps) => void;
+    onSearchPropChanged: (searchProp: Filters) => void;
 }
 
 const SkyListSearch = ({ searchProp, onSearchPropChanged }: SkyListSearchProps) => {
     const colors = useColors();
-    const [isExtended, setIsExtended] = useState(false);
 
     const handleSearchTermChanged = (search: string) => {
         onSearchPropChanged({ ...searchProp, searchTerm: search });
     };
 
+    const handleDistrictChanged = (district: string[]) => {
+        onSearchPropChanged({ ...searchProp, districts: district });
+    }
+
     return (
-        <View style={{ ...styles.container}}>
+        <View style={{ ...styles.container }}>
             <View style={styles.row}>
                 <SearchBar
                     platform="ios"
                     searchIcon={<Icon name="ice-skating" type='material' />}
                     clearIcon={<Icon name="close" type='material' />}
+                    onClear={() => console.log('clear')}
                     containerStyle={[styles.searchBarContainer]}
                     inputContainerStyle={styles.searchBarInputContainer}
                     onChangeText={handleSearchTermChanged}
-                    placeholder="Search for a place..."
+                    placeholder="Search for a rink..."
                     placeholderTextColor="#888"
                     value={searchProp.searchTerm}
                 />
+            </View>
+            <View style={styles.params}>
+                <CheckBox
+                    checked={!!searchProp.open}
+                    iconType="material"
+                    title={'Only open rinks'}
+                    checkedColor={colors.primary.midnightBlue}
+                    uncheckedIcon='check-box-outline-blank'
+                    checkedIcon="check-box"
+                    onPress={() => onSearchPropChanged({ ...searchProp, open: !searchProp.open })}
+                />
+                <View style={styles.row}>
+                  <DistrictSelector districts={getAllDistrict()} onSelect={handleDistrictChanged} />
+                </View>
             </View>
         </View>
     );
@@ -52,6 +72,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-start',
         width: '100%',
+    },
+    params: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
     },
     searchBarContainer: {
 

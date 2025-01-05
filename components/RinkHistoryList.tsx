@@ -1,15 +1,15 @@
 import React from 'react';
-import { Place, PlaceHistory } from '../models/Place';
+import { Rink, RinkHistory } from '../models/Rink';
 import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { useColors } from '../colors';
 import Dayjs from 'dayjs';
 
-interface PlaceHistoryListProps {
-    place: Place;
+interface RinkHistoryListProps {
+    rink: Rink;
     isLoading: boolean;
     error: string;
-    history: PlaceHistory[];
+    history: RinkHistory[];
 }
 
 const Property: React.FunctionComponent<{ name: string, valueTrue: string, valueFalse: string, value: boolean }> = ({ name, valueTrue, valueFalse, value }) => {
@@ -22,7 +22,7 @@ const Property: React.FunctionComponent<{ name: string, valueTrue: string, value
     );
 }
 
-const PlaceHistoryItemRender = ({ historyItem }: { historyItem: PlaceHistory }) => {
+const RinkHistoryItemRender = ({ historyItem }: { historyItem: RinkHistory }) => {
     const colors = useColors();
     return (
         <View style={[styles.card, {
@@ -31,7 +31,7 @@ const PlaceHistoryItemRender = ({ historyItem }: { historyItem: PlaceHistory }) 
             borderBottomLeftRadius: 4, borderBottomRightRadius: 4,
             borderWidth: 0, borderBottomWidth: 5
         }]}>
-            <Text >{Dayjs(historyItem.date).format('DD-MM-YYYY')}</Text>
+            <Text >{Dayjs(historyItem.date).format('DD-MM-YYYY HH:mm')}</Text>
             <Property name="Open" valueTrue="Open" valueFalse="Closed" value={historyItem.open} />
             <Property name="Cleared" valueTrue="Cleared" valueFalse="Not Cleared" value={historyItem.cleared} />
             <Property name="Watered" valueTrue="Watered" valueFalse="Not Watered" value={historyItem.watered} />
@@ -40,7 +40,7 @@ const PlaceHistoryItemRender = ({ historyItem }: { historyItem: PlaceHistory }) 
     );
 }
 
-const PlaceHistoryList: React.FunctionComponent<PlaceHistoryListProps> = ({ place, isLoading, error, history }) => {
+const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink, isLoading, error, history }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>History</Text>
@@ -50,8 +50,8 @@ const PlaceHistoryList: React.FunctionComponent<PlaceHistoryListProps> = ({ plac
                 data={history}
                 ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
                 keyExtractor={(item, index) => `${item.date}-${index}`}
-                renderItem={({ item: place }) => (
-                    <PlaceHistoryItemRender historyItem={place} />
+                renderItem={({ item: rink }) => (
+                    <RinkHistoryItemRender historyItem={rink} />
                 )} />
         </View>
     );
@@ -81,4 +81,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default PlaceHistoryList;
+export default RinkHistoryList;

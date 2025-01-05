@@ -1,32 +1,33 @@
 import React, { FunctionComponent } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
-import SkyList from "../components/SkyList";
-import useFetchPlaces, { UseFetchPlacesProps } from "../hooks/UseFetchPlaces";
+import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
+import SkyList from "../components/RinkList";
+
 import { Icon, SearchBar } from "@rneui/themed";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "./types";
-import { Place } from "../models/Place";
-import SkyListSearch from "../components/SkyListSearch";
-import usePlaceFilter from "../hooks/UsePlaceFilter";
-import LinearGradient from "react-native-linear-gradient";
-import { useColors } from "../colors";
+import { Rink, RinkWithDistrictAndCondition } from "../models/Rink";
+import SkyListSearch from "../components/RinkListSearch";
+import useRinkFilter, { Filters } from "../hooks/UseRinkFilter";
+import useRinkConditions from "../hooks/UseRinkConditions";
 
-export const PlaceListScreen = ({ }) => {
+export const RinkListScreen = ({ }) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-    const [searchParam, setSearchParam] = React.useState<UseFetchPlacesProps>({
+    const [searchParam, setSearchParam] = React.useState<Filters>({
         searchTerm: '',
-        open: undefined
+        open: undefined,
+        districts: [],
+        conditions: []
     });
 
-    const { places: placesSources, loading, error } = useFetchPlaces();
-    const { places } = usePlaceFilter({ filter: searchParam, sources: placesSources });
+    const { rinks: rinksSources, loading, error } = useRinkConditions();
+    const { rinks } = useRinkFilter({ filter: searchParam, sources: rinksSources });
 
-    const handleOnPlacePressed = (place: Place) => {
-        navigation.navigate('PlaceInformation', { place });
+    const handleOnRinkPressed = (rink: RinkWithDistrictAndCondition) => {
+        navigation.navigate('RinkInformation', { rink });
     }
 
     const handleOnMapPressed = () => {
-        
+
     }
 
     if (loading) {
@@ -44,7 +45,7 @@ export const PlaceListScreen = ({ }) => {
             <SkyListSearch onSearchPropChanged={setSearchParam} onMapSearchPressed={handleOnMapPressed} searchProp={searchParam} />
         </View>
         <View style={styles.list}>
-            <SkyList places={places} onPlacePress={handleOnPlacePressed} />
+            <SkyList rinks={rinks} onRinkPress={handleOnRinkPressed} />
         </View>
     </View>
 };

@@ -1,28 +1,28 @@
 import React, { FunctionComponent } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import { Place } from '../models/Place';
+import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
 import { useColors } from '../colors';
 
 interface SkiListProps {
-    places: Place[];
-    onPlacePress: (place: Place) => void;
+    rinks: RinkWithDistrictAndCondition[];
+    onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
 }
 
-const SkiList: FunctionComponent<SkiListProps> = ({ places, onPlacePress }) => {
+const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress }) => {
     const colors = useColors();
     return (
         <FlatList
-            data={places}
+            data={rinks}
             style={styles.container}
             ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
             keyExtractor={(item, index) => `${item.name}-${index}`}
-            renderItem={({ item: place }) => (
+            renderItem={({ item: rink }) => (
 
-                <TouchableOpacity onPress={() => onPlacePress(place)} style={styles.card}>
-                    <View style={[styles.circle, { backgroundColor: place.open ? colors.accent.emeraldGreen : colors.accent.skatingRed }]} />
+                <TouchableOpacity onPress={() => onRinkPress(rink)} style={styles.card}>
+                    <View style={[styles.circle, { backgroundColor: rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed }]} />
                     <View style={styles.column}>
-                        <Text style={styles.placeName}>{place.name}</Text>
-                        <Text style={styles.condition}>{place.neibordhoods.name}</Text>
+                        <Text style={styles.rinkName}>{rink.name}</Text>
+                        <Text style={styles.condition}>{rink.district}</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     column: {
         flexDirection: 'column',
     },
-    placeName: {
+    rinkName: {
         fontSize: 16,
         fontWeight: 'bold',
     },

@@ -5,6 +5,6 @@ export const StringCleaner = (input: string) => {
 }
 
 //remove all characters between parentheses
-export const PlaceNameCleaner = (name: string) => {
-    return StringCleaner(name.replace(/\(.*?\)/g, ''));
+export const RinkNameCleaner = (name: string) => {
+    return StringCleaner(name.rerink(/\(.*?\)/g, ''));
 }

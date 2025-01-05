@@ -8,9 +8,10 @@
                 "type": "PPL",
                 "rink_name": "Aire de patinage libre, Georges-Saint-Pierre (PPL)",
                 "coordinates": {
-                    "latitude": 45.4685286,
-                    "longitude": -73.6080182
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "MacDonald",
@@ -18,9 +19,10 @@
                 "type": "PPL",
                 "rink_name": "Aire de patinage libre, MacDonald (PPL)",
                 "coordinates": {
-                    "latitude": 45.4845029,
-                    "longitude": -73.6411984
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Mackenzie-King",
@@ -28,9 +30,10 @@
                 "type": "PPL",
                 "rink_name": "Aire de patinage libre, Mackenzie-King (PPL)",
                 "coordinates": {
-                    "latitude": 45.4898979,
-                    "longitude": -73.63372450000001
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Martin-Luther-King",
@@ -38,9 +41,10 @@
                 "type": "PPL",
                 "rink_name": "Aire de patinage libre, Martin-Luther-King (PPL)",
                 "coordinates": {
-                    "latitude": 45.50524,
-                    "longitude": -73.63150399999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Notre-Dame-de-Grâce",
@@ -48,9 +52,10 @@
                 "type": "PPL",
                 "rink_name": "Aire de patinage libre, Notre-Dame-de-Grâce (PPL)",
                 "coordinates": {
-                    "latitude": 45.4660994,
-                    "longitude": -73.6396329
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "William-Hurst",
@@ -58,9 +63,10 @@
                 "type": "PP",
                 "rink_name": "Aire de patinage libre, William-Hurst (PP)",
                 "coordinates": {
-                    "latitude": 45.4695738,
-                    "longitude": -73.6308552
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Mackenzie-King",
@@ -68,9 +74,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , Mackenzie-King (PSE)",
                 "coordinates": {
-                    "latitude": 45.4898979,
-                    "longitude": -73.63372450000001
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Trenholme",
@@ -78,9 +85,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , Trenholme (PSE)",
                 "coordinates": {
-                    "latitude": 45.4566389,
-                    "longitude": -73.6469858
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Georges-Saint-Pierre",
@@ -88,9 +96,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Georges-Saint-Pierre (PSE)",
                 "coordinates": {
-                    "latitude": 45.4685286,
-                    "longitude": -73.6080182
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jean-Brillant",
@@ -98,9 +107,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Jean-Brillant (PSE)",
                 "coordinates": {
-                    "latitude": 45.4929315,
-                    "longitude": -73.6245398
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "MacDonald",
@@ -108,9 +118,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, MacDonald (PSE)",
                 "coordinates": {
-                    "latitude": 45.4845029,
-                    "longitude": -73.6411984
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Martin-Luther-King (nord)",
@@ -118,9 +129,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Martin-Luther-King (nord) (PSE)",
                 "coordinates": {
-                    "latitude": 45.50524,
-                    "longitude": -73.63150399999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Martin-Luther-King (sud)",
@@ -128,9 +140,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Martin-Luther-King (sud) (PSE)",
                 "coordinates": {
-                    "latitude": 45.50524,
-                    "longitude": -73.63150399999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Notre-Dame-de-Grâce",
@@ -138,9 +151,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Notre-Dame-de-Grâce (PSE)",
                 "coordinates": {
-                    "latitude": 45.4660994,
-                    "longitude": -73.6396329
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "William-Bowie",
@@ -148,9 +162,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, William-Bowie (PSE)",
                 "coordinates": {
-                    "latitude": 45.4576098,
-                    "longitude": -73.6488883
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "William-Hurst",
@@ -158,9 +173,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, William-Hurst (PSE)",
                 "coordinates": {
-                    "latitude": 45.4695738,
-                    "longitude": -73.6308552
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Confédération",
@@ -168,15 +184,17 @@
                 "type": "PSE",
                 "rink_name": "Patinoire Bleu-Blanc-Bouge, Confédération (PSE)",
                 "coordinates": {
-                    "latitude": 45.4723525,
-                    "longitude": -73.6394522
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4767847,
-            "longitude": -73.61431329999999
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "sle": {
         "arrondissement": "Saint-Léonard",
@@ -187,9 +205,10 @@
                 "type": "PPL",
                 "rink_name": "Anneau de glace, C.C.S.L. (PPL)",
                 "coordinates": {
-                    "latitude": 45.4996164,
-                    "longitude": -73.57310439999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Laurier-MacDonald",
@@ -197,9 +216,10 @@
                 "type": "PPL",
                 "rink_name": "Anneau de glace, parc Laurier-MacDonald (PPL)",
                 "coordinates": {
-                    "latitude": 45.5775574,
-                    "longitude": -73.5875907
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Delorme",
@@ -207,9 +227,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Delorme (PSE)",
                 "coordinates": {
-                    "latitude": 45.5905637,
-                    "longitude": -73.5884047
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Ferland",
@@ -217,9 +238,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Ferland (PSE)",
                 "coordinates": {
-                    "latitude": 45.596846,
-                    "longitude": -73.5997666
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Ladauversière",
@@ -227,9 +249,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Ladauversière (PSE)",
                 "coordinates": {
-                    "latitude": 45.5816162,
-                    "longitude": -73.58318899999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Pie-XII",
@@ -237,9 +260,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Pie-XII (PSE)",
                 "coordinates": {
-                    "latitude": 45.5886023,
-                    "longitude": -73.6080169
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Giuseppe-Garibaldi",
@@ -247,9 +271,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Giuseppe-Garibaldi (PPL)",
                 "coordinates": {
-                    "latitude": 45.5869461,
-                    "longitude": -73.57207439999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Ladauversière",
@@ -257,9 +282,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Ladauversière (PPL)",
                 "coordinates": {
-                    "latitude": 45.5816162,
-                    "longitude": -73.58318899999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "C.S.S.L",
@@ -267,9 +293,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire sans bande, C.S.S.L (PPL)",
                 "coordinates": {
-                    "latitude": 45.56208059999999,
-                    "longitude": -73.61054539999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Luigi-Pirandello",
@@ -277,15 +304,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire sans bande, parc Luigi-Pirandello (PPL)",
                 "coordinates": {
-                    "latitude": 45.5779837,
-                    "longitude": -73.6037824
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.58305350000001,
-            "longitude": -73.5806921
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "ibi": {
         "arrondissement": "L'Île-Bizard - Sainte-Geneviève",
@@ -296,9 +325,10 @@
                 "type": "PPL",
                 "rink_name": "Anneau de glace, Parc Eugène-Dostie (PPL)",
                 "coordinates": {
-                    "latitude": 45.48753749999999,
-                    "longitude": -73.8837685
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Eugène-Dostie",
@@ -306,9 +336,10 @@
                 "type": "PPL",
                 "rink_name": "Carré de glace, Parc Eugène-Dostie (PPL)",
                 "coordinates": {
-                    "latitude": 45.48753749999999,
-                    "longitude": -73.8837685
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Jonathan-Wilson",
@@ -316,9 +347,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire # 1, Parc Jonathan-Wilson (PSE)",
                 "coordinates": {
-                    "latitude": 45.5006543,
-                    "longitude": -73.87199609999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Joseph-Avila-Proulx",
@@ -326,9 +358,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire # 1, Parc Joseph-Avila-Proulx (PSE)",
                 "coordinates": {
-                    "latitude": 45.4968458,
-                    "longitude": -73.8823419
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Robert-Sauvé",
@@ -336,9 +369,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire # 1, Parc Robert-Sauvé (PSE)",
                 "coordinates": {
-                    "latitude": 45.4813131,
-                    "longitude": -73.866691
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Eugène-Dostie",
@@ -346,9 +380,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire # 2, Parc Eugène-Dostie (PSE)",
                 "coordinates": {
-                    "latitude": 45.48753749999999,
-                    "longitude": -73.8837685
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Eugène-Dostie",
@@ -356,15 +391,17 @@
                 "type": "PSE",
                 "rink_name": "Patinoire Coach Ken, Parc Eugène-Dostie (PSE)",
                 "coordinates": {
-                    "latitude": 45.48753749999999,
-                    "longitude": -73.8837685
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4948893,
-            "longitude": -73.89075559999999
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "anj": {
         "arrondissement": "Anjou",
@@ -375,9 +412,10 @@
                 "type": "PPL",
                 "rink_name": "Anneau de glace, Parc Lucie-Bruneau (PPL)",
                 "coordinates": {
-                    "latitude": 45.604415,
-                    "longitude": -73.5841204
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Talcy",
@@ -385,9 +423,10 @@
                 "type": "PPL",
                 "rink_name": "Anneau de glace, Parc Talcy (PPL)",
                 "coordinates": {
-                    "latitude": 45.607129,
-                    "longitude": -73.5599556
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Des Roseraies",
@@ -395,9 +434,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Des Roseraies (PSE)",
                 "coordinates": {
-                    "latitude": 45.5943471,
-                    "longitude": -73.5552282
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Lucie-Bruneau",
@@ -405,9 +445,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Lucie-Bruneau (PSE)",
                 "coordinates": {
-                    "latitude": 45.604415,
-                    "longitude": -73.5841204
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Roger Rousseau",
@@ -415,9 +456,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Roger Rousseau (PSE)",
                 "coordinates": {
-                    "latitude": 45.6172658,
-                    "longitude": -73.54955919999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Des Roseraies",
@@ -425,15 +467,17 @@
                 "type": "PP",
                 "rink_name": "Sentier glacé, Parc Des Roseraies (PP)",
                 "coordinates": {
-                    "latitude": 45.5943471,
-                    "longitude": -73.5552282
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.6123487,
-            "longitude": -73.5553355
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "pmr": {
         "arrondissement": "Le Plateau-Mont-Royal",
@@ -444,9 +488,10 @@
                 "type": "PSE",
                 "rink_name": "Grande patinoire avec bandes, La Fontaine (PSE)",
                 "coordinates": {
-                    "latitude": 45.5273219,
-                    "longitude": -73.5703556
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Gaspé/Bernard",
@@ -454,9 +499,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , De Gaspé/Bernard (PSE)",
                 "coordinates": {
-                    "latitude": 45.52751199999999,
-                    "longitude": -73.597355
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Baldwin",
@@ -464,9 +510,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Baldwin (PSE)",
                 "coordinates": {
-                    "latitude": 45.5262851,
-                    "longitude": -73.5879707
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jeanne-Mance",
@@ -474,9 +521,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Jeanne-Mance (PSE)",
                 "coordinates": {
-                    "latitude": 45.5175663,
-                    "longitude": -73.5886699
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sir-Wilfrid-Laurier no 1",
@@ -484,9 +532,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Sir-Wilfrid-Laurier no 1 (PSE)",
                 "coordinates": {
-                    "latitude": 45.5229468,
-                    "longitude": -73.59319789999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sir-Wilfrid-Laurier no 2",
@@ -494,9 +543,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Sir-Wilfrid-Laurier no 2 (PSE)",
                 "coordinates": {
-                    "latitude": 45.5330839,
-                    "longitude": -73.5888439
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Baldwin",
@@ -504,9 +554,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Baldwin (PPL)",
                 "coordinates": {
-                    "latitude": 45.5262851,
-                    "longitude": -73.5879707
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jeanne-Mance",
@@ -514,9 +565,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Jeanne-Mance (PPL)",
                 "coordinates": {
-                    "latitude": 45.5175663,
-                    "longitude": -73.5886699
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sir-Wilfrid-Laurier",
@@ -524,9 +576,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Sir-Wilfrid-Laurier (PPL)",
                 "coordinates": {
-                    "latitude": 45.5330839,
-                    "longitude": -73.5888439
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Arena Mont-Royal",
@@ -534,9 +587,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Arena Mont-Royal (PP)",
                 "coordinates": {
-                    "latitude": 45.5333859,
-                    "longitude": -73.5717796
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Lorimier",
@@ -544,9 +598,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, De Lorimier (PP)",
                 "coordinates": {
-                    "latitude": 45.5374141,
-                    "longitude": -73.5811519
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "La Fontaine",
@@ -554,9 +609,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, La Fontaine (PP)",
                 "coordinates": {
-                    "latitude": 45.5273219,
-                    "longitude": -73.5703556
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "La Fontaine",
@@ -564,15 +620,17 @@
                 "type": "PSE",
                 "rink_name": "Petite patinoire avec bandes, La Fontaine (PSE)",
                 "coordinates": {
-                    "latitude": 45.5273219,
-                    "longitude": -73.5703556
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5262851,
-            "longitude": -73.5879707
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "out": {
         "arrondissement": "Outremont",
@@ -583,9 +641,10 @@
                 "type": "PSE",
                 "rink_name": "Grande patinoire de hockey, Parc Beaubien (PSE)",
                 "coordinates": {
-                    "latitude": 45.5156782,
-                    "longitude": -73.60862709999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Pratt",
@@ -593,9 +652,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de hockey et patin libre, Parc Pratt (PPL)",
                 "coordinates": {
-                    "latitude": 45.5140286,
-                    "longitude": -73.6185788
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Oakwood",
@@ -603,9 +663,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de hockey, Parc Oakwood (PPL)",
                 "coordinates": {
-                    "latitude": 45.51309819999999,
-                    "longitude": -73.6006747
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Jacques-Parizeau",
@@ -613,9 +674,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc Jacques-Parizeau (PPL)",
                 "coordinates": {
-                    "latitude": 45.5117686,
-                    "longitude": -73.6172421
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Outremont",
@@ -623,9 +685,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc Outremont (PPL)",
                 "coordinates": {
-                    "latitude": 45.5182082,
-                    "longitude": -73.60463419999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Beaubien",
@@ -633,15 +696,17 @@
                 "type": "PSE",
                 "rink_name": "Petite patinoire de hockey, Parc Beaubien (PSE)",
                 "coordinates": {
-                    "latitude": 45.5156782,
-                    "longitude": -73.60862709999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5175945,
-            "longitude": -73.6109554
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "lch": {
         "arrondissement": "Lachine",
@@ -652,9 +717,10 @@
                 "type": "PSE",
                 "rink_name": "Pat. avec bandes - près chalet, parc LaSalle (PSE)",
                 "coordinates": {
-                    "latitude": 45.43865390000001,
-                    "longitude": -73.6743104
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc LaSalle",
@@ -662,9 +728,10 @@
                 "type": "PSE",
                 "rink_name": "Pat. avec bandes - près 10e Avenue, parc LaSalle (PSE)",
                 "coordinates": {
-                    "latitude": 45.43865390000001,
-                    "longitude": -73.6743104
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Carignan",
@@ -672,9 +739,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Carignan (PSE)",
                 "coordinates": {
-                    "latitude": 45.4433976,
-                    "longitude": -73.7019842
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Dixie",
@@ -682,9 +750,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Dixie (PSE)",
                 "coordinates": {
-                    "latitude": 45.4431099,
-                    "longitude": -73.7182031
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Duff court",
@@ -692,9 +761,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Duff court (PSE)",
                 "coordinates": {
-                    "latitude": 45.44692910000001,
-                    "longitude": -73.6806562
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Kirkland",
@@ -702,9 +772,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, parc Kirkland (PSE)",
                 "coordinates": {
-                    "latitude": 45.4459897,
-                    "longitude": -73.6498474
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "club pêcheurs/chasseurs",
@@ -712,9 +783,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, club pêcheurs/chasseurs (PPL)",
                 "coordinates": {
-                    "latitude": 45.4419094,
-                    "longitude": -73.6925445
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Carignan",
@@ -722,9 +794,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Carignan (PPL)",
                 "coordinates": {
-                    "latitude": 45.4433976,
-                    "longitude": -73.7019842
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Kirkland",
@@ -732,9 +805,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Kirkland (PPL)",
                 "coordinates": {
-                    "latitude": 45.4459897,
-                    "longitude": -73.6498474
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc LaSalle",
@@ -742,9 +816,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc LaSalle (PPL)",
                 "coordinates": {
-                    "latitude": 45.43865390000001,
-                    "longitude": -73.6743104
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Rosewood",
@@ -752,15 +827,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Rosewood (PPL)",
                 "coordinates": {
-                    "latitude": 45.44972240000001,
-                    "longitude": -73.652484
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4419094,
-            "longitude": -73.6925445
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "mhm": {
         "arrondissement": "Mercier - Hochelaga-Maisonneuve",
@@ -771,9 +848,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire à bandes, Liébert (PSE)",
                 "coordinates": {
-                    "latitude": 45.595759,
-                    "longitude": -73.5231393
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De La Bruère",
@@ -781,9 +859,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, De La Bruère (PSE)",
                 "coordinates": {
-                    "latitude": 45.5932491,
-                    "longitude": -73.5192646
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jean-Amyot",
@@ -791,9 +870,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Jean-Amyot (PSE)",
                 "coordinates": {
-                    "latitude": 45.575841,
-                    "longitude": -73.539627
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Lalancette",
@@ -801,9 +881,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Lalancette (PSE)",
                 "coordinates": {
-                    "latitude": 45.5481158,
-                    "longitude": -73.5484006
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Pierre-Bédard",
@@ -811,9 +892,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Pierre-Bédard (PSE)",
                 "coordinates": {
-                    "latitude": 45.578712,
-                    "longitude": -73.5566518
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Aloysius",
@@ -821,9 +903,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-Aloysius (PSE)",
                 "coordinates": {
-                    "latitude": 45.545898,
-                    "longitude": -73.5409899
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Victor",
@@ -831,9 +914,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-Victor (PSE)",
                 "coordinates": {
-                    "latitude": 45.6107525,
-                    "longitude": -73.5152366
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Thomas-Chapais",
@@ -841,9 +925,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Thomas-Chapais (PSE)",
                 "coordinates": {
-                    "latitude": 45.6080464,
-                    "longitude": -73.5370492
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Beauclerk",
@@ -851,9 +936,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Beauclerk (PPL)",
                 "coordinates": {
-                    "latitude": 45.5843033,
-                    "longitude": -73.5293119
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jean-Amyot",
@@ -861,9 +947,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Jean-Amyot (PPL)",
                 "coordinates": {
-                    "latitude": 45.575841,
-                    "longitude": -73.539627
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Lalancette",
@@ -871,9 +958,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Lalancette (PPL)",
                 "coordinates": {
-                    "latitude": 45.5481158,
-                    "longitude": -73.5484006
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Pierre-Bédard",
@@ -881,9 +969,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Pierre-Bédard (PPL)",
                 "coordinates": {
-                    "latitude": 45.578712,
-                    "longitude": -73.5566518
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Pierre-Bernard",
@@ -891,9 +980,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Pierre-Bernard (PPL)",
                 "coordinates": {
-                    "latitude": 45.6069759,
-                    "longitude": -73.5276575
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Rougemont",
@@ -901,9 +991,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Rougemont (PPL)",
                 "coordinates": {
-                    "latitude": 45.5687272,
-                    "longitude": -73.5264464
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Aloysius",
@@ -911,9 +1002,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Aloysius (PPL)",
                 "coordinates": {
-                    "latitude": 45.545898,
-                    "longitude": -73.5409899
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Victor",
@@ -921,9 +1013,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Victor (PPL)",
                 "coordinates": {
-                    "latitude": 45.6107525,
-                    "longitude": -73.5152366
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Théodore",
@@ -931,15 +1024,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Théodore (PPL)",
                 "coordinates": {
-                    "latitude": 45.5584073,
-                    "longitude": -73.5383286
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.582811,
-            "longitude": -73.54322230000001
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "ver": {
         "arrondissement": "Verdun",
@@ -950,9 +1045,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire à bandes, Parc de la Fontaine (PSE)",
                 "coordinates": {
-                    "latitude": 45.4635441,
-                    "longitude": -73.5431156
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Elgar",
@@ -960,9 +1056,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire à bandes, Parc Elgar (PSE)",
                 "coordinates": {
-                    "latitude": 45.4706309,
-                    "longitude": -73.58737169999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Reine-Elisabeth",
@@ -970,9 +1067,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire à bandes, Reine-Elisabeth (PSE)",
                 "coordinates": {
-                    "latitude": 45.438539,
-                    "longitude": -73.5927842
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Willibrord",
@@ -980,9 +1078,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire Bleu Blanc Bouge, Parc Willibrord (PSE)",
                 "coordinates": {
-                    "latitude": 45.4591667,
-                    "longitude": -73.57562659999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Natatorium",
@@ -990,9 +1089,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Natatorium (PP)",
                 "coordinates": {
-                    "latitude": 45.4437535,
-                    "longitude": -73.5760564
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de la Fontaine",
@@ -1000,9 +1100,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Parc de la Fontaine (PP)",
                 "coordinates": {
-                    "latitude": 45.4635441,
-                    "longitude": -73.5431156
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Duquette",
@@ -1010,9 +1111,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire décorative, Parc Duquette (PSE)",
                 "coordinates": {
-                    "latitude": 45.4659886,
-                    "longitude": -73.5748816
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Elgar",
@@ -1020,9 +1122,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Parc Elgar (PP)",
                 "coordinates": {
-                    "latitude": 45.4706309,
-                    "longitude": -73.58737169999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Willibrord",
@@ -1030,9 +1133,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Parc Willibrord (PP)",
                 "coordinates": {
-                    "latitude": 45.4591667,
-                    "longitude": -73.57562659999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Reine-Elisabeth",
@@ -1040,15 +1144,17 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Reine-Elisabeth (PP)",
                 "coordinates": {
-                    "latitude": 45.438539,
-                    "longitude": -73.5927842
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4626418,
-            "longitude": -73.5634882
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "pir": {
         "arrondissement": "Pierrefonds - Roxboro",
@@ -1059,9 +1165,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bande, Parc Grier (PSE)",
                 "coordinates": {
-                    "latitude": 45.457258,
-                    "longitude": -73.8843751
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de Roxboro",
@@ -1069,9 +1176,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes Nord, Parc de Roxboro (PSE)",
                 "coordinates": {
-                    "latitude": 45.5033809,
-                    "longitude": -73.7929405
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Alexander",
@@ -1079,9 +1187,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Alexander (PSE)",
                 "coordinates": {
-                    "latitude": 45.4751558,
-                    "longitude": -73.8559051
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Brook",
@@ -1089,9 +1198,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Brook (PSE)",
                 "coordinates": {
-                    "latitude": 45.510074,
-                    "longitude": -73.8432438
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc d'À-Ma-Baie",
@@ -1099,9 +1209,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc d'À-Ma-Baie (PSE)",
                 "coordinates": {
-                    "latitude": 45.5048057,
-                    "longitude": -73.7832097
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de la Rive-Boisée",
@@ -1109,9 +1220,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc de la Rive-Boisée (PSE)",
                 "coordinates": {
-                    "latitude": 45.4987112,
-                    "longitude": -73.8544194
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de Roxboro",
@@ -1119,9 +1231,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes Sud, Parc de Roxboro (PSE)",
                 "coordinates": {
-                    "latitude": 45.5033809,
-                    "longitude": -73.7929405
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Brook",
@@ -1129,9 +1242,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre Est, Parc Brook (PPL)",
                 "coordinates": {
-                    "latitude": 45.510074,
-                    "longitude": -73.8432438
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Brook",
@@ -1139,9 +1253,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre Ouest, Parc Brook (PPL)",
                 "coordinates": {
-                    "latitude": 45.510074,
-                    "longitude": -73.8432438
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc d'À-Ma-Baie",
@@ -1149,9 +1264,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc d'À-Ma-Baie (PPL)",
                 "coordinates": {
-                    "latitude": 45.5048057,
-                    "longitude": -73.7832097
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de la Rive-Boisée",
@@ -1159,9 +1275,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc de la Rive-Boisée (PPL)",
                 "coordinates": {
-                    "latitude": 45.4987112,
-                    "longitude": -73.8544194
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc de Roxboro",
@@ -1169,9 +1286,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc de Roxboro (PPL)",
                 "coordinates": {
-                    "latitude": 45.5033809,
-                    "longitude": -73.7929405
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Grier",
@@ -1179,9 +1297,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Parc Grier (PPL)",
                 "coordinates": {
-                    "latitude": 45.457258,
-                    "longitude": -73.8843751
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Grier",
@@ -1189,9 +1308,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre sentier, Parc Grier (PPL)",
                 "coordinates": {
-                    "latitude": 45.457258,
-                    "longitude": -73.8843751
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Alexander",
@@ -1199,15 +1319,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre Sud, Parc Alexander (PPL)",
                 "coordinates": {
-                    "latitude": 45.4751558,
-                    "longitude": -73.8559051
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.482163,
-            "longitude": -73.8621589
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "vsp": {
         "arrondissement": "Villeray-Saint-Michel - Parc-Extension",
@@ -1218,9 +1340,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes - Nord, Villeray (PSE)",
                 "coordinates": {
-                    "latitude": 45.5481165,
-                    "longitude": -73.624751
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Villeray",
@@ -1228,9 +1351,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes - Sud, Villeray (PSE)",
                 "coordinates": {
-                    "latitude": 45.5481165,
-                    "longitude": -73.624751
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Champdoré",
@@ -1238,9 +1362,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Champdoré (PSE)",
                 "coordinates": {
-                    "latitude": 45.5715023,
-                    "longitude": -73.6358143
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Nicolas-Tillemont",
@@ -1248,9 +1373,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Nicolas-Tillemont (PSE)",
                 "coordinates": {
-                    "latitude": 45.5547222,
-                    "longitude": -73.6125
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jarry",
@@ -1258,9 +1384,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes nord, Jarry (PSE)",
                 "coordinates": {
-                    "latitude": 45.5431671,
-                    "longitude": -73.6283636
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jarry",
@@ -1268,9 +1395,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes sud, Jarry (PSE)",
                 "coordinates": {
-                    "latitude": 45.5431671,
-                    "longitude": -73.6283636
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Normanville",
@@ -1278,9 +1406,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, De Normanville (PPL)",
                 "coordinates": {
-                    "latitude": 45.5423332,
-                    "longitude": -73.6071876
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Nicolas-Tillemont",
@@ -1288,9 +1417,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Nicolas-Tillemont (PPL)",
                 "coordinates": {
-                    "latitude": 45.5547222,
-                    "longitude": -73.6125
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Ovila-Légaré",
@@ -1298,9 +1428,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Ovila-Légaré (PP)",
                 "coordinates": {
-                    "latitude": 45.5815844,
-                    "longitude": -73.6232224
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Howard",
@@ -1308,9 +1439,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patinage libre, Howard (PPL)",
                 "coordinates": {
-                    "latitude": 45.5588033,
-                    "longitude": -73.5983835
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "François-Perrault",
@@ -1318,9 +1450,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire décorative, François-Perrault (PPL)",
                 "coordinates": {
-                    "latitude": 45.56060910000001,
-                    "longitude": -73.60223979999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Bleu Blanc Bouge F-Perrault",
@@ -1328,15 +1461,17 @@
                 "type": "PSE",
                 "rink_name": "Patinoire réfrigérée, Bleu Blanc Bouge F-Perrault (PSE)",
                 "coordinates": {
-                    "latitude": 45.563089,
-                    "longitude": -73.6014368
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5588033,
-            "longitude": -73.5983835
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "mno": {
         "arrondissement": "Montréal-Nord",
@@ -1347,9 +1482,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , parc Charleroi (PSE)",
                 "coordinates": {
-                    "latitude": 45.5994693,
-                    "longitude": -73.62217559999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Oscar",
@@ -1357,9 +1493,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , parc Oscar (PSE)",
                 "coordinates": {
-                    "latitude": 45.5822655,
-                    "longitude": -73.6483198
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Sauvé",
@@ -1367,9 +1504,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes , parc Sauvé (PSE)",
                 "coordinates": {
-                    "latitude": 45.5997232,
-                    "longitude": -73.6362843
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Sauvé",
@@ -1377,9 +1515,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre , parc Sauvé (PPL)",
                 "coordinates": {
-                    "latitude": 45.5997232,
-                    "longitude": -73.6362843
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Charleroi",
@@ -1387,9 +1526,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Charleroi (PPL)",
                 "coordinates": {
-                    "latitude": 45.5994693,
-                    "longitude": -73.62217559999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Lacordaire",
@@ -1397,9 +1537,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, parc Lacordaire (PPL)",
                 "coordinates": {
-                    "latitude": 45.616632,
-                    "longitude": -73.6307331
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Bleu Blanc Bouge Le Carignan",
@@ -1407,15 +1548,17 @@
                 "type": "PSE",
                 "rink_name": "Patinoire réfrigérée,Bleu Blanc Bouge Le Carignan (PSE)",
                 "coordinates": {
-                    "latitude": 45.6099006,
-                    "longitude": -73.6158166
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.6067159,
-            "longitude": -73.6200782
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "rpp": {
         "arrondissement": "Rosemont - La Petite-Patrie",
@@ -1426,9 +1569,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Beaubien (PSE)",
                 "coordinates": {
-                    "latitude": 45.5557517,
-                    "longitude": -73.5856807
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Cité-Jardin",
@@ -1436,9 +1580,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Cité-Jardin (PSE)",
                 "coordinates": {
-                    "latitude": 45.5712813,
-                    "longitude": -73.5603366
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Gaspé",
@@ -1446,9 +1591,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, De Gaspé (PSE)",
                 "coordinates": {
-                    "latitude": 45.5280646,
-                    "longitude": -73.6149523
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De la Louisiane",
@@ -1456,9 +1602,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, De la Louisiane (PSE)",
                 "coordinates": {
-                    "latitude": 45.5683326,
-                    "longitude": -73.57234509999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Du Pélican",
@@ -1466,9 +1613,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Du Pélican (PSE)",
                 "coordinates": {
-                    "latitude": 45.5608572,
-                    "longitude": -73.5738906
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Lafond",
@@ -1476,9 +1624,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Lafond (PSE)",
                 "coordinates": {
-                    "latitude": 45.5535227,
-                    "longitude": -73.5747344
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Père-Marquette",
@@ -1486,9 +1635,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Père-Marquette (PSE)",
                 "coordinates": {
-                    "latitude": 45.5409291,
-                    "longitude": -73.59356249999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Beaubien",
@@ -1496,9 +1646,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Beaubien (PPL)",
                 "coordinates": {
-                    "latitude": 45.5557517,
-                    "longitude": -73.5856807
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Cité-Jardin",
@@ -1506,9 +1657,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Cité-Jardin (PPL)",
                 "coordinates": {
-                    "latitude": 45.5712813,
-                    "longitude": -73.5603366
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De la Louisiane",
@@ -1516,9 +1668,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, De la Louisiane (PPL)",
                 "coordinates": {
-                    "latitude": 45.5683326,
-                    "longitude": -73.57234509999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Du Pélican",
@@ -1526,9 +1679,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Du Pélican (PPL)",
                 "coordinates": {
-                    "latitude": 45.5608572,
-                    "longitude": -73.5738906
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Joseph-Paré",
@@ -1536,9 +1690,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Joseph-Paré (PPL)",
                 "coordinates": {
-                    "latitude": 45.5746605,
-                    "longitude": -73.5709291
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Lafond",
@@ -1546,9 +1701,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Lafond (PPL)",
                 "coordinates": {
-                    "latitude": 45.5535227,
-                    "longitude": -73.5747344
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Père-Marquette",
@@ -1556,9 +1712,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Père-Marquette (PPL)",
                 "coordinates": {
-                    "latitude": 45.5409291,
-                    "longitude": -73.59356249999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sainte-Bernadette",
@@ -1566,9 +1723,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Sainte-Bernadette (PPL)",
                 "coordinates": {
-                    "latitude": 45.5615549,
-                    "longitude": -73.5873397
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De la Petite-Italie",
@@ -1576,9 +1734,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, De la Petite-Italie (PP)",
                 "coordinates": {
-                    "latitude": 45.5324569,
-                    "longitude": -73.6113766
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Maisonneuve",
@@ -1586,9 +1745,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Maisonneuve (PP)",
                 "coordinates": {
-                    "latitude": 45.561201,
-                    "longitude": -73.55485019999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Molson",
@@ -1596,15 +1756,17 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Molson (PP)",
                 "coordinates": {
-                    "latitude": 45.5486505,
-                    "longitude": -73.5888334
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5608572,
-            "longitude": -73.5738906
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "ahc": {
         "arrondissement": "Ahuntsic - Cartierville",
@@ -1615,9 +1777,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Berthe-Louard (PSE)",
                 "coordinates": {
-                    "latitude": 45.5563482,
-                    "longitude": -73.6435158
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Louisbourg",
@@ -1625,9 +1788,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, De Louisbourg (PSE)",
                 "coordinates": {
-                    "latitude": 45.5325278,
-                    "longitude": -73.7012581
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Des Hirondelles",
@@ -1635,9 +1799,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Des Hirondelles (PSE)",
                 "coordinates": {
-                    "latitude": 45.5755015,
-                    "longitude": -73.6425452
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Alphonse",
@@ -1645,9 +1810,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-Alphonse (PSE)",
                 "coordinates": {
-                    "latitude": 45.5487036,
-                    "longitude": -73.6384429
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-André-Apôtre",
@@ -1655,9 +1821,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-André-Apôtre (PSE)",
                 "coordinates": {
-                    "latitude": 45.54650609999999,
-                    "longitude": -73.67032669999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Paul-de-la-Croix",
@@ -1665,9 +1832,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-Paul-de-la-Croix (PSE)",
                 "coordinates": {
-                    "latitude": 45.5593504,
-                    "longitude": -73.6613076
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sault-au-Récollet",
@@ -1675,9 +1843,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Sault-au-Récollet (PSE)",
                 "coordinates": {
-                    "latitude": 45.5732794,
-                    "longitude": -73.648039
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Mésy",
@@ -1685,9 +1854,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire Bleu blanc bouge, De Mésy (PSE)",
                 "coordinates": {
-                    "latitude": 45.529866,
-                    "longitude": -73.717249
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Berthe-Louard",
@@ -1695,9 +1865,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Berthe-Louard (PPL)",
                 "coordinates": {
-                    "latitude": 45.5563482,
-                    "longitude": -73.6435158
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Camille",
@@ -1705,9 +1876,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Camille (PPL)",
                 "coordinates": {
-                    "latitude": 45.5094061,
-                    "longitude": -73.7521621
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Bordeaux",
@@ -1715,9 +1887,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, De Bordeaux (PPL)",
                 "coordinates": {
-                    "latitude": 45.5508605,
-                    "longitude": -73.6560631
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "De Louisbourg",
@@ -1725,9 +1898,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, De Louisbourg (PPL)",
                 "coordinates": {
-                    "latitude": 45.5325278,
-                    "longitude": -73.7012581
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Henri-Julien",
@@ -1735,9 +1909,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Henri-Julien (PPL)",
                 "coordinates": {
-                    "latitude": 45.542256,
-                    "longitude": -73.633071
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Nicolas-Viel",
@@ -1745,9 +1920,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Nicolas-Viel (PPL)",
                 "coordinates": {
-                    "latitude": 45.5506839,
-                    "longitude": -73.67723699999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Alphonse",
@@ -1755,9 +1931,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Alphonse (PPL)",
                 "coordinates": {
-                    "latitude": 45.5487036,
-                    "longitude": -73.6384429
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-André-Apôtre",
@@ -1765,9 +1942,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-André-Apôtre (PPL)",
                 "coordinates": {
-                    "latitude": 45.54650609999999,
-                    "longitude": -73.67032669999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Paul-de-la-Croix",
@@ -1775,9 +1953,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Paul-de-la-Croix (PPL)",
                 "coordinates": {
-                    "latitude": 45.5593504,
-                    "longitude": -73.6613076
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Simon-Apôtre",
@@ -1785,9 +1964,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Simon-Apôtre (PPL)",
                 "coordinates": {
-                    "latitude": 45.539655,
-                    "longitude": -73.6471348
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sault-au-Récollet",
@@ -1795,15 +1975,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Sault-au-Récollet (PPL)",
                 "coordinates": {
-                    "latitude": 45.5732794,
-                    "longitude": -73.648039
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5508605,
-            "longitude": -73.6560631
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "sou": {
         "arrondissement": "Le Sud-Ouest",
@@ -1814,9 +1996,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Campbell-Ouest (PSE)",
                 "coordinates": {
-                    "latitude": 45.4581021,
-                    "longitude": -73.59165
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Carré Hibernia",
@@ -1824,9 +2007,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Carré Hibernia (PSE)",
                 "coordinates": {
-                    "latitude": 45.4788404,
-                    "longitude": -73.5643984
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Ignace-Bourget",
@@ -1834,9 +2018,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Ignace-Bourget (PSE)",
                 "coordinates": {
-                    "latitude": 45.4557809,
-                    "longitude": -73.60578230000002
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Le Ber",
@@ -1844,9 +2029,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Le Ber (PSE)",
                 "coordinates": {
-                    "latitude": 45.4772466,
-                    "longitude": -73.5539697
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Polyvalente Saint-Henri",
@@ -1854,9 +2040,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Polyvalente Saint-Henri (PSE)",
                 "coordinates": {
-                    "latitude": 45.4773919,
-                    "longitude": -73.5848072
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Vinet",
@@ -1864,9 +2051,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Vinet (PSE)",
                 "coordinates": {
-                    "latitude": 45.4843193,
-                    "longitude": -73.5755853
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Campbell-Ouest",
@@ -1874,9 +2062,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Campbell-Ouest (PP)",
                 "coordinates": {
-                    "latitude": 45.4581021,
-                    "longitude": -73.59165
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Carré Hibernia",
@@ -1884,9 +2073,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Carré Hibernia (PP)",
                 "coordinates": {
-                    "latitude": 45.4788404,
-                    "longitude": -73.5643984
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Gédéon-de-Catalogne",
@@ -1894,9 +2084,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Gédéon-de-Catalogne (PP)",
                 "coordinates": {
-                    "latitude": 45.471973,
-                    "longitude": -73.5833176
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Le Ber",
@@ -1904,9 +2095,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Le Ber (PP)",
                 "coordinates": {
-                    "latitude": 45.4772466,
-                    "longitude": -73.5539697
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Polyvalente Saint-Henri",
@@ -1914,9 +2106,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire Décorative, Polyvalente Saint-Henri (PP)",
                 "coordinates": {
-                    "latitude": 45.4773919,
-                    "longitude": -73.5848072
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Vinet",
@@ -1924,15 +2117,17 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Vinet (PP)",
                 "coordinates": {
-                    "latitude": 45.4843193,
-                    "longitude": -73.5755853
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4705621,
-            "longitude": -73.5908213
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "rdp": {
         "arrondissement": "Rivière-des-Prairies - Pointe-aux-Trembles",
@@ -1943,9 +2138,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Des Cageux (PSE)",
                 "coordinates": {
-                    "latitude": 45.67234879999999,
-                    "longitude": -73.54208179999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Don-Bosco",
@@ -1953,9 +2149,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Don-Bosco (PSE)",
                 "coordinates": {
-                    "latitude": 45.6443911,
-                    "longitude": -73.5885481
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Gérard-Vaillancourt",
@@ -1963,9 +2160,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Gérard-Vaillancourt (PSE)",
                 "coordinates": {
-                    "latitude": 45.6665876,
-                    "longitude": -73.5022011
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Montmartre",
@@ -1973,9 +2171,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire avec bandes, Montmartre (PPL)",
                 "coordinates": {
-                    "latitude": 45.674084,
-                    "longitude": -73.502411
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Hans-Selye",
@@ -1983,9 +2182,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Parc Hans-Selye (PSE)",
                 "coordinates": {
-                    "latitude": 45.63127009999999,
-                    "longitude": -73.60241789999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Pehr-Kalm",
@@ -1993,9 +2193,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Pehr-Kalm (PSE)",
                 "coordinates": {
-                    "latitude": 45.6638235,
-                    "longitude": -73.5520918
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Sainte-Maria-Goretti",
@@ -2003,9 +2204,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Sainte-Maria-Goretti (PSE)",
                 "coordinates": {
-                    "latitude": 45.6955482,
-                    "longitude": -73.4858847
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Jean-Baptiste",
@@ -2013,9 +2215,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Saint-Jean-Baptiste (PSE)",
                 "coordinates": {
-                    "latitude": 45.6412051,
-                    "longitude": -73.4996136
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Daniel-Johnson",
@@ -2023,9 +2226,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Daniel-Johnson (PP)",
                 "coordinates": {
-                    "latitude": 45.6504167,
-                    "longitude": -73.5009286
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Des Cageux",
@@ -2033,9 +2237,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Des Cageux (PPL)",
                 "coordinates": {
-                    "latitude": 45.67234879999999,
-                    "longitude": -73.54208179999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Don-Bosco",
@@ -2043,9 +2248,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Don-Bosco (PPL)",
                 "coordinates": {
-                    "latitude": 45.6443911,
-                    "longitude": -73.5885481
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Jeanne-Lapierre",
@@ -2053,9 +2259,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Jeanne-Lapierre (PPL)",
                 "coordinates": {
-                    "latitude": 45.6604228,
-                    "longitude": -73.5156099
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Saint-Jean-Baptiste",
@@ -2063,9 +2270,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Saint-Jean-Baptiste (PPL)",
                 "coordinates": {
-                    "latitude": 45.6412051,
-                    "longitude": -73.4996136
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Y-Thériault/Sherbrooke",
@@ -2073,15 +2281,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Y-Thériault/Sherbrooke (PPL)",
                 "coordinates": {
-                    "latitude": 45.6565594,
-                    "longitude": -73.5093931
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.64404709999999,
-            "longitude": -73.5859392
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "vma": {
         "arrondissement": "Ville-Marie",
@@ -2092,9 +2302,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Des Vétérans (PSE)",
                 "coordinates": {
-                    "latitude": 45.5240996,
-                    "longitude": -73.5548689
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Toussaint-Louverture",
@@ -2102,9 +2313,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Toussaint-Louverture (PSE)",
                 "coordinates": {
-                    "latitude": 45.5124438,
-                    "longitude": -73.5646668
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Walter-Stewart",
@@ -2112,9 +2324,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire avec bandes, Walter-Stewart (PSE)",
                 "coordinates": {
-                    "latitude": 45.533292,
-                    "longitude": -73.5562451
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Walter-Stewart",
@@ -2122,9 +2335,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire de patin libre, Walter-Stewart (PPL)",
                 "coordinates": {
-                    "latitude": 45.533292,
-                    "longitude": -73.5562451
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "du Glacis",
@@ -2132,9 +2346,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, du Glacis (PP)",
                 "coordinates": {
-                    "latitude": 45.5132155,
-                    "longitude": -73.550916
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Toussaint-Louverture",
@@ -2142,9 +2357,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire décorative, Toussaint-Louverture (PP)",
                 "coordinates": {
-                    "latitude": 45.5124438,
-                    "longitude": -73.5646668
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Esplanade Tranquille",
@@ -2152,9 +2368,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire réfrigérée, Esplanade Tranquille (PP)",
                 "coordinates": {
-                    "latitude": 45.509607,
-                    "longitude": -73.5649782
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Lac aux Castors ,",
@@ -2162,9 +2379,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire réfrigérée, Lac aux Castors , (PP)",
                 "coordinates": {
-                    "latitude": 45.4988179,
-                    "longitude": -73.5973997
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Square Cabot",
@@ -2172,9 +2390,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire réfrigérée, Square Cabot (PP)",
                 "coordinates": {
-                    "latitude": 45.48953299999999,
-                    "longitude": -73.58362009999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Des Faubourgs",
@@ -2182,15 +2401,17 @@
                 "type": "PPL",
                 "rink_name": "Patinoire sans bandes, Des Faubourgs (PPL)",
                 "coordinates": {
-                    "latitude": 45.52810789999999,
-                    "longitude": -73.55738509999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4987392,
-            "longitude": -73.5704313
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "sla": {
         "arrondissement": "Saint-Laurent",
@@ -2201,9 +2422,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Beaudet (PP)",
                 "coordinates": {
-                    "latitude": 45.5096014,
-                    "longitude": -73.6763756
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Beaulac",
@@ -2211,9 +2433,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Beaulac (PP)",
                 "coordinates": {
-                    "latitude": 45.519989,
-                    "longitude": -73.6777481
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Chamberland",
@@ -2221,9 +2444,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Chamberland (PP)",
                 "coordinates": {
-                    "latitude": 45.5029541,
-                    "longitude": -73.6894678
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Gohier",
@@ -2231,9 +2455,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Gohier (PP)",
                 "coordinates": {
-                    "latitude": 45.5086299,
-                    "longitude": -73.6814392
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Hartenstein",
@@ -2241,9 +2466,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Hartenstein (PP)",
                 "coordinates": {
-                    "latitude": 45.5180085,
-                    "longitude": -73.6911032
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Houde",
@@ -2251,9 +2477,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Houde (PP)",
                 "coordinates": {
-                    "latitude": 45.5010116,
-                    "longitude": -73.68071809999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Petit",
@@ -2261,9 +2488,10 @@
                 "type": "PP",
                 "rink_name": "Patinoire de patin libre, Parc Petit (PP)",
                 "coordinates": {
-                    "latitude": 45.5200637,
-                    "longitude": -73.6954879
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Cousineau",
@@ -2271,9 +2499,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Cousineau (PSE)",
                 "coordinates": {
-                    "latitude": 45.5212665,
-                    "longitude": -73.69065930000001
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Gohier",
@@ -2281,9 +2510,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Gohier (PSE)",
                 "coordinates": {
-                    "latitude": 45.5086299,
-                    "longitude": -73.6814392
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Houde",
@@ -2291,9 +2521,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Houde (PSE)",
                 "coordinates": {
-                    "latitude": 45.5010116,
-                    "longitude": -73.68071809999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Noël-Nord",
@@ -2301,9 +2532,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Noël-Nord (PSE)",
                 "coordinates": {
-                    "latitude": 45.5176314,
-                    "longitude": -73.728706
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Painter",
@@ -2311,9 +2543,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Painter (PSE)",
                 "coordinates": {
-                    "latitude": 45.52922220000001,
-                    "longitude": -73.6759527
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Petit",
@@ -2321,9 +2554,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Petit (PSE)",
                 "coordinates": {
-                    "latitude": 45.5200637,
-                    "longitude": -73.6954879
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Poirier",
@@ -2331,9 +2565,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure , Parc Poirier (PSE)",
                 "coordinates": {
-                    "latitude": 45.5147048,
-                    "longitude": -73.6630205
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Beaulac",
@@ -2341,9 +2576,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure, Parc Beaulac (PSE)",
                 "coordinates": {
-                    "latitude": 45.519989,
-                    "longitude": -73.6777481
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Chamberland",
@@ -2351,9 +2587,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure, Parc Chamberland (PSE)",
                 "coordinates": {
-                    "latitude": 45.5029541,
-                    "longitude": -73.6894678
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Decelles",
@@ -2361,9 +2598,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure, Parc Decelles (PSE)",
                 "coordinates": {
-                    "latitude": 45.513918,
-                    "longitude": -73.67761519999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc du Bois-Franc",
@@ -2371,9 +2609,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire extérieure, Parc du Bois-Franc (PSE)",
                 "coordinates": {
-                    "latitude": 45.5157791,
-                    "longitude": -73.7089471
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Philippe-Laheurte",
@@ -2381,9 +2620,10 @@
                 "type": "PPL",
                 "rink_name": "Patinoire extérieure, Parc Philippe-Laheurte (PPL)",
                 "coordinates": {
-                    "latitude": 45.5064454,
-                    "longitude": -73.7164566
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Decelle",
@@ -2391,9 +2631,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire sport d'équipe, Parc Decelle (PSE)",
                 "coordinates": {
-                    "latitude": 45.513918,
-                    "longitude": -73.67761519999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Cousineau",
@@ -2401,9 +2642,10 @@
                 "type": "PP",
                 "rink_name": "Rond de glace , Parc Cousineau (PP)",
                 "coordinates": {
-                    "latitude": 45.5212665,
-                    "longitude": -73.69065930000001
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Noël-Nord",
@@ -2411,9 +2653,10 @@
                 "type": "PP",
                 "rink_name": "Rond de glace , Parc Noël-Nord (PP)",
                 "coordinates": {
-                    "latitude": 45.5176314,
-                    "longitude": -73.728706
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Painter",
@@ -2421,9 +2664,10 @@
                 "type": "PPL",
                 "rink_name": "Rond de glace , Parc Painter (PPL)",
                 "coordinates": {
-                    "latitude": 45.52922220000001,
-                    "longitude": -73.6759527
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc du Bois-Franc",
@@ -2431,9 +2675,10 @@
                 "type": "PPL",
                 "rink_name": "Rond de glace, Parc du Bois-Franc (PPL)",
                 "coordinates": {
-                    "latitude": 45.5157791,
-                    "longitude": -73.7089471
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "Parc Saint-Laurent",
@@ -2441,15 +2686,17 @@
                 "type": "PP",
                 "rink_name": "Rond de glace, Parc Saint-Laurent (PP)",
                 "coordinates": {
-                    "latitude": 45.5274272,
-                    "longitude": -73.6875234
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.5022961,
-            "longitude": -73.70606599999999
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     },
     "lsl": {
         "arrondissement": "LaSalle",
@@ -2460,9 +2707,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire ext avec bandes (BBB) , parc Hayward (PSE)",
                 "coordinates": {
-                    "latitude": 45.4230116,
-                    "longitude": -73.6480661
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc des Rapides",
@@ -2470,9 +2718,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire ext. avec bandes, parc des Rapides (PSE)",
                 "coordinates": {
-                    "latitude": 45.4267195,
-                    "longitude": -73.5954616
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Lefebvre",
@@ -2480,9 +2729,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire ext. avec bandes, parc Lefebvre (PSE)",
                 "coordinates": {
-                    "latitude": 45.4362573,
-                    "longitude": -73.63497629999999
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Raymond",
@@ -2490,9 +2740,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire ext. avec bandes, parc Raymond (PSE)",
                 "coordinates": {
-                    "latitude": 45.4279994,
-                    "longitude": -73.6031423
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Riverside",
@@ -2500,9 +2751,10 @@
                 "type": "PSE",
                 "rink_name": "Patinoire ext. avec bandes, parc Riverside (PSE)",
                 "coordinates": {
-                    "latitude": 45.4209898,
-                    "longitude": -73.6116764
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             },
             {
                 "name": "parc Hayward",
@@ -2510,14 +2762,16 @@
                 "type": "PPL",
                 "rink_name": "Patinoire ext. sans bandes, parc Hayward (PPL)",
                 "coordinates": {
-                    "latitude": 45.4230116,
-                    "longitude": -73.6480661
-                }
+                    "lat": null,
+                    "lng": null
+                },
+                "photo": null
             }
         ],
         "coordinates": {
-            "latitude": 45.4305611,
-            "longitude": -73.6346777
-        }
+            "lat": null,
+            "lng": null
+        },
+        "photo": null
     }
 }
