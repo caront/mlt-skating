@@ -15,13 +15,6 @@ interface RinkInformationProps {
     rink: RinkWithDistrictAndCondition;
 }
 
-interface PropertyProps {
-    name: string;
-    valueTrue: string;
-    valueFalse: string;
-    value: boolean;
-}
-
 const Open: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
     const colors = useColors();
     return <Chip

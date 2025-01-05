@@ -1,0 +1,6 @@
+module Pods_mltski_mltskiTests {
+  umbrella header "Pods-mltski-mltskiTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

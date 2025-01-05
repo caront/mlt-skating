@@ -1,19 +1,20 @@
 import React, { FunctionComponent } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle } from 'react-native';
 import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
 import { useColors } from '../colors';
 
 interface SkiListProps {
     rinks: RinkWithDistrictAndCondition[];
     onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
+    style?: StyleProp<ViewStyle>
 }
 
-const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress }) => {
+const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style }) => {
     const colors = useColors();
     return (
         <FlatList
             data={rinks}
-            style={styles.container}
+            style={[style, styles.container]}
             ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
             keyExtractor={(item, index) => `${item.name}-${index}`}
             renderItem={({ item: rink }) => (

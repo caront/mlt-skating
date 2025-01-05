@@ -2,15 +2,20 @@ import React, { FunctionComponent } from "react";
 import { ActivityIndicator, ScrollView, StyleSheet, Text, View } from "react-native";
 import SkyList from "../components/RinkList";
 
-import { Icon, SearchBar } from "@rneui/themed";
+import { Button, Icon, SearchBar } from "@rneui/themed";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "./types";
 import { Rink, RinkWithDistrictAndCondition } from "../models/Rink";
 import SkyListSearch from "../components/RinkListSearch";
 import useRinkFilter, { Filters } from "../hooks/UseRinkFilter";
 import useRinkConditions from "../hooks/UseRinkConditions";
+import MapRinkView from "../components/MapRinkView";
+import useAskPermission from "../hooks/UseAskPermission";
+import { Permission } from "react-native-permissions";
 
 export const RinkListScreen = ({ }) => {
+    // useAskPermission({ permissions: ['ios.permission.LOCATION_WHEN_IN_USE', 'android.permission.ACCESS_FINE_LOCATION'] });
+    const [isMapVisible, setIsMapVisible] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const [searchParam, setSearchParam] = React.useState<Filters>({
         searchTerm: '',
@@ -27,7 +32,7 @@ export const RinkListScreen = ({ }) => {
     }
 
     const handleOnMapPressed = () => {
-
+        setIsMapVisible(!isMapVisible);
     }
 
     if (loading) {
@@ -41,26 +46,30 @@ export const RinkListScreen = ({ }) => {
     }
 
     return <View style={styles.container}>
-        <View style={styles.searchBar}>
-            <SkyListSearch onSearchPropChanged={setSearchParam} onMapSearchPressed={handleOnMapPressed} searchProp={searchParam} />
-        </View>
-        <View style={styles.list}>
-            <SkyList rinks={rinks} onRinkPress={handleOnRinkPressed} />
-        </View>
+        <Button icon={<Icon name='map' />} onPress={handleOnMapPressed} />
+        <SkyListSearch onSearchPropChanged={setSearchParam} onMapSearchPressed={handleOnMapPressed} searchProp={searchParam} />
+        {isMapVisible && <MapRinkView rinks={rinks} onRinkPress={handleOnRinkPressed} />}
+        {!isMapVisible && <SkyList rinks={rinks} onRinkPress={handleOnRinkPressed} />}
     </View>
 };
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         display: 'flex',
+        height: '100%',
         justifyContent: 'flex-start',
         flexDirection: 'column',
         minHeight: 75,
         gap: 10,
     },
-    searchBar: {
+    searchBarContainer: {
+        backgroundColor: 'transparent',
+        borderBottomColor: 'transparent',
+        borderTopColor: 'transparent',
+        flex: 1,
     },
-    list: {
-        padding: 10,
+    list : {
+        flex: 1,
     }
 });

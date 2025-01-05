@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { View, TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle } from "react-native";
 import { CheckBox, SearchBar, Switch } from "@rneui/themed";
 
 import { Icon } from '@rneui/themed';
@@ -13,9 +13,10 @@ interface SkyListSearchProps {
     searchProp: Filters;
     onMapSearchPressed: () => void;
     onSearchPropChanged: (searchProp: Filters) => void;
+     style?: StyleProp<ViewStyle>
 }
 
-const SkyListSearch = ({ searchProp, onSearchPropChanged }: SkyListSearchProps) => {
+const SkyListSearch = ({ searchProp, onSearchPropChanged, style }: SkyListSearchProps) => {
     const colors = useColors();
 
     const handleSearchTermChanged = (search: string) => {
@@ -27,7 +28,7 @@ const SkyListSearch = ({ searchProp, onSearchPropChanged }: SkyListSearchProps) 
     }
 
     return (
-        <View style={{ ...styles.container }}>
+        <View style={[style, styles.container]}>
             <View style={styles.row}>
                 <SearchBar
                     platform="ios"
