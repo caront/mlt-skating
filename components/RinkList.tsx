@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl } from 'react-native';
 import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
 import { useColors } from '../colors';
 
@@ -7,9 +7,11 @@ interface SkiListProps {
     rinks: RinkWithDistrictAndCondition[];
     onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
     style?: StyleProp<ViewStyle>
+    onRinkListRefresh: () => void;
+    isRefreshing: boolean;
 }
 
-const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style }) => {
+const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style, onRinkListRefresh, isRefreshing }) => {
     const colors = useColors();
     return (
         <FlatList
@@ -17,8 +19,15 @@ const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style })
             style={[style, styles.container]}
             ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
             keyExtractor={(item, index) => `${item.name}-${index}`}
+            refreshControl={
+                <RefreshControl
+                    refreshing={isRefreshing}
+                    onRefresh={onRinkListRefresh}
+                    colors={['grey']}
+                    progressBackgroundColor={'black'}
+                />
+            }
             renderItem={({ item: rink }) => (
-
                 <TouchableOpacity onPress={() => onRinkPress(rink)} style={styles.card}>
                     <View style={[styles.circle, { backgroundColor: rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed }]} />
                     <View style={styles.column}>

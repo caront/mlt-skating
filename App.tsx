@@ -39,34 +39,34 @@ function App(): React.JSX.Element {
 
   return (
     <ThemeProvider theme={theme}>
-      <StrictMode>
-        <SafeAreaProvider>
-          <SafeAreaView style={[styles.safeArea]}>
-            <StatusBar
-              barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-              backgroundColor={colors.neutral.charcoal}
-            />
-            <View style={styles.container}>
-              <NavigationContainer>
-                <Stack.Navigator>
-                  <Stack.Screen
-                    name="RinkList"
-                    component={RinkListScreen}
-                    options={{ headerShown: false, title: 'Rinks' }}
-                  />
-                  <Stack.Screen
-                    name="RinkInformation"
-                    component={RinkInformationScreen}
-                    options={({ route }) => ({
-                      title: route.params?.rink?.name,
-                    })}
-                  />
-                </Stack.Navigator>
-              </NavigationContainer>
-            </View>
-          </SafeAreaView>
-        </SafeAreaProvider>
-      </StrictMode>
+
+      <SafeAreaProvider>
+        <SafeAreaView style={[styles.safeArea]}>
+          <StatusBar
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+            backgroundColor={colors.neutral.charcoal}
+          />
+          <View style={styles.container}>
+            <NavigationContainer>
+              <Stack.Navigator>
+                <Stack.Screen
+                  name="RinkList"
+                  component={RinkListScreen}
+                  options={{ headerShown: false, title: 'Rinks' }}
+                />
+                <Stack.Screen
+                  name="RinkInformation"
+                  component={RinkInformationScreen}
+                  options={({ route }) => ({
+                    title: route.params?.rink?.name,
+                  })}
+                />
+              </Stack.Navigator>
+            </NavigationContainer>
+          </View>
+        </SafeAreaView>
+      </SafeAreaProvider>
+
     </ThemeProvider>
   );
 }

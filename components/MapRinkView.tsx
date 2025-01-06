@@ -19,11 +19,10 @@ const useStyle = () => {
             display: 'flex',
             width: '100%',
             height: '100%',
-            backgroundColor: colors.neutral.steelGray,
         },
         map: {
-            width: '100%',
             flex: 1,
+            width: '100%',
             height: '100%',
         },
     });
@@ -33,6 +32,7 @@ const useStyle = () => {
 
 const MapRinkView: React.FC<MapRinkViewProps> = ({ rinks, onRinkPress, style }) => {
     const styles = useStyle();
+    const colors = useColors();
     return (
         <MapView
             style={[style, styles.map]}
@@ -46,6 +46,7 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ rinks, onRinkPress, style }) 
             {rinks.map((rink, idx) => (
                 <Marker
                     key={idx}
+                    pinColor={rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed}
                     coordinate={rink.coordinates}
                     onPress={() => onRinkPress(rink)}
                 />
