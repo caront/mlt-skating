@@ -16,6 +16,9 @@ import { createTheme, ThemeProvider } from '@rneui/themed';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
 import { useColors } from './colors';
+import GraphqlProvider from './graphql/GraphqlProvider';
+import { DistrictContext, DistrictProvider } from './contexts/DistrictContext';
+import { RinkProvider } from './contexts/RinkContext';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -38,36 +41,42 @@ function App(): React.JSX.Element {
   const colors = useColors();
 
   return (
-    <ThemeProvider theme={theme}>
+    <GraphqlProvider>
+      <ThemeProvider theme={theme}>
 
-      <SafeAreaProvider>
-        <SafeAreaView style={[styles.safeArea]}>
-          <StatusBar
-            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-            backgroundColor={colors.neutral.charcoal}
-          />
-          <View style={styles.container}>
-            <NavigationContainer>
-              <Stack.Navigator>
-                <Stack.Screen
-                  name="RinkList"
-                  component={RinkListScreen}
-                  options={{ headerShown: false, title: 'Rinks' }}
-                />
-                <Stack.Screen
-                  name="RinkInformation"
-                  component={RinkInformationScreen}
-                  options={({ route }) => ({
-                    title: route.params?.rink?.name,
-                  })}
-                />
-              </Stack.Navigator>
-            </NavigationContainer>
-          </View>
-        </SafeAreaView>
-      </SafeAreaProvider>
+        <SafeAreaProvider>
+          <SafeAreaView style={[styles.safeArea]}>
+            <StatusBar
+              barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+              backgroundColor={colors.neutral.charcoal}
+            />
+            <DistrictProvider>
+              <RinkProvider>
+                <View style={styles.container}>
+                  <NavigationContainer>
+                    <Stack.Navigator>
+                      <Stack.Screen
+                        name="RinkList"
+                        component={RinkListScreen}
+                        options={{ headerShown: false, title: 'Rinks' }}
+                      />
+                      <Stack.Screen
+                        name="RinkInformation"
+                        component={RinkInformationScreen}
+                        options={({ route }) => ({
+                          title: route.params?.rink?.name,
+                        })}
+                      />
+                    </Stack.Navigator>
+                  </NavigationContainer>
+                </View>
+              </RinkProvider>
+            </DistrictProvider>
+          </SafeAreaView>
+        </SafeAreaProvider>
 
-    </ThemeProvider>
+      </ThemeProvider>
+    </GraphqlProvider>
   );
 }
 

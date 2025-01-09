@@ -28,9 +28,7 @@ const SkyListSearch = ({ searchProp, onSearchPropChanged, style }: SkyListSearch
     const handleDistrictChanged = (district: string[]) => {
         onSearchPropChanged({ ...searchProp, districts: district });
     }
-    useEffect(() => {
-        console.log('open', open);
-    }, [open]);
+
     return (
         <View>
             <Drawer
@@ -54,6 +52,7 @@ const SkyListSearch = ({ searchProp, onSearchPropChanged, style }: SkyListSearch
                 <SearchBar
                     platform="ios"
                     searchIcon={<Icon name='search' />}
+                    clearButtonMode='never'
                     onClear={() => console.log('clear')}
                     containerStyle={[styles.searchBarContainer]}
                     inputContainerStyle={styles.searchBarInputContainer}
@@ -65,40 +64,6 @@ const SkyListSearch = ({ searchProp, onSearchPropChanged, style }: SkyListSearch
             </View>
 
         </View>
-
-
-        // <View style={[style, styles.container]}>
-        //     <View style={styles.row}>
-        //         <SearchBar
-        //             platform="ios"
-        //             style={styles.searchBar}
-        //             searchIcon={<Icon name="ice-skating" type='material' />}
-        //             clearIcon={<Icon name="close" type='material' />}
-        //             onClear={() => console.log('clear')}
-        //             containerStyle={[styles.searchBarContainer]}
-        //             inputContainerStyle={styles.searchBarInputContainer}
-        //             onChangeText={handleSearchTermChanged}
-        //             placeholder="Search for a rink..."
-        //             placeholderTextColor="#888"
-        //             value={searchProp.searchTerm}
-        //         />
-        //         <Button style={styles.searchParams} icon={<Icon name='map' />} />
-        //     </View>
-        //     <View style={styles.params}>
-        //         <CheckBox
-        //             checked={!!searchProp.open}
-        //             iconType="material"
-        //             title={'Only open rinks'}
-        //             checkedColor={colors.primary.midnightBlue}
-        //             uncheckedIcon='check-box-outline-blank'
-        //             checkedIcon="check-box"
-        //             onPress={() => onSearchPropChanged({ ...searchProp, open: !searchProp.open })}
-        //         />
-        //         <View style={styles.row}>
-        //             <DistrictSelector districts={getAllDistrict()} onSelect={handleDistrictChanged} />
-        //         </View>
-        //     </View>
-        // </View>
     );
 };
 
