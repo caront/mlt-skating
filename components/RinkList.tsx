@@ -18,7 +18,7 @@ const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style, o
             data={rinks}
             style={[style, styles.container]}
             ItemSeparatorComponent={() => <View style={{ height: 10 }} />}
-            keyExtractor={(item, index) => `${item.name}-${index}`}
+            keyExtractor={(item) => item.id}
             refreshControl={
                 <RefreshControl
                     refreshing={isRefreshing}
@@ -32,7 +32,7 @@ const SkiList: FunctionComponent<SkiListProps> = ({ rinks, onRinkPress, style, o
                     <View style={[styles.circle, { backgroundColor: rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed }]} />
                     <View style={styles.column}>
                         <Text style={styles.rinkName}>{rink.name}</Text>
-                        <Text style={styles.condition}>{rink.district}</Text>
+                        <Text style={styles.condition}>{rink.district.name}</Text>
                     </View>
                 </TouchableOpacity>
 

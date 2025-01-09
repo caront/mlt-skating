@@ -47,7 +47,7 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ rinks, onRinkPress, style }) 
                 <Marker
                     key={idx}
                     pinColor={rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed}
-                    coordinate={rink.coordinates}
+                    coordinate={rink}
                     onPress={() => onRinkPress(rink)}
                 />
             ))}

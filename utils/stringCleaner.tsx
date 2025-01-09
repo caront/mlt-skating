@@ -6,5 +6,5 @@ export const StringCleaner = (input: string) => {
 
 //remove all characters between parentheses
 export const RinkNameCleaner = (name: string) => {
-    return StringCleaner(name.rerink(/\(.*?\)/g, ''));
+    return StringCleaner(name.replace(/\(.*?\)/g, ''));
 }

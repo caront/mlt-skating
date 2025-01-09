@@ -1,18 +1,16 @@
-export interface Rink {
+export interface Rink extends Coordinate {
+  id: string;
   name: string;
   description: string;
   type: string;
   rink_name: string;
-  coordinates: {
-    latitude: number;
-    longitude: number;
-  };
+  district: District;
 }
 
 export interface District {
-  district: string;
-  districtAbv: string;
-  coordinates: Coordinate;
+  id: string;
+  name: string;
+  code: string;
 }
 
 export interface DistrictWithRinks extends District, RinkList {}
@@ -24,7 +22,9 @@ export interface Coordinate {
 
 export interface RinkWithDistrict extends Rink, District {}
 
-export interface RinkWithDistrictAndCondition extends RinkWithDistrict, Condition {}
+export interface RinkWithDistrictAndCondition
+  extends RinkWithDistrict,
+    Condition {}
 
 export interface RinkList {
   rinks: Rink[];
@@ -48,10 +48,9 @@ export interface RinkHistory {
   condition: string;
 }
 
-
 export enum ECondition {
-  Excellente = 'Excellente',
-  Good = 'Bonne',
-  Bad = 'Mauvaise',
-  NA = 'N/A',
+  Excellente = "EXCELLENTE",
+  Good = "GOOD",
+  Bad = "BAD",
+  NA = "NA"
 }

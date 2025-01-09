@@ -55,7 +55,7 @@ const Neibordhoods: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = 
     const colors = useColors();
     if (!rink.district) return null;
     return <Chip
-        title={rink.district}
+        title={rink.district.name}
         background={colors.primary.midnightBlue}
         icon={<Icon name='map' size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
@@ -78,7 +78,7 @@ const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
             <Neibordhoods rink={rink} />
         </View>
         <View style={[styles.row]}>
-            <MapsViewImage label={rink.name} lat={rink.coordinates.latitude} lng={rink.coordinates.longitude}/>
+            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude}/>
         </View>
     </View>
 }
@@ -92,10 +92,6 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        // borderRadius: 20,
-        // borderWidth: 1,
-        // borderBlockColor: 'black',
-        // padding: 10
     },
     property: {
         fontWeight: 'bold'
