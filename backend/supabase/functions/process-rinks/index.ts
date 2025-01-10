@@ -245,60 +245,25 @@ async function processRinks(data: any) {
 
   await Promise.all(rinks.map(processRink));
 }
-// export default async (): Promise<Response> => {
-//   try {
-//     // console.log("Fetching data from Montreal Open Data API...");
-//     // const data = await fetchXMLData(DATA_URL);
 
-//     // console.log("Processing districts...");
-//     // await processDistricts(data);
-
-//     // console.log("Processing rinks...");
-//     // await processRinks(data);
-
-//     console.log("Data processing completed.");
-//     return new Response("Data processing completed successfully.", {
-//       status: 200,
-//     });
-//   } catch (error) {
-//     console.error("Error processing data:", error);
-//     return new Response(`Error processing data: ${(error as Error).message}`, {
-//       status: 500,
-//     });
-//   }
-// };
 async function main() {
   console.log("Fetching data from Montreal Open Data API...");
   const data = await fetchXMLData(DATA_URL);
 
   console.log("Processing districts...");
-  await processDistricts( data);
+  await processDistricts(data);
 
   console.log("Processing rinks...");
-  await processRinks( data);
+  await processRinks(data);
 
   console.log("Data processing completed.");
 }
 
 Deno.serve(async (_req) => {
   try {
-    // supabase = createClient(
-    //   Deno.env.get("SUPABASE_URL") ?? "",
-    //   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    //   {
-    //     global: {
-    //       headers: { Authorization: req.headers.get("Authorization")! },
-    //     },
-    //   }
-    // );
-
-    console.log(Deno.env.get("GOOGLE_MAPS_API_KEY"));
-
     await main();
 
-    const data = { env: Deno.env.toObject() };
-
-    return new Response(JSON.stringify({ data }), {
+    return new Response(JSON.stringify({}), {
       headers: { "Content-Type": "application/json" },
       status: 200,
     });

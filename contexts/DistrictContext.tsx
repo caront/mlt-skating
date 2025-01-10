@@ -7,12 +7,14 @@ export type DistrictContextType = {
     districts: District[];
     loading: boolean;
     error: Error | ApolloError | undefined;
+    getDistrict: (id: string) => District | undefined;
 };
 
 const defaultDistritContext: DistrictContextType = {
     districts: [],
     loading: true,
     error: undefined,
+    getDistrict: () => undefined
 };
 
 const buildDistricts = (districts: any) => {
@@ -41,10 +43,15 @@ export const DistrictProvider: React.FC<React.PropsWithChildren<{}>> = ({ childr
 
     const districts = buildDistricts(data);
 
+    const getDistrict = (id: string) => {
+        return districts?.find((district: District) => district.id === id);
+    }
+
     return <DistrictContext.Provider value={{
         districts: districts || [],
         loading,
-        error
+        error,
+        getDistrict
     }}>
         {children}
     </DistrictContext.Provider>

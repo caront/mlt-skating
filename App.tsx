@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -6,54 +6,81 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RinkListScreen } from './screens/RinkListScreen';
 import RinkInformationScreen from './screens/RinkInformationScreen';
 import { RootStackParamList } from './screens/types';
-import { createTheme, ThemeProvider } from '@rneui/themed';
+import { createTheme, ThemeProvider, useTheme } from '@rneui/themed';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import LinearGradient from 'react-native-linear-gradient';
 import { useColors } from './colors';
 import GraphqlProvider from './graphql/GraphqlProvider';
-import { DistrictContext, DistrictProvider } from './contexts/DistrictContext';
+import { DistrictProvider } from './contexts/DistrictContext';
 import { RinkProvider } from './contexts/RinkContext';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const theme = createTheme({
-  lightColors: {
-    primary: 'red',
-  },
-  darkColors: {
-    primary: 'blue',
-  },
-  components: {
-    Button: {
-      raised: true,
+
+const buildTheme = () => {
+  const colors = useColors();
+
+  return createTheme({
+    lightColors: {
+      primary: colors.primary.midnightBlue,
+      secondary: colors.primary.iceBlue,
+      background: colors.primary.snowWhite,
     },
-  },
-});
+    darkColors: {
+      primary: colors.primary.snowWhite,
+      secondary: colors.primary.iceBlue,
+      background: colors.primary.midnightBlue,
+    }
+  })
+}
+
+
+const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+  const { theme } = useTheme();
+
+  return (
+    <NavigationContainer
+      theme={{
+        colors: {
+          primary: theme.colors.primary,
+          background: theme.colors.background,
+          card: theme.colors.white,
+          text: theme.colors.black,
+          border: '',
+          notification: ''
+        },
+        fonts: {
+          regular: { fontFamily: 'System', fontWeight: 'normal' },
+          bold: { fontFamily: 'System', fontWeight: 'normal' },
+          medium: { fontFamily: 'System', fontWeight: 'normal' },
+          heavy: { fontFamily: 'System', fontWeight: 'normal' },
+        },
+
+        dark: theme.mode === 'dark',
+      }}
+    >
+      {children}
+    </NavigationContainer>
+  );
+};
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const colors = useColors();
-
+  const theme = buildTheme();
   return (
     <GraphqlProvider>
       <ThemeProvider theme={theme}>
-
         <SafeAreaProvider>
           <SafeAreaView style={[styles.safeArea]}>
-            <StatusBar
-              barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-              backgroundColor={colors.neutral.charcoal}
-            />
             <DistrictProvider>
               <RinkProvider>
                 <View style={styles.container}>
-                  <NavigationContainer>
+                  <Navigation>
                     <Stack.Navigator>
                       <Stack.Screen
                         name="RinkList"
@@ -68,13 +95,12 @@ function App(): React.JSX.Element {
                         })}
                       />
                     </Stack.Navigator>
-                  </NavigationContainer>
+                  </Navigation>
                 </View>
               </RinkProvider>
             </DistrictProvider>
           </SafeAreaView>
         </SafeAreaProvider>
-
       </ThemeProvider>
     </GraphqlProvider>
   );

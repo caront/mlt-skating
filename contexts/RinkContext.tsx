@@ -1,18 +1,28 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useReducer, useState } from "react";
 import { ApolloError, useLazyQuery } from "@apollo/client";
 import { Rink, RinkWithDistrictAndCondition } from "../models/Rink";
 import { GET_RINKS } from "../graphql/RinkQueries";
+import { Action, RinkSearchOption, defaultSearchOption, rinkReducer } from "../reducers/RinkReducer";
+import { StringCleaner } from "../utils/stringCleaner";
 
 export type RinkContextType = {
     rinks: RinkWithDistrictAndCondition[];
     loading: boolean;
     error: Error | ApolloError | undefined;
+    options: RinkSearchOption;
+    dispatch: React.Dispatch<Action>;
+    refresh: () => void;
+    resetOptions: () => void;
 };
 
 const defaultDistritContext: RinkContextType = {
     rinks: [],
     loading: true,
     error: undefined,
+    dispatch: () => { },
+    options: defaultSearchOption,
+    refresh: () => { },
+    resetOptions: () => { }
 };
 
 export const RinkContext = createContext<RinkContextType>(defaultDistritContext);
@@ -40,10 +50,16 @@ const buildRinks = (rinks: any) => {
 };
 
 export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+    const [sourceRinks, setSourceRinks] = useState<RinkWithDistrictAndCondition[]>([]);
     const [rinks, setRinks] = useState<RinkWithDistrictAndCondition[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<ApolloError | undefined>(undefined);
     const [loadRinks] = useLazyQuery(GET_RINKS);
+
+
+    const [options, dispatch] = useReducer(
+        rinkReducer,
+        defaultSearchOption)
 
     const fetchAllRinks = async () => {
         let allRinks: any[] = [];
@@ -74,7 +90,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
             after = pageInfo.endCursor;
         }
 
-        setRinks(buildRinks(allRinks));
+        setSourceRinks(buildRinks(allRinks));
         setLoading(false);
     };
 
@@ -82,8 +98,60 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
         fetchAllRinks();
     }, []);
 
+    React.useEffect(() => {
+        let filteredRinks = sourceRinks;
+        if (options.onlyOpen) {
+            filteredRinks = filteredRinks.filter((rink) => rink.open);
+        }
+        if (options.name !== '') {
+            filteredRinks = filteredRinks.filter((rink) =>
+                StringCleaner(rink.name).includes(StringCleaner(options.name as string))
+            );
+        }
+        if (options.districts !== undefined && options.districts.length > 0) {
+            filteredRinks = filteredRinks.filter((rink) => {
+                if (options.districts === undefined)
+                    return true;
+                return options.districts.includes(rink.district.id);
+            }
+
+            );
+        }
+        if (options.conditions !== undefined && options.conditions.length > 0) {
+            filteredRinks = filteredRinks.filter((rink) => {
+                if (options.conditions === undefined)
+                    return true;
+                return options.conditions.includes(rink.condition);
+            });
+        }
+        setRinks(filteredRinks);
+    }, [options]);
+
+
+    const refresh = () => {
+        fetchAllRinks();
+    }
+
+
+    const resetOptions = () => {
+        dispatch({ type: "RESET_OPTIONS" });
+    }
+
+    React.useEffect(() => {
+        if (rinks.length === 0)
+            setRinks(sourceRinks);
+    }, [sourceRinks]);
+
     return (
-        <RinkContext.Provider value={{ rinks, loading, error }}>
+        <RinkContext.Provider value={{
+            rinks,
+            options,
+            dispatch,
+            loading,
+            error,
+            refresh,
+            resetOptions
+        }}>
             {children}
         </RinkContext.Provider>
     );
