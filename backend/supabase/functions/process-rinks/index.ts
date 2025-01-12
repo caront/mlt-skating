@@ -26,6 +26,8 @@ async function fetchXMLData(url: string): Promise<any> {
   return parse(text);
 }
 
+const UPDATE_RINK_GPS = false;
+
 // Function to fetch GPS coordinates using Google Maps API
 async function getCoordinates(
   address: string
@@ -175,22 +177,43 @@ async function processRink(rink: Rink) {
     );
   }
 
+  const district = await supabase
+    .from("districts")
+    .select("*")
+    .eq("code", rinkData.code)
+    .single();
+
+  if (!district.data) {
+    console.error(`District not found for rink: ${rinkData.name}`);
+    return;
+  }
+
   if (existingRinkData) {
     console.log(`Rink already exists: ${rinkData.name}`);
     rinkId = existingRinkData.id;
-  } else {
-    const district = await supabase
-      .from("districts")
-      .select("id")
-      .eq("code", rinkData.code)
-      .single();
 
-    if (!district.data) {
-      console.error(`District not found for rink: ${rinkData.name}`);
-      return;
+    if (UPDATE_RINK_GPS) {
+      const gps = await getCoordinates(
+        `patinoire ${rinkData.name}, ${district?.data?.name}, Montreal, QC`
+      );
+      const { error: errorUpdateRink } = await supabase
+        .from("rinks")
+        .update({
+          latitude: gps?.lat,
+          longitude: gps?.lng,
+        })
+        .eq("id", rinkId);
+      if (errorUpdateRink) {
+        console.error(
+          `Error updating rink ${rinkData.name}:`,
+          errorUpdateRink.message
+        );
+      }
     }
-
-    const gps = await getCoordinates(`${rinkData.name}, Montreal, QC`);
+  } else {
+    const gps = await getCoordinates(
+      `${rinkData.rink_name}, ${district?.data?.name}, Montreal, QC`
+    );
     const { data: newRinkData, error: errorRinkInsert } = await supabase
       .from("rinks")
       .insert({

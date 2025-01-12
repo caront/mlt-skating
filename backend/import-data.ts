@@ -176,24 +176,34 @@ async function processRink(rink: Rink) {
     );
   }
 
+  const district = await supabase
+    .from("districts")
+    .select("*")
+    .eq("code", rinkData.code)
+    .single();
+
+  if (!district.data) {
+    console.error(`District not found for rink: ${rinkData.name}`);
+    return;
+  }
+
   if (existingRinkData) {
     console.log(`Rink already exists: ${rinkData.name}`);
     rinkId = existingRinkData.id;
 
     if (UPDATE_GPS) {
-      const gps = await getCoordinates(`${rinkData.name}, Montreal, QC`);
-      const { error: errorGpsUpdate } = await supabase
+      const gps = await getCoordinates(`patinoire ${rinkData.name}, ${district?.data?.name}, Montreal, QC`);
+      const { error: errorUpdateRink } = await supabase
         .from("rinks")
         .update({
           latitude: gps?.lat,
           longitude: gps?.lng,
         })
-        .eq("id", rinkId)
-        .select();
-      if (errorGpsUpdate) {
+        .eq("id", rinkId);
+      if (errorUpdateRink) {
         console.error(
-          `Error updating GPS coordinates for rink ${rinkData.name}:`,
-          errorGpsUpdate.message
+          `Error updating rink ${rinkData.name}:`,
+          errorUpdateRink.message
         );
       }
     }
