@@ -68,10 +68,23 @@ const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   );
 };
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const useStyle = () => {
   const colors = useColors();
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.primary.snowWhite,
+    },
+    safeArea: {
+      flex: 1,
+      backgroundColor: colors.primary.snowWhite,
+    },
+  });
+}
+
+function App(): React.JSX.Element {
   const theme = buildTheme();
+  const styles = useStyle();
   return (
     <GraphqlProvider>
       <ThemeProvider theme={theme}>
@@ -106,13 +119,5 @@ function App(): React.JSX.Element {
   );
 }
 
-const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
-  },
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

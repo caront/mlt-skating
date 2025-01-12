@@ -25,7 +25,7 @@ const useStyle = () => {
     return StyleSheet.create({
         container: {
             color: colors.neutral.charcoal,
-            
+
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
@@ -33,8 +33,25 @@ const useStyle = () => {
             justifyContent: 'space-between',
             backgroundColor: colors.primary.snowWhite,
         },
+        card: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            alignContent: 'center',
+            // justifyContent: 'flex-start',
+            width: '100%',
+            backgroundColor: '#fff',
+            borderRadius: 8,
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 2 },
+            shadowRadius: 8,
+            elevation: 1,
+            padding: 10,
+        },
         searchBarContainer: {
-            width: '70%'
+            width: '80%',
+            height: 40,
+            borderRadius: 30,
         },
         searchBarInputContainer: {
             backgroundColor: colors.primary.snowWhite,
@@ -56,7 +73,7 @@ const useStyle = () => {
             padding: 10,
             borderRadius: 10,
         },
-        row : {
+        row: {
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
@@ -86,7 +103,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
     return (
         <View style={style}>
 
-            <View style={[styles.container]}>
+            <View style={[styles.container, styles.card]}>
 
                 <SearchBar
                     platform="ios"

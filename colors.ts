@@ -30,7 +30,7 @@ const colors = {
   darkTheme: {
     primary: {
       iceBlue: '#7FB8DA',
-      snowWhite: '#E1E6E9',
+      snowWhite : '#E1E6E9',
       midnightBlue: '#002A4E',
     },
     accent: {
