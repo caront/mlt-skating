@@ -3,6 +3,7 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyl
 import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
 import { useColors } from '../colors';
 import { useRinks } from '../hooks/UseRinks';
+import { Icon } from '@rneui/themed';
 
 interface RinkListProps {
     onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
@@ -21,7 +22,7 @@ const useStyles = () => {
             flexDirection: 'row',
             alignItems: 'center',
             alignContent: 'center',
-            justifyContent: 'flex-start',
+            justifyContent: 'space-between',
             width: '100%',
             backgroundColor: '#fff',
             borderRadius: 8,
@@ -30,6 +31,22 @@ const useStyles = () => {
             shadowRadius: 8,
             elevation: 1,
             padding: 10,
+        },
+        left: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'flex-start',
+        },
+        right: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'flex-end',
+            marginRight: 10,
+            color: colors.grey1,
         },
         circle: {
             width: 20,
@@ -43,17 +60,17 @@ const useStyles = () => {
         rinkName: {
             fontSize: 16,
             fontWeight: 'bold',
-            color: colors.neutral.charcoal,
+            color: colors.grey5,
         },
         rinkNumber:
         {
             fontSize: 20,
             fontWeight: 'bold',
-            color: colors.neutral.charcoal,
+            color: colors.grey5,
         },
         district: {
             fontSize: 14,
-            color: colors.neutral.charcoal,
+            color: colors.grey5,
         }
     });
 }
@@ -63,6 +80,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const { rinks, refresh } = useRinks();
     const colors = useColors();
     const styles = useStyles();
+
     const onRinkListRefresh = () => {
         if (isRefreshing) return;
         setIsRefreshing(true);
@@ -81,20 +99,25 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                 data={rinks}
                 ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
                 keyExtractor={(item) => item.id}
-                // refreshControl={
-                //     <RefreshControl
-                //         refreshing={isRefreshing}
-                //         onRefresh={onRinkListRefresh}
-                //         colors={['grey']}
-                //         progressBackgroundColor={'black'}
-                //     />
-                // }
+                refreshControl={
+                    <RefreshControl
+                        refreshing={isRefreshing}
+                        onRefresh={onRinkListRefresh}
+                        colors={['grey']}
+                        progressBackgroundColor={'black'}
+                    />
+                }
                 renderItem={({ item: rink }) => (
                     <TouchableOpacity onPress={() => onRinkPress(rink)} style={styles.card}>
-                        <View style={[styles.circle, { backgroundColor: rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed }]} />
-                        <View style={styles.column}>
-                            <Text style={styles.rinkName}>{rink.name}</Text>
-                            <Text style={styles.district}>{rink.district.name}</Text>
+                        <View style={styles.left}>
+                            <View style={[styles.circle, { backgroundColor: rink.open ? colors.success : colors.error }]} />
+                            <View style={styles.column}>
+                                <Text style={styles.rinkName}>{rink.name}</Text>
+                                <Text style={styles.district}>{rink.district.name}</Text>
+                            </View>
+                        </View>
+                        <View style={styles.right}>
+                            {/* <Icon name='heart' type="ant-design" /> */}
                         </View>
                     </TouchableOpacity>
 

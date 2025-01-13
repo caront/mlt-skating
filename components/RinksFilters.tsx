@@ -24,24 +24,21 @@ const useStyle = () => {
 
     return StyleSheet.create({
         container: {
-            color: colors.neutral.charcoal,
-
+            color: colors.grey5,
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             alignContent: 'center',
             justifyContent: 'space-between',
-            backgroundColor: colors.primary.snowWhite,
+            backgroundColor: 'transparent',
+
         },
         card: {
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
             alignContent: 'center',
-            // justifyContent: 'flex-start',
             width: '100%',
-            backgroundColor: '#fff',
-            borderRadius: 8,
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 2 },
             shadowRadius: 8,
@@ -49,27 +46,30 @@ const useStyle = () => {
             padding: 10,
         },
         searchBarContainer: {
+            backgroundColor: colors.white,
             width: '80%',
-            height: 40,
+            height: 55,
             borderRadius: 30,
+            paddingHorizontal: 10,
         },
         searchBarInputContainer: {
-            backgroundColor: colors.primary.snowWhite,
+            backgroundColor: colors.white,
         },
         showOptionsButton: {
             borderRadius: 30,
-            backgroundColor: colors.primary.snowWhite,
+            width: 55,
+            height: 55,
+            backgroundColor: colors.white,
         },
         drawerContent: {
             flex: 1,
             padding: 20,
             backgroundColor: '#fff',
-            // paddingHorizontal: 10,
             gap: 20,
         },
         resetButton: {
-            backgroundColor: colors.primary.snowWhite,
-            color: colors.neutral.charcoal,
+            backgroundColor: colors.primary,
+            color: colors.grey5,
             padding: 10,
             borderRadius: 10,
         },
@@ -121,7 +121,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
                     icon={{
                         name: 'manage-search',
                         type: 'material',
-                        color: colors.primary.midnightBlue,
+                        color: colors.grey5,
                     }}
                     titleStyle={{ fontWeight: 'bold' }} onPress={() => bottomDrawerRef.current?.open()}>
                 </Button>

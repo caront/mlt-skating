@@ -17,7 +17,7 @@ const Property: React.FunctionComponent<{ name: string, valueTrue: string, value
     return (
         <View style={styles.property}>
             <Text>{name}</Text>
-            <Text style={{ color:  colors.primary.midnightBlue }}>{value ? valueTrue : valueFalse}</Text>
+            <Text style={{ color:  colors.primary }}>{value ? valueTrue : valueFalse}</Text>
         </View>
     );
 }
@@ -26,8 +26,8 @@ const RinkHistoryItemRender = ({ historyItem }: { historyItem: RinkHistory }) =>
     const colors = useColors();
     return (
         <View style={[styles.card, {
-            backgroundColor: colors.primary.snowWhite,
-            borderColor: historyItem.open ? colors.accent.emeraldGreen : colors.accent.skatingRed,
+            backgroundColor: colors.primary,
+            borderColor: historyItem.open ? colors.success : colors.error,
             borderBottomLeftRadius: 4, borderBottomRightRadius: 4,
             borderWidth: 0, borderBottomWidth: 5
         }]}>

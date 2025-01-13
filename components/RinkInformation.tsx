@@ -19,7 +19,7 @@ const Open: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink 
     const colors = useColors();
     return <Chip
         title={rink.open ? 'Open' : 'Closed'}
-        background={rink.open ? colors.accent.emeraldGreen : colors.accent.skatingRed}
+        background={rink.open ? colors.success : colors.error}
         icon={<Icon name={rink.open ? 'ice-skating' : 'close'} size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
 }
@@ -28,7 +28,7 @@ const Cleared: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ ri
     const colors = useColors();
     return <Chip
         title={rink.cleared ? 'Cleared' : 'Not Cleared'}
-        background={rink.cleared ? colors.primary.midnightBlue : colors.primary.iceBlue}
+        background={rink.cleared ? colors.primary : colors.secondary}
         icon={<Icon name={rink.cleared ? 'cleaning-services' : 'close'} size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
 }
@@ -37,7 +37,7 @@ const Watered: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ ri
     const colors = useColors();
     return <Chip
         title={rink.watered ? 'Watered' : 'Not Watered'}
-        background={rink.watered ? colors.primary.midnightBlue : colors.primary.iceBlue}
+        background={rink.watered ? colors.primary : colors.secondary}
         icon={<Icon name={rink.watered ? 'water' : 'close'} size={15} color='white' type={rink.watered ? 'entypo' : 'material'} />}
         containerStyle={{ marginVertical: 5 }}/>
 }
@@ -46,7 +46,7 @@ const Resurfaced: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({
     const colors = useColors();
     return <Chip
         title={rink.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
-        background={rink.resurfaced ? colors.primary.midnightBlue : colors.primary.iceBlue}
+        background={rink.resurfaced ? colors.primary : colors.secondary}
         icon={<Icon name={rink.resurfaced ? 'check' : 'close'} size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
 }
@@ -56,7 +56,7 @@ const Neibordhoods: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = 
     if (!rink.district) return null;
     return <Chip
         title={rink.district.name}
-        background={colors.primary.midnightBlue}
+        background={colors.primary}
         icon={<Icon name='map' size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}/>
 }

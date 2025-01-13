@@ -38,14 +38,14 @@ export const RinkListScreen = ({ }) => {
     }
 
     return <View style={styles.container}>
-        <SkyListSearch style={styles.searchBarContainer} />
+        <SkyListSearch style={isMapVisible ? styles.searchBarContainerMapView : styles.searchBarContainer} />
         {isMapVisible && <MapRinkView onRinkPress={handleOnRinkPressed} />}
         {!isMapVisible && <RinkList style={styles.list} onRinkPress={handleOnRinkPressed} />}
         <View style={styles.bottomRight}>
             <Icon
-                color={colors.primary.midnightBlue}
+                color={colors.grey5}
                 containerStyle={{
-                    backgroundColor: colors.primary.snowWhite,
+                    backgroundColor: colors.primary,
                     borderRadius: 50,
                 }}
                 disabledStyle={{}}
@@ -57,14 +57,14 @@ export const RinkListScreen = ({ }) => {
         </View>
         <View style={styles.bottomLeft}>
             <Icon
-                color={colors.primary.midnightBlue}
+                color={colors.grey5}
                 containerStyle={{
-                    backgroundColor: colors.primary.snowWhite,
+                    backgroundColor: colors.primary,
                     borderRadius: 50,
                 }}
                 disabledStyle={{}}
                 name="info-outline"
-                onPress={() => {}}
+                onPress={() => { }}
                 raised
                 type="material"
             />
@@ -75,6 +75,7 @@ export const RinkListScreen = ({ }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'transparent',
         display: 'flex',
         height: '100%',
         justifyContent: 'flex-start',
@@ -84,8 +85,13 @@ const styles = StyleSheet.create({
     },
     searchBarContainer: {
         backgroundColor: 'transparent',
-        borderBottomColor: 'transparent',
-        borderTopColor: 'transparent',
+        borderBottomLeftRadius: 8,
+        borderBottomRightRadius: 8,
+    },
+    searchBarContainerMapView: {
+        position: 'absolute',
+        zIndex: 2,
+        backgroundColor: 'transparent',
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
     },

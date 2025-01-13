@@ -17,39 +17,30 @@ import { useColors } from './colors';
 import GraphqlProvider from './graphql/GraphqlProvider';
 import { DistrictProvider } from './contexts/DistrictContext';
 import { RinkProvider } from './contexts/RinkContext';
+import {lightColors, darkColors} from './theme';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 
 const buildTheme = () => {
-  const colors = useColors();
-
   return createTheme({
-    lightColors: {
-      primary: colors.primary.midnightBlue,
-      secondary: colors.primary.iceBlue,
-      background: colors.primary.snowWhite,
-    },
-    darkColors: {
-      primary: colors.primary.snowWhite,
-      secondary: colors.primary.iceBlue,
-      background: colors.primary.midnightBlue,
-    }
+    lightColors,
+    darkColors,
   })
 }
 
 
 const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const { theme } = useTheme();
-
+  const colors = useColors();
   return (
     <NavigationContainer
       theme={{
         colors: {
-          primary: theme.colors.primary,
-          background: theme.colors.background,
-          card: theme.colors.white,
-          text: theme.colors.black,
+          primary: colors.primary,
+          background: colors.background,
+          card: colors.white,
+          text: colors.grey5,
           border: '',
           notification: ''
         },
@@ -71,13 +62,9 @@ const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
 const useStyle = () => {
   const colors = useColors();
   return StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: colors.primary.snowWhite,
-    },
     safeArea: {
       flex: 1,
-      backgroundColor: colors.primary.snowWhite,
+      backgroundColor: colors.background,
     },
   });
 }
@@ -92,7 +79,6 @@ function App(): React.JSX.Element {
           <SafeAreaView style={[styles.safeArea]}>
             <DistrictProvider>
               <RinkProvider>
-                <View style={styles.container}>
                   <Navigation>
                     <Stack.Navigator>
                       <Stack.Screen
@@ -109,7 +95,6 @@ function App(): React.JSX.Element {
                       />
                     </Stack.Navigator>
                   </Navigation>
-                </View>
               </RinkProvider>
             </DistrictProvider>
           </SafeAreaView>

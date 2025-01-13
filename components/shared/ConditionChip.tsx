@@ -21,7 +21,7 @@ const ConditionChip: React.FC<ConditionChipProps> = ({ condition }) => {
 
     return <Chip
         title={condition}
-        background={condition === ECondition.Excellente ? colors.accent.emeraldGreen : condition === ECondition.Good ? colors.accent.goldenYellow : colors.accent.skatingRed}
+        background={condition === ECondition.Excellente ? colors.success : condition === ECondition.Good ? colors.warning : colors.error}
         icon={<Icon name={condition === ECondition.Excellente ? 'check' : condition === ECondition.Good ? 'check' : 'close'} size={15} color='white' type="material" />}
         containerStyle={{ marginVertical: 5 }}
     />;

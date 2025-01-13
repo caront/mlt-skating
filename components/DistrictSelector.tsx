@@ -64,13 +64,13 @@ const useStyles = () => {
             margin: 10,
         },
         buttonOpen: {
-            backgroundColor: colors.primary.midnightBlue,
+            backgroundColor: colors.primary,
         },
         buttonClose: {
-            backgroundColor: colors.primary.midnightBlue,
+            backgroundColor: colors.primary,
         },
         textStyle: {
-            color: colors.primary.snowWhite,
+            color: colors.primary,
             fontWeight: 'bold',
             textAlign: 'center',
         },
@@ -93,8 +93,8 @@ const useStyles = () => {
             paddingHorizontal: 12,
             borderRadius: 20,
             gap: 5,
-            color: colors.neutral.charcoal,
-            backgroundColor: colors.primary.snowWhite
+            color: colors.grey1,
+            backgroundColor: colors.primary
         }
     });
     return styles;
@@ -134,7 +134,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                             <Icon
                                 name="close"
                                 type="material"
-                                color={colors.primary.midnightBlue}
+                                color={colors.primary}
                                 onPress={() => setSelectedDistrict(selectedDistrict.filter((selected) => selected !== district))}
                             />
                         </View>
@@ -142,7 +142,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                 </View>}
             {!hasDistricts &&
                 <View>
-                    <Text style={{ color: colors.neutral.charcoal }}>Select Districts</Text>
+                    <Text style={{ color: colors.grey1 }}>Select Districts</Text>
                 </View>}
             <Modal
                 style={styles.modalView}
@@ -166,7 +166,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                                     key={index}
                                     title={district.name}
                                     iconType="material"
-                                    checkedColor={colors.primary.midnightBlue}
+                                    checkedColor={colors.primary}
                                     uncheckedIcon='check-box-outline-blank'
                                     checkedIcon="check-box"
                                     checked={selectedDistrict.includes(district.id)}
