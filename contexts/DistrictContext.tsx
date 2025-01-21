@@ -7,7 +7,7 @@ export type DistrictContextType = {
     districts: District[];
     loading: boolean;
     error: Error | ApolloError | undefined;
-    getDistrict: (id: string) => District | undefined;
+    getDistrict: (id: number) => District | undefined;
 };
 
 const defaultDistritContext: DistrictContextType = {
@@ -43,7 +43,7 @@ export const DistrictProvider: React.FC<React.PropsWithChildren<{}>> = ({ childr
 
     const districts = buildDistricts(data);
 
-    const getDistrict = (id: string) => {
+    const getDistrict = (id: number) => {
         return districts?.find((district: District) => district.id === id);
     }
 

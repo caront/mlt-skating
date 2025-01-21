@@ -1,5 +1,6 @@
 import { createClient } from "jsr:@supabase/supabase-js@2";
 import { parse } from "https://deno.land/x/xml/mod.ts";
+import DayJs from "npm:dayjs@1.11.13";
 
 // Supabase configuration
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
@@ -9,7 +10,7 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
   Deno.exit(1);
 }
 
-const UPDATE_GPS = true;
+const UPDATE_GPS = false;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -114,7 +115,7 @@ const CONDITIONS = {
 };
 
 interface Rink {
-  arrondissement: { cle: string };
+  arrondissement: { cle: string; nom_arr: string; date_maj: string };
   nom: string;
   description?: string;
   type?: string;
@@ -139,6 +140,8 @@ function splitRinkString(rinkString: string) {
 
 async function processRink(rink: Rink) {
   const { description, name, type } = splitRinkString(rink.nom);
+
+  const lastUpdate = DayJs(rink.arrondissement.date_maj);
 
   const rinkData = {
     code: rink.arrondissement.cle,
@@ -192,7 +195,10 @@ async function processRink(rink: Rink) {
     rinkId = existingRinkData.id;
 
     if (UPDATE_GPS) {
-      const gps = await getCoordinates(`patinoire ${rinkData.name}, ${district?.data?.name}, Montreal, QC`);
+      console.log(`Updating GPS coordinates for rink: ${rinkData.name}`);
+      const gps = await getCoordinates(
+        `patinoire ${rinkData.name}, ${district?.data?.name}, Montreal, QC`
+      );
       const { error: errorUpdateRink } = await supabase
         .from("rinks")
         .update({
@@ -246,6 +252,46 @@ async function processRink(rink: Rink) {
     rinkId = newRinkData[0].id;
     console.log(`Rink inserted: ${rinkData.name}`);
   }
+  const { data: existingConditionData, error: errorExistingConditionData } =
+    await supabase
+      .from("conditions")
+      .select()
+      .eq("rink_id", rinkId)
+      .order("updated_at", {
+        ascending: false,
+      })
+      .limit(1);
+
+  if (errorExistingConditionData) {
+    console.error(
+      `Error fetching existing condition data for rink ${rinkData.name}:`,
+      errorExistingConditionData.message
+    );
+  }
+
+  const hasExistingConditions =
+    existingConditionData !== null && existingConditionData.length > 0;
+
+  const updated_at = hasExistingConditions
+    ? DayJs(existingConditionData[0].updated_at)
+    : null;
+
+  const hasToInsertNewConditions =
+    !hasExistingConditions || !updated_at || lastUpdate.isAfter(updated_at);
+
+  console.log(
+    `Has to insert new conditions for rink ${rinkData.name}: ${hasToInsertNewConditions},\n
+    lastRinkCondition update ${updated_at}, lastUpdate ${lastUpdate}`
+  );
+
+  // console.log("Conditions:", conditions);
+  // console.log("Last update:", lastUpdate);
+
+  if (!hasToInsertNewConditions) {
+    console.log(`Conditions already up to date for rink: ${rinkData.name}`);
+    return;
+  }
+
   const { error: errorConditionInsert } = await supabase
     .from("conditions")
     .insert({
@@ -255,6 +301,7 @@ async function processRink(rink: Rink) {
       watered: conditions.watered,
       resurfaced: conditions.resurfaced,
       condition: conditions.condition,
+      updated_at: lastUpdate,
     })
     .select();
 

@@ -1,109 +1,135 @@
 import React, { FunctionComponent } from "react";
-import { Rink, RinkWithDistrictAndCondition } from "../models/Rink";
+import { Condition, ConditionAndLastUpdate, ConditionLastUpdate, Rink, RinkWithCondition, RinkWithDistrictAndConditionLastUpdate } from "../models/Rink";
 import { StyleSheet, Text, View } from "react-native";
 import ConditionChip from "./shared/ConditionChip";
 import { Row } from "./shared/Flex";
 import DayJs from "dayjs";
-import {useColors } from "../colors";
+import { useColors } from "../colors";
 import Chip from "./shared/Chip";
 import { Icon } from "@rneui/base";
 import FontAnesome from 'react'
 import MapsViewImage from "./shared/MapsViewImage";
-
+import PropertyChip from "./shared/PropertyChip";
+import Circle from "./shared/Circle";
+import { BlurView } from '@react-native-community/blur';
+import { useTheme } from "@react-navigation/native";
+import BlurContainer from "./shared/BlurContainer";
 
 interface RinkInformationProps {
-    rink: RinkWithDistrictAndCondition;
+    rink: RinkWithDistrictAndConditionLastUpdate;
 }
 
-const Open: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
+const useStyles = () => {
+    const colors = useColors();
+    return StyleSheet.create({
+        container: {
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 10,
+        },
+        row: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+        },
+        column: {
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 5,
+        },
+        lastUpdate: {
+            fontSize: 12,
+            color: 'grey',
+        },
+        propertyContainer: {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: 5,
+            color: colors.grey5,
+            padding: 10,
+        }
+    });
+}
+
+const Open: FunctionComponent<{ rink: RinkWithDistrictAndConditionLastUpdate }> = ({ rink }) => {
+    const colors = useColors();
+    const styles = useStyles();
+
+    return <View style={styles.propertyContainer} >
+
+        <View style={[styles.row, { gap: 5, justifyContent: 'flex-start' }]}>
+            <Text style={{ fontSize: 20 }} >{rink.open ? 'Open' : 'Close'}</Text>
+            <Circle color={rink.open ? colors.success : colors.error} size={15} />
+        </View>
+        <Text style={{ fontSize: 12, color: colors.grey4 }}>Since {DayJs(rink.openSince).format('YYYY-MM-DD HH:mm')}</Text>
+    </View>
+}
+
+const Cleared: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const colors = useColors();
     return <Chip
-        title={rink.open ? 'Open' : 'Closed'}
-        background={rink.open ? colors.success : colors.error}
-        icon={<Icon name={rink.open ? 'ice-skating' : 'close'} size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }}/>
+        title={condition.cleared ? 'Cleared' : 'Not Cleared'}
+        subTitle={`last time cleared ${DayJs(condition.lastTimeWatered).format('YYYY-MM-DD HH:mm')}`}
+        background={condition.cleared ? colors.primary : colors.disabled}
+        icon={<Icon name={'cleaning-services'} size={15} color='white' type="material" />}
+        containerStyle={{ marginVertical: 5 }} />
 }
 
-const Cleared: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
+const Watered: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const colors = useColors();
     return <Chip
-        title={rink.cleared ? 'Cleared' : 'Not Cleared'}
-        background={rink.cleared ? colors.primary : colors.secondary}
-        icon={<Icon name={rink.cleared ? 'cleaning-services' : 'close'} size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }}/>
+        title={condition.watered ? 'Watered' : 'Not Watered'}
+        subTitle={`last time watered ${DayJs(condition.lastTimeWatered).format('YYYY-MM-DD HH:mm')}`}
+        background={condition.watered ? colors.primary : colors.disabled}
+        icon={<Icon name={'water-drop'} size={15} color='white' type={'material-community-icons'} />}
+        containerStyle={{ marginVertical: 5 }} />
 }
 
-const Watered: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
+const Resurfaced: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const colors = useColors();
+
     return <Chip
-        title={rink.watered ? 'Watered' : 'Not Watered'}
-        background={rink.watered ? colors.primary : colors.secondary}
-        icon={<Icon name={rink.watered ? 'water' : 'close'} size={15} color='white' type={rink.watered ? 'entypo' : 'material'} />}
-        containerStyle={{ marginVertical: 5 }}/>
+        title={condition.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
+        subTitle={`last time resurfaced ${DayJs(condition.lastTimeResurfaced).format('YYYY-MM-DD HH:mm')}`}
+        background={condition.resurfaced ? colors.primary : colors.disabled}
+        icon={<Icon name={'view-headline'} size={15} color='white' type="material" />}
+        containerStyle={{ marginVertical: 5 }} />
 }
 
-const Resurfaced: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
-    const colors = useColors();
-    return <Chip
-        title={rink.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
-        background={rink.resurfaced ? colors.primary : colors.secondary}
-        icon={<Icon name={rink.resurfaced ? 'check' : 'close'} size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }}/>
-}
-
-const Neibordhoods: FunctionComponent<{ rink: RinkWithDistrictAndCondition }> = ({ rink }) => {
+const Neibordhoods: FunctionComponent<{ rink: RinkWithCondition }> = ({ rink }) => {
     const colors = useColors();
     if (!rink.district) return null;
     return <Chip
         title={rink.district.name}
         background={colors.primary}
         icon={<Icon name='map' size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }}/>
+        containerStyle={{ marginVertical: 5 }} />
 }
 
 
 const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
-    const lastUpdateYesterday = DayJs(rink.lastUpdate).isBefore(DayJs().subtract(1, 'day'));
+    const lastUpdate = DayJs(rink.lastUpdate);
+    const isLastUpdateToday = lastUpdate.isSame(DayJs(), 'day');
+    const styles = useStyles();
 
     return <View style={styles.container}>
-        <View style={styles.row}>
-            <Text style={styles.lastUpdate}>last updated { DayJs(rink.lastUpdate).format(lastUpdateYesterday ? 'YYYY-DD-MM HH:mm' : 'HH:mm')}</Text>
-        </View>
-        <View style={[styles.row, { justifyContent: 'flex-start', flexWrap: 'wrap', gap: 5 }]}>
+       
+        <BlurContainer style={[styles.column, { justifyContent: 'flex-start', gap: 5, padding: 10 }]}>
             <Open rink={rink} />
             <ConditionChip condition={rink.condition} />
-            <Cleared rink={rink} />
-            <Watered rink={rink} />
-            <Resurfaced rink={rink} />
+            <Cleared condition={rink} />
+            <Watered condition={rink} />
+            <Resurfaced condition={rink} />
+        </BlurContainer>
+        <BlurContainer style={[styles.column, { justifyContent: 'flex-start', gap: 5, padding: 10 }]}>
             <Neibordhoods rink={rink} />
-        </View>
-        <View style={[styles.row]}>
-            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude}/>
-        </View>
+            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} />
+        </BlurContainer>
     </View>
 }
 
-const styles = StyleSheet.create({
-    container: {
-        display: 'flex',
-        gap: 10
-    },
-    row: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    property: {
-        fontWeight: 'bold'
-    },
-    propertyValue: {
-
-    },
-    lastUpdate: {
-        color: 'gray',
-        fontSize: 10,
-    }
-
-});
 
 export default RinkInformation;

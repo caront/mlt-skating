@@ -1,22 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle, Pressable } from "react-native";
-import { CheckBox, SearchBar, Switch, Button } from "@rneui/themed";
+import { View, TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle, TextInput } from "react-native";
+import { CheckBox, Switch, Button } from "@rneui/themed";
 import { Drawer } from 'react-native-drawer-layout';
 import { Icon } from '@rneui/themed';
 import { useColors } from '../colors';
 import DistrictSelector from './DistrictSelector';
 import { getAllDistrict } from '../data/rinks';
-
+import { BlurView, VibrancyView } from "@react-native-community/blur";
 import BottomDrawer, {
     BottomDrawerMethods,
 } from 'react-native-animated-bottom-drawer';
 import { useRinks } from '../hooks/UseRinks';
 import { color } from '@rneui/base';
+import SearchBar from './shared/SearchBar';
+import BlurIconButton from './shared/BlurButton';
 
 
 
 interface RinksFiltersProps {
     style?: StyleProp<ViewStyle>
+    isMapVisible: boolean;
 }
 
 const useStyle = () => {
@@ -25,41 +28,14 @@ const useStyle = () => {
     return StyleSheet.create({
         container: {
             color: colors.grey5,
+            marginHorizontal: 10,
             display: 'flex',
+            borderRadius: 40,
+            gap: 10,
             flexDirection: 'row',
             alignItems: 'center',
             alignContent: 'center',
             justifyContent: 'space-between',
-            backgroundColor: 'transparent',
-
-        },
-        card: {
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            alignContent: 'center',
-            width: '100%',
-            shadowColor: '#000',
-            shadowOffset: { width: 0, height: 2 },
-            shadowRadius: 8,
-            elevation: 1,
-            padding: 10,
-        },
-        searchBarContainer: {
-            backgroundColor: colors.white,
-            width: '80%',
-            height: 55,
-            borderRadius: 30,
-            paddingHorizontal: 10,
-        },
-        searchBarInputContainer: {
-            backgroundColor: colors.white,
-        },
-        showOptionsButton: {
-            borderRadius: 30,
-            width: 55,
-            height: 55,
-            backgroundColor: colors.white,
         },
         drawerContent: {
             flex: 1,
@@ -82,7 +58,7 @@ const useStyle = () => {
     });
 }
 
-const RinksFilters = ({ style }: RinksFiltersProps) => {
+const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
     const { dispatch, options, resetOptions } = useRinks();
     const bottomDrawerRef = useRef<BottomDrawerMethods>(null);
     const styles = useStyle();
@@ -92,7 +68,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
         dispatch({ type: 'SEARCH_RINK_NAME', payload: search });
     };
 
-    const handleDistrictChanged = (districts: string[]) => {
+    const handleDistrictChanged = (districts: number[]) => {
         dispatch({ type: 'SEARCH_RINK_DISTRICT', payload: districts });
     }
 
@@ -100,44 +76,45 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
         dispatch({ type: 'SEARCH_RINK_OPEN', payload: value });
     }
 
+    const handleOnlyFavoriteChanged = (value: boolean) => {
+        dispatch({ type: 'SEARCH_FAVORITE', payload: value });
+    }
+
+
     return (
-        <View style={style}>
-
-            <View style={[styles.container, styles.card]}>
-
+        <View style={style} >
+            <View style={[styles.container, { backgroundColor: isMapVisible ? 'transparent' : colors.white }]}>
                 <SearchBar
-                    platform="ios"
-                    searchIcon={<Icon name='ice-skating' type='material' />}
-                    clearButtonMode='never'
-                    onClear={() => console.log('clear')}
-                    containerStyle={[styles.searchBarContainer]}
-                    inputContainerStyle={styles.searchBarInputContainer}
+                    blur={true}
+                    value={options.name}
                     onChangeText={handleSearchTermChanged}
                     placeholder="Search for a rink..."
-                    placeholderTextColor="#888"
-                    value={options.name}
                 />
-                <Button buttonStyle={styles.showOptionsButton}
+                <BlurIconButton
+                    blur={true}
+                    height={55}
+                    width={55}
                     icon={{
                         name: 'manage-search',
                         type: 'material',
                         color: colors.grey5,
                     }}
-                    titleStyle={{ fontWeight: 'bold' }} onPress={() => bottomDrawerRef.current?.open()}>
-                </Button>
+                    onPress={() => bottomDrawerRef.current?.open()} />
             </View>
 
             <BottomDrawer ref={bottomDrawerRef}>
                 <View style={styles.drawerContent}>
-                    {/* <Pressable style={styles.resetButton} onPress={() => resetOptions()}><Text>Reset filters</Text></Pressable> */}
                     <View style={styles.row}>
                         <Text>Only open rinks</Text>
                         <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
                     </View>
+                    <View style={styles.row}>
+                        <Text>Only favorites rinks</Text>
+                        <Switch value={options.onlyFavorite} onValueChange={handleOnlyFavoriteChanged} />
+                    </View>
                     <DistrictSelector onSelect={handleDistrictChanged} />
                 </View>
             </BottomDrawer>
-
 
         </View>
     );

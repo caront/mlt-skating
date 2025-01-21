@@ -1,42 +1,61 @@
 import React from "react";
 import { StyleSheet, Text } from "react-native";
 import { View } from "react-native";
+import Circle from "./Circle";
+import { useColors } from "../../colors";
 
 interface ChipProps {
     title: string;
+    subTitle?: string;
     background?: string;
     icon?: React.ReactElement;
     containerStyle?: object;
 }
 
-const Chip: React.FC<ChipProps> = ({ title, background, icon, containerStyle }) => {
+const useStyles = () => {
+    const colors = useColors();
+
+    return StyleSheet.create({
+        container: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingHorizontal: 10,
+            borderRadius: 20,
+            gap: 5,
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: 0.1,
+            shadowRadius: 8,
+            elevation: 1,
+        },
+        title: {
+            color: colors.grey5,
+            fontSize: 16,
+        },
+        subTitle: {
+            color: colors.grey4,
+            fontSize: 12,
+        }
+    })
+}
+
+const Chip: React.FC<ChipProps> = ({ title, subTitle, background, icon, containerStyle }) => {
+    const styles = useStyles();
+    const hasSubTitle = subTitle !== undefined;
     return (
-        <View style={{ ...styles.container, backgroundColor: background, ...containerStyle }}>
-            {icon}
-            <Text style={styles.title}>{title}</Text>
+        <View style={{ ...styles.container, ...containerStyle }}>
+            <View style={{ backgroundColor: background, padding: 5, borderRadius: 20 }}>
+                {icon}
+            </View>
+            <View style={{ display: 'flex', flexDirection: 'column', paddingHorizontal: 10 }}>
+                <Text style={styles.title}>{title}</Text>
+                {hasSubTitle && <Text style={styles.subTitle}>{subTitle}</Text>}
+            </View>
         </View>
 
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 12,
-        borderRadius: 20,
-        gap: 5,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
-        elevation: 1,
-    },
-    title: {
-        color: 'white',
-        marginLeft: 5,
-    }
-})
 
 export default Chip;

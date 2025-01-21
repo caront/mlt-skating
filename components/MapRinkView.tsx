@@ -1,13 +1,13 @@
 import React from 'react';
-import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
-import MapView, { Marker } from 'react-native-maps';
+import { Rink } from '../models/Rink';
+import MapView, { Circle, Marker } from 'react-native-maps';
 import { useColors } from '../colors';
 import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 import { useRinks } from '../hooks/UseRinks';
 
 interface MapRinkViewProps {
-    onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
+    onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
 }
 

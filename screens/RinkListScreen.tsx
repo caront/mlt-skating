@@ -1,25 +1,29 @@
-import React, { FunctionComponent } from "react";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import React, { FunctionComponent, useCallback, useMemo } from "react";
+import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import SkyList from "../components/RinkList";
 
 import { Button, Icon, SearchBar } from "@rneui/themed";
-import { NavigationProp, useNavigation } from "@react-navigation/native";
+import { NavigationProp, useFocusEffect, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "./types";
-import { Rink, RinkWithDistrictAndCondition } from "../models/Rink";
-import SkyListSearch from "../components/RinksFilters";
+import { Rink, RinkWithCondition } from "../models/Rink";
+import RinksFilters from "../components/RinksFilters";
 import MapRinkView from "../components/MapRinkView";
 import { useRinks } from "../hooks/UseRinks";
 import RinkList from "../components/RinkList";
 import { useColors } from "../colors";
+import RinkCount from "../components/RinkCount";
+import { BlurView } from "@react-native-community/blur";
+import BlurIconButton from "../components/shared/BlurButton";
 
 export const RinkListScreen = ({ }) => {
-    const { rinks: rinksSources, loading, error } = useRinks();
+    const { rinks, refresh, loading, error } = useRinks();
     const [isMapVisible, setIsMapVisible] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
     const colors = useColors();
 
-    const handleOnRinkPressed = (rink: RinkWithDistrictAndCondition) => {
+
+    const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });
     }
 
@@ -27,49 +31,67 @@ export const RinkListScreen = ({ }) => {
         setIsMapVisible(!isMapVisible);
     }
 
-    if (loading) {
-        return <ActivityIndicator style={{ marginVertical: 16 }} />;
+    const BottomButtons = useMemo(() => (
+        <View style={styles.bottomButtonContainer}>
+
+            <BlurIconButton
+                height={55}
+                width={55}
+                blur={true}
+                icon={{
+                    name: 'info-outline',
+                    type: 'material',
+                    color: colors.grey5,
+                }}
+                onPress={() => { }}
+            />
+
+            <BlurIconButton
+                height={55}
+                width={55}
+                blur={true}
+                icon={{
+                    name: isMapVisible ? "format-list-bulleted" : "map",
+                    type: 'material',
+                    color: colors.grey5,
+                }}
+                onPress={handleOnMapPressed}>
+            </BlurIconButton>
+        </View>
+    ), [isMapVisible]);
+
+    if (loading || rinks.length === 0) {
+        return <SafeAreaView style={styles.container}>
+            <ActivityIndicator style={{ marginVertical: 16 }} />
+        </SafeAreaView>
     }
 
     if (error) {
-        return <View>
+        return  <SafeAreaView style={styles.container}>
             <Text>{error.message}</Text>
-        </View>
+        </SafeAreaView>
     }
 
-    return <View style={styles.container}>
-        <SkyListSearch style={isMapVisible ? styles.searchBarContainerMapView : styles.searchBarContainer} />
-        {isMapVisible && <MapRinkView onRinkPress={handleOnRinkPressed} />}
-        {!isMapVisible && <RinkList style={styles.list} onRinkPress={handleOnRinkPressed} />}
-        <View style={styles.bottomRight}>
-            <Icon
-                color={colors.grey5}
-                containerStyle={{
-                    backgroundColor: colors.primary,
-                    borderRadius: 50,
-                }}
-                disabledStyle={{}}
-                name={isMapVisible ? "format-list-bulleted" : "map"}
-                onPress={handleOnMapPressed}
-                raised
-                type="material"
-            />
-        </View>
-        <View style={styles.bottomLeft}>
-            <Icon
-                color={colors.grey5}
-                containerStyle={{
-                    backgroundColor: colors.primary,
-                    borderRadius: 50,
-                }}
-                disabledStyle={{}}
-                name="info-outline"
-                onPress={() => { }}
-                raised
-                type="material"
-            />
-        </View>
-    </View>
+
+
+    if (isMapVisible) {
+        return <>
+            <MapRinkView onRinkPress={handleOnRinkPressed} />
+            <SafeAreaView style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
+                <RinksFilters isMapVisible={true} />
+                {BottomButtons}
+            </SafeAreaView>
+        </>
+    }
+
+    return <>
+        <SafeAreaView style={styles.container}>
+            <RinksFilters isMapVisible={false} />
+            <RinkCount style={styles.list} />
+            <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} />
+            {BottomButtons}
+        </SafeAreaView>
+    </>
 };
 
 const styles = StyleSheet.create({
@@ -77,14 +99,13 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'transparent',
         display: 'flex',
-        height: '100%',
         justifyContent: 'flex-start',
         flexDirection: 'column',
-        minHeight: 75,
         gap: 10,
+        padding: 10,
     },
     searchBarContainer: {
-        backgroundColor: 'transparent',
+        backgroundColor: 'red',
         borderBottomLeftRadius: 8,
         borderBottomRightRadius: 8,
     },
@@ -96,17 +117,17 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 8,
     },
     list: {
-        flex: 1,
         paddingHorizontal: 10,
     },
-    bottomLeft: {
-        position: "absolute",
-        bottom: 20,
-        left: 20,
-    },
-    bottomRight: {
-        position: "absolute",
-        bottom: 20,
-        right: 20,
-    },
+    bottomButtonContainer: {
+        position: 'absolute',
+        bottom: 50,
+        left: 10,
+        width: '90%',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginHorizontal: 10,
+    }
+
 });

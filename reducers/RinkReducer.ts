@@ -1,15 +1,17 @@
 export type Action =
   | { type: "RESET_OPTIONS" }
   | { type: "SEARCH_RINK_NAME"; payload: string }
+  | { type: "SEARCH_FAVORITE"; payload: boolean }
   | { type: "SEARCH_RINK_OPEN"; payload: boolean }
-  | { type: "SEARCH_RINK_DISTRICT"; payload: string[] }
+  | { type: "SEARCH_RINK_DISTRICT"; payload: number[] }
   | { type: "SEARCH_RINK_TYPE"; payload: string[] }
   | { type: "SEARCH_RINK_CONDITION"; payload: string[] };
 
 export type RinkSearchOption = {
   name: string;
   onlyOpen: boolean;
-  districts: string[];
+  onlyFavorite: boolean;
+  districts: number[];
   type: string[];
   conditions: string[];
 };
@@ -17,6 +19,7 @@ export type RinkSearchOption = {
 export const defaultSearchOption: RinkSearchOption = {
   name: "",
   onlyOpen: false,
+  onlyFavorite: false,
   districts: [],
   type: [],
   conditions: [],
@@ -39,6 +42,8 @@ export const rinkReducer = (
       return { ...state, type: action.payload };
     case "SEARCH_RINK_CONDITION":
       return { ...state, conditions: action.payload };
+    case "SEARCH_FAVORITE":
+      return { ...state, onlyFavorite: action.payload };
     default:
       return state;
   }

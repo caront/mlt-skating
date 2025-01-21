@@ -10,7 +10,7 @@ import { useDistricts } from '../hooks/UseDistricts';
 
 
 interface DistrictSelectorProps {
-    onSelect: (selectedDistrict: string[]) => void;
+    onSelect: (selectedDistrict: number[]) => void;
 }
 
 const useStyles = () => {
@@ -64,10 +64,10 @@ const useStyles = () => {
             margin: 10,
         },
         buttonOpen: {
-            backgroundColor: colors.primary,
+            backgroundColor: colors.secondary,
         },
         buttonClose: {
-            backgroundColor: colors.primary,
+            backgroundColor: colors.secondary,
         },
         textStyle: {
             color: colors.primary,
@@ -94,7 +94,7 @@ const useStyles = () => {
             borderRadius: 20,
             gap: 5,
             color: colors.grey1,
-            backgroundColor: colors.primary
+            backgroundColor: colors.secondary
         }
     });
     return styles;
@@ -103,10 +103,10 @@ const useStyles = () => {
 const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const { districts, getDistrict } = useDistricts();
-    const [selectedDistrict, setSelectedDistrict] = useState<string[]>([]);
+    const [selectedDistrict, setSelectedDistrict] = useState<number[]>([]);
     const colors = useColors();
     const styles = useStyles();
-    const handleSelect = (itemValue: string) => {
+    const handleSelect = (itemValue: number) => {
         if (selectedDistrict.includes(itemValue)) {
             setSelectedDistrict(selectedDistrict.filter((district) => district !== itemValue));
             return;
@@ -130,7 +130,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                 <View style={styles.selectedList}>
                     {selectedDistrict.map((district, index) => (
                         <View key={index} style={styles.selectedDistrict}>
-                            <Text >{getDistrict(district)?.name}</Text>
+                            <Text >{getDistrict(district)?.code}</Text>
                             <Icon
                                 name="close"
                                 type="material"
@@ -166,7 +166,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                                     key={index}
                                     title={district.name}
                                     iconType="material"
-                                    checkedColor={colors.primary}
+                                    checkedColor={colors.secondary}
                                     uncheckedIcon='check-box-outline-blank'
                                     checkedIcon="check-box"
                                     checked={selectedDistrict.includes(district.id)}

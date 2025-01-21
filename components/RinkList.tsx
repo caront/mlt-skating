@@ -1,12 +1,16 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl } from 'react-native';
-import { Rink, RinkWithDistrictAndCondition } from '../models/Rink';
-import { useColors } from '../colors';
+import { ECondition, Rink, RinkWithCondition } from '../models/Rink';
+import { cleanColor, conditionColor, resurfacedColor, useColors } from '../colors';
 import { useRinks } from '../hooks/UseRinks';
 import { Icon } from '@rneui/themed';
-
+import Animated, { SharedTransition, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
+import { BlurView } from "@react-native-community/blur";
+import PropertyChip from './shared/PropertyChip';
+import Circle from './shared/Circle';
+import { isFavorite } from '../utils/favoritesUtils';
 interface RinkListProps {
-    onRinkPress: (rink: RinkWithDistrictAndCondition) => void;
+    onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
 }
 
@@ -19,12 +23,12 @@ const useStyles = () => {
         },
         card: {
             display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            alignContent: 'center',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            alignContent: 'flex-start',
             justifyContent: 'space-between',
             width: '100%',
-            backgroundColor: '#fff',
+            backgroundColor: colors.white,
             borderRadius: 8,
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 2 },
@@ -42,20 +46,18 @@ const useStyles = () => {
         right: {
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'center',
-            alignContent: 'center',
+            alignItems: 'flex-end',
+            alignContent: 'flex-end',
             justifyContent: 'flex-end',
             marginRight: 10,
+            marginBottom: 10,
             color: colors.grey1,
-        },
-        circle: {
-            width: 20,
-            height: 20,
-            borderRadius: 10,
-            marginRight: 10,
         },
         column: {
             flexDirection: 'column',
+            alignItems: 'center',
+            alignContent: 'center',
+            justifyContent: 'flex-start',
         },
         rinkName: {
             fontSize: 16,
@@ -69,16 +71,89 @@ const useStyles = () => {
             color: colors.grey5,
         },
         district: {
+            fontSize: 12,
+            color: colors.grey5,
+        },
+        rinkDecription: {
             fontSize: 14,
             color: colors.grey5,
-        }
+        },
+        absolute: {
+            position: "absolute",
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            borderRadius: 8,
+        },
+        test: {
+            position: "absolute",
+            height: '2%',
+            width: '100%',
+            bottom: 2,
+            left: 2,
+            borderRadius: 10,
+        },
+        row: {
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+        },
     });
 }
 
+const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void }) => {
+    const colors = useColors();
+    const styles = useStyles();
+    const [isFav, setIsFav] = React.useState(rink.isFav);
+    const scale = useSharedValue(1);
+
+    const animatedStyle = useAnimatedStyle(() => {
+        return {
+            transform: [{ scale: scale.value }],
+        };
+    });
+
+
+    const handlePress = () => {
+        scale.value = withSpring(1.5, {}, () => {
+            scale.value = withSpring(1);
+        });
+        onRinkPress(rink)
+    };
+
+    return <TouchableOpacity onPress={handlePress} style={styles.card}>
+        {isFav &&
+            <View style={[styles.absolute, styles.right]}>
+                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{rotate: '-35deg'}], }} type='material' />
+            </View>
+        }
+
+        <BlurView style={styles.absolute} blurType="light" blurAmount={1} />
+        <Text style={styles.rinkName}>{rink.name}</Text>
+        <Text style={styles.rinkDecription}>{rink.description}</Text>
+        <Text style={styles.district}>{rink.district.name}</Text>
+        <View style={styles.row}>
+            <View style={[styles.row, { gap: 5 }]}>
+                <Text>Open</Text>
+                <Circle color={rink.open ? colors.success : colors.error} size={10} />
+            </View>
+            <View style={[styles.row, { gap: 5 }]}>
+                <Text>Ice condition</Text>
+                <Circle color={conditionColor(rink.condition)} size={10} />
+            </View>
+        </View>
+    </TouchableOpacity>
+}
+
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
+
+
+
     const [isRefreshing, setIsRefreshing] = React.useState(false);
     const { rinks, refresh } = useRinks();
-    const colors = useColors();
+
     const styles = useStyles();
 
     const onRinkListRefresh = () => {
@@ -93,12 +168,12 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
 
     return (
         <View style={[styles.container, style]}>
-            <Text style={styles.rinkNumber}>{rinks.length === 0 ? 'No Rink' : `${rinks.length} Rinks`}</Text>
+
 
             <FlatList
                 data={rinks}
                 ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
-                keyExtractor={(item) => item.id}
+                keyExtractor={(item) => item.id.toString()}
                 refreshControl={
                     <RefreshControl
                         refreshing={isRefreshing}
@@ -107,21 +182,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                         progressBackgroundColor={'black'}
                     />
                 }
-                renderItem={({ item: rink }) => (
-                    <TouchableOpacity onPress={() => onRinkPress(rink)} style={styles.card}>
-                        <View style={styles.left}>
-                            <View style={[styles.circle, { backgroundColor: rink.open ? colors.success : colors.error }]} />
-                            <View style={styles.column}>
-                                <Text style={styles.rinkName}>{rink.name}</Text>
-                                <Text style={styles.district}>{rink.district.name}</Text>
-                            </View>
-                        </View>
-                        <View style={styles.right}>
-                            {/* <Icon name='heart' type="ant-design" /> */}
-                        </View>
-                    </TouchableOpacity>
-
-                )}
+                renderItem={({ item: rink }) => <RinkItemList rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
     );

@@ -15,10 +15,6 @@ interface ConditionChipProps {
 const ConditionChip: React.FC<ConditionChipProps> = ({ condition }) => {
     const colors = useColors();
 
-    if (condition === ECondition.NA) {
-        return <View />;
-    }
-
     return <Chip
         title={condition}
         background={condition === ECondition.Excellente ? colors.success : condition === ECondition.Good ? colors.warning : colors.error}

@@ -17,10 +17,16 @@ import { useColors } from './colors';
 import GraphqlProvider from './graphql/GraphqlProvider';
 import { DistrictProvider } from './contexts/DistrictContext';
 import { RinkProvider } from './contexts/RinkContext';
-import {lightColors, darkColors} from './theme';
+import { lightColors, darkColors } from './theme';
+import { configureReanimatedLogger, ReanimatedLogLevel } from 'react-native-reanimated';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
+configureReanimatedLogger({
+  level: ReanimatedLogLevel.warn,
+  strict: false, // Reanimated runs in strict mode by default
+});
 
 const buildTheme = () => {
   return createTheme({
@@ -76,28 +82,26 @@ function App(): React.JSX.Element {
     <GraphqlProvider>
       <ThemeProvider theme={theme}>
         <SafeAreaProvider>
-          <SafeAreaView style={[styles.safeArea]}>
+          <GestureHandlerRootView>
             <DistrictProvider>
               <RinkProvider>
-                  <Navigation>
-                    <Stack.Navigator>
-                      <Stack.Screen
-                        name="RinkList"
-                        component={RinkListScreen}
-                        options={{ headerShown: false, title: 'Rinks' }}
-                      />
-                      <Stack.Screen
-                        name="RinkInformation"
-                        component={RinkInformationScreen}
-                        options={({ route }) => ({
-                          title: route.params?.rink?.name,
-                        })}
-                      />
-                    </Stack.Navigator>
-                  </Navigation>
+                <Navigation>
+                  <Stack.Navigator>
+                    <Stack.Screen
+                      name="RinkList"
+                      component={RinkListScreen}
+                      options={{ headerShown: false, title: 'Rinks' }}
+                    />
+                    <Stack.Screen
+                      name="RinkInformation"
+                      component={RinkInformationScreen}
+                      options={{ headerShown: false, title: 'RinkInformation' }}
+                    />
+                  </Stack.Navigator>
+                </Navigation>
               </RinkProvider>
             </DistrictProvider>
-          </SafeAreaView>
+          </GestureHandlerRootView>
         </SafeAreaProvider>
       </ThemeProvider>
     </GraphqlProvider>

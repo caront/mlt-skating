@@ -16,14 +16,19 @@ export const GET_RINKS = gql`
             name
             id
           }
-          conditionsCollection {
+          conditionsCollection(
+            first: 1
+            orderBy: [{ updated_at: DescNullsFirst }]
+          ) {
             edges {
               node {
-                open
+                id
                 condition
-                cleared
+                open
                 watered
+                cleared
                 resurfaced
+                updated_at
               }
             }
           }
@@ -32,6 +37,44 @@ export const GET_RINKS = gql`
       pageInfo {
         hasNextPage
         endCursor
+      }
+    }
+  }
+`;
+
+export const GET_RINKS_BY_ID = gql`
+  query GetRinkAndConditionHistory($rinId: Int!) {
+    rinksCollection(filter: { id: { eq: $rinkId } }) {
+      edges {
+        node {
+          id
+          name
+          type
+          description
+          rink_name
+          longitude
+          latitude
+          districts {
+            name
+            id
+          }
+          conditionsCollection(
+            first: 10
+            orderBy: [{ updated_at: DescNullsFirst }]
+          ) {
+            edges {
+              node {
+                id
+                condition
+                open
+                watered
+                cleared
+                resurfaced
+                updated_at
+              }
+            }
+          }
+        }
       }
     }
   }
