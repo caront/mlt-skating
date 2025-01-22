@@ -26,7 +26,7 @@ type BlurIconButtonProps = {
 const BlurIconButton: React.FC<BlurIconButtonProps> = ({ height, width, icon, onPress, blur: blurEnable }) => {
     const colors = useColors();
     return (
-        <BlurContainer style={[{ width, height, backgroundColor: blurEnable ? 'transparent' : colors.white }, { borderRadius: 30 }]}>
+        <BlurContainer blurAmount={2} style={[{ width, height, backgroundColor: blurEnable ? 'transparent' : colors.white }, { borderRadius: 30 }]}>
             <Button
                 buttonStyle={{
                     borderRadius: 30,

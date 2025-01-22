@@ -1,19 +1,20 @@
 import React, { FunctionComponent } from "react";
-import { Condition, ConditionAndLastUpdate, ConditionLastUpdate, Rink, RinkWithCondition, RinkWithDistrictAndConditionLastUpdate } from "../models/Rink";
+import { Condition, ConditionAndLastUpdate, ConditionLastUpdate, Rink, RinkWithCondition, RinkWithDistrictAndConditionLastUpdate } from "../../models/Rink";
 import { StyleSheet, Text, View } from "react-native";
-import ConditionChip from "./shared/ConditionChip";
-import { Row } from "./shared/Flex";
+import ConditionChip from "../shared/ConditionChip";
+import { Row } from "../shared/Flex";
 import DayJs from "dayjs";
-import { useColors } from "../colors";
-import Chip from "./shared/Chip";
+import { openColor, useColors } from "../../colors";
+import Chip from "../shared/Chip";
 import { Icon } from "@rneui/base";
 import FontAnesome from 'react'
-import MapsViewImage from "./shared/MapsViewImage";
-import PropertyChip from "./shared/PropertyChip";
-import Circle from "./shared/Circle";
+import MapsViewImage from "../shared/MapsViewImage";
+import PropertyChip from "../shared/PropertyChip";
+import Circle from "../shared/Circle";
 import { BlurView } from '@react-native-community/blur';
 import { useTheme } from "@react-navigation/native";
-import BlurContainer from "./shared/BlurContainer";
+import BlurContainer from "../shared/BlurContainer";
+import InformationContainer from "../shared/InformationContainer";
 
 interface RinkInformationProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
@@ -111,24 +112,19 @@ const Neibordhoods: FunctionComponent<{ rink: RinkWithCondition }> = ({ rink }) 
 
 
 const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
-    const lastUpdate = DayJs(rink.lastUpdate);
-    const isLastUpdateToday = lastUpdate.isSame(DayJs(), 'day');
     const styles = useStyles();
 
-    return <View style={styles.container}>
-       
-        <BlurContainer style={[styles.column, { justifyContent: 'flex-start', gap: 5, padding: 10 }]}>
-            <Open rink={rink} />
-            <ConditionChip condition={rink.condition} />
-            <Cleared condition={rink} />
-            <Watered condition={rink} />
-            <Resurfaced condition={rink} />
-        </BlurContainer>
-        <BlurContainer style={[styles.column, { justifyContent: 'flex-start', gap: 5, padding: 10 }]}>
-            <Neibordhoods rink={rink} />
-            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} />
-        </BlurContainer>
-    </View>
+    return <InformationContainer
+        title={"Informations"}
+        titleBackground={openColor(rink.open)}
+        titleIcon={<Icon name='snowshoeing' size={20} color='white' type="material" />}
+    >
+        <Open rink={rink} />
+        <ConditionChip condition={rink.condition} />
+        <Cleared condition={rink} />
+        <Watered condition={rink} />
+        <Resurfaced condition={rink} />
+    </InformationContainer>
 }
 
 

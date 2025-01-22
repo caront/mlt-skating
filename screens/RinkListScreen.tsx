@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useCallback, useMemo } from "react";
 import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
-import SkyList from "../components/RinkList";
+import SkyList from "../components/RinkList/RinkList";
 
 import { Button, Icon, SearchBar } from "@rneui/themed";
 import { NavigationProp, useFocusEffect, useNavigation } from "@react-navigation/native";
@@ -9,10 +9,9 @@ import { Rink, RinkWithCondition } from "../models/Rink";
 import RinksFilters from "../components/RinksFilters";
 import MapRinkView from "../components/MapRinkView";
 import { useRinks } from "../hooks/UseRinks";
-import RinkList from "../components/RinkList";
+import RinkList from "../components/RinkList/RinkList";
 import { useColors } from "../colors";
 import RinkCount from "../components/RinkCount";
-import { BlurView } from "@react-native-community/blur";
 import BlurIconButton from "../components/shared/BlurButton";
 
 export const RinkListScreen = ({ }) => {
@@ -21,7 +20,7 @@ export const RinkListScreen = ({ }) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
     const colors = useColors();
-
+console.log('RinkListScreen', loading, rinks.length, error);
 
     const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });
@@ -59,18 +58,18 @@ export const RinkListScreen = ({ }) => {
             </BlurIconButton>
         </View>
     ), [isMapVisible]);
-
-    if (loading || rinks.length === 0) {
-        return <SafeAreaView style={styles.container}>
-            <ActivityIndicator style={{ marginVertical: 16 }} />
-        </SafeAreaView>
-    }
-
     if (error) {
         return  <SafeAreaView style={styles.container}>
             <Text>{error.message}</Text>
         </SafeAreaView>
     }
+
+    if (loading) {
+        return <SafeAreaView style={styles.container}>
+            <ActivityIndicator style={{ marginVertical: 16 }} />
+        </SafeAreaView>
+    }
+
 
 
 

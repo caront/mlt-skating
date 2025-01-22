@@ -5,6 +5,7 @@ import { useColors } from '../colors';
 import Animated, { useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { saveFavoriteStatus } from '../utils/favoritesUtils';
 import { useRinks } from '../hooks/UseRinks';
+import { Button } from '@rneui/themed';
 
 interface FavButtonProps {
     rink: Rink;
@@ -32,16 +33,20 @@ const FavButton: React.FC<FavButtonProps> = ({ rink }) => {
     };
 
     return <Animated.View style={animatedStyle}>
-        <BlurIconButton
-            height={55}
-            width={55}
-            blur={true}
-            onPress={handlePress}
-            icon={{
-                name: isFav ? 'favorite' : 'favorite-border',
-                type: 'material',
-                color: isFav ? 'pink' : colors.grey5,
-            }} />
+        <Button
+                buttonStyle={{
+                    borderRadius: 30,
+                    width : 55,
+                    height : 55,
+                    backgroundColor: 'transparent',
+                }}
+                icon={{
+                    name: isFav ? 'favorite' : 'favorite-border',
+                    type: 'material',
+                    color: isFav ? 'pink' : colors.grey5,
+                }}
+                titleStyle={{ fontWeight: 'bold' }} onPress={handlePress}
+            />
     </Animated.View>
 }
 

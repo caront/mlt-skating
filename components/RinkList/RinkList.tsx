@@ -1,14 +1,14 @@
 import React, { FunctionComponent, useEffect } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl } from 'react-native';
-import { ECondition, Rink, RinkWithCondition } from '../models/Rink';
-import { cleanColor, conditionColor, resurfacedColor, useColors } from '../colors';
-import { useRinks } from '../hooks/UseRinks';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
+import { ECondition, Rink, RinkWithCondition } from '../../models/Rink';
+import { cleanColor, conditionColor, resurfacedColor, useColors } from '../../colors';
+import { useRinks } from '../../hooks/UseRinks';
 import { Icon } from '@rneui/themed';
 import Animated, { SharedTransition, useAnimatedStyle, useSharedValue, withSpring } from 'react-native-reanimated';
 import { BlurView } from "@react-native-community/blur";
-import PropertyChip from './shared/PropertyChip';
-import Circle from './shared/Circle';
-import { isFavorite } from '../utils/favoritesUtils';
+import PropertyChip from '../shared/PropertyChip';
+import Circle from '../shared/Circle';
+import { isFavorite } from '../../utils/favoritesUtils';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -108,6 +108,7 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
     const styles = useStyles();
     const [isFav, setIsFav] = React.useState(rink.isFav);
     const scale = useSharedValue(1);
+    const isAndroid = Platform.OS === 'android';
 
     const animatedStyle = useAnimatedStyle(() => {
         return {
@@ -130,7 +131,7 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
             </View>
         }
 
-        <BlurView style={styles.absolute} blurType="light" blurAmount={1} />
+        {!isAndroid && <BlurView style={styles.absolute} blurType="light" blurAmount={1} />}
         <Text style={styles.rinkName}>{rink.name}</Text>
         <Text style={styles.rinkDecription}>{rink.description}</Text>
         <Text style={styles.district}>{rink.district.name}</Text>

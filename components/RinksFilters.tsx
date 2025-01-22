@@ -1,12 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, StyleProp, ViewStyle, TextInput } from "react-native";
 import { CheckBox, Switch, Button } from "@rneui/themed";
-import { Drawer } from 'react-native-drawer-layout';
-import { Icon } from '@rneui/themed';
 import { useColors } from '../colors';
 import DistrictSelector from './DistrictSelector';
-import { getAllDistrict } from '../data/rinks';
-import { BlurView, VibrancyView } from "@react-native-community/blur";
 import BottomDrawer, {
     BottomDrawerMethods,
 } from 'react-native-animated-bottom-drawer';

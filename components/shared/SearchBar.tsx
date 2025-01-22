@@ -1,6 +1,6 @@
 import { Icon } from "@rneui/themed";
 import React, { useState } from "react";
-import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
+import { StyleSheet, TextInput, View, Keyboard, Button, Platform } from "react-native";
 import { useColors } from "../../colors";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 import { BlurView } from "@react-native-community/blur";
@@ -49,12 +49,15 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder,
     const styles = useStyles();
     const colors = useColors();
     const isDarkMode = useTheme().dark;
-
+    const isAndroid = Platform.OS === 'android';
     const showClearIcon = value !== "" && value !== undefined && value !== null;
+
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, isAndroid ? { backgroundColor: colors.white, borderRadius: 30 } : {}]}>
             {blueEnable && <BlurView
                 style={{
+                    display: isAndroid ? 'none' : 'flex',
                     position: 'absolute',
                     top: 0,
                     left: 0,

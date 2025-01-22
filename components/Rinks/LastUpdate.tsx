@@ -1,7 +1,7 @@
 import React from 'react';
 import DayJs from "dayjs";
 import { View, Text, StyleSheet } from 'react-native';
-import { useColors } from '../colors';
+import { useColors } from '../../colors';
 
 const useStyles = () => {
     const colors = useColors();

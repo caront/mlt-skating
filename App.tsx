@@ -51,7 +51,7 @@ const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
           notification: ''
         },
         fonts: {
-          regular: { fontFamily: 'System', fontWeight: 'normal' },
+          regular: { fontFamily: 'Mulish-Regular', fontWeight: 'normal' },
           bold: { fontFamily: 'System', fontWeight: 'normal' },
           medium: { fontFamily: 'System', fontWeight: 'normal' },
           heavy: { fontFamily: 'System', fontWeight: 'normal' },
@@ -78,6 +78,7 @@ const useStyle = () => {
 function App(): React.JSX.Element {
   const theme = buildTheme();
   const styles = useStyle();
+  console.log('App render');
   return (
     <GraphqlProvider>
       <ThemeProvider theme={theme}>

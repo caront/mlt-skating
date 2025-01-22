@@ -5,8 +5,6 @@ import {
   defaultDataIdFromObject,
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
-import { relayStylePagination } from "@apollo/client/utilities";
-import { supabase } from "../supabase";
 import { SUPABASE_KEY, SUPABASE_URL } from "@env";
 
 const cache = new InMemoryCache({

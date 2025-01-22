@@ -49,6 +49,7 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
                     }}
                 />
             </MapView>
+            {!isIos && <View style={{ position: 'absolute', left: 0, top: 0,  height: 150 }} />}
             <Button buttonStyle={[styles.button, { backgroundColor: colors.primary }]}
                 onPress={handleOnMapButtonPressed} >
                 <Text style={{ color: colors.grey5 }} >{isIos ? 'Open in Maps' : 'Open in Google Maps'}</Text>

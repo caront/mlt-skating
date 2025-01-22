@@ -20,32 +20,33 @@ const useStyles = () => {
             display: 'flex',
             flexDirection: 'row',
             alignItems: 'center',
-            paddingHorizontal: 10,
-            borderRadius: 20,
-            gap: 5,
+            paddingHorizontal: 8,
+            backgroundColor: 'transparent',
+            borderColor: 'transparent',
+            gap: 6,
             shadowColor: '#000',
             shadowOffset: { width: 0, height: 2 },
             shadowOpacity: 0.1,
             shadowRadius: 8,
-            elevation: 1,
         },
         title: {
             color: colors.grey5,
-            fontSize: 16,
+            fontSize: 18,
         },
         subTitle: {
             color: colors.grey4,
-            fontSize: 12,
+            fontSize: 16,
         }
     })
 }
 
-const Chip: React.FC<ChipProps> = ({ title, subTitle, background, icon, containerStyle }) => {
+const Chip: React.FC<ChipProps> = ({ title, subTitle, background, icon = null, containerStyle }) => {
     const styles = useStyles();
     const hasSubTitle = subTitle !== undefined;
+    const hasIcon = icon !== null && icon !== undefined;
     return (
-        <View style={{ ...styles.container, ...containerStyle }}>
-            <View style={{ backgroundColor: background, padding: 5, borderRadius: 20 }}>
+        <View style={[styles.container, containerStyle]}>
+            <View style={{ display: hasIcon ? 'flex' : 'none', backgroundColor: background, padding: 5, borderRadius: 20 }}>
                 {icon}
             </View>
             <View style={{ display: 'flex', flexDirection: 'column', paddingHorizontal: 10 }}>

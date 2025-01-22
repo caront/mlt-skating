@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 
-import RinkInformation from "../components/RinkInformation";
+import RinkInformation from "../components/Rinks/RinkInformation";
 import { RinkInformationScreenProps, RootStackParamList } from "./types";
 import useHistory from "../hooks/UseHistory";
 import { StyleSheet, Text, View } from "react-native";
@@ -13,9 +13,10 @@ import { useColors } from "../colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRink } from "../hooks/UseRink";
 import { ScrollView } from "react-native-gesture-handler";
-import LastUpdate from "../components/LastUpdate";
+import LastUpdate from "../components/Rinks/LastUpdate";
 import BlurIconButton from "../components/shared/BlurButton";
 import FavButton from "../components/FavButton";
+import { RinkMapInformation } from "../components/Rinks/RinkMapInformation";
 
 const useStyle = () => {
     const colors = useColors();
@@ -112,16 +113,15 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
     }
 
 
-    return <SafeAreaView style={styles.container}>
+    return <SafeAreaView>
         <RinkInformationHeader rink={rink} />
-        <ScrollView style={styles.container}>
-            <View style={styles.information}>
+        <ScrollView >
+            <View style={styles.container}>
                 <RinkInformation rink={rink} />
-            </View>
-            <View style={styles.history}>
+                <RinkMapInformation rink={rink} />
                 <RinkHistoryList rink={rink} />
+                <LastUpdate date={rink.lastUpdate} />
             </View>
-            <LastUpdate date={rink.lastUpdate} />
         </ScrollView>
     </SafeAreaView>
 }
