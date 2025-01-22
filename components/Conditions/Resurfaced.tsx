@@ -9,15 +9,15 @@ import { Icon } from "@rneui/themed";
 import { DateFormat } from "../../utils/dateFormat";
 
 
-const Watered: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
+const Resurfaced: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const colors = useColors();
 
     return <Chip
-        title={condition.watered ? 'Watered' : 'Not Watered'}
-        subTitle={`last time watered ${DateFormat(condition.lastTimeWatered)}`}
-        background={condition.watered ? colors.primary : colors.disabled}
+        title={condition.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
+        subTitle={`last time watered ${DateFormat(condition.lastTimeResurfaced)}`}
+        background={condition.resurfaced ? colors.primary : colors.disabled}
         icon={<Icon name={'water-drop'} size={15} color='white' type={'material-community-icons'} />}
         containerStyle={{ marginVertical: 5 }} />
 }
 
-export default Watered;
+export default Resurfaced;

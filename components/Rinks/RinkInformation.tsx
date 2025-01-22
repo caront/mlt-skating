@@ -15,6 +15,10 @@ import { BlurView } from '@react-native-community/blur';
 import { useTheme } from "@react-navigation/native";
 import BlurContainer from "../shared/BlurContainer";
 import InformationContainer from "../shared/InformationContainer";
+import Cleared from "../Conditions/Cleared";
+import Resurfaced from "../Conditions/Resurfaced";
+import Watered from "../Conditions/Wather";
+import IceConditions from "../Conditions/IceConditions";
 
 interface RinkInformationProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
@@ -69,37 +73,6 @@ const Open: FunctionComponent<{ rink: RinkWithDistrictAndConditionLastUpdate }> 
     </View>
 }
 
-const Cleared: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
-    const colors = useColors();
-    return <Chip
-        title={condition.cleared ? 'Cleared' : 'Not Cleared'}
-        subTitle={`last time cleared ${DayJs(condition.lastTimeWatered).format('YYYY-MM-DD HH:mm')}`}
-        background={condition.cleared ? colors.primary : colors.disabled}
-        icon={<Icon name={'cleaning-services'} size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }} />
-}
-
-const Watered: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
-    const colors = useColors();
-    return <Chip
-        title={condition.watered ? 'Watered' : 'Not Watered'}
-        subTitle={`last time watered ${DayJs(condition.lastTimeWatered).format('YYYY-MM-DD HH:mm')}`}
-        background={condition.watered ? colors.primary : colors.disabled}
-        icon={<Icon name={'water-drop'} size={15} color='white' type={'material-community-icons'} />}
-        containerStyle={{ marginVertical: 5 }} />
-}
-
-const Resurfaced: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
-    const colors = useColors();
-
-    return <Chip
-        title={condition.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
-        subTitle={`last time resurfaced ${DayJs(condition.lastTimeResurfaced).format('YYYY-MM-DD HH:mm')}`}
-        background={condition.resurfaced ? colors.primary : colors.disabled}
-        icon={<Icon name={'view-headline'} size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }} />
-}
-
 const Neibordhoods: FunctionComponent<{ rink: RinkWithCondition }> = ({ rink }) => {
     const colors = useColors();
     if (!rink.district) return null;
@@ -120,7 +93,7 @@ const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
         titleIcon={<Icon name='snowshoeing' size={20} color='white' type="material" />}
     >
         <Open rink={rink} />
-        <ConditionChip condition={rink.condition} />
+        <IceConditions condition={rink} />
         <Cleared condition={rink} />
         <Watered condition={rink} />
         <Resurfaced condition={rink} />

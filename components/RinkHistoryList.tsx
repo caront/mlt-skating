@@ -11,6 +11,7 @@ import ConditionTimeLine from './ConditionTimeline';
 import BlurContainer from './shared/BlurContainer';
 import Chip from './shared/Chip';
 import { Icon } from '@rneui/themed';
+import InformationContainer from './shared/InformationContainer';
 
 interface RinkHistoryListProps {
     rink: Rink;
@@ -41,34 +42,33 @@ const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }
 
 
     if (loading) {
-        return <BlurContainer style={styles.container}>
+        return <InformationContainer style={styles.container}>
             <ActivityIndicator style={{ marginVertical: 16 }} />
-        </BlurContainer>
+        </InformationContainer>
     }
 
     if (error) {
-        return <BlurContainer style={styles.container}>
+        return <InformationContainer style={styles.container}>
             <Text>{error.message}</Text>
-        </BlurContainer>
+        </InformationContainer>
     }
 
     if (conditions.length === 0) {
-        return <BlurContainer style={styles.container}>
+        return <InformationContainer style={styles.container}>
             <Text>No history</Text>
-        </BlurContainer>
+        </InformationContainer>
     }
 
 
 
     return (
-        <BlurContainer style={styles.container}>
-            <Chip title="History"
-                background={colors.secondary}
-                icon={<Icon name='access-time' color='white' size={15} type='material' />}
-                containerStyle={{ marginVertical: 5 }} />
-
+        <InformationContainer
+            title="History"
+            titleIcon={<Icon name='access-time' color='white' size={20} type='material' />}
+            titleBackground={colors.primary}
+         style={styles.container}>
             <ConditionTimeLine changes={conditions} />
-        </BlurContainer>
+        </InformationContainer>
     );
 }
 
