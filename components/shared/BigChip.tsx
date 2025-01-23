@@ -7,8 +7,12 @@ import DayJs from "dayjs";
 import { useColors } from '../../colors';
 import Circle from '../shared/Circle';
 
-interface OpenChipsProps {
-    condition: ConditionAndLastUpdate;
+interface BigChipProps {
+    title: string;
+    subTitle?: string;
+    background?: string;
+    icon?: React.ReactElement;
+    containerStyle?: object;
 }
 
 const useStyles = () => {
@@ -16,11 +20,12 @@ const useStyles = () => {
     return StyleSheet.create({
         container: {
             display: 'flex',
-            flexDirection: 'column',
-            gap: 5,
+            flexDirection: 'row',
+            gap: 12,
             alignItems: 'center',
             borderRadius: 20,
             padding: 12,
+            paddingVertical: 6,
             fontSize: 18,
             color: colors.white
         },
@@ -30,21 +35,25 @@ const useStyles = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
         },
-        status: {
+        title: {
             fontSize: 18,
             color: colors.white
         },
     })
 }
 
-const OpenChips: React.FC<OpenChipsProps> = ({ condition }) => {
+const BigChip: React.FC<BigChipProps> = ({ title, subTitle, background, icon = null, containerStyle }) => {
     const colors = useColors();
     const styles = useStyles();
+    const hasSubTitle = subTitle !== undefined;
+    const hasIcon = icon !== null && icon !== undefined;
 
-    return <View style={[styles.container, { backgroundColor: condition.open ? colors.success : colors.error }]} >
-        <Text style={styles.status} >{condition.open ? 'Open' : 'Close'}</Text>
-        <Text style={{ fontSize: 12, color: colors.white }}>Since {DayJs(condition.openSince).format('YYYY-MM-DD HH:mm')}</Text>
+    return <View style={[styles.container, { backgroundColor: background }]} >
+        <View style={{ display: hasIcon ? 'flex' : 'none'}}>
+            {icon}
+        </View>
+        <Text style={styles.title} >{title}</Text>
     </View>
 }
 
-export default OpenChips;
+export default BigChip;

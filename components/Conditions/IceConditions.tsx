@@ -12,7 +12,8 @@ import { DateFormat } from "../../utils/dateFormat";
 const IceConditions: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const conditionsColor = conditionColor(condition.condition);
     return <Chip
-        title={condition.condition.toLocaleLowerCase()}
+        title={'Ice Condition'}
+        subTitle={condition.condition.toLocaleLowerCase()}
         background={conditionsColor}
         icon={<Icon name={'snowflake-4'} size={15} color='white' type={'fontisto'} />}
         containerStyle={{ marginVertical: 5 }} />

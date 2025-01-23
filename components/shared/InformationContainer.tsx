@@ -7,6 +7,7 @@ import Animated, { useSharedValue, withSpring } from 'react-native-reanimated';
 import { useColors } from '../../colors';
 import Chip from './Chip';
 import BlurContainer from './BlurContainer';
+import BigChip from './BigChip';
 
 interface InfromationContainerProps {
     children: React.ReactNode;
@@ -38,10 +39,10 @@ const InformationContainer: React.FC<InfromationContainerProps> = ({ style, chil
     const colors = useColors();
     return (
         <View style={[styles.container, style]}>
-            <Chip
+            <BigChip
                 title={title ? title : ''}
                 icon={titleIcon}
-                background={titleBackground ? titleBackground : colors.primary}
+                background={colors.secondary}
             />
             {children}
         </View>

@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 
-import RinkInformation from "../components/Rinks/RinkInformation";
 import { RinkInformationScreenProps, RootStackParamList } from "./types";
 import useHistory from "../hooks/UseHistory";
 import { StyleSheet, Text, View } from "react-native";
@@ -17,6 +16,8 @@ import LastUpdate from "../components/Rinks/LastUpdate";
 import BlurIconButton from "../components/shared/BlurButton";
 import FavButton from "../components/FavButton";
 import { RinkMapInformation } from "../components/Rinks/RinkMapInformation";
+import RinkConditions from "../components/Rinks/RinkCondition";
+import RinkInformations from "../components/Rinks/RinkInformations";
 
 const useStyle = () => {
     const colors = useColors();
@@ -117,7 +118,8 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
         <RinkInformationHeader rink={rink} />
         <ScrollView >
             <View style={styles.container}>
-                <RinkInformation rink={rink} />
+                <RinkInformations rink={rink} />
+                <RinkConditions rink={rink} />
                 <RinkMapInformation rink={rink} />
                 <RinkHistoryList rink={rink} />
                 <LastUpdate date={rink.lastUpdate} />

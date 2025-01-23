@@ -13,14 +13,13 @@ import RinkList from "../components/RinkList/RinkList";
 import { useColors } from "../colors";
 import RinkCount from "../components/RinkCount";
 import BlurIconButton from "../components/shared/BlurButton";
+import useUserLocation from "../hooks/UseUserLocation";
 
 export const RinkListScreen = ({ }) => {
     const { rinks, refresh, loading, error } = useRinks();
     const [isMapVisible, setIsMapVisible] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-
     const colors = useColors();
-console.log('RinkListScreen', loading, rinks.length, error);
 
     const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });

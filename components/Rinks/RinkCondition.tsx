@@ -19,8 +19,9 @@ import Cleared from "../Conditions/Cleared";
 import Resurfaced from "../Conditions/Resurfaced";
 import Watered from "../Conditions/Wather";
 import IceConditions from "../Conditions/IceConditions";
+import OpenChips from "../Conditions/OpenChips";
 
-interface RinkInformationProps {
+interface RinkConditionsProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
 }
 
@@ -59,40 +60,16 @@ const useStyles = () => {
     });
 }
 
-const Open: FunctionComponent<{ rink: RinkWithDistrictAndConditionLastUpdate }> = ({ rink }) => {
-    const colors = useColors();
-    const styles = useStyles();
 
-    return <View style={styles.propertyContainer} >
-
-        <View style={[styles.row, { gap: 5, justifyContent: 'flex-start' }]}>
-            <Text style={{ fontSize: 20 }} >{rink.open ? 'Open' : 'Close'}</Text>
-            <Circle color={rink.open ? colors.success : colors.error} size={15} />
-        </View>
-        <Text style={{ fontSize: 12, color: colors.grey4 }}>Since {DayJs(rink.openSince).format('YYYY-MM-DD HH:mm')}</Text>
-    </View>
-}
-
-const Neibordhoods: FunctionComponent<{ rink: RinkWithCondition }> = ({ rink }) => {
-    const colors = useColors();
-    if (!rink.district) return null;
-    return <Chip
-        title={rink.district.name}
-        background={colors.primary}
-        icon={<Icon name='map' size={15} color='white' type="material" />}
-        containerStyle={{ marginVertical: 5 }} />
-}
-
-
-const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
+const RinkConditions: FunctionComponent<RinkConditionsProps> = ({ rink }) => {
     const styles = useStyles();
 
     return <InformationContainer
-        title={"Informations"}
-        titleBackground={openColor(rink.open)}
+        title={"Conditions"}
+        // titleBackground={colors}
         titleIcon={<Icon name='snowshoeing' size={20} color='white' type="material" />}
     >
-        <Open rink={rink} />
+        {/* <OpenChips condition={rink} /> */}
         <IceConditions condition={rink} />
         <Cleared condition={rink} />
         <Watered condition={rink} />
@@ -101,4 +78,4 @@ const RinkInformation: FunctionComponent<RinkInformationProps> = ({ rink }) => {
 }
 
 
-export default RinkInformation;
+export default RinkConditions;

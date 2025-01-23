@@ -5,7 +5,7 @@ import { ECondition } from "./models/Rink";
 
 export const useColors = (): Colors => {
   return lightColors;
-  // const isDarkMode = useColorScheme() === "dark";
+  //const isDarkMode = useColorScheme() === "dark";
   // return isDarkMode ? darkColors : lightColors;
 };
 

@@ -5,6 +5,7 @@ import { useColors } from '../colors';
 import { StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 import { useRinks } from '../hooks/UseRinks';
+import useUserLocation from '../hooks/UseUserLocation';
 
 interface MapRinkViewProps {
     onRinkPress: (rink: Rink) => void;
@@ -32,6 +33,7 @@ const useStyle = () => {
 
 const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
     const { rinks } = useRinks();
+    const { location } = useUserLocation();
 
     const styles = useStyle();
     const colors = useColors();
@@ -45,6 +47,12 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
                 longitudeDelta: 0.0421,
             }}
         >
+            {location && <Circle
+                center={location}
+                radius={200}
+                fillColor={colors.primary}
+                strokeColor={colors.primary}
+            />}
             {rinks.map((rink, idx) => (
                 <Marker
                     key={idx}

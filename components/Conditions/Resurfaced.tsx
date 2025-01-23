@@ -16,7 +16,7 @@ const Resurfaced: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ 
         title={condition.resurfaced ? 'Resurfaced' : 'Not Resurfaced'}
         subTitle={`last time watered ${DateFormat(condition.lastTimeResurfaced)}`}
         background={condition.resurfaced ? colors.primary : colors.disabled}
-        icon={<Icon name={'water-drop'} size={15} color='white' type={'material-community-icons'} />}
+        icon={<Icon name={'line-weight'} size={15} color='white' type={'material'} />}
         containerStyle={{ marginVertical: 5 }} />
 }
 
