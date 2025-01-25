@@ -1,0 +1,16 @@
+{
+  "rink": "Patinoire",
+  "rink_name": "Nom de la patinoire",
+  "rinks": "Patinoires",
+  "rinks_list": "Liste des patinoires",
+  "rinks_map": "Carte des patinoires",
+  "rink.count_zero": "Aucune patinoire",
+  "rink.count_one": "Une patinoire",
+  "rink.count_other": "{{count}} patinoires",
+  "key_zero": "zero",
+  "key_one": "singular",
+  "key_two": "two",
+  "key_few": "few",
+  "key_many": "many",
+  "key_other": "other"
+}

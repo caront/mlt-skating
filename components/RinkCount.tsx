@@ -9,12 +9,12 @@ interface RinkCountProps {
     style: StyleProp<ViewStyle>;
     rinks: Rink[];
 }
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
 
 
 const useStyles = () => {
     const colors = useColors();
-
-
     return StyleSheet.create({
         rinkNumber: {
             fontSize: 20,
@@ -26,8 +26,9 @@ const useStyles = () => {
 
 
 const RinkCount: React.FC<RinkCountProps> = ({ style, rinks }) => {
+    const { t } = useTranslation();
     const styles = useStyles();
-    return <Text style={[style, styles.rinkNumber]}>{rinks.length === 0 ? 'No Rink' : `${rinks.length} Rinks`}</Text>
+    return <Text style={[style, styles.rinkNumber]}>{i18next.t('key', {count: 2})}</Text>
 }
 
 export default RinkCount;

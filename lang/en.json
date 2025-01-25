@@ -1,0 +1,16 @@
+{
+  "rink": "rink",
+  "rink_name": "rink's name",
+  "rinks": "rinks",
+  "rinks_list": "Rinks list",
+  "rinks_map": "Rinks map",
+  "rink_count.zero": "No rinks",
+  "rink_count.one": "One rink",
+  "rink_count.other": "{{count}} rinks",
+  "key_zero": "zero",
+  "key_one": "singular",
+  "key_two": "two",
+  "key_few": "few",
+  "key_many": "many",
+  "key_other": "other"
+}
