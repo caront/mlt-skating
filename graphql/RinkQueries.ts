@@ -58,6 +58,7 @@ export const GET_RINKS_BY_ID = gql`
             name
             id
           }
+          public_static_map_url
           conditionsCollection(
             first: 10
             orderBy: [{ updated_at: DescNullsFirst }]

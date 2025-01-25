@@ -1,6 +1,6 @@
 import { Button, Text } from '@rneui/base';
 import React from 'react';
-import { StyleSheet, View, Platform } from 'react-native';
+import { StyleSheet, View, Platform, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useColors } from '../../colors';
 import { openMap } from '../../utils/openMaps';
@@ -10,9 +10,10 @@ interface MapsViewImageProps {
     label: string;
     lat: number;
     lng: number;
+    url?: string;
 }
 
-const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
+const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng, url }) => {
     const colors = useColors();
     const isIos = Platform.OS === 'ios';
 
@@ -22,7 +23,7 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
 
     return (
         <View style={[styles.container]}>
-            <MapView
+            {isIos && <MapView
                 style={styles.map}
                 cacheEnabled
                 camera={{
@@ -48,8 +49,8 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng }) => {
                         longitude: lng,
                     }}
                 />
-            </MapView>
-            {!isIos && <View style={{ position: 'absolute', left: 0, top: 0,  height: 150 }} />}
+            </MapView>}
+            {!isIos && <Image source={{ uri: url }} style={styles.map} />}
             <Button buttonStyle={[styles.button, { backgroundColor: colors.primary }]}
                 onPress={handleOnMapButtonPressed} >
                 <Text style={{ color: colors.grey5 }} >{isIos ? 'Open in Maps' : 'Open in Google Maps'}</Text>

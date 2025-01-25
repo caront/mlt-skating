@@ -1,4 +1,4 @@
-export interface Rink extends Coordinate {
+export interface Rink extends Coordinate, WithStaticMap {
   id: number;
   name: string;
   description: string;
@@ -7,6 +7,10 @@ export interface Rink extends Coordinate {
   district: District;
   lastUpdate: string;
   isFav: boolean;
+}
+
+interface WithStaticMap {
+  public_url : string;
 }
 
 export interface District {
@@ -86,6 +90,7 @@ export const defaultRink: Rink = {
   latitude: 0,
   longitude: 0,
   isFav: false,
+  public_url: "",
 };
 
 export const defaultCondition: Condition = {

@@ -31,7 +31,7 @@ export const RinkMapInformation: React.FC<RinkMapInformationProps> = ({ rink }) 
             titleIcon={<Icon name='map' size={20} color='white' type="material" />}
             titleBackground={useColors().primary}
             >
-            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} />
+            <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} url={rink.public_url} />
         </InformationContainer>
     );
 }

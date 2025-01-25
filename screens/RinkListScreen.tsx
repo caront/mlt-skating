@@ -75,7 +75,7 @@ export const RinkListScreen = ({ }) => {
     if (isMapVisible) {
         return <>
             <MapRinkView onRinkPress={handleOnRinkPressed} />
-            <SafeAreaView style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
+            <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
                 <RinksFilters isMapVisible={true} />
                 {BottomButtons}
             </SafeAreaView>
@@ -120,8 +120,8 @@ const styles = StyleSheet.create({
     bottomButtonContainer: {
         position: 'absolute',
         bottom: 50,
-        left: 10,
-        width: '90%',
+        left: 0,
+        right: 0,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
