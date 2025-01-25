@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { logger, consoleTransport } from "react-native-logs";
 
 export let Log = logger.createLogger({
@@ -23,6 +24,9 @@ export let Log = logger.createLogger({
     printDate: true,
     fixedExtLvlLength: false,
     enabled: true,
+    formatFunc: (level: string, extension: string | null, msgs: any) => {
+        return `${Platform.OS}| ${level.toUpperCase()} | ${extension ? ` ${extension} |` : ''} ${msgs}`;
+    }
 });
 
 

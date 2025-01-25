@@ -9,6 +9,7 @@ import { BlurView } from "@react-native-community/blur";
 import PropertyChip from '../shared/PropertyChip';
 import Circle from '../shared/Circle';
 import { isFavorite } from '../../utils/favoritesUtils';
+import { Log } from '../../utils/logs';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -106,32 +107,19 @@ const useStyles = () => {
 const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void }) => {
     const colors = useColors();
     const styles = useStyles();
-    const [isFav, setIsFav] = React.useState(rink.isFav);
-    const scale = useSharedValue(1);
-    const isAndroid = Platform.OS === 'android';
-
-    const animatedStyle = useAnimatedStyle(() => {
-        return {
-            transform: [{ scale: scale.value }],
-        };
-    });
-
 
     const handlePress = () => {
-        scale.value = withSpring(1.5, {}, () => {
-            scale.value = withSpring(1);
-        });
         onRinkPress(rink)
     };
 
+    const randomRotation = Math.floor(rink.id * 10) - 60;
+
     return <TouchableOpacity onPress={handlePress} style={styles.card}>
-        {isFav &&
+        {rink.isFav &&
             <View style={[styles.absolute, styles.right]}>
-                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{rotate: '-35deg'}], }} type='material' />
+                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{rotate: `${randomRotation}deg`}], }} type='material' />
             </View>
         }
-
-        {!isAndroid && <BlurView style={styles.absolute} blurType="light" blurAmount={1} />}
         <Text style={styles.rinkName}>{rink.name}</Text>
         <Text style={styles.rinkDecription}>{rink.description}</Text>
         <Text style={styles.district}>{rink.district.name}</Text>
@@ -149,9 +137,6 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
 }
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
-
-
-
     const [isRefreshing, setIsRefreshing] = React.useState(false);
     const { rinks, refresh } = useRinks();
 
@@ -169,8 +154,6 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
 
     return (
         <View style={[styles.container, style]}>
-
-
             <FlatList
                 data={rinks}
                 ItemSeparatorComponent={() => <View style={{ height: 8 }} />}

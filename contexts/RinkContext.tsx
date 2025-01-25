@@ -6,6 +6,7 @@ import { Action, RinkSearchOption, defaultSearchOption, rinkReducer } from "../r
 import { StringCleaner } from "../utils/stringCleaner";
 import dayjs from "dayjs";
 import { getFavorites, isFavorite, saveFavoriteStatus } from "../utils/favoritesUtils";
+import { Log } from "../utils/logs";
 
 export type RinkContextType = {
     rinks: RinkWithCondition[];
@@ -35,7 +36,6 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
 
     return Promise.all(rinks.map(async (rink: any): Promise<RinkWithCondition> => {
         const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection } = rink;
-        const isFav = await isFavorite(id);
         if (conditionsCollection.edges.length === 0) {
             return {
                 ...defaultCondition,
@@ -48,7 +48,8 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
                 latitude,
                 rink_name,
                 lastUpdate: new Date().toISOString(),
-                isFav
+                isFav: false,
+                public_url: undefined
             }
         }
 
@@ -70,7 +71,8 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
             condition,
             watered,
             resurfaced,
-            isFav
+            isFav: false,
+            public_url: undefined
         }
     }));
 
@@ -116,13 +118,25 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
             hasNextPage = pageInfo.hasNextPage;
             after = pageInfo.endCursor;
         }
-        setSourceRinks(await buildRinks(allRinks));
+
+        setSourceRinks(await syncIsFavorite(await buildRinks(allRinks)));
         setLoading(false);
     };
+
+    const syncIsFavorite = async (rinks: RinkWithCondition[]) => {
+        const favorites = await getFavorites();
+        rinks.forEach(async (rink: Rink) => {
+            rink.isFav = rink.id in favorites;
+        }
+        );
+        return rinks
+    }
 
     useEffect(() => {
         fetchAllRinks();
     }, []);
+
+
 
     const filters = async () => {
         setLoading(true);
@@ -156,7 +170,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
                 const favoriteRinks = await getFavorites();
                 filteredRinks = filteredRinks.filter((rink) => rink.id in favoriteRinks);
             }
-            setRinks(filteredRinks);
+            setRinks(filteredRinks.sort((a, b)=> a.name.localeCompare(b.name)));
         }
         catch (e) {
             console.log(e);
@@ -173,7 +187,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
 
 
     const refresh = () => {
-        fetchAllRinks();
+        fetchAllRinks().then(() => Log.info("Rinks refreshed"));
     }
 
     const resetOptions = () => {
@@ -181,14 +195,9 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     }
 
     const setRinkFav = async (id: number, isFav: boolean) => {
-        const rinkIndex = rinks.findIndex((rink) => rink.id === id);
-        if (rinkIndex === -1) {
-            return;
-        }
-        saveFavoriteStatus(id, isFav);
-        const newRinks = [...rinks];
-        newRinks[rinkIndex].isFav = isFav;
-        setRinks(newRinks);
+        saveFavoriteStatus(id, isFav).then(() =>
+            syncIsFavorite(rinks).then((rinks) => setRinks(rinks))
+        );
     }
 
     React.useEffect(() => {

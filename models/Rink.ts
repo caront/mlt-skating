@@ -10,7 +10,7 @@ export interface Rink extends Coordinate, WithStaticMap {
 }
 
 interface WithStaticMap {
-  public_url : string;
+  public_url? : string;
 }
 
 export interface District {
