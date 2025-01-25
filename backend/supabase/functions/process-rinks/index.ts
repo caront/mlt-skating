@@ -8,18 +8,47 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
 const SUPABASE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 const GOOGLE_MAPS_API_KEY = Deno.env.get("GOOGLE_MAPS_API_KEY");
 
-if (!SUPABASE_URL || !SUPABASE_KEY || !GOOGLE_MAPS_API_KEY) {
-  console.error("Missing environment variables.");
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  console.error("Missing Supabase credentials in environment variables.");
   Deno.exit(1);
 }
 
 const UPDATE_GPS = false;
+const UPDATE_RINK_MAP_URL = true;
+
+const BUCKET_NAME = "static-maps";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-//Montreal Open Data API URL
+// Montreal Open Data API URL
 const DATA_URL =
   "https://donnees.montreal.ca/dataset/patinoires/resource/5b1244bd-7b92-436b-8a84-2fab1ea802a4/proxy";
+
+const CONDITIONS = {
+  Excellente: "EXCELLENTE",
+  Bonne: "GOOD",
+  Mauvaise: "BAD",
+  "N/A": "NA",
+};
+
+interface Rink {
+  arrondissement: { cle: string; nom_arr: string; date_maj: string };
+  nom: string;
+  description?: string;
+  type?: string;
+  ouvert: string;
+  debacle: string;
+  arrose: string;
+  resurfa: string;
+  condition: keyof typeof CONDITIONS;
+}
+
+interface StaticMap {
+  id: number;
+  created_at: string;
+  cache_key: string;
+  public_url: string;
+}
 
 // Function to fetch XML data and parse it into JSON
 async function fetchXMLData(url: string): Promise<any> {
@@ -35,7 +64,6 @@ async function fetchXMLData(url: string): Promise<any> {
 async function getCoordinates(
   address: string
 ): Promise<{ lat: number; lng: number } | null> {
-  const GOOGLE_MAPS_API_KEY = Deno.env.get("GOOGLE_MAPS_API_KEY");
   if (!GOOGLE_MAPS_API_KEY) {
     throw new Error("Missing Google Maps API key in environment variables.");
   }
@@ -53,6 +81,115 @@ async function getCoordinates(
     console.error(`Error fetching coordinates for ${address}: ${data.status}`);
     return null;
   }
+}
+
+async function getStaticMap(
+  longitude: number,
+  latitude: number
+): Promise<StaticMap | null> {
+  const params = new URLSearchParams();
+  params.set("center", `${latitude},${longitude}`);
+  params.set("zoom", "15");
+  params.set("size", "300x150");
+  params.set("markers", `color:green|${latitude},${longitude}`);
+
+  const cacheKey = `${latitude}-${longitude}`;
+
+  const { data: dbEntry, error: dbError } = await supabase
+    .from("static-map")
+    .select("*")
+    .eq("cache_key", cacheKey)
+    .single();
+
+  if (dbError) {
+    console.error("Error fetching database entry:", dbError);
+    return null;
+  }
+
+  if (dbEntry) {
+    return dbEntry;
+  }
+
+  const { data: existingFile, error: fileCheckError } = await supabase.storage
+    .from(BUCKET_NAME)
+    .list("", { search: encodeURIComponent(cacheKey) });
+
+  if (fileCheckError) {
+    console.error("Error checking storage bucket:", fileCheckError);
+  }
+
+  if (existingFile && existingFile.length > 0) {
+    const { data: dbEntry, error: dbError } = await supabase
+      .from("static-map")
+      .select("*")
+      .eq("cache_key", cacheKey)
+      .single();
+
+    if (dbError) {
+      console.error("Error fetching database entry:", dbError);
+      return null;
+    }
+
+    if (dbEntry) {
+      return dbEntry;
+    }
+  }
+
+  const googleMapsUrl = `https://maps.googleapis.com/maps/api/staticmap?${params.toString()}&key=${GOOGLE_MAPS_API_KEY}`;
+  const googleResponse = await fetch(googleMapsUrl);
+
+  if (!googleResponse.ok) {
+    console.error(`Failed to fetch map image: ${googleResponse.statusText}`);
+    return null;
+  }
+
+  // Get the image buffer
+  const imageBuffer = await googleResponse.arrayBuffer();
+
+  // Save the image to the Supabase Storage bucket
+  const { data: uploadData, error: uploadError } = await supabase.storage
+    .from(BUCKET_NAME)
+    .upload(encodeURIComponent(cacheKey), new Uint8Array(imageBuffer), {
+      contentType: "image/png",
+      cacheControl: "3600",
+    });
+
+  console.log("new image uploaded", uploadData);
+  if (uploadError) {
+    console.error("Error saving image to bucket:", uploadError);
+    return null;
+  }
+
+  // Generate the public URL for the uploaded file
+  const { data: publicUrlData } = supabase.storage
+    .from(BUCKET_NAME)
+    .getPublicUrl(uploadData.path);
+
+  const publicUrl = publicUrlData?.publicUrl;
+
+  if (!publicUrl) {
+    console.error("Error generating public URL for image");
+    return null;
+  }
+
+  console.log("Public URL:", publicUrl);
+
+  const { data, error: dbInsertError } = await supabase
+    .from("static-map")
+    .insert([
+      {
+        cache_key: cacheKey,
+        public_url: publicUrl,
+      },
+    ])
+    .select();
+
+  if (dbInsertError) {
+    console.error("Error inserting into database:", dbInsertError);
+    return null;
+  }
+
+  return data[0];
 }
 
 async function processDistrict(district: any) {
@@ -110,23 +247,48 @@ async function processDistricts(data: any) {
   }
 }
 
-const CONDITIONS = {
-  Excellente: "EXCELLENTE",
-  Bonne: "GOOD",
-  Mauvaise: "BAD",
-  "N/A": "NA",
-};
+async function updateRinkStaticMap(rinkId: number) {
+  try {
+    const { data: rinkData, error: rinkError } = await supabase
+      .from("rinks")
+      .select("latitude, longitude")
+      .eq("id", rinkId)
+      .single();
 
-interface Rink {
-  arrondissement: { cle: string; nom_arr: string; date_maj: string };
-  nom: string;
-  description?: string;
-  type?: string;
-  ouvert: string;
-  debacle: string;
-  arrose: string;
-  resurfa: string;
-  condition: keyof typeof CONDITIONS;
+    if (rinkError) {
+      console.error("Error fetching rink data:", rinkError);
+      return;
+    }
+
+    if (!rinkData) {
+      console.error("Rink not found");
+      return;
+    }
+
+    const { latitude, longitude } = rinkData;
+    const staticMap = await getStaticMap(longitude, latitude);
+
+    if (!staticMap) {
+      console.error("Error fetching static map");
+      return;
+    }
+
+    const { error: updateError } = await supabase
+      .from("rinks")
+      .update({
+        public_static_map_url: staticMap.public_url,
+      })
+      .eq("id", rinkId);
+
+    if (updateError) {
+      console.error("Error updating rink static map:", updateError);
+      return;
+    }
+    console.log("Static map updated for rink:", rinkId);
+    return;
+  } catch (error) {
+    console.error("Error updating rink static map:", error);
+  }
 }
 
 function splitRinkString(rinkString: string) {
@@ -255,6 +417,11 @@ async function processRink(rink: Rink) {
     rinkId = newRinkData[0].id;
     console.log(`Rink inserted: ${rinkData.name}`);
   }
+
+  if (UPDATE_RINK_MAP_URL) {
+    updateRinkStaticMap(rinkId);
+  }
+
   const { data: existingConditionData, error: errorExistingConditionData } =
     await supabase
       .from("conditions")
@@ -322,9 +489,11 @@ async function processRink(rink: Rink) {
 async function processRinks(data: any) {
   const rinks = data.patinoires.patinoire;
 
+  // await processRink(rinks[0]);
   await Promise.all(rinks.map(processRink));
 }
 
+// Main function to orchestrate the processing
 async function main() {
   console.log("Fetching data from Montreal Open Data API...");
   const data = await fetchXMLData(DATA_URL);
