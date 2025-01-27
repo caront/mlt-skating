@@ -93,6 +93,31 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/armeabi-v7a/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/rnflashlist-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/armeabi-v7a/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/*.cpp")
+set(OLD_GLOB
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/ComponentDescriptors.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/EventEmitters.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/Props.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/ShadowNodes.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/States.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/react/renderer/components/rnflashlist/rnflashlistJSI-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/armeabi-v7a/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB

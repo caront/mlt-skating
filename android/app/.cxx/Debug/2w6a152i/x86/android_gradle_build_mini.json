@@ -3,6 +3,7 @@
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@react-native-community/blur/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@react-native-picker/picker/android/src/main/jni/CMakeLists.txt",
+    "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
@@ -53,6 +54,11 @@
     },
     "react_codegen_RNPermissionsSpec::@7ad697819b753921c957": {
       "artifactName": "react_codegen_RNPermissionsSpec",
+      "abi": "x86",
+      "runtimeFiles": []
+    },
+    "react_codegen_rnflashlist::@c1d6cf6af84cbabf418f": {
+      "artifactName": "react_codegen_rnflashlist",
       "abi": "x86",
       "runtimeFiles": []
     },
