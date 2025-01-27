@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useCallback, useMemo } from "react";
+import React, { FunctionComponent, useCallback, useEffect, useMemo, useRef } from "react";
 import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import SkyList from "../components/RinkList/RinkList";
 
@@ -13,13 +13,22 @@ import RinkList from "../components/RinkList/RinkList";
 import { useColors } from "../colors";
 import RinkCount from "../components/RinkCount";
 import BlurIconButton from "../components/shared/BlurButton";
-import useUserLocation from "../hooks/UseUserLocation";
+import ActionSheet, { ActionSheetRef, SheetProvider } from "react-native-actions-sheet";
+import { Log } from "../utils/logs";
 
 export const RinkListScreen = ({ }) => {
     const { rinks, refresh, loading, error } = useRinks();
     const [isMapVisible, setIsMapVisible] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
+
+    const actionSheetRef = useRef<ActionSheetRef>(null);
+
+    useEffect(() => {
+        console.log(actionSheetRef)
+        if (actionSheetRef && actionSheetRef.current)
+            actionSheetRef.current?.show();
+    }, [actionSheetRef.current]);
 
     const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });
@@ -57,8 +66,9 @@ export const RinkListScreen = ({ }) => {
             </BlurIconButton>
         </View>
     ), [isMapVisible]);
+
     if (error) {
-        return  <SafeAreaView style={styles.container}>
+        return <SafeAreaView style={styles.container}>
             <Text>{error.message}</Text>
         </SafeAreaView>
     }
@@ -71,23 +81,25 @@ export const RinkListScreen = ({ }) => {
 
 
 
-
-    if (isMapVisible) {
-        return <>
-            <MapRinkView onRinkPress={handleOnRinkPressed} />
-            <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
-                <RinksFilters isMapVisible={true} />
-                {BottomButtons}
-            </SafeAreaView>
-        </>
-    }
-
     return <>
-        <SafeAreaView style={styles.container}>
+        <MapRinkView onRinkPress={handleOnRinkPressed} />
+        <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
             <RinksFilters isMapVisible={false} />
-            <RinkCount style={styles.list} />
-            <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} />
-            {BottomButtons}
+            <ActionSheet
+                ref={actionSheetRef}
+                isModal={false}
+                snapPoints={[30, 80]}
+                gestureEnabled
+                closable={false}
+                backgroundInteractionEnabled
+                disableDragBeyondMinimumSnapPoint
+                drawUnderStatusBar
+            >
+                <View >
+                    <RinkCount style={styles.list} />
+                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} />
+                </View>
+            </ActionSheet>
         </SafeAreaView>
     </>
 };

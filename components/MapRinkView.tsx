@@ -5,9 +5,9 @@ import { useColors } from '../colors';
 import { Platform, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 import { useRinks } from '../hooks/UseRinks';
-import useUserLocation from '../hooks/UseUserLocation';
 import { Log } from '../utils/logs';
 import { Button } from '@rneui/themed';
+import { useLocates } from '../hooks/UseLocation';
 
 interface MapRinkViewProps {
     onRinkPress: (rink: Rink) => void;
@@ -35,7 +35,7 @@ const useStyle = () => {
 
 const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
     const { rinks } = useRinks();
-    const { location, isAccesible, refresh } = useUserLocation();
+    const { location, isLocationEnabled } = useLocates();
     const mapRef = useRef<MapView>(null);
     const styles = useStyle();
     const colors = useColors();
@@ -65,11 +65,12 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
                     longitudeDelta: 0.0421,
                 }}
             >
-                {isAccesible && <Circle
+                {isLocationEnabled && <Circle
                     center={location}
                     radius={100}
+                    strokeWidth={3}
                     fillColor={colors.primary}
-                    strokeColor={colors.primary}
+                    strokeColor={colors.secondary}
                 />}
 
                 {rinks.map((rink, idx) => {

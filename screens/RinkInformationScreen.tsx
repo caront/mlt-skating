@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 
 import { RinkInformationScreenProps, RootStackParamList } from "./types";
 import useHistory from "../hooks/UseHistory";
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import RinkHistoryList from "../components/RinkHistoryList";
 import Animated from "react-native-reanimated";
 import { Rink, RinkWithCondition } from "../models/Rink";
@@ -99,14 +99,14 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
     const { rink, error, loading } = useRink(id);
     const styles = useStyle();
 
-    if (loading) {
+    if (loading || !rink) {
         return <SafeAreaView style={styles.container}>
             <RinkInformationHeader rink={route.params.rink} />
-            <Text>Loading...</Text>
+            <ActivityIndicator style={{ marginVertical: 16 }} />
         </SafeAreaView>
     }
 
-    if (error || !rink) {
+    if (error) {
         return <SafeAreaView style={styles.container}>
             <RinkInformationHeader rink={route.params.rink} />
             <Text>{rink === null ? 'error fetch Rink info' : error?.message}</Text>

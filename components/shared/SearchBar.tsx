@@ -7,7 +7,6 @@ import { BlurView } from "@react-native-community/blur";
 import { useTheme } from "@react-navigation/native";
 
 interface SearchBarProps {
-    blur: boolean;
     value: string;
     onChangeText: (text: string) => void;
     placeholder?: string;
@@ -45,7 +44,7 @@ const useStyles = () => {
     });
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder, blur: blueEnable }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder }) => {
     const styles = useStyles();
     const colors = useColors();
     const isDarkMode = useTheme().dark;
@@ -55,22 +54,6 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder,
 
     return (
         <View style={[styles.container, isAndroid ? { backgroundColor: colors.white, borderRadius: 30 } : {}]}>
-            {blueEnable && <BlurView
-                style={{
-                    display: isAndroid ? 'none' : 'flex',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    width: '115%',
-                    height: 55,
-                    borderRadius: 30,
-                }}
-                blurType={isDarkMode ? 'dark' : 'light'}
-                blurAmount={10}
-                reducedTransparencyFallbackColor={colors.primary}
-            />}
             <Icon
                 name="search"
                 size={20}

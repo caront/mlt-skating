@@ -10,6 +10,8 @@ import { useRinks } from '../hooks/UseRinks';
 import { color } from '@rneui/base';
 import SearchBar from './shared/SearchBar';
 import BlurIconButton from './shared/BlurButton';
+import ButtonIcon from './shared/ButtonIcon';
+import { useLocates } from '../hooks/UseLocation';
 
 
 
@@ -28,6 +30,7 @@ const useStyle = () => {
             display: 'flex',
             borderRadius: 40,
             gap: 10,
+            backgroundColor: colors.white,
             flexDirection: 'row',
             alignItems: 'center',
             alignContent: 'center',
@@ -56,6 +59,7 @@ const useStyle = () => {
 
 const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
     const { dispatch, options, resetOptions } = useRinks();
+    const { isLocationEnabled, refresh: refreshLocation } = useLocates();
     const bottomDrawerRef = useRef<BottomDrawerMethods>(null);
     const styles = useStyle();
     const colors = useColors();
@@ -76,18 +80,28 @@ const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
         dispatch({ type: 'SEARCH_FAVORITE', payload: value });
     }
 
+    const handleRefrehLocation = () => {
+        refreshLocation();
+    }
 
     return (
-        <View style={style} >
-            <View style={[styles.container, { backgroundColor: isMapVisible ? 'transparent' : colors.white }]}>
+        <View style={style}>
+            <View style={[styles.container]}>
+                <ButtonIcon
+                    height={55}
+                    width={55}
+                    icon={{
+                        name: 'locate',
+                        type: 'ionicon',
+                        color: colors.grey5,
+                    }}
+                    onPress={handleRefrehLocation} />
                 <SearchBar
-                    blur={true}
                     value={options.name}
                     onChangeText={handleSearchTermChanged}
                     placeholder="Search for a rink..."
                 />
-                <BlurIconButton
-                    blur={true}
+                <ButtonIcon
                     height={55}
                     width={55}
                     icon={{

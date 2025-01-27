@@ -39,7 +39,7 @@ const useStyles = (blur: boolean) => {
     });
 }
 
-const BlurContainer: React.FC<BlurContainerProps> = ({ style, blur = true, children, blurAmount = 10 }) => {
+const BlurContainer: React.FC<BlurContainerProps> = ({ style, blur = false, children, blurAmount = 10 }) => {
     const colors = useColors();
     const isDarkMode = useTheme().dark;
     const styles = useStyles(blur);

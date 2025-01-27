@@ -84,7 +84,7 @@ const buildRink = (data: any): RinkWithDistrictAndConditionLastUpdate | null => 
     return null;
 }
 
-export const useRink = (rinkId: string): UseRinkReturn => {
+export const useRink = (rinkId: number): UseRinkReturn => {
     const { data, loading, error } = useQuery(GET_RINKS_BY_ID, {
         variables: { rinkId }
     });
