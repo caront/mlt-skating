@@ -7,9 +7,12 @@ import { StringCleaner } from "../utils/stringCleaner";
 import dayjs from "dayjs";
 import { getFavorites, isFavorite, saveFavoriteStatus } from "../utils/favoritesUtils";
 import { Log } from "../utils/logs";
+import { useLocates } from "../hooks/UseLocation";
+import { getDistanceBetweenCoordinates } from "../utils/distance";
 
 export type RinkContextType = {
     rinks: RinkWithCondition[];
+    favRinks: RinkWithCondition[];
     loading: boolean;
     error: Error | ApolloError | undefined;
     options: RinkSearchOption;
@@ -21,6 +24,7 @@ export type RinkContextType = {
 
 const defaultDistritContext: RinkContextType = {
     rinks: [],
+    favRinks: [],
     loading: true,
     error: undefined,
     dispatch: () => { },
@@ -79,6 +83,7 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
 };
 
 export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+    const { isLocationEnabled, location } = useLocates();
     const [sourceRinks, setSourceRinks] = useState<RinkWithCondition[]>([]);
     const [rinks, setRinks] = useState<RinkWithCondition[]>([]);
     const [loading, setLoading] = useState(true);
@@ -137,6 +142,13 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     }, []);
 
 
+    useEffect(() => {
+        if (!isLocationEnabled) return;
+        sourceRinks.forEach((rink) => {
+            rink.distance = getDistanceBetweenCoordinates(location, rink);
+        });
+        setSourceRinks(sourceRinks.sort((a, b) => (a.distance ?? 0) - (b.distance ?? 0)));
+    }, [location, isLocationEnabled]);
 
     const filters = async () => {
         setLoading(true);
@@ -170,7 +182,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
                 const favoriteRinks = await getFavorites();
                 filteredRinks = filteredRinks.filter((rink) => rink.id in favoriteRinks);
             }
-            setRinks(filteredRinks.sort((a, b)=> a.name.localeCompare(b.name)));
+            setRinks(filteredRinks.sort((a, b) => a.name.localeCompare(b.name)));
         }
         catch (e) {
             console.log(e);
@@ -208,6 +220,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     return (
         <RinkContext.Provider value={{
             rinks,
+            favRinks: rinks.filter((rink) => rink.isFav),
             options,
             dispatch,
             loading,

@@ -1,15 +1,15 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {Rink, RinkWithDistrictAndCondition} from '../models/Rink';
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { Rink, RinkWithCondition } from "../models/Rink";
 
 export type RinkInformationScreenProps = NativeStackScreenProps<
   RootStackParamList,
-  'RinkInformation'
+  "RinkInformation"
 >;
 
 export type RootStackParamList = {
   RinkList: undefined;
-  RinkInformation: {rink: RinkWithDistrictAndCondition};
-  TestScreen: undefined;
+  RinkInformation: { rink: Rink };
+  AboutScreen: undefined;
 };
 
 declare global {

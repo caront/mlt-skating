@@ -14,18 +14,20 @@ import { useColors } from "../colors";
 import RinkCount from "../components/RinkCount";
 import BlurIconButton from "../components/shared/BlurButton";
 import ActionSheet, { ActionSheetRef, SheetProvider } from "react-native-actions-sheet";
+import { Tab } from '@rneui/themed';
 import { Log } from "../utils/logs";
+import { color } from "@rneui/base";
+import ButtonIcon from "../components/shared/ButtonIcon";
 
 export const RinkListScreen = ({ }) => {
-    const { rinks, refresh, loading, error } = useRinks();
-    const [isMapVisible, setIsMapVisible] = React.useState(false);
+    const { rinks, favRinks, loading, error } = useRinks();
+    const [isShowFav, setIsShowFav] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
 
     const actionSheetRef = useRef<ActionSheetRef>(null);
 
     useEffect(() => {
-        console.log(actionSheetRef)
         if (actionSheetRef && actionSheetRef.current)
             actionSheetRef.current?.show();
     }, [actionSheetRef.current]);
@@ -34,38 +36,9 @@ export const RinkListScreen = ({ }) => {
         navigation.navigate('RinkInformation', { rink });
     }
 
-    const handleOnMapPressed = () => {
-        setIsMapVisible(!isMapVisible);
+    const handleIsShowFav = () => {
+        setIsShowFav(!isShowFav);
     }
-
-    const BottomButtons = useMemo(() => (
-        <View style={styles.bottomButtonContainer}>
-
-            <BlurIconButton
-                height={55}
-                width={55}
-                blur={true}
-                icon={{
-                    name: 'info-outline',
-                    type: 'material',
-                    color: colors.grey5,
-                }}
-                onPress={() => { }}
-            />
-
-            <BlurIconButton
-                height={55}
-                width={55}
-                blur={true}
-                icon={{
-                    name: isMapVisible ? "format-list-bulleted" : "map",
-                    type: 'material',
-                    color: colors.grey5,
-                }}
-                onPress={handleOnMapPressed}>
-            </BlurIconButton>
-        </View>
-    ), [isMapVisible]);
 
     if (error) {
         return <SafeAreaView style={styles.container}>
@@ -94,17 +67,51 @@ export const RinkListScreen = ({ }) => {
                 backgroundInteractionEnabled
                 disableDragBeyondMinimumSnapPoint
                 drawUnderStatusBar
+                containerStyle={{ backgroundColor: colors.background }}
             >
-                <View >
-                    <RinkCount style={styles.list} />
-                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} />
+                <View style={styles.list}>
+                    <View style={styles.row}>
+                        <RinkCount style={styles.list} rinks={isShowFav ? favRinks : rinks} />
+                        <View style={{ display: 'flex', flexDirection: 'row', gap: 10 }}>
+                            {/* <Button
+                                buttonStyle={{
+                                    borderRadius: 30,
+                                    width: 55,
+                                    height: 55,
+                                    backgroundColor: 'transparent',
+                                }}
+                                icon={{
+                                    name: 'sort',
+                                    type: 'material',
+                                    color: colors.grey5,
+                                }}
+                                titleStyle={{ fontWeight: 'bold' }} onPress={handleIsShowFav}
+                            /> */}
+                            <Button
+                                buttonStyle={{
+                                    borderRadius: 30,
+                                    width: 55,
+                                    height: 55,
+                                    backgroundColor: 'transparent',
+                                }}
+                                icon={{
+                                    name: isShowFav ? 'favorite' : 'favorite-border',
+                                    type: 'material',
+                                    color: isShowFav ? 'pink' : colors.grey5,
+                                }}
+                                titleStyle={{ fontWeight: 'bold' }} onPress={handleIsShowFav}
+                            />
+                        </View>
+                    </View>
+                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} rinks={isShowFav ? favRinks : rinks} />
                 </View>
             </ActionSheet>
-        </SafeAreaView>
+        </SafeAreaView >
     </>
 };
 
 const styles = StyleSheet.create({
+
     container: {
         flex: 1,
         backgroundColor: 'transparent',
@@ -128,6 +135,14 @@ const styles = StyleSheet.create({
     },
     list: {
         paddingHorizontal: 10,
+        gap: 10,
+    },
+    row: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: 10,
     },
     bottomButtonContainer: {
         position: 'absolute',

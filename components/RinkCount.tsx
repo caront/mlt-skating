@@ -3,6 +3,12 @@ import { StyleProp, StyleSheet, Text, ViewStyle } from 'react-native';
 import { useColors } from '../colors';
 import { useRinks } from '../hooks/UseRinks';
 import { Log } from '../utils/logs';
+import { Rink } from '../models/Rink';
+
+interface RinkCountProps {
+    style: StyleProp<ViewStyle>;
+    rinks: Rink[];
+}
 
 
 const useStyles = () => {
@@ -19,10 +25,8 @@ const useStyles = () => {
 }
 
 
-const RinkCount: React.FC<{style: StyleProp<ViewStyle>}> = ({style}) => {
-    const { rinks } = useRinks();
+const RinkCount: React.FC<RinkCountProps> = ({ style, rinks }) => {
     const styles = useStyles();
-    Log.info('RinkCount', rinks.length);
     return <Text style={[style, styles.rinkNumber]}>{rinks.length === 0 ? 'No Rink' : `${rinks.length} Rinks`}</Text>
 }
 

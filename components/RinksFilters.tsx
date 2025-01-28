@@ -12,6 +12,8 @@ import SearchBar from './shared/SearchBar';
 import BlurIconButton from './shared/BlurButton';
 import ButtonIcon from './shared/ButtonIcon';
 import { useLocates } from '../hooks/UseLocation';
+import Animated, { SlideInUp, SlideOutUp, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
+import { Log } from '../utils/logs';
 
 
 
@@ -38,15 +40,12 @@ const useStyle = () => {
         },
         drawerContent: {
             flex: 1,
+            margin: 10,
             padding: 20,
-            backgroundColor: '#fff',
+            display: 'flex',
+            borderRadius: 30,
+            backgroundColor: colors.white,
             gap: 20,
-        },
-        resetButton: {
-            backgroundColor: colors.primary,
-            color: colors.grey5,
-            padding: 10,
-            borderRadius: 10,
         },
         row: {
             display: 'flex',
@@ -57,12 +56,26 @@ const useStyle = () => {
     });
 }
 
-const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
-    const { dispatch, options, resetOptions } = useRinks();
+const RinksFilters = ({ style }: RinksFiltersProps) => {
+    const { dispatch, options, resetOptions, refresh: refreshRinks } = useRinks();
     const { isLocationEnabled, refresh: refreshLocation } = useLocates();
-    const bottomDrawerRef = useRef<BottomDrawerMethods>(null);
+    const [isDrawerVisible, setIsDrawerVisible] = useState(false);
     const styles = useStyle();
     const colors = useColors();
+    const scale = useSharedValue<number>(0);
+
+    // useEffect(() => {
+    //     scale.value = isDrawerVisible ? withSpring(1) : withSpring(0);
+    // }, [isDrawerVisible]);
+
+    const handleSearchParamButtonClicked = () => {
+        console.log('handleSearchParamButtonClicked', { isDrawerVisible });
+        setIsDrawerVisible(!isDrawerVisible);
+    }
+
+    // const animatedStyles = useAnimatedStyle(() => ({
+    //     transform: [{ scaleY: scale.value }],
+    // }));
 
     const handleSearchTermChanged = (search: string) => {
         dispatch({ type: 'SEARCH_RINK_NAME', payload: search });
@@ -81,11 +94,21 @@ const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
     }
 
     const handleRefrehLocation = () => {
-        refreshLocation();
+        refreshLocation()
     }
 
     return (
         <View style={style}>
+            {isDrawerVisible && <Animated.View style={[{ position: 'absolute', top: 55, right: 0 }]} entering={SlideInUp} exiting={SlideOutUp}>
+                <View style={styles.drawerContent}>
+                    <View style={styles.row}>
+                        <Text>Only open rinks</Text>
+                        <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
+                    </View>
+                    <DistrictSelector onSelect={handleDistrictChanged} />
+                </View>
+            </Animated.View>
+            }
             <View style={[styles.container]}>
                 <ButtonIcon
                     height={55}
@@ -109,22 +132,11 @@ const RinksFilters = ({ style, isMapVisible }: RinksFiltersProps) => {
                         type: 'material',
                         color: colors.grey5,
                     }}
-                    onPress={() => bottomDrawerRef.current?.open()} />
+                    onPress={handleSearchParamButtonClicked} />
             </View>
 
-            <BottomDrawer ref={bottomDrawerRef}>
-                <View style={styles.drawerContent}>
-                    <View style={styles.row}>
-                        <Text>Only open rinks</Text>
-                        <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
-                    </View>
-                    <View style={styles.row}>
-                        <Text>Only favorites rinks</Text>
-                        <Switch value={options.onlyFavorite} onValueChange={handleOnlyFavoriteChanged} />
-                    </View>
-                    <DistrictSelector onSelect={handleDistrictChanged} />
-                </View>
-            </BottomDrawer>
+
+
 
         </View>
     );

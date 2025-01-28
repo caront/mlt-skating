@@ -10,9 +10,11 @@ import PropertyChip from '../shared/PropertyChip';
 import Circle from '../shared/Circle';
 import { isFavorite } from '../../utils/favoritesUtils';
 import { Log } from '../../utils/logs';
+import { useLocates } from '../../hooks/UseLocation';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
+    rinks: RinkWithCondition[];
 }
 
 const useStyles = () => {
@@ -106,6 +108,7 @@ const useStyles = () => {
 
 const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void }) => {
     const colors = useColors();
+    const { isLocationEnabled } = useLocates();
     const styles = useStyles();
 
     const handlePress = () => {
@@ -114,10 +117,12 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
 
     const randomRotation = Math.floor(rink.id * 10) - 60;
 
+
+
     return <TouchableOpacity onPress={handlePress} style={styles.card}>
         {rink.isFav &&
             <View style={[styles.absolute, styles.right]}>
-                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{rotate: `${randomRotation}deg`}], }} type='material' />
+                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{ rotate: `${randomRotation}deg` }], }} type='material' />
             </View>
         }
         <Text style={styles.rinkName}>{rink.name}</Text>
@@ -132,13 +137,18 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
                 <Text>Ice condition</Text>
                 <Circle color={conditionColor(rink.condition)} size={10} />
             </View>
+            {false && <View style={[styles.row, { gap: 5 }]}>
+                <Text> {rink.distance}</Text>
+                <Text>km</Text>
+            </View>
+            }
         </View>
     </TouchableOpacity>
 }
 
-const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
+const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style, rinks }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);
-    const { rinks, refresh } = useRinks();
+    const { refresh } = useRinks();
 
     const styles = useStyles();
 

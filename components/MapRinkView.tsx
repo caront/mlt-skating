@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Rink } from '../models/Rink';
-import MapView, { Circle, Marker } from 'react-native-maps';
+import MapView, { Circle, Marker, MarkerAnimated } from 'react-native-maps';
 import { useColors } from '../colors';
 import { Platform, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { View } from 'react-native';
@@ -74,13 +74,14 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
                 />}
 
                 {rinks.map((rink, idx) => {
-                    return <Marker
+                    return <MarkerAnimated
                         key={idx}
                         pinColor={rink.open ? colors.success : colors.error}
                         coordinate={rink}
                         onPress={() => onRinkPress(rink)}
                         id={idx.toString()}
-                    />
+                    >
+                    </MarkerAnimated>
                 })}
             </MapView >
         </>

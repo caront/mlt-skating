@@ -32,6 +32,7 @@ export interface DistrictWithRinks extends District, RinkList {}
 export interface Coordinate {
   latitude: number;
   longitude: number;
+  distance?: number;
 }
 
 export interface ConditionAndLastUpdate
