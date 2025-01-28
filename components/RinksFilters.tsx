@@ -14,6 +14,7 @@ import ButtonIcon from './shared/ButtonIcon';
 import { useLocates } from '../hooks/UseLocation';
 import Animated, { SlideInUp, SlideOutUp, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
 import { Log } from '../utils/logs';
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -57,6 +58,7 @@ const useStyle = () => {
 }
 
 const RinksFilters = ({ style }: RinksFiltersProps) => {
+    const {t} = useTranslation();
     const { dispatch, options, resetOptions, refresh: refreshRinks } = useRinks();
     const { isLocationEnabled, refresh: refreshLocation } = useLocates();
     const [isDrawerVisible, setIsDrawerVisible] = useState(false);
@@ -102,7 +104,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
             {isDrawerVisible && <Animated.View style={[{ position: 'absolute', top: 55, right: 0 }]} entering={SlideInUp} exiting={SlideOutUp}>
                 <View style={styles.drawerContent}>
                     <View style={styles.row}>
-                        <Text>Only open rinks</Text>
+                        <Text>{t('search.only_opened')}</Text>
                         <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
                     </View>
                     <DistrictSelector onSelect={handleDistrictChanged} />
@@ -122,7 +124,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
                 <SearchBar
                     value={options.name}
                     onChangeText={handleSearchTermChanged}
-                    placeholder="Search for a rink..."
+                    placeholder={t('search.search_placeholder')}
                 />
                 <ButtonIcon
                     height={55}

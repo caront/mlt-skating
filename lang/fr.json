@@ -3,14 +3,65 @@
   "rink_name": "Nom de la patinoire",
   "rinks": "Patinoires",
   "rinks_list": "Liste des patinoires",
+  "rinks_search_placeholder": "Rechercher une patinoire",
   "rinks_map": "Carte des patinoires",
-  "rink.count_zero": "Aucune patinoire",
-  "rink.count_one": "Une patinoire",
-  "rink.count_other": "{{count}} patinoires",
-  "key_zero": "zero",
-  "key_one": "singular",
-  "key_two": "two",
-  "key_few": "few",
-  "key_many": "many",
-  "key_other": "other"
+  "rink_number_zero": "Aucune patinoire",
+  "rink_number_one": "Une patinoire",
+  "rink_number_other": "{{count}} patinoires",
+  "search": {
+    "search": "Rechercher",
+    "search_placeholder": "Recherche",
+    "only_opened": "Seulement les patinoires ouvertes",
+    "filter_by_distict": "Filtrer par arrondissement",
+    "filter_by_distict_hint": "Sélectionner un ou plusieurs arrondissements"
+  },
+  "done": "Terminé",
+  "open": "Ouvert",
+  "close": "Fermé",
+  "since": "Depuis le {{date}}",
+  "rink_details": {
+    "conditions": "Conditions",
+    "name": "Nom",
+    "ice_quality_title": "Qualité de la glace",
+    "ice_quality" : {
+      "EXCELLENTE" : "Excellente",
+      "GOOD" : "Bonne",
+      "BAD" : "Mauvaise",
+      "NA" : "Inconnue"
+    },
+    "cleared": {
+      "yes": "Déneigée",
+      "no": "Non déneigée",
+      "hint": "La patinoire est-elle déneigée?",
+      "since": "Déneigée {{date}}"
+    },
+    "watered": {
+      "yes": "Arrosée",
+      "no": "Non arrosée",
+      "hint": "La patinoire est-elle arrosée?",
+      "since": "Arrosée {{date}}"
+    },
+    "resurfaced": {
+      "yes": "Resurfacée",
+      "no": "Non resurfacée",
+      "hint": "La patinoire est-elle resurfacée?",
+      "since": "Resurfacée {{date}}"
+    }
+  },
+  "open_map": "Ouvrir dans Plan",
+  "open_google_maps": "Ouvrir dans Google Maps",
+  "history": "Historique",
+  "last_update": "Dernière mise à jour {{date}}",
+  "date_format" : {
+    "date": "DD/MM/YYYY",
+    "time": "HH:mm",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "today_at": "Aujourd'hui à {{time}}",
+    "yesterday_at": "Hier à {{time}}"
+  },
+  "about": {
+    "about": "À propos",
+    "about_text": "Cette application a été créée par des bénévoles pour aider les Montréalais à trouver des patinoires près de chez eux. Les données sont fournies par la Ville de Montréal et mises à jour toutes les 15 minutes. Si vous avez des commentaires ou des suggestions, n'hésitez pas à nous contacter."
+  }
 }

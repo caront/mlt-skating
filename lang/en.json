@@ -1,16 +1,67 @@
 {
-  "rink": "rink",
-  "rink_name": "rink's name",
-  "rinks": "rinks",
-  "rinks_list": "Rinks list",
-  "rinks_map": "Rinks map",
-  "rink_count.zero": "No rinks",
-  "rink_count.one": "One rink",
-  "rink_count.other": "{{count}} rinks",
-  "key_zero": "zero",
-  "key_one": "singular",
-  "key_two": "two",
-  "key_few": "few",
-  "key_many": "many",
-  "key_other": "other"
+  "rink": "Rink",
+  "rink_name": "Rink Name",
+  "rinks": "Rinks",
+  "rinks_list": "List of Rinks",
+  "rinks_search_placeholder": "Search for a rink",
+  "rinks_map": "Rink Map",
+  "rink_number_zero": "No rinks",
+  "rink_number_one": "One rink",
+  "rink_number_other": "{{count}} rinks",
+  "search": {
+    "search": "Search",
+    "search_placeholder": "Search",
+    "only_opened": "Only open rinks",
+    "filter_by_distict": "Filter by district",
+    "filter_by_distict_hint": "Select one or more districts"
+  },
+  "done": "Done",
+  "open": "Open",
+  "close": "Closed",
+  "since": "Since {{date}}",
+  "rink_details": {
+    "conditions": "Conditions",
+    "name": "Name",
+    "ice_quality_title": "Ice Quality",
+    "ice_quality": {
+      "EXCELLENTE": "Excellent",
+      "GOOD": "Good",
+      "BAD": "Bad",
+      "NA": "Unknown"
+    },
+    "cleared": {
+      "yes": "Cleared",
+      "no": "Not cleared",
+      "hint": "Is the rink cleared?",
+      "since": "Cleared since {{date}}"
+    },
+    "watered": {
+      "yes": "Watered",
+      "no": "Not watered",
+      "hint": "Is the rink watered?",
+      "since": "Watered since {{date}}"
+    },
+    "resurfaced": {
+      "yes": "Resurfaced",
+      "no": "Not resurfaced",
+      "hint": "Is the rink resurfaced?",
+      "since": "Resurfaced since {{date}}"
+    }
+  },
+  "open_map": "Open in Maps",
+  "open_google_maps": "Open in Google Maps",
+  "history": "History",
+  "last_update": "Last updated {{date}}",
+  "date_format": {
+    "date": "MM/DD/YYYY",
+    "time": "HH:mm",
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "today_at": "Today at {{time}}",
+    "yesterday_at": "Yesterday at {{time}}"
+  },
+  "about": {
+    "about": "About",
+    "about_text": "This app was created by volunteers to help Montrealers find rinks near them. The data is provided by the City of Montreal and updated every 15 minutes. If you have any feedback or suggestions, feel free to contact us."
+  }
 }

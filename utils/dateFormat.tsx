@@ -1,6 +1,8 @@
 import dayjs, { Dayjs } from "dayjs"
+import i18next from "i18next";
 
 export const DateFormat = (date: string | null) => {
+
     if (date === null) return 'N/a';
     const today = dayjs();
 
@@ -9,5 +11,7 @@ export const DateFormat = (date: string | null) => {
     const isSameDay = today.isSame(dateToFormat, 'day');
     const isYesterday = today.isSame(dateToFormat.add(1, 'day'), 'day');
 
-    return isSameDay ? `Today at ${dateToFormat.format('HH:mm')}` : isYesterday ? `Yesterday at ${dateToFormat.format('HH:mm')}` : dateToFormat.format('DD/MM/YYYY');
+    if (isSameDay) return i18next.t('date_format.today_at', { time: dateToFormat.format(i18next.t('date_format.time')) });
+    if (isYesterday) return i18next.t('date_format.yesterday_at', { time: dateToFormat.format(i18next.t('date_format.time')) });
+    return dateToFormat.format(i18next.t('date_format.date'));
 }

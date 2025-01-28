@@ -12,6 +12,7 @@ import BlurContainer from './shared/BlurContainer';
 import Chip from './shared/Chip';
 import { Icon } from '@rneui/themed';
 import InformationContainer from './shared/InformationContainer';
+import { useTranslation } from 'react-i18next';
 
 interface RinkHistoryListProps {
     rink: Rink;
@@ -31,7 +32,7 @@ const useStyles = () => {
 }
 
 const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }) => {
-
+    const {t} = useTranslation();
     const { loading, error, conditions } = useRinkConditionsHistory(rink.id);
     const width = Dimensions.get('window').width;
     const styles = useStyles();
@@ -63,7 +64,7 @@ const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }
 
     return (
         <InformationContainer
-            title="History"
+            title={t('history')}
             titleIcon={<Icon name='access-time' color='white' size={20} type='material' />}
             titleBackground={colors.primary}
          style={styles.container}>

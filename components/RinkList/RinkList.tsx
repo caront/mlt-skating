@@ -11,6 +11,7 @@ import Circle from '../shared/Circle';
 import { isFavorite } from '../../utils/favoritesUtils';
 import { Log } from '../../utils/logs';
 import { useLocates } from '../../hooks/UseLocation';
+import { useTranslation } from 'react-i18next';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -107,6 +108,7 @@ const useStyles = () => {
 }
 
 const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void }) => {
+    const { t } = useTranslation();
     const colors = useColors();
     const { isLocationEnabled } = useLocates();
     const styles = useStyles();
@@ -130,11 +132,11 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
         <Text style={styles.district}>{rink.district.name}</Text>
         <View style={styles.row}>
             <View style={[styles.row, { gap: 5 }]}>
-                <Text>Open</Text>
+                <Text>{t(rink.open ? 'open' : 'close')}</Text>
                 <Circle color={rink.open ? colors.success : colors.error} size={10} />
             </View>
             <View style={[styles.row, { gap: 5 }]}>
-                <Text>Ice condition</Text>
+                <Text>{t(`rink_details.ice_quality.${rink.condition}`)}</Text>
                 <Circle color={conditionColor(rink.condition)} size={10} />
             </View>
             {false && <View style={[styles.row, { gap: 5 }]}>

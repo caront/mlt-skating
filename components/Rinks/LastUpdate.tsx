@@ -2,6 +2,7 @@ import React from 'react';
 import DayJs from "dayjs";
 import { View, Text, StyleSheet } from 'react-native';
 import { useColors } from '../../colors';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = () => {
     const colors = useColors();
@@ -40,12 +41,13 @@ const useStyles = () => {
 
 
 const LastUpdate: React.FC<{ date: string }> = ({ date }) => {
+    const { t } = useTranslation()
     const lastUpdate = DayJs(date);
     const isLastUpdateToday = lastUpdate.isSame(DayJs(), 'day');
     const styles = useStyles();
 
     return <View style={[styles.row]}>
-        <Text style={styles.lastUpdate}>last updated {lastUpdate.format(isLastUpdateToday ? 'HH:mm' : 'YYYY-DD-MM HH:mm')}</Text>
+        <Text style={styles.lastUpdate}>{t('last_update', { date: lastUpdate.format(isLastUpdateToday ? 'HH:mm' : 'YYYY-DD-MM HH:mm') })}</Text>
     </View>
 
 }

@@ -4,6 +4,7 @@ import { StyleSheet, View, Platform, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useColors } from '../../colors';
 import { openMap } from '../../utils/openMaps';
+import { useTranslation } from 'react-i18next';
 
 
 interface MapsViewImageProps {
@@ -15,6 +16,7 @@ interface MapsViewImageProps {
 
 const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng, url }) => {
     const colors = useColors();
+    const { t } = useTranslation();
     const isIos = Platform.OS === 'ios';
 
     const handleOnMapButtonPressed = () => {
@@ -53,7 +55,7 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng, url }) =
             {!isIos && <Image source={{ uri: url }} style={styles.map} />}
             <Button buttonStyle={[styles.button, { backgroundColor: colors.primary }]}
                 onPress={handleOnMapButtonPressed} >
-                <Text style={{ color: colors.grey5 }} >{isIos ? 'Open in Maps' : 'Open in Google Maps'}</Text>
+                <Text style={{ color: colors.grey5 }} >{isIos ? t('open_map') : t('open_google_maps')}</Text>
             </Button>
         </View>
     );

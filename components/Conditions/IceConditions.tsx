@@ -7,13 +7,16 @@ import React from "react";
 import DayJs from "dayjs";
 import { Icon } from "@rneui/themed";
 import { DateFormat } from "../../utils/dateFormat";
+import { useTranslation } from "react-i18next";
 
 
 const IceConditions: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
+    const { t } = useTranslation();
     const conditionsColor = conditionColor(condition.condition);
+
     return <Chip
-        title={'Ice Condition'}
-        subTitle={condition.condition.toLocaleLowerCase()}
+        title={t('rink_details.ice_quality_title')}
+        subTitle={t(`rink_details.ice_quality.${condition.condition}`)}
         background={conditionsColor}
         icon={<Icon name={'snowflake-4'} size={15} color='white' type={'fontisto'} />}
         containerStyle={{ marginVertical: 5 }} />

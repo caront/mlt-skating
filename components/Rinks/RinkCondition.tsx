@@ -20,6 +20,7 @@ import Resurfaced from "../Conditions/Resurfaced";
 import Watered from "../Conditions/Wather";
 import IceConditions from "../Conditions/IceConditions";
 import OpenChips from "../Conditions/OpenChips";
+import { useTranslation } from "react-i18next";
 
 interface RinkConditionsProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
@@ -62,10 +63,11 @@ const useStyles = () => {
 
 
 const RinkConditions: FunctionComponent<RinkConditionsProps> = ({ rink }) => {
+    const { t } = useTranslation();
     const styles = useStyles();
 
     return <InformationContainer
-        title={"Conditions"}
+        title={t("rink_details.conditions")}
         // titleBackground={colors}
         titleIcon={<Icon name='snowshoeing' size={20} color='white' type="material" />}
     >

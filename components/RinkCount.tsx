@@ -28,7 +28,7 @@ const useStyles = () => {
 const RinkCount: React.FC<RinkCountProps> = ({ style, rinks }) => {
     const { t } = useTranslation();
     const styles = useStyles();
-    return <Text style={[style, styles.rinkNumber]}>{i18next.t('key', {count: 2})}</Text>
+    return <Text style={[style, styles.rinkNumber]}>{t('rink_number', {count: rinks.length})}</Text>
 }
 
 export default RinkCount;

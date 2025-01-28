@@ -7,6 +7,8 @@ import Chip from './shared/Chip';
 import { getDistrict } from '../data/rinks';
 import { District } from '../models/Rink';
 import { useDistricts } from '../hooks/UseDistricts';
+import { use } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 
 interface DistrictSelectorProps {
@@ -101,6 +103,7 @@ const useStyles = () => {
 }
 
 const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
+    const { t } = useTranslation();
     const [modalVisible, setModalVisible] = useState(false);
     const { districts, getDistrict } = useDistricts();
     const [selectedDistrict, setSelectedDistrict] = useState<number[]>([]);
@@ -123,7 +126,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
     return (
         <View style={styles.container}>
             <Pressable onPress={() => setModalVisible(true)} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
-                <Text style={styles.label}>Filter by Districts</Text>
+                <Text style={styles.label}>{t('search.filter_by_distict')}</Text>
                 <Icon name='edit' type="material" />
             </Pressable>
             {hasDistricts &&
@@ -157,7 +160,7 @@ const DistrictSelector: React.FC<DistrictSelectorProps> = ({ onSelect }) => {
                         <Pressable
                             style={[styles.button, styles.buttonOpen]}
                             onPress={() => setModalVisible(false)}>
-                            <Text style={styles.textStyle}>Done</Text>
+                            <Text style={styles.textStyle}>{t('done')}</Text>
                         </Pressable>
                         <View style={styles.list}>
                             {districts.map((district, index) => (
