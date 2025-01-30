@@ -57,53 +57,24 @@ export const RinkListScreen = ({ }) => {
     return <>
         <MapRinkView onRinkPress={handleOnRinkPressed} />
         <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
-            <RinksFilters isMapVisible={false} />
             <ActionSheet
                 ref={actionSheetRef}
                 isModal={false}
-                snapPoints={[30, 80]}
+                snapPoints={[30, 50, 80]}
                 gestureEnabled
+                elevation={0}
                 closable={false}
                 backgroundInteractionEnabled
                 disableDragBeyondMinimumSnapPoint
-                drawUnderStatusBar
-                containerStyle={{ backgroundColor: colors.background }}
+                useBottomSafeAreaPadding={false}
+                containerStyle={{ backgroundColor: 'transparent', elevation: 0 }}
             >
-                <View style={styles.list}>
+                <View style={[styles.list, { height: '200%', backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 20 }]}>
+                    <RinksFilters isMapVisible={false} />
                     <View style={styles.row}>
                         <RinkCount style={styles.list} rinks={isShowFav ? favRinks : rinks} />
-                        <View style={{ display: 'flex', flexDirection: 'row', gap: 10 }}>
-                            {/* <Button
-                                buttonStyle={{
-                                    borderRadius: 30,
-                                    width: 55,
-                                    height: 55,
-                                    backgroundColor: 'transparent',
-                                }}
-                                icon={{
-                                    name: 'sort',
-                                    type: 'material',
-                                    color: colors.grey5,
-                                }}
-                                titleStyle={{ fontWeight: 'bold' }} onPress={handleIsShowFav}
-                            /> */}
-                            <Button
-                                buttonStyle={{
-                                    borderRadius: 30,
-                                    width: 55,
-                                    height: 55,
-                                    backgroundColor: 'transparent',
-                                }}
-                                icon={{
-                                    name: isShowFav ? 'favorite' : 'favorite-border',
-                                    type: 'material',
-                                    color: isShowFav ? 'pink' : colors.grey5,
-                                }}
-                                titleStyle={{ fontWeight: 'bold' }} onPress={handleIsShowFav}
-                            />
-                        </View>
                     </View>
-                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list} rinks={isShowFav ? favRinks : rinks} />
+                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list}/>
                 </View>
             </ActionSheet>
         </SafeAreaView >

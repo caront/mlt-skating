@@ -46,7 +46,6 @@ const OpenChips: React.FC<OpenChipsProps> = ({ condition }) => {
 
     return <View style={[styles.container, { backgroundColor: condition.open ? colors.success : colors.error }]} >
         <Text style={styles.status} >{t(condition.open ? 'open' : 'close')}</Text>
-        <Text style={{ fontSize: 12, color: colors.white }}>{t('since', { date: DateFormat(condition.openSince) })}</Text>
     </View>
 }
 

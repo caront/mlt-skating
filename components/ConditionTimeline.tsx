@@ -3,17 +3,17 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import { ConditionChanges } from "../models/ConditionHistory";
 import { useColors } from "../colors";
 import Circle from "./shared/Circle";
-import { ECondition } from "../models/Rink";
+import { Condition, ECondition } from "../models/Rink";
 import dayjs, { Dayjs } from "dayjs";
 import { Icon } from "@rneui/themed";
 import Chip from "./shared/Chip";
 
 
 type ConditionTimeLineProps = {
-    changes: ConditionChanges[];
+    conditions: Condition[];
 };
 
-const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ changes }) => {
+const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ conditions }) => {
     const colors = useColors();
 
     const conditionColor = (condition: ECondition) => {
@@ -28,8 +28,8 @@ const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ changes }) => {
                 return colors.grey3;
         }
     }
-    const renderItem = ({ item }: { item: ConditionChanges }) => {
-        const { current } = item;
+    const renderItem = ({ item }: { item: Condition }) => {
+
         return (
             <View style={styles.ConditionTimeLineItem}>
                 {/* Vertical Line */}
@@ -39,26 +39,26 @@ const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ changes }) => {
                 {/* Marker and Properties */}
                 <View style={styles.markerContainer}>
                     <View style={{flexDirection: 'row', gap: 5}}>
-                        <Circle color={current.open ? colors.success : colors.error} size={20} />
+                        <Circle color={item.open ? colors.success : colors.error} size={20} />
                         <Icon
-                            containerStyle={{ backgroundColor: conditionColor(current.condition), height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
+                            containerStyle={{ backgroundColor: conditionColor(item.condition), height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
                             name={'snowflake-4'} size={12} color='white' type={'fontisto'} />
                     </View>
 
                     <View style={styles.details}>
-                        <Text style={styles.date}>{dayjs(current.updatedAt).format('YYYY-DD-MM')}</Text>
-                        <Text style={styles.date}>{dayjs(current.updatedAt).format('HH:mm')}</Text>
+                        <Text style={styles.date}>{dayjs(item.updatedAt).format('YYYY-DD-MM')}</Text>
+                        <Text style={styles.date}>{dayjs(item.updatedAt).format('HH:mm')}</Text>
 
                         <View style={{ flexDirection: 'row', gap: 5, flexWrap: 'wrap' }}>
-                            {current.resurfaced && <Icon
+                            {item.resurfaced && <Icon
                                 containerStyle={{ backgroundColor: colors.secondary, height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
                                 name={'view-headline'} size={12} color='white' type={'material-community-icons'} />
                             }
-                            {current.cleared && <Icon
+                            {item.cleared && <Icon
                                 containerStyle={{ backgroundColor: colors.secondary, height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
                                 name={'cleaning-services'} size={12} color='white' type={'material-community-icons'} />
                             }
-                            {current.watered && <Icon
+                            {item.watered && <Icon
                                 containerStyle={{ backgroundColor: colors.secondary, height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
                                 name={'water-drop'} size={12} color='white' type={'material-community-icons'} />
                             }
@@ -71,7 +71,7 @@ const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ changes }) => {
 
     return (
         <FlatList
-            data={changes}
+            data={conditions}
             horizontal
             ItemSeparatorComponent={() => <View style={{ width: 12 }} />}
             keyExtractor={(_item, index) => index.toString()}

@@ -58,7 +58,7 @@ const useStyle = () => {
 }
 
 const RinksFilters = ({ style }: RinksFiltersProps) => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const { dispatch, options, resetOptions, refresh: refreshRinks } = useRinks();
     const { isLocationEnabled, refresh: refreshLocation } = useLocates();
     const [isDrawerVisible, setIsDrawerVisible] = useState(false);
@@ -91,8 +91,8 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
         dispatch({ type: 'SEARCH_RINK_OPEN', payload: value });
     }
 
-    const handleOnlyFavoriteChanged = (value: boolean) => {
-        dispatch({ type: 'SEARCH_FAVORITE', payload: value });
+    const handleOnlyFavoriteChanged = () => {
+        dispatch({ type: 'SEARCH_FAVORITE', payload: !options.onlyFavorite });
     }
 
     const handleRefrehLocation = () => {
@@ -101,16 +101,7 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
 
     return (
         <View style={style}>
-            {isDrawerVisible && <Animated.View style={[{ position: 'absolute', top: 55, right: 0 }]} entering={SlideInUp} exiting={SlideOutUp}>
-                <View style={styles.drawerContent}>
-                    <View style={styles.row}>
-                        <Text>{t('search.only_opened')}</Text>
-                        <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
-                    </View>
-                    <DistrictSelector onSelect={handleDistrictChanged} />
-                </View>
-            </Animated.View>
-            }
+
             <View style={[styles.container]}>
                 <ButtonIcon
                     height={55}
@@ -130,14 +121,23 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
                     height={55}
                     width={55}
                     icon={{
-                        name: 'manage-search',
+                        name: options.onlyFavorite ? 'favorite' : 'favorite-border',
                         type: 'material',
-                        color: colors.grey5,
+                        color: options.onlyFavorite ? 'pink' : colors.grey5,
                     }}
-                    onPress={handleSearchParamButtonClicked} />
+                    onPress={handleOnlyFavoriteChanged} />
             </View>
 
-
+            {isDrawerVisible && <Animated.View style={[{ position: 'absolute', top: -55, right: 0, zIndex: 6 }]} entering={SlideInUp} exiting={SlideOutUp}>
+                <View style={styles.drawerContent}>
+                    <View style={styles.row}>
+                        <Text>{t('search.only_opened')}</Text>
+                        <Switch value={options.onlyOpen} onValueChange={handleOnlyOpenChanged} />
+                    </View>
+                    <DistrictSelector onSelect={handleDistrictChanged} />
+                </View>
+            </Animated.View>
+            }
 
 
         </View>

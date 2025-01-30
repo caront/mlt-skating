@@ -68,7 +68,7 @@ const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }
             titleIcon={<Icon name='access-time' color='white' size={20} type='material' />}
             titleBackground={colors.primary}
          style={styles.container}>
-            <ConditionTimeLine changes={conditions} />
+            <ConditionTimeLine conditions={conditions} />
         </InformationContainer>
     );
 }

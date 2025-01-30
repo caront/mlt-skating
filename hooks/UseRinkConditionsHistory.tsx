@@ -8,7 +8,7 @@ import { ConditionChanges } from "../models/ConditionHistory";
 interface UseRinkConditionsHistoryReturn {
     loading: boolean;
     error: Error | ApolloError | undefined;
-    conditions: ConditionChanges[];
+    conditions: Condition[];
 }
 
 
@@ -36,7 +36,7 @@ function getChanges(conditions: Condition[]): ConditionChanges[] {
 }
 
 
-const buildHistory = (data: any): ConditionChanges[] => {
+const buildHistory = (data: any): Condition[] => {
     try {
         const conditions = data.rinksCollection.edges[0].node.conditionsCollection.edges.map(
             (edge: any): Condition => {
@@ -52,7 +52,7 @@ const buildHistory = (data: any): ConditionChanges[] => {
             }
         );
 
-        return getChanges(conditions);
+        return (conditions);
 
         // return data.rinksCollection.edges[0].node.conditionsCollection.edges.map((edge: any) : ConditionHistory => {
         //     return {

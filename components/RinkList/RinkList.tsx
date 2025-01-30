@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { FunctionComponent, useEffect, useMemo } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
 import { ECondition, Rink, RinkWithCondition } from '../../models/Rink';
 import { cleanColor, conditionColor, resurfacedColor, useColors } from '../../colors';
@@ -15,7 +15,6 @@ import { useTranslation } from 'react-i18next';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
-    rinks: RinkWithCondition[];
 }
 
 const useStyles = () => {
@@ -107,7 +106,7 @@ const useStyles = () => {
     });
 }
 
-const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void }) => {
+const RinkItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
     const { t } = useTranslation();
     const colors = useColors();
     const { isLocationEnabled } = useLocates();
@@ -119,38 +118,51 @@ const RinkItemList = ({ rink, onRinkPress }: { rink: RinkWithCondition, onRinkPr
 
     const randomRotation = Math.floor(rink.id * 10) - 60;
 
+// Log.info('RinkItemList', index );
 
-
-    return <TouchableOpacity onPress={handlePress} style={styles.card}>
-        {rink.isFav &&
-            <View style={[styles.absolute, styles.right]}>
-                <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{ rotate: `${randomRotation}deg` }], }} type='material' />
-            </View>
-        }
-        <Text style={styles.rinkName}>{rink.name}</Text>
-        <Text style={styles.rinkDecription}>{rink.description}</Text>
-        <Text style={styles.district}>{rink.district.name}</Text>
-        <View style={styles.row}>
-            <View style={[styles.row, { gap: 5 }]}>
-                <Text>{t(rink.open ? 'open' : 'close')}</Text>
-                <Circle color={rink.open ? colors.success : colors.error} size={10} />
-            </View>
-            <View style={[styles.row, { gap: 5 }]}>
-                <Text>{t(`rink_details.ice_quality.${rink.condition}`)}</Text>
-                <Circle color={conditionColor(rink.condition)} size={10} />
-            </View>
-            {false && <View style={[styles.row, { gap: 5 }]}>
-                <Text> {rink.distance}</Text>
-                <Text>km</Text>
-            </View>
+    return <View style={styles.column}>
+        <Adds show={index !== 0 && index % 10 === 0} />
+        <TouchableOpacity onPress={handlePress} style={styles.card}>
+            {rink.isFav &&
+                <View style={[styles.absolute, styles.right]}>
+                    <Icon name="favorite" iconStyle={{ color: 'pink', transform: [{ rotate: `${randomRotation}deg` }], }} type='material' />
+                </View>
             }
-        </View>
-    </TouchableOpacity>
+            <Text style={styles.rinkName}>{rink.name}</Text>
+            <Text style={styles.rinkDecription}>{rink.description}</Text>
+            <Text style={styles.district}>{rink.district.name}</Text>
+            <View style={styles.row}>
+                <View style={[styles.row, { gap: 5 }]}>
+                    <Text>{t(rink.open ? 'open' : 'close')}</Text>
+                    <Circle color={rink.open ? colors.success : colors.error} size={10} />
+                </View>
+                <View style={[styles.row, { gap: 5 }]}>
+                    <Text>{t(`rink_details.ice_quality.${rink.condition}`)}</Text>
+                    <Circle color={conditionColor(rink.condition)} size={10} />
+                </View>
+                {false && <View style={[styles.row, { gap: 5 }]}>
+                    <Text> {rink.distance}</Text>
+                    <Text>km</Text>
+                </View>
+                }
+            </View>
+        </TouchableOpacity>
+    </View>
+
 }
 
-const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style, rinks }) => {
+const Adds: React.FC<{ show: boolean }> = ({ show }) => {
+    const colors = useColors();
+
+    if (show) {
+        return <View style={{ height: 55, marginBottom: 16, width: '100%', backgroundColor: colors.error }} />
+    }
+    return <View style={{ height: 0 }} />
+}
+
+const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);
-    const { refresh } = useRinks();
+    const { refresh, rinks } = useRinks();
 
     const styles = useStyles();
 
@@ -168,7 +180,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style, rinks 
         <View style={[styles.container, style]}>
             <FlatList
                 data={rinks}
-                ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
+                ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
                 keyExtractor={(item) => item.id.toString()}
                 refreshControl={
                     <RefreshControl
@@ -178,7 +190,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style, rinks 
                         progressBackgroundColor={'black'}
                     />
                 }
-                renderItem={({ item: rink }) => <RinkItemList rink={rink} onRinkPress={onRinkPress} />}
+                renderItem={({ item: rink, index }) => <RinkItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
     );

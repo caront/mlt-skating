@@ -7,7 +7,7 @@
 - [1/2] Rink detail
 - [x] Rink map
 - [ ] District filter
-- [ ] I18n
+- [x] I18n
 - [ ] Ads 
 - [ ] 
 
