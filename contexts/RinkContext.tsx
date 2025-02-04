@@ -5,7 +5,7 @@ import { GET_RINKS } from "../graphql/RinkQueries";
 import { Action, RinkSearchOption, defaultSearchOption, rinkReducer } from "../reducers/RinkReducer";
 import { StringCleaner } from "../utils/stringCleaner";
 import dayjs from "dayjs";
-import { getFavorites, isFavorite, saveFavoriteStatus } from "../utils/favoritesUtils";
+import { getFavorites, isRinkFavorite, saveFavoriteStatus } from "../utils/favoritesUtils";
 import { Log } from "../utils/logs";
 import { useLocates } from "../hooks/UseLocation";
 import { getDistanceBetweenCoordinates } from "../utils/distance";

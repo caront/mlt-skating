@@ -18,9 +18,10 @@ import { Tab } from '@rneui/themed';
 import { Log } from "../utils/logs";
 import { color } from "@rneui/base";
 import ButtonIcon from "../components/shared/ButtonIcon";
+import { useRinkGroups } from "../hooks/UseRinkGroup";
 
 export const RinkListScreen = ({ }) => {
-    const { rinks, favRinks, loading, error } = useRinks();
+    const {  loading, error } = useRinkGroups();
     const [isShowFav, setIsShowFav] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
@@ -72,7 +73,7 @@ export const RinkListScreen = ({ }) => {
                 <View style={[styles.list, { height: '200%', backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 20 }]}>
                     <RinksFilters isMapVisible={false} />
                     <View style={styles.row}>
-                        <RinkCount style={styles.list} rinks={isShowFav ? favRinks : rinks} />
+                        <RinkCount style={styles.list}  />
                     </View>
                     <SkyList onRinkPress={handleOnRinkPressed} style={styles.list}/>
                 </View>

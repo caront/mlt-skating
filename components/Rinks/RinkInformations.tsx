@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useTransition } from 'react';
 import { Rink, RinkWithDistrictAndConditionLastUpdate } from '../../models/Rink';
 import { StyleSheet, Text, View } from 'react-native';
 import { Icon } from '@rneui/themed';
 import { useColors } from '../../colors';
-import { color } from '@rneui/base';
 import OpenChips from '../Conditions/OpenChips';
+import InformationContainer from '../shared/InformationContainer';
+import Chip from '../shared/Chip';
+import { use } from 'i18next';
+import { useTranslation } from 'react-i18next';
+import dayjs from 'dayjs';
 
 interface RinkInformationsProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
@@ -19,19 +23,56 @@ const useStyles = () => {
             gap: 5,
             color: colors.grey5,
         },
+        information : {
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 5,
+            color: colors.grey5,
+            paddingHorizontal: 20,
+            textAlign: 'justify',
+        }
     })
 }
 
+const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+]
 
 const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
-
+    const { t } = useTranslation();
     const styles = useStyles();
     const colors = useColors();
 
+    const today = dayjs().get('day');
+    const todayName = days[today];
+
+    const hasService = (rink.services ?? []).length > 0;
+    const hasSchedules = (rink.schedules ?? []).length > 0;
+
+    const scheduleValue = rink.schedules?.find((schedule) => schedule.dayOfWeek === todayName);
+
     return (
-        <View style={styles.container}>
-            <OpenChips condition={rink} />
-        </View>
+        <>
+            <View style={styles.container}>
+                <OpenChips condition={rink} />
+            </View>
+            <InformationContainer
+                title={rink.description}
+                titleIcon={<Icon name='ice-skating' size={20} color='white' type="material" />}
+            >
+                <Text style={styles.information}>{rink.information}</Text>
+                {hasService && <Chip title={t('services')}  subTitle={rink.services?.join(' - ')} />}
+                {hasSchedules && <Chip title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />}
+            </InformationContainer>
+
+        </>
+
     );
 }
 

@@ -1,4 +1,4 @@
-import { District } from "./Rink";
+import { District } from "./District";
 
 export interface City {
   id: number;

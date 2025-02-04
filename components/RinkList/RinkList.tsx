@@ -8,10 +8,12 @@ import Animated, { SharedTransition, useAnimatedStyle, useSharedValue, withSprin
 import { BlurView } from "@react-native-community/blur";
 import PropertyChip from '../shared/PropertyChip';
 import Circle from '../shared/Circle';
-import { isFavorite } from '../../utils/favoritesUtils';
+// import { isFavorite } from '../../utils/favoritesUtils';
 import { Log } from '../../utils/logs';
 import { useLocates } from '../../hooks/UseLocation';
 import { useTranslation } from 'react-i18next';
+import { useRinkGroups } from '../../hooks/UseRinkGroup';
+import { RinkGroup } from '../../models/RinkGroup';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -106,14 +108,14 @@ const useStyles = () => {
     });
 }
 
-const RinkItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
+const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
     const { t } = useTranslation();
     const colors = useColors();
     const { isLocationEnabled } = useLocates();
     const styles = useStyles();
 
     const handlePress = () => {
-        onRinkPress(rink)
+        onRinkPress(rink);
     };
 
     const randomRotation = Math.floor(rink.id * 10) - 60;
@@ -190,7 +192,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                         progressBackgroundColor={'black'}
                     />
                 }
-                renderItem={({ item: rink, index }) => <RinkItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
+                renderItem={({ item: rink, index }) => <RinkGroupItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
     );

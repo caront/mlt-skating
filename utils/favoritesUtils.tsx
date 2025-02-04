@@ -25,7 +25,7 @@ export const getFavorites = async (): Promise<{ [key: number]: boolean }> => {
         return {};
     }
 };
-export const isFavorite = async (rinkId: number): Promise<boolean> => {
+export const isRinkFavorite = async (rinkId: number): Promise<boolean> => {
     const favorites = await getFavorites();
     return !!favorites[rinkId];
 };

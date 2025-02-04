@@ -1,16 +1,12 @@
 import React from 'react';
 import { StyleProp, StyleSheet, Text, ViewStyle } from 'react-native';
 import { useColors } from '../colors';
-import { useRinks } from '../hooks/UseRinks';
-import { Log } from '../utils/logs';
-import { Rink } from '../models/Rink';
-
 interface RinkCountProps {
     style: StyleProp<ViewStyle>;
-    rinks: Rink[];
 }
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import { useRinkGroups } from '../hooks/UseRinkGroup';
 
 
 const useStyles = () => {
@@ -25,10 +21,11 @@ const useStyles = () => {
 }
 
 
-const RinkCount: React.FC<RinkCountProps> = ({ style, rinks }) => {
+const RinkCount: React.FC<RinkCountProps> = ({ style }) => {
     const { t } = useTranslation();
+    const {rinkGroups} = useRinkGroups();
     const styles = useStyles();
-    return <Text style={[style, styles.rinkNumber]}>{t('rink_number', {count: rinks.length})}</Text>
+    return <Text style={[style, styles.rinkNumber]}>{t('rink_number', {count: rinkGroups.length})}</Text>
 }
 
 export default RinkCount;

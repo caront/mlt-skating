@@ -1,3 +1,6 @@
+import { District } from "./District";
+import { Schedule } from "./RinkGroup";
+
 export interface Rink extends Coordinate, WithStaticMap {
   id: number;
   name: string;
@@ -7,17 +10,15 @@ export interface Rink extends Coordinate, WithStaticMap {
   district: District;
   lastUpdate: string;
   isFav: boolean;
+  schedules?: Schedule[];
+  services?: string[];
+  information?: string;
 }
 
-interface WithStaticMap {
+export interface WithStaticMap {
   public_url? : string;
 }
 
-export interface District {
-  id: number;
-  name: string;
-  code: string;
-}
 
 export interface ConditionLastUpdate {
   lastTimeOpen: string | null;
@@ -33,6 +34,7 @@ export interface Coordinate {
   latitude: number;
   longitude: number;
   distance?: number;
+  address?: string;
 }
 
 export interface ConditionAndLastUpdate
@@ -129,3 +131,4 @@ export const defaultRinkWithDistrictAndConditionLastUpdate: RinkWithDistrictAndC
     lastTimeWatered: null,
     openSince: null,
   };
+

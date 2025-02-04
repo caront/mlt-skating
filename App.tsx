@@ -24,6 +24,7 @@ import LogProvider from './utils/logs';
 import { LocateProvider } from './contexts/LocateContext';
 import { I18NProvider } from './lang/i18n';
 import { CityProvider } from './contexts/CityContext';
+import { RinkGroupProvider } from './contexts/RinkGroupContext';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -90,26 +91,24 @@ function App(): React.JSX.Element {
             <SafeAreaProvider>
               <GestureHandlerRootView>
                 <LocateProvider>
-                  <CityProvider>
-                    <DistrictProvider>
-                      <RinkProvider>
-                        <Navigation>
-                          <Stack.Navigator>
-                            <Stack.Screen
-                              name="RinkList"
-                              component={RinkListScreen}
-                              options={{ headerShown: false, title: 'Rinks' }}
-                            />
-                            <Stack.Screen
-                              name="RinkInformation"
-                              component={RinkInformationScreen}
-                              options={{ headerShown: false, title: 'RinkInformation' }}
-                            />
-                          </Stack.Navigator>
-                        </Navigation>
-                      </RinkProvider>
-                    </DistrictProvider>
-                  </CityProvider>
+                  <DistrictProvider>
+                  <RinkProvider>
+                      <Navigation>
+                        <Stack.Navigator>
+                          <Stack.Screen
+                            name="RinkList"
+                            component={RinkListScreen}
+                            options={{ headerShown: false, title: 'Rinks' }}
+                          />
+                          <Stack.Screen
+                            name="RinkInformation"
+                            component={RinkInformationScreen}
+                            options={{ headerShown: false, title: 'RinkInformation' }}
+                          />
+                        </Stack.Navigator>
+                      </Navigation>
+                    </RinkProvider>
+                  </DistrictProvider>
                 </LocateProvider>
               </GestureHandlerRootView>
             </SafeAreaProvider>

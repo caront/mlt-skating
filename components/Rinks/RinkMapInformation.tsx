@@ -7,6 +7,7 @@ import MapsViewImage from '../shared/MapsViewImage';
 import DistrictChip from '../Districts/District';
 import InformationContainer from '../shared/InformationContainer';
 import { Icon } from '@rneui/themed';
+import { Text } from '@rneui/base';
 
 interface RinkMapInformationProps {
     rink: Rink;
@@ -30,7 +31,8 @@ export const RinkMapInformation: React.FC<RinkMapInformationProps> = ({ rink }) 
             title={rink.district.name}
             titleIcon={<Icon name='map' size={20} color='white' type="material" />}
             titleBackground={useColors().primary}
-            >
+        >
+            <Text>{rink.address}</Text>
             <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} url={rink.public_url} />
         </InformationContainer>
     );

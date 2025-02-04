@@ -19,6 +19,8 @@
   "open": "Ouvert",
   "close": "Fermé",
   "since": "Depuis le {{date}}",
+  "schedules": "Horaires",
+  "services": "Services",
   "rink_details": {
     "conditions": "Conditions",
     "name": "Nom",

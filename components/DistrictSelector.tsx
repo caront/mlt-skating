@@ -5,7 +5,7 @@ import { useColors } from '../colors';
 import { color, Icon } from '@rneui/base';
 import Chip from './shared/Chip';
 import { getDistrict } from '../data/rinks';
-import { District } from '../models/Rink';
+import { District } from '../models/District';
 import { useDistricts } from '../hooks/UseDistricts';
 import { use } from 'i18next';
 import { useTranslation } from 'react-i18next';

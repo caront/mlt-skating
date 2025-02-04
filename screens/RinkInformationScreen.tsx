@@ -88,7 +88,7 @@ const RinkInformationHeader: FunctionComponent<{ rink: Rink }> = ({ rink }) => {
                 }}
                 titleStyle={{ fontWeight: 'bold' }} onPress={() => handleOnRinkPressed()}>
             </Button>
-            <Text>{rink.name}</Text>
+            <Text style={{ flexWrap: 'wrap', maxWidth: '75%' }}>{rink.name}</Text>
         </View>
         <FavButton rink={rink} />
     </View>

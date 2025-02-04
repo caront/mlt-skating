@@ -54,11 +54,31 @@ export const GET_RINKS_BY_ID = gql`
           rink_name
           longitude
           latitude
+          services
+          schedules
+          information
+          address
           districts {
             name
             id
           }
           public_static_map_url
+          rink_group_rinkCollection {
+            edges {
+              node {
+                id
+                rink_groups {
+                  id
+                  name
+                  latitude
+                  description
+                  services
+                  longitude
+                  hours
+                }
+              }
+            }
+          }
           conditionsCollection(
             first: 10
             orderBy: [{ updated_at: DescNullsFirst }]

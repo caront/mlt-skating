@@ -1,0 +1,9738 @@
+{
+  "Patinoire du parc Jean-Amyot": [
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    }
+  ],
+  "Patinoire du parc Raymond": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoire du parc des Rapides": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoire du parc De Mésy": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Clémentine-De La Rousselière": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Pierre-Bernard": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc de Bordeaux": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Anneau de glace du parc Saint-Laurent": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du Glacis": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc de la Cité-Jardin": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Joseph-Paré": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Beauclerk": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc du Bois-Franc": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Saint-Victor": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc Champdoré": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Painter": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Petit": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Pratt": [
+    {
+      "id": 918,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 987,
+      "name": "Parc Pratt"
+    },
+    {
+      "id": 1103,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 1080,
+      "name": "Parc Outremont"
+    },
+    {
+      "id": 1005,
+      "name": "Parc Oakwood"
+    },
+    {
+      "id": 1068,
+      "name": "Parc Jacques-Parizeau"
+    }
+  ],
+  "Patinoire du parc Poirier": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc De La Bruère": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc des Faubourgs": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc Georges-Gauthier": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Joseph-Avila-Proulx": [
+    {
+      "id": 1028,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 958,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 972,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 913,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 975,
+      "name": "Parc Robert-Sauvé"
+    },
+    {
+      "id": 943,
+      "name": "Parc Jonathan-Wilson"
+    },
+    {
+      "id": 940,
+      "name": "Parc Joseph-Avila-Proulx"
+    }
+  ],
+  "Patinoire Bleu Blanc Bouge de CDN-NDG": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire du parc du Père-Marquette": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Le Carignan": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoire du parc Riverside": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoire du parc Grier": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Patinoire du parc Jacques-Parizeau": [
+    {
+      "id": 918,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 987,
+      "name": "Parc Pratt"
+    },
+    {
+      "id": 1103,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 1080,
+      "name": "Parc Outremont"
+    },
+    {
+      "id": 1005,
+      "name": "Parc Oakwood"
+    },
+    {
+      "id": 1068,
+      "name": "Parc Jacques-Parizeau"
+    }
+  ],
+  "Anneau de glace du parc Philippe-Laheurte": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Duquette": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc Walter-Stewart": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc Gédéon-De Catalogne": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Anneau de glace du parc François-Perrault": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire Bleu Blanc Bouge du parc Willibrord": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc Houde": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Henri-Julien": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Eugène-Dostie": [
+    {
+      "id": 1028,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 958,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 972,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 913,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 975,
+      "name": "Parc Robert-Sauvé"
+    },
+    {
+      "id": 943,
+      "name": "Parc Jonathan-Wilson"
+    },
+    {
+      "id": 940,
+      "name": "Parc Joseph-Avila-Proulx"
+    }
+  ],
+  "Patinoire du parc Yves-Thériault": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Lalancette": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire extérieure du parc d'À-Ma-Baie": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Patinoire du parc Saint-Aloysius": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire intérieure du centre sportif Dollard-St-Laurent": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Anneau de glace du parc Beaulac": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Le Prévost": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Rougemont": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc Pehr-Kalm": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc de la Reine-Élisabeth": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc Oakwood": [
+    {
+      "id": 918,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 987,
+      "name": "Parc Pratt"
+    },
+    {
+      "id": 1103,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 1080,
+      "name": "Parc Outremont"
+    },
+    {
+      "id": 1005,
+      "name": "Parc Oakwood"
+    },
+    {
+      "id": 1068,
+      "name": "Parc Jacques-Parizeau"
+    }
+  ],
+  "Patinoire du parc Saint-Simon-Apôtre": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Lefebvre": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoires du parc Beaubien - Outremont": [
+    {
+      "id": 918,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 987,
+      "name": "Parc Pratt"
+    },
+    {
+      "id": 1103,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 1080,
+      "name": "Parc Outremont"
+    },
+    {
+      "id": 1005,
+      "name": "Parc Oakwood"
+    },
+    {
+      "id": 1068,
+      "name": "Parc Jacques-Parizeau"
+    }
+  ],
+  "Patinoires du parc Vinet": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoires du Carré d'Hibernia": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoire du parc Beurling": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc Camille": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire réfrigérée Bleu Blanc Bouge du parc De Mésy": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire réfrigérée de l'esplanade Tranquille": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc Trenholme": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoires du parc Saint-André-Apôtre": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoires du parc Saint-Alphonse": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoires du parc Campbell Ouest": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoire du parc Toussaint-Louverture": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc de Montmartre": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Jonathan-Wilson": [
+    {
+      "id": 1028,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 958,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 972,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 913,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 975,
+      "name": "Parc Robert-Sauvé"
+    },
+    {
+      "id": 943,
+      "name": "Parc Jonathan-Wilson"
+    },
+    {
+      "id": 940,
+      "name": "Parc Joseph-Avila-Proulx"
+    }
+  ],
+  "Patinoire Bleu Blanc Bouge du parc Le Carignan": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoire extérieure réfrigérée Bleu Blanc Bouge du parc Hayward": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoires du parc George-Vernot": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoires du parc Saint-Paul-de-la-Croix": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Thomas-Chapais": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire extérieure du parc Ferland": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoires du parc Don-Bosco": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Leroux": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoire du parc Lacordaire": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoires du parc Berthe-Louard": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Anneau de glace du parc Chamberland": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Lafond": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Pierre-Bédard": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoire du parc Sainte-Bernadette": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoires de la polyvalente Saint-Henri": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoire du parc Gohier": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Anneau de glace du parc de Talcy": [
+    {
+      "id": 912,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 960,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 1042,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1107,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1004,
+      "name": "Parc Roger Rousseau"
+    },
+    {
+      "id": 986,
+      "name": "Parc Talcy"
+    }
+  ],
+  "Patinoires du parc des Hirondelles": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire extérieure de l'aréna Mont-Royal": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc de Louisbourg": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc Nicolas-Viel": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoires du parc Gérard-Vaillancourt": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Oscar": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoire du parc Outremont": [
+    {
+      "id": 918,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 987,
+      "name": "Parc Pratt"
+    },
+    {
+      "id": 1103,
+      "name": "Parc Beaubien"
+    },
+    {
+      "id": 1080,
+      "name": "Parc Outremont"
+    },
+    {
+      "id": 1005,
+      "name": "Parc Oakwood"
+    },
+    {
+      "id": 1068,
+      "name": "Parc Jacques-Parizeau"
+    }
+  ],
+  "Patinoire du parc Hans-Selye": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Anneau de glace du parc Hayward": [
+    {
+      "id": 1108,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1090,
+      "name": "parc Riverside"
+    },
+    {
+      "id": 1097,
+      "name": "parc Hayward"
+    },
+    {
+      "id": 1125,
+      "name": "parc Lefebvre"
+    },
+    {
+      "id": 1096,
+      "name": "parc des Rapides"
+    },
+    {
+      "id": 1116,
+      "name": "parc Leroux"
+    }
+  ],
+  "Patinoire du parc Théodore": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Anneau de glace du parc Decelles": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoires du parc du Sault-au-Récollet": [
+    {
+      "id": 929,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 948,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1073,
+      "name": "Nicolas-Viel"
+    },
+    {
+      "id": 1026,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 971,
+      "name": "Berthe-Louard"
+    },
+    {
+      "id": 1052,
+      "name": "Henri-Julien"
+    },
+    {
+      "id": 1063,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 1003,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 1041,
+      "name": "Saint-Alphonse"
+    },
+    {
+      "id": 1000,
+      "name": "Camille"
+    },
+    {
+      "id": 992,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1072,
+      "name": "Sault-au-Récollet"
+    },
+    {
+      "id": 985,
+      "name": "De Louisbourg"
+    },
+    {
+      "id": 1040,
+      "name": "Saint-André-Apôtre"
+    },
+    {
+      "id": 923,
+      "name": "Saint-Paul-de-la-Croix"
+    },
+    {
+      "id": 938,
+      "name": "Des Hirondelles"
+    },
+    {
+      "id": 1036,
+      "name": "De Bordeaux"
+    },
+    {
+      "id": 1076,
+      "name": "Saint-Simon-Apôtre"
+    },
+    {
+      "id": 1019,
+      "name": "De Mésy"
+    }
+  ],
+  "Patinoire du parc de la Rive-Boisée": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Patinoire du parc des Vétérans": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoires du parc Le Ber": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoire du parc Daniel-Johnson": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoires du parc Martin-Luther-King": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire du parc Ignace-Bourget": [
+    {
+      "id": 928,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1078,
+      "name": "Vinet"
+    },
+    {
+      "id": 930,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 1092,
+      "name": "Polyvalente Saint-Henri"
+    },
+    {
+      "id": 917,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 909,
+      "name": "Le Ber"
+    },
+    {
+      "id": 944,
+      "name": "Ignace-Bourget"
+    },
+    {
+      "id": 1067,
+      "name": "Le Ber"
+    },
+    {
+      "id": 1091,
+      "name": "Carré Hibernia"
+    },
+    {
+      "id": 1060,
+      "name": "Campbell-Ouest"
+    },
+    {
+      "id": 1101,
+      "name": "Gédéon-de-Catalogne"
+    },
+    {
+      "id": 951,
+      "name": "Vinet"
+    }
+  ],
+  "Patinoire extérieure du parc Luigi-Pirandello": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Anneau de glace du parc Beaudet": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoire du parc Howard": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire Bernard Est": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc Georges-Saint-Pierre": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire du parc Liébert": [
+    {
+      "id": 952,
+      "name": "Thomas-Chapais"
+    },
+    {
+      "id": 905,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 1037,
+      "name": "Lalancette"
+    },
+    {
+      "id": 954,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1034,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 959,
+      "name": "Liébert"
+    },
+    {
+      "id": 1032,
+      "name": "Beauclerk"
+    },
+    {
+      "id": 1038,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 982,
+      "name": "Pierre-Bédard"
+    },
+    {
+      "id": 922,
+      "name": "Lalancette"
+    },
+    {
+      "id": 1075,
+      "name": "Pierre-Bernard"
+    },
+    {
+      "id": 942,
+      "name": "Jean-Amyot"
+    },
+    {
+      "id": 1064,
+      "name": "Saint-Victor"
+    },
+    {
+      "id": 1062,
+      "name": "Saint-Aloysius"
+    },
+    {
+      "id": 995,
+      "name": "De La Bruère"
+    },
+    {
+      "id": 1066,
+      "name": "Théodore"
+    },
+    {
+      "id": 1106,
+      "name": "Rougemont"
+    }
+  ],
+  "Patinoires du parc Sauvé": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoire De Gaspé": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc Mackenzie-King": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire extérieure du complexe sportif Saint-Léonard": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire extérieure du parc Ladauversière": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire extérieure au parc-école Laurier-MacDonald": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire du parc Dixie": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Patinoire du parc Molson": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Noël-Nord": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoires du parc Notre-Dame-de-Grâce": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire extérieure du parc Delorme": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire du parc Beaubien": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Jeanne-Lapierre": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire extérieure du parc Alexander": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Anneau de glace du parc Rosewood": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Patinoires du parc des Cageux": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Michel-Ménard": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Patinoires du parc Sir-Wilfrid-Laurier": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoire du Parc Brook": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Patinoires du parc William-Hurst": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire du parc De Lorimier": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc Jean-Brillant": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire extérieure du parc de Roxboro": [
+    {
+      "id": 924,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1048,
+      "name": "Parc Alexander"
+    },
+    {
+      "id": 1025,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1007,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 1053,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 1011,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1020,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 908,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1013,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 904,
+      "name": "Parc de la Rive-Boisée"
+    },
+    {
+      "id": 994,
+      "name": "Parc Brook"
+    },
+    {
+      "id": 964,
+      "name": "Parc de Roxboro"
+    },
+    {
+      "id": 1065,
+      "name": "Parc Grier"
+    },
+    {
+      "id": 1047,
+      "name": "Parc d'À-Ma-Baie"
+    },
+    {
+      "id": 934,
+      "name": "Parc Alexander"
+    }
+  ],
+  "Patinoire extérieure du parc Giuseppe-Garibaldi": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire du parc William-Bowie": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Grande patinoire de sports d'équipe du parc La Fontaine": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoire réfrigérée Bleu Blanc Bouge du parc François-Perrault": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc De Normanville": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Ovila-Legaré": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Dan-Hanganu (Elgar)": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc de la Louisiane": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Kirkland": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Patinoire du parc Charleroi": [
+    {
+      "id": 925,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 935,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1133,
+      "name": "Bleu Blanc Bouge Le Carignan"
+    },
+    {
+      "id": 946,
+      "name": "parc Oscar"
+    },
+    {
+      "id": 1010,
+      "name": "parc Sauvé"
+    },
+    {
+      "id": 1030,
+      "name": "parc Charleroi"
+    },
+    {
+      "id": 1058,
+      "name": "parc Lacordaire"
+    }
+  ],
+  "Patinoire du chalet La Fontaine": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc Macdonald": [
+    {
+      "id": 920,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 953,
+      "name": "MacDonald"
+    },
+    {
+      "id": 968,
+      "name": "MacDonald"
+    },
+    {
+      "id": 1017,
+      "name": "Confédération"
+    },
+    {
+      "id": 967,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1015,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 981,
+      "name": "Martin-Luther-King"
+    },
+    {
+      "id": 1120,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 936,
+      "name": "Georges-Saint-Pierre"
+    },
+    {
+      "id": 963,
+      "name": "Notre-Dame-de-Grâce"
+    },
+    {
+      "id": 974,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 993,
+      "name": "William-Bowie"
+    },
+    {
+      "id": 1002,
+      "name": "William-Hurst"
+    },
+    {
+      "id": 955,
+      "name": "Mackenzie-King"
+    },
+    {
+      "id": 965,
+      "name": "Trenholme"
+    },
+    {
+      "id": 999,
+      "name": "Jean-Brillant"
+    },
+    {
+      "id": 910,
+      "name": "Notre-Dame-de-Grâce"
+    }
+  ],
+  "Patinoire du parc Maisonneuve": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc de la Petite-Italie": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoires du parc Saint-Jean-Baptiste": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoire du parc Robert-Sauvé": [
+    {
+      "id": 1028,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 958,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 972,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 913,
+      "name": "Parc Eugène-Dostie"
+    },
+    {
+      "id": 975,
+      "name": "Parc Robert-Sauvé"
+    },
+    {
+      "id": 943,
+      "name": "Parc Jonathan-Wilson"
+    },
+    {
+      "id": 940,
+      "name": "Parc Joseph-Avila-Proulx"
+    }
+  ],
+  "Patinoire sur l'étang du parc La Fontaine": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoire du parc De Gaspé": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire du parc Cousineau": [
+    {
+      "id": 1118,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 988,
+      "name": "Parc Beaudet"
+    },
+    {
+      "id": 1138,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1132,
+      "name": "Parc Philippe-Laheurte"
+    },
+    {
+      "id": 1082,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1102,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1123,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1050,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1033,
+      "name": "Parc Chamberland"
+    },
+    {
+      "id": 1130,
+      "name": "Parc Noël-Nord"
+    },
+    {
+      "id": 1110,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1137,
+      "name": "Parc Saint-Laurent"
+    },
+    {
+      "id": 1121,
+      "name": "Parc Decelle"
+    },
+    {
+      "id": 1111,
+      "name": "Parc Petit"
+    },
+    {
+      "id": 1124,
+      "name": "Parc Poirier"
+    },
+    {
+      "id": 1105,
+      "name": "Parc Painter"
+    },
+    {
+      "id": 1104,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1114,
+      "name": "Parc Decelles"
+    },
+    {
+      "id": 1054,
+      "name": "Parc Gohier"
+    },
+    {
+      "id": 1136,
+      "name": "Parc du Bois-Franc"
+    },
+    {
+      "id": 1046,
+      "name": "Parc Houde"
+    },
+    {
+      "id": 1126,
+      "name": "Parc Cousineau"
+    },
+    {
+      "id": 1014,
+      "name": "Parc Hartenstein"
+    },
+    {
+      "id": 1099,
+      "name": "Parc Beaulac"
+    },
+    {
+      "id": 1129,
+      "name": "Parc Cousineau"
+    }
+  ],
+  "Patinoires du parc Baldwin": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoire réfrigérée du square Cabot": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire du parc de la Fontaine": [
+    {
+      "id": 907,
+      "name": "Parc de la Fontaine"
+    },
+    {
+      "id": 926,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1069,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1140,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 1093,
+      "name": "Reine-Elisabeth"
+    },
+    {
+      "id": 1139,
+      "name": "Parc Beurling"
+    },
+    {
+      "id": 949,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1070,
+      "name": "Parc Elgar"
+    },
+    {
+      "id": 1115,
+      "name": "Parc Duquette"
+    },
+    {
+      "id": 1135,
+      "name": "Natatorium"
+    },
+    {
+      "id": 1027,
+      "name": "Parc Willibrord"
+    },
+    {
+      "id": 1049,
+      "name": "Parc de la Fontaine"
+    }
+  ],
+  "Patinoire du parc du Pélican": [
+    {
+      "id": 921,
+      "name": "Lafond"
+    },
+    {
+      "id": 914,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 906,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 931,
+      "name": "Beaubien"
+    },
+    {
+      "id": 998,
+      "name": "De Gaspé"
+    },
+    {
+      "id": 1088,
+      "name": "Joseph-Paré"
+    },
+    {
+      "id": 1122,
+      "name": "Molson"
+    },
+    {
+      "id": 1071,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 1083,
+      "name": "Maisonneuve"
+    },
+    {
+      "id": 933,
+      "name": "Père-Marquette"
+    },
+    {
+      "id": 961,
+      "name": "Beaubien"
+    },
+    {
+      "id": 980,
+      "name": "De la Louisiane"
+    },
+    {
+      "id": 1131,
+      "name": "Sainte-Bernadette"
+    },
+    {
+      "id": 1006,
+      "name": "Du Pélican"
+    },
+    {
+      "id": 1016,
+      "name": "Lafond"
+    },
+    {
+      "id": 1039,
+      "name": "Cité-Jardin"
+    },
+    {
+      "id": 1109,
+      "name": "De la Petite-Italie"
+    },
+    {
+      "id": 1009,
+      "name": "De la Louisiane"
+    }
+  ],
+  "Patinoire extérieure du parc Pie-XII": [
+    {
+      "id": 1128,
+      "name": "parc Luigi-Pirandello"
+    },
+    {
+      "id": 1113,
+      "name": "C.S.S.L"
+    },
+    {
+      "id": 1043,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 990,
+      "name": "parc Laurier-MacDonald"
+    },
+    {
+      "id": 1022,
+      "name": "parc Ladauversière"
+    },
+    {
+      "id": 1084,
+      "name": "parc Giuseppe-Garibaldi"
+    },
+    {
+      "id": 983,
+      "name": "parc Pie-XII"
+    },
+    {
+      "id": 937,
+      "name": "C.C.S.L."
+    },
+    {
+      "id": 927,
+      "name": "parc Delorme"
+    },
+    {
+      "id": 979,
+      "name": "parc Ferland"
+    }
+  ],
+  "Patinoire réfrigérée au parc du Mont-Royal": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Patinoire et anneau de glace du parc Lucie-Bruneau": [
+    {
+      "id": 912,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 960,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 1042,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1107,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1004,
+      "name": "Parc Roger Rousseau"
+    },
+    {
+      "id": 986,
+      "name": "Parc Talcy"
+    }
+  ],
+  "Patinoires du parc Jeanne-Mance": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoire et sentier glacé du parc des Roseraies": [
+    {
+      "id": 912,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 960,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 1042,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1107,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1004,
+      "name": "Parc Roger Rousseau"
+    },
+    {
+      "id": 986,
+      "name": "Parc Talcy"
+    }
+  ],
+  "Pavillon du Lac-aux-Castors": [
+    {
+      "id": 1141,
+      "name": "Place du Village"
+    },
+    {
+      "id": 1112,
+      "name": "Lac aux Castors ,"
+    },
+    {
+      "id": 1117,
+      "name": "Esplanade Tranquille"
+    },
+    {
+      "id": 903,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 973,
+      "name": "Des Vétérans"
+    },
+    {
+      "id": 1095,
+      "name": "du Glacis"
+    },
+    {
+      "id": 1012,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1074,
+      "name": "Toussaint-Louverture"
+    },
+    {
+      "id": 1134,
+      "name": "Des Faubourgs"
+    },
+    {
+      "id": 1056,
+      "name": "Walter-Stewart"
+    },
+    {
+      "id": 1089,
+      "name": "Square Cabot"
+    }
+  ],
+  "Anneau de glace du parc Sainte-Lucie": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Maria-Goretti": [
+    {
+      "id": 997,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 915,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 970,
+      "name": "Daniel-Johnson"
+    },
+    {
+      "id": 1001,
+      "name": "Pehr-Kalm"
+    },
+    {
+      "id": 941,
+      "name": "Parc Hans-Selye"
+    },
+    {
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke"
+    },
+    {
+      "id": 978,
+      "name": "Don-Bosco"
+    },
+    {
+      "id": 1057,
+      "name": "Jeanne-Lapierre"
+    },
+    {
+      "id": 984,
+      "name": "Montmartre"
+    },
+    {
+      "id": 1045,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 956,
+      "name": "Saint-Jean-Baptiste"
+    },
+    {
+      "id": 989,
+      "name": "Gérard-Vaillancourt"
+    },
+    {
+      "id": 1079,
+      "name": "Des Cageux"
+    },
+    {
+      "id": 945,
+      "name": "Sainte-Maria-Goretti"
+    }
+  ],
+  "Patinoires du parc Villeray": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoires du parc Nicolas-Tillemont": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire derrière le 3051, boul. Saint-Joseph": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Petite patinoire de sports d'équipe du parc La Fontaine": [
+    {
+      "id": 1098,
+      "name": "Arena Mont-Royal"
+    },
+    {
+      "id": 957,
+      "name": "De Gaspé/Bernard"
+    },
+    {
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2"
+    },
+    {
+      "id": 916,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1"
+    },
+    {
+      "id": 1100,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 977,
+      "name": "Baldwin"
+    },
+    {
+      "id": 1051,
+      "name": "La Fontaine"
+    },
+    {
+      "id": 1085,
+      "name": "Sir-Wilfrid-Laurier"
+    },
+    {
+      "id": 1055,
+      "name": "Jeanne-Mance"
+    },
+    {
+      "id": 1094,
+      "name": "De Lorimier"
+    },
+    {
+      "id": 1077,
+      "name": "La Fontaine/Étang"
+    },
+    {
+      "id": 1023,
+      "name": "Baldwin"
+    },
+    {
+      "id": 969,
+      "name": "Jeanne-Mance"
+    }
+  ],
+  "Patinoires du parc Jarry": [
+    {
+      "id": 939,
+      "name": "Jarry"
+    },
+    {
+      "id": 932,
+      "name": "Villeray"
+    },
+    {
+      "id": 911,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 1059,
+      "name": "Ovila-Légaré"
+    },
+    {
+      "id": 962,
+      "name": "Villeray"
+    },
+    {
+      "id": 1087,
+      "name": "François-Perrault"
+    },
+    {
+      "id": 1081,
+      "name": "Howard"
+    },
+    {
+      "id": 1031,
+      "name": "De Normanville"
+    },
+    {
+      "id": 1021,
+      "name": "Jarry"
+    },
+    {
+      "id": 1035,
+      "name": "Nicolas-Tillemont"
+    },
+    {
+      "id": 976,
+      "name": "Champdoré"
+    },
+    {
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault"
+    }
+  ],
+  "Patinoire du parc Carignan": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ],
+  "Patinoire du parc Roger-Rousseau": [
+    {
+      "id": 912,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 960,
+      "name": "Parc Lucie-Bruneau"
+    },
+    {
+      "id": 1042,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1107,
+      "name": "Parc Des Roseraies"
+    },
+    {
+      "id": 1004,
+      "name": "Parc Roger Rousseau"
+    },
+    {
+      "id": 986,
+      "name": "Parc Talcy"
+    }
+  ],
+  "Patinoire du parc LaSalle": [
+    {
+      "id": 919,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs"
+    },
+    {
+      "id": 947,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 996,
+      "name": "parc Dixie"
+    },
+    {
+      "id": 1044,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1024,
+      "name": "parc Carignan"
+    },
+    {
+      "id": 1086,
+      "name": "parc Rosewood"
+    },
+    {
+      "id": 966,
+      "name": "parc LaSalle"
+    },
+    {
+      "id": 1029,
+      "name": "parc Kirkland"
+    },
+    {
+      "id": 1008,
+      "name": "parc Duff court"
+    },
+    {
+      "id": 950,
+      "name": "parc LaSalle"
+    }
+  ]
+}

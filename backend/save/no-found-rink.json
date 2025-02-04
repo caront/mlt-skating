@@ -1,0 +1,195 @@
+{
+  "notFound": [
+    {
+      "searchterm": "C.C.S.L.",
+      "groups": [
+        {
+          "id": 108,
+          "name": "Patinoire extérieure du complexe sportif Saint-Léonard"
+        }
+      ],
+      "id": 937,
+      "name": "C.C.S.L.",
+      "rink_name": "Anneau de glace, C.C.S.L. (PPL)"
+    },
+    {
+      "searchterm": "SAINTE MARIA GORETTI",
+      "groups": [
+        {
+          "id": 120,
+          "name": "Patinoire du parc Maria-Goretti"
+        }
+      ],
+      "id": 945,
+      "name": "Sainte-Maria-Goretti",
+      "rink_name": "Patinoire avec bandes, Sainte-Maria-Goretti (PSE)"
+    },
+    {
+      "searchterm": "GASPÉ/BERNARD",
+      "groups": [
+        {
+          "id": 23,
+          "name": "Patinoire De Gaspé"
+        }
+      ],
+      "id": 957,
+      "name": "De Gaspé/Bernard",
+      "rink_name": "Patinoire avec bandes , De Gaspé/Bernard (PSE)"
+    },
+    {
+      "searchterm": "SIR WILFRID LAURIER NO 1",
+      "groups": [
+        {
+          "id": 163,
+          "name": "Patinoires du parc Sir-Wilfrid-Laurier"
+        }
+      ],
+      "id": 991,
+      "name": "Sir-Wilfrid-Laurier no 1",
+      "rink_name": "Patinoire avec bandes, Sir-Wilfrid-Laurier no 1 (PSE)"
+    },
+    {
+      "searchterm": "FF COURT",
+      "groups": [],
+      "id": 1008,
+      "name": "parc Duff court",
+      "rink_name": "Patinoire avec bandes, parc Duff court (PSE)"
+    },
+    {
+      "searchterm": "HARTENSTEIN",
+      "groups": [],
+      "id": 1014,
+      "name": "Parc Hartenstein",
+      "rink_name": "Patinoire de patin libre, Parc Hartenstein (PP)"
+    },
+    {
+      "searchterm": "CONFÉDÉRATION",
+      "groups": [
+        {
+          "id": 209,
+          "name": "Patinoire Bleu Blanc Bouge de CDN-NDG"
+        }
+      ],
+      "id": 1017,
+      "name": "Confédération",
+      "rink_name": "Patinoire Bleu-Blanc-Bouge, Confédération (PSE)"
+    },
+    {
+      "searchterm": "CLUB PÊCHEURS/CHASSEURS",
+      "groups": [],
+      "id": 1018,
+      "name": "club pêcheurs/chasseurs",
+      "rink_name": "Patinoire de patin libre, club pêcheurs/chasseurs (PPL)"
+    },
+    {
+      "searchterm": "OVILA LÉGARÉ",
+      "groups": [
+        {
+          "id": 117,
+          "name": "Patinoire du parc Ovila-Legaré"
+        }
+      ],
+      "id": 1059,
+      "name": "Ovila-Légaré",
+      "rink_name": "Patinoire de patin libre, Ovila-Légaré (PP)"
+    },
+    {
+      "searchterm": "SIR WILFRID LAURIER NO 2",
+      "groups": [
+        {
+          "id": 163,
+          "name": "Patinoires du parc Sir-Wilfrid-Laurier"
+        }
+      ],
+      "id": 1061,
+      "name": "Sir-Wilfrid-Laurier no 2",
+      "rink_name": "Patinoire avec bandes, Sir-Wilfrid-Laurier no 2 (PSE)"
+    },
+    {
+      "searchterm": "LA FONTAINE/ETANG",
+      "groups": [
+        {
+          "id": 94,
+          "name": "Patinoire sur l'étang du parc La Fontaine"
+        }
+      ],
+      "id": 1077,
+      "name": "La Fontaine/Étang",
+      "rink_name": "Patinoire décorative, La Fontaine/Étang (PP) (PP)"
+    },
+    {
+      "searchterm": "ARENA MONT ROYAL",
+      "groups": [
+        {
+          "id": 54,
+          "name": "Patinoire extérieure de l'aréna Mont-Royal"
+        }
+      ],
+      "id": 1098,
+      "name": "Arena Mont-Royal",
+      "rink_name": "Patinoire décorative, Arena Mont-Royal (PP)"
+    },
+    {
+      "searchterm": "LAC AUX CASTORS ,",
+      "groups": [
+        {
+          "id": 165,
+          "name": "Pavillon du Lac-aux-Castors"
+        }
+      ],
+      "id": 1112,
+      "name": "Lac aux Castors ,",
+      "rink_name": "Patinoire réfrigérée, Lac aux Castors , (PP)"
+    },
+    {
+      "searchterm": "C.S.S.L",
+      "groups": [
+        {
+          "id": 108,
+          "name": "Patinoire extérieure du complexe sportif Saint-Léonard"
+        }
+      ],
+      "id": 1113,
+      "name": "C.S.S.L",
+      "rink_name": "Patinoire sans bande, C.S.S.L (PPL)"
+    },
+    {
+      "searchterm": "BLEU BLANC BOUGE F PERRAULT",
+      "groups": [
+        {
+          "id": 114,
+          "name": "Patinoire réfrigérée Bleu Blanc Bouge du parc François-Perrault"
+        }
+      ],
+      "id": 1119,
+      "name": "Bleu Blanc Bouge F-Perrault",
+      "rink_name": "Patinoire réfrigérée, Bleu Blanc Bouge F-Perrault (PSE)"
+    },
+    {
+      "searchterm": "Y THÉRIAULT/SHERBROOKE",
+      "groups": [
+        {
+          "id": 73,
+          "name": "Patinoire du parc Yves-Thériault"
+        }
+      ],
+      "id": 1127,
+      "name": "Y-Thériault/Sherbrooke",
+      "rink_name": "Patinoire de patin libre, Y-Thériault/Sherbrooke (PPL)"
+    },
+    {
+      "searchterm": "NATATORIUM",
+      "groups": [],
+      "id": 1135,
+      "name": "Natatorium",
+      "rink_name": "Patinoire décorative, Natatorium (PP)"
+    },
+    {
+      "searchterm": "PLACE VILLAGE",
+      "groups": [],
+      "id": 1141,
+      "name": "Place du Village",
+      "rink_name": "Patinoire réfrigérée, Place du Village (PP)"
+    }
+  ]
+}
