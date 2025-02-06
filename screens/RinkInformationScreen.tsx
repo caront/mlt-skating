@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import { RinkInformationScreenProps, RootStackParamList } from "./types";
 import useHistory from "../hooks/UseHistory";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
-import RinkHistoryList from "../components/RinkHistoryList";
+import RinkHistoryList from "../components/Rinks/RinkHistoryList";
 import Animated from "react-native-reanimated";
 import { Rink, RinkWithCondition } from "../models/Rink";
 import { CommonActions, NavigationProp, useNavigation } from "@react-navigation/native";
@@ -26,6 +26,7 @@ const useStyle = () => {
             display: 'flex',
             padding: 10,
             gap: 10,
+            paddingBottom: 100,
         },
         information: {
 

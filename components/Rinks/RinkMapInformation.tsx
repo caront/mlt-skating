@@ -26,11 +26,11 @@ const useStyles = () => {
 
 export const RinkMapInformation: React.FC<RinkMapInformationProps> = ({ rink }) => {
     const styles = useStyles();
+    const colors = useColors();
     return (
         <InformationContainer
             title={rink.district.name}
-            titleIcon={<Icon name='map' size={20} color='white' type="material" />}
-            titleBackground={useColors().primary}
+            titleIcon={<Icon name='map' size={20} color={colors.grey0} type="material" />}
         >
             <Text>{rink.address}</Text>
             <MapsViewImage label={rink.name} lat={rink.latitude} lng={rink.longitude} url={rink.public_url} />

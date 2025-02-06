@@ -51,6 +51,10 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
         }
     }, [location])
 
+    const handleOnRinkClick = (rink: Rink) => {
+        onRinkPress(rink);
+    };
+
     return (
         <>
             <MapView
@@ -58,7 +62,7 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
                 loadingEnabled={true}
                 onMapLoaded={() => Log.debug("Map loaded")}
                 onMapReady={() => Log.debug("Map ready")}
-                style={[style, styles.map]}
+                style={[styles.map, style]}
                 initialRegion={{
                     ...location,
                     latitudeDelta: 0.0922,
@@ -78,7 +82,7 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
                         key={idx}
                         pinColor={rink.open ? colors.success : colors.error}
                         coordinate={rink}
-                        onPress={() => onRinkPress(rink)}
+                        onPress={() => handleOnRinkClick(rink)}
                         id={idx.toString()}
                     >
                     </MarkerAnimated>

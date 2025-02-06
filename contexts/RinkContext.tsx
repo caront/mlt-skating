@@ -20,6 +20,8 @@ export type RinkContextType = {
     refresh: () => void;
     resetOptions: () => void;
     setRinkFavorite: (id: number, isFav: boolean) => void;
+    rinkFocus: Rink | undefined;
+    setRinkFocus: (rink: Rink) => void;
 };
 
 const defaultDistritContext: RinkContextType = {
@@ -31,7 +33,9 @@ const defaultDistritContext: RinkContextType = {
     options: defaultSearchOption,
     refresh: () => { },
     resetOptions: () => { },
-    setRinkFavorite: (id: number, isFav: boolean) => { }
+    setRinkFavorite: (id: number, isFav: boolean) => { },
+    rinkFocus: undefined,
+    setRinkFocus: (rink: Rink) => { },
 };
 
 export const RinkContext = createContext<RinkContextType>(defaultDistritContext);
@@ -89,6 +93,8 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<ApolloError | undefined>(undefined);
     const [loadRinks] = useLazyQuery(GET_RINKS);
+
+    const [rinkFocus, setRinkFocus] = useState<Rink | undefined>(undefined);
 
 
     const [options, dispatch] = useReducer(
@@ -227,7 +233,9 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
             error,
             refresh,
             resetOptions,
-            setRinkFavorite: setRinkFav
+            setRinkFavorite: setRinkFav,
+            rinkFocus,
+            setRinkFocus
         }}>
             {children}
         </RinkContext.Provider>

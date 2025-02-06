@@ -64,7 +64,7 @@ const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
             </View>
             <InformationContainer
                 title={rink.description}
-                titleIcon={<Icon name='ice-skating' size={20} color='white' type="material" />}
+                titleIcon={<Icon name='ice-skating' size={20} color={colors.grey0} type="material" />}
             >
                 <Text style={styles.information}>{rink.information}</Text>
                 {hasService && <Chip title={t('services')}  subTitle={rink.services?.join(' - ')} />}

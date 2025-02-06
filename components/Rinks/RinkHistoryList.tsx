@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Condition, ECondition, Rink, RinkHistory } from '../models/Rink';
+import { Condition, ECondition, Rink, RinkHistory } from '../../models/Rink';
 import { ActivityIndicator, FlatList, Dimensions, Text, TouchableOpacity, View } from 'react-native';
 import { StyleSheet } from 'react-native';
-import { useColors } from '../colors';
+import { useColors } from '../../colors';
 import Dayjs from 'dayjs';
-import { useRinkConditionsHistory } from '../hooks/UseRinkConditionsHistory';
+import { useRinkConditionsHistory } from '../../hooks/UseRinkConditionsHistory';
 import Carousel, { ICarouselInstance } from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
-import ConditionTimeLine from './ConditionTimeline';
-import BlurContainer from './shared/BlurContainer';
-import Chip from './shared/Chip';
+import ConditionTimeLine from '../ConditionTimeline';
+import BlurContainer from '../shared/BlurContainer';
+import Chip from '../shared/Chip';
 import { Icon } from '@rneui/themed';
-import InformationContainer from './shared/InformationContainer';
+import InformationContainer from '../shared/InformationContainer';
 import { useTranslation } from 'react-i18next';
 
 interface RinkHistoryListProps {
@@ -60,13 +60,10 @@ const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }
         </InformationContainer>
     }
 
-
-
     return (
         <InformationContainer
             title={t('history')}
-            titleIcon={<Icon name='access-time' color='white' size={20} type='material' />}
-            titleBackground={colors.primary}
+            titleIcon={<Icon name='access-time' color={colors.grey0} size={20} type='material' />}
          style={styles.container}>
             <ConditionTimeLine conditions={conditions} />
         </InformationContainer>

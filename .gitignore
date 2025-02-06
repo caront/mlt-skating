@@ -68,6 +68,7 @@ local.properties
 *.iml
 /packages/react-native/android/*
 !/packages/react-native/android/README.md
+/android/app/.cxx/
 
 # Node
 node_modules
@@ -335,3 +336,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+android/app/.cxx/Debug/**/*
+android/app/.cxx/Debug/**/*

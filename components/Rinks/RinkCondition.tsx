@@ -65,11 +65,11 @@ const useStyles = () => {
 const RinkConditions: FunctionComponent<RinkConditionsProps> = ({ rink }) => {
     const { t } = useTranslation();
     const styles = useStyles();
+    const colors = useColors();
 
     return <InformationContainer
         title={t("rink_details.conditions")}
-        // titleBackground={colors}
-        titleIcon={<Icon name='snowshoeing' size={20} color='white' type="material" />}
+        titleIcon={<Icon name='snowshoeing' size={20} color={colors.grey0} type="material" />}
     >
         {/* <OpenChips condition={rink} /> */}
         <IceConditions condition={rink} />

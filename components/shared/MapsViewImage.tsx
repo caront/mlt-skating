@@ -1,10 +1,11 @@
 import { Button, Text } from '@rneui/base';
 import React from 'react';
-import { StyleSheet, View, Platform, Image } from 'react-native';
+import { StyleSheet, View, Platform, Image, Touchable, TouchableOpacity } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { useColors } from '../../colors';
 import { openMap } from '../../utils/openMaps';
 import { useTranslation } from 'react-i18next';
+import { Icon } from '@rneui/themed';
 
 
 interface MapsViewImageProps {
@@ -53,10 +54,12 @@ const MapsViewImage: React.FC<MapsViewImageProps> = ({ label, lat, lng, url }) =
                 />
             </MapView>}
             {!isIos && <Image source={{ uri: url }} style={styles.map} />}
-            <Button buttonStyle={[styles.button, { backgroundColor: colors.primary }]}
-                onPress={handleOnMapButtonPressed} >
-                <Text style={{ color: colors.grey5 }} >{isIos ? t('open_map') : t('open_google_maps')}</Text>
-            </Button>
+            <TouchableOpacity
+                onPress={handleOnMapButtonPressed}
+                style={[styles.button]} >
+                <Text>{isIos ? t('open_map') : t('open_google_maps')}</Text>
+                <Icon name="link-external" type='octicon' color={colors.grey5} />
+            </TouchableOpacity>
         </View>
     );
 };
@@ -79,12 +82,13 @@ const styles = StyleSheet.create({
         height: 150,
     },
     button: {
-        display: 'flex',
+       display: 'flex',
         flexDirection: 'row',
-        alignContent: 'stretch',
         alignItems: 'center',
-        height: 40,
-        borderRadius: 20,
+        justifyContent: 'center',
+        gap: 10,
+        padding: 10,
+
     }
 });
 

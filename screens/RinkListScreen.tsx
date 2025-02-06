@@ -1,30 +1,26 @@
-import React, { FunctionComponent, useCallback, useEffect, useMemo, useRef } from "react";
-import { ActivityIndicator, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
-import SkyList from "../components/RinkList/RinkList";
-
-import { Button, Icon, SearchBar } from "@rneui/themed";
+import React, { FunctionComponent, RefObject, useCallback, useEffect, useMemo, useRef } from "react";
+import { ActivityIndicator, Dimensions, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import { NavigationProp, useFocusEffect, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "./types";
-import { Rink, RinkWithCondition } from "../models/Rink";
+import { Rink } from "../models/Rink";
 import RinksFilters from "../components/RinksFilters";
 import MapRinkView from "../components/MapRinkView";
-import { useRinks } from "../hooks/UseRinks";
 import RinkList from "../components/RinkList/RinkList";
 import { useColors } from "../colors";
-import RinkCount from "../components/RinkCount";
-import BlurIconButton from "../components/shared/BlurButton";
-import ActionSheet, { ActionSheetRef, SheetProvider } from "react-native-actions-sheet";
-import { Tab } from '@rneui/themed';
-import { Log } from "../utils/logs";
-import { color } from "@rneui/base";
-import ButtonIcon from "../components/shared/ButtonIcon";
+import ActionSheet, { ActionSheetRef, useScrollHandlers } from "react-native-actions-sheet";
 import { useRinkGroups } from "../hooks/UseRinkGroup";
+import ButtonIcon from "../components/shared/ButtonIcon";
+import LoadingFullScreen from "../components/shared/LoadingFullScreen";
+import { NativeViewGestureHandler } from 'react-native-gesture-handler';
+import { useRinks } from "../hooks/UseRinks";
 
 export const RinkListScreen = ({ }) => {
-    const {  loading, error } = useRinkGroups();
+    const { rinks, loading, error } = useRinks();
     const [isShowFav, setIsShowFav] = React.useState(false);
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
+
+    const [index, setIndex] = React.useState(0);
 
     const actionSheetRef = useRef<ActionSheetRef>(null);
 
@@ -33,12 +29,15 @@ export const RinkListScreen = ({ }) => {
             actionSheetRef.current?.show();
     }, [actionSheetRef.current]);
 
+    useEffect(() => {
+        if (actionSheetRef && actionSheetRef.current)
+            actionSheetRef.current?.snapToIndex(index);
+    }, [index]);
+
+
+
     const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });
-    }
-
-    const handleIsShowFav = () => {
-        setIsShowFav(!isShowFav);
     }
 
     if (error) {
@@ -47,16 +46,9 @@ export const RinkListScreen = ({ }) => {
         </SafeAreaView>
     }
 
-    if (loading) {
-        return <SafeAreaView style={styles.container}>
-            <ActivityIndicator style={{ marginVertical: 16 }} />
-        </SafeAreaView>
-    }
-
-
 
     return <>
-        <MapRinkView onRinkPress={handleOnRinkPressed} />
+        <MapRinkView style={styles.map} onRinkPress={handleOnRinkPressed} />
         <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
             <ActionSheet
                 ref={actionSheetRef}
@@ -68,17 +60,15 @@ export const RinkListScreen = ({ }) => {
                 backgroundInteractionEnabled
                 disableDragBeyondMinimumSnapPoint
                 useBottomSafeAreaPadding={false}
-                containerStyle={{ backgroundColor: 'transparent', elevation: 0 }}
+                containerStyle={{ backgroundColor: 'transparent', elevation: 0, borderRadius: 30 }}
             >
-                <View style={[styles.list, { height: '200%', backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 20 }]}>
+                <View style={[styles.list, { height: Dimensions.get('screen').height, backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 16}]}>
                     <RinksFilters isMapVisible={false} />
-                    <View style={styles.row}>
-                        <RinkCount style={styles.list}  />
-                    </View>
-                    <SkyList onRinkPress={handleOnRinkPressed} style={styles.list}/>
+                    <RinkList onRinkPress={handleOnRinkPressed} style={styles.list} />
                 </View>
             </ActionSheet>
         </SafeAreaView >
+        <LoadingFullScreen loading={loading} />
     </>
 };
 
@@ -108,6 +98,9 @@ const styles = StyleSheet.create({
     list: {
         paddingHorizontal: 10,
         gap: 10,
+    },
+    map: {
+        height: '75%'
     },
     row: {
         display: 'flex',

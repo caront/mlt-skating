@@ -1,5 +1,5 @@
-import React, { FunctionComponent, useEffect, useMemo } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
+import React, { FunctionComponent, useEffect, useMemo, useRef } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
 import { ECondition, Rink, RinkWithCondition } from '../../models/Rink';
 import { cleanColor, conditionColor, resurfacedColor, useColors } from '../../colors';
 import { useRinks } from '../../hooks/UseRinks';
@@ -14,6 +14,9 @@ import { useLocates } from '../../hooks/UseLocation';
 import { useTranslation } from 'react-i18next';
 import { useRinkGroups } from '../../hooks/UseRinkGroup';
 import { RinkGroup } from '../../models/RinkGroup';
+import { FlatList } from 'react-native-actions-sheet';
+import LoadingFullScreen from '../shared/LoadingFullScreen';
+import { FlatList as RNFlatList } from 'react-native';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -34,11 +37,7 @@ const useStyles = () => {
             justifyContent: 'space-between',
             width: '100%',
             backgroundColor: colors.white,
-            borderRadius: 8,
-            shadowColor: '#000',
-            shadowOffset: { width: 0, height: 2 },
-            shadowRadius: 8,
-            elevation: 1,
+            borderRadius: 16,
             padding: 10,
         },
         left: {
@@ -120,7 +119,7 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
 
     const randomRotation = Math.floor(rink.id * 10) - 60;
 
-// Log.info('RinkItemList', index );
+    // Log.info('RinkItemList', index );
 
     return <View style={styles.column}>
         <Adds show={index !== 0 && index % 10 === 0} />
@@ -164,7 +163,8 @@ const Adds: React.FC<{ show: boolean }> = ({ show }) => {
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);
-    const { refresh, rinks } = useRinks();
+    const { rinkFocus, refresh, rinks } = useRinks();
+    const flatRinkRef = useRef<RNFlatList>(null);
 
     const styles = useStyles();
 
@@ -182,6 +182,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
         <View style={[styles.container, style]}>
             <FlatList
                 data={rinks}
+                ref={flatRinkRef}
                 ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
                 keyExtractor={(item) => item.id.toString()}
                 refreshControl={
@@ -192,6 +193,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                         progressBackgroundColor={'black'}
                     />
                 }
+                scrollEnabled
                 renderItem={({ item: rink, index }) => <RinkGroupItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
