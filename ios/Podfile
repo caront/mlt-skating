@@ -49,7 +49,7 @@ platform :ios, min_ios_version_supported
 prepare_react_native_project!
 # ⬇️ uncomment the permissions you need
 setup_permissions([
-  # 'AppTrackingTransparency',
+  'AppTrackingTransparency',
   # 'Bluetooth',
   # 'Calendars',
   # 'CalendarsWriteOnly',
