@@ -17,6 +17,7 @@ import { RinkGroup } from '../../models/RinkGroup';
 import { FlatList } from 'react-native-actions-sheet';
 import LoadingFullScreen from '../shared/LoadingFullScreen';
 import { FlatList as RNFlatList } from 'react-native';
+import Ads from '../shared/Ads';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -122,7 +123,7 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
     // Log.info('RinkItemList', index );
 
     return <View style={styles.column}>
-        <Adds show={index !== 0 && index % 10 === 0} />
+        <Ads display={index !== 0 && index % 10 === 0} style={{ marginBottom: 16 }} />
         <TouchableOpacity onPress={handlePress} style={styles.card}>
             {rink.isFav &&
                 <View style={[styles.absolute, styles.right]}>
@@ -152,14 +153,14 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
 
 }
 
-const Adds: React.FC<{ show: boolean }> = ({ show }) => {
-    const colors = useColors();
+// const Adds: React.FC<{ show: boolean }> = ({ show }) => {
+//     const colors = useColors();
 
-    if (show) {
-        return <View style={{ height: 55, marginBottom: 16, width: '100%', backgroundColor: colors.error }} />
-    }
-    return <View style={{ height: 0 }} />
-}
+//     if (show) {
+//         return <View style={{ height: 55, marginBottom: 16, width: '100%', backgroundColor: colors.error }} />
+//     }
+//     return <View style={{ height: 0 }} />
+// }
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);

@@ -18,6 +18,8 @@ import FavButton from "../components/FavButton";
 import { RinkMapInformation } from "../components/Rinks/RinkMapInformation";
 import RinkConditions from "../components/Rinks/RinkCondition";
 import RinkInformations from "../components/Rinks/RinkInformations";
+import LoadingFullScreen from "../components/shared/LoadingFullScreen";
+import Ads from "../components/shared/Ads";
 
 const useStyle = () => {
     const colors = useColors();
@@ -103,7 +105,7 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
     if (loading || !rink) {
         return <SafeAreaView style={styles.container}>
             <RinkInformationHeader rink={route.params.rink} />
-            <ActivityIndicator style={{ marginVertical: 16 }} />
+            <LoadingFullScreen loading={loading} />
         </SafeAreaView>
     }
 
@@ -122,6 +124,7 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
                 <RinkInformations rink={rink} />
                 <RinkConditions rink={rink} />
                 <RinkMapInformation rink={rink} />
+                <Ads display />
                 <RinkHistoryList rink={rink} />
                 <LastUpdate date={rink.lastUpdate} />
             </View>

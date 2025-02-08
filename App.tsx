@@ -25,6 +25,7 @@ import { LocateProvider } from './contexts/LocateContext';
 import { I18NProvider } from './lang/i18n';
 import { CityProvider } from './contexts/CityContext';
 import { RinkGroupProvider } from './contexts/RinkGroupContext';
+import AdsProvider from './utils/AdsProvider';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -85,37 +86,39 @@ function App(): React.JSX.Element {
   return (
     <LogProvider>
       <I18NProvider>
+        <AdsProvider>
 
-        <GraphqlProvider>
-          <ThemeProvider theme={theme}>
-            <SafeAreaProvider>
-              <GestureHandlerRootView>
-                <LocateProvider>
-                  <DistrictProvider>
-                  <RinkProvider>
-                      <Navigation>
-                        <Stack.Navigator>
-                          <Stack.Screen
-                            name="RinkList"
-                            component={RinkListScreen}
-                            options={{ headerShown: false, title: 'Rinks' }}
-                          />
-                          <Stack.Screen
-                            name="RinkInformation"
-                            component={RinkInformationScreen}
-                            options={{ headerShown: false, title: 'RinkInformation' }}
-                          />
-                        </Stack.Navigator>
-                      </Navigation>
-                    </RinkProvider>
-                  </DistrictProvider>
-                </LocateProvider>
-              </GestureHandlerRootView>
-            </SafeAreaProvider>
-          </ThemeProvider>
-        </GraphqlProvider>
+          <GraphqlProvider>
+            <ThemeProvider theme={theme}>
+              <SafeAreaProvider>
+                <GestureHandlerRootView>
+                  <LocateProvider>
+                    <DistrictProvider>
+                      <RinkProvider>
+                        <Navigation>
+                          <Stack.Navigator>
+                            <Stack.Screen
+                              name="RinkList"
+                              component={RinkListScreen}
+                              options={{ headerShown: false, title: 'Rinks' }}
+                            />
+                            <Stack.Screen
+                              name="RinkInformation"
+                              component={RinkInformationScreen}
+                              options={{ headerShown: false, title: 'RinkInformation' }}
+                            />
+                          </Stack.Navigator>
+                        </Navigation>
+                      </RinkProvider>
+                    </DistrictProvider>
+                  </LocateProvider>
+                </GestureHandlerRootView>
+              </SafeAreaProvider>
+            </ThemeProvider>
+          </GraphqlProvider>
+        </AdsProvider>
       </I18NProvider>
-    </LogProvider>
+    </LogProvider >
   );
 }
 
