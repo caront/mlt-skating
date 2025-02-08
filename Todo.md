@@ -4,12 +4,12 @@
 - [x] Rink list
 - [x] Rink search
 - [x] Rink fav
-- [1/2] Rink detail
+- [x] Rink detail
 - [x] Rink map
 - [ ] District filter
 - [x] I18n
-- [ ] Ads 
-- [ ] 
+- [x] Ads 
+- [ ] about page
 
 ### RINKS Locations
 - [ ] St-helene rink
@@ -23,7 +23,7 @@
 - [ ] remove missing date
 - [ ] nearby rinks
 - [ ] weather ?
-- [ ] open hours ? 
+- [x] open hours ? 
 
 
 
