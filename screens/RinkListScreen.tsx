@@ -15,6 +15,8 @@ import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 import { useRinks } from "../hooks/UseRinks";
 import { Button } from "@rneui/base";
 
+const SNAP_POINTS_FROM_TOP = [30, 50, 80];
+
 export const RinkListScreen = ({ }) => {
     const { rinks, loading, error } = useRinks();
     const [isShowFav, setIsShowFav] = React.useState(false);
@@ -54,11 +56,13 @@ export const RinkListScreen = ({ }) => {
 
     const isDarkMode = useColorScheme() === "dark";
     const isIOS = Platform.OS === 'ios';
-    const buttonBackground = isDarkMode ? colors.white : colors.grey5;
+    const buttonBackground = isDarkMode && isIOS ? colors.white : colors.grey5;
 
 
+
+   
     return <>
-        <MapRinkView style={styles.map} onRinkPress={handleOnRinkPressed} />
+        <MapRinkView style={{ height: `75%` }} onRinkPress={handleOnRinkPressed} />
 
         <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
             <View
@@ -79,7 +83,7 @@ export const RinkListScreen = ({ }) => {
             <ActionSheet
                 ref={actionSheetRef}
                 isModal={false}
-                snapPoints={[30, 50, 80]}
+                snapPoints={SNAP_POINTS_FROM_TOP}
                 gestureEnabled
                 elevation={0}
                 closable={false}
