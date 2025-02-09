@@ -13,12 +13,17 @@ export interface Rink extends Coordinate, WithStaticMap {
   schedules?: Schedule[];
   services?: string[];
   information?: string;
+
+  description_fr: string;
+  description_en: string;
+
+  information_fr?: string;
+  information_en?: string;
 }
 
 export interface WithStaticMap {
-  public_url? : string;
+  public_url?: string;
 }
-
 
 export interface ConditionLastUpdate {
   lastTimeOpen: string | null;
@@ -46,7 +51,8 @@ export interface RinkWithDistrict extends Rink, District {}
 export interface RinkWithCondition extends Rink, Condition {}
 
 export interface RinkWithDistrictAndConditionLastUpdate
-  extends Rink, ConditionAndLastUpdate {}
+  extends Rink,
+    ConditionAndLastUpdate {}
 
 export interface RinkList {
   rinks: Rink[];
@@ -94,6 +100,8 @@ export const defaultRink: Rink = {
   longitude: 0,
   isFav: false,
   public_url: "",
+  description_fr: "",
+  description_en: "",
 };
 
 export const defaultCondition: Condition = {
@@ -131,4 +139,3 @@ export const defaultRinkWithDistrictAndConditionLastUpdate: RinkWithDistrictAndC
     lastTimeWatered: null,
     openSince: null,
   };
-

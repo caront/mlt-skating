@@ -18,6 +18,7 @@ import { FlatList } from 'react-native-actions-sheet';
 import LoadingFullScreen from '../shared/LoadingFullScreen';
 import { FlatList as RNFlatList } from 'react-native';
 import Ads from '../shared/Ads';
+import { getI18nField } from '../../utils/i18nHelper';
 interface RinkListProps {
     onRinkPress: (rink: Rink) => void;
     style?: StyleProp<ViewStyle>
@@ -131,7 +132,7 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
                 </View>
             }
             <Text style={styles.rinkName}>{rink.name}</Text>
-            <Text style={styles.rinkDecription}>{rink.description}</Text>
+            <Text style={styles.rinkDecription}>{getI18nField(rink, 'description')}</Text>
             <Text style={styles.district}>{rink.district.name}</Text>
             <View style={styles.row}>
                 <View style={[styles.row, { gap: 5 }]}>

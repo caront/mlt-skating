@@ -1,23 +1,27 @@
-import i18n from "i18next";
+import i18n, { init } from "i18next";
 import { initReactI18next } from "react-i18next";
 import en from "./en.json";
 import fr from "./fr.json";
 import React, { useEffect } from "react";
+import { Platform, NativeModules } from "react-native";
+import { get } from "react-native/Libraries/TurboModule/TurboModuleRegistry";
+import { getSavedLanguage } from "../utils/i18nHelper";
 
 const resources = {
   en: {
-    translation : en
+    translation: en
   },
-  fr:{
+  fr: {
     translation: fr
   }
 };
 
-const initalizeI18Next = () => {
+const initalizeI18Next = (language: 'fr' | 'en') => {
   i18n.use(initReactI18next).init({
     debug: true,
     resources,
-    lng: "fr",
+    lng: language,
+    fallbackLng: "fr",
     compatibilityJSON: "v4",
     interpolation: {
       escapeValue: false,
@@ -27,7 +31,10 @@ const initalizeI18Next = () => {
 
 export const I18NProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   useEffect(() => {
-    initalizeI18Next();
+    getSavedLanguage().then((language: string) => {
+      initalizeI18Next(language as 'fr' | 'en');
+    });
+
   }, []);
   return <>{children}</>
 };

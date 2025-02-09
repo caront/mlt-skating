@@ -8,6 +8,7 @@ import { useTranslation } from 'react-i18next';
 import { Button, Switch } from '@rneui/themed';
 import { version } from '../package.json'
 import ExternalLibraries from '../components/Navigation/ExternalLib';
+import { setSavedLanguage } from '../utils/i18nHelper';
 
 const useStyles = () => {
     const colors = useColors();
@@ -49,10 +50,10 @@ const useStyles = () => {
             fontSize: 24,
             fontWeight: 'bold',
             color: colors.grey5,
-            marginBottom: 20,
         },
         aboutContent: {
             fontSize: 16,
+            textAlign: 'justify',
         }
     });
 }
@@ -65,8 +66,8 @@ const SettingsScreen = () => {
 
     const isFR = i18n.language === 'fr';
 
-    const handleOnLanguageChange = async () => {
-        await i18n.changeLanguage(isFR ? 'en' : 'fr');
+    const handleOnLanguageChange = (language: string) => {
+        setSavedLanguage(language).then(() => i18n.changeLanguage(language));
     }
 
     return (
@@ -82,7 +83,7 @@ const SettingsScreen = () => {
                                 borderRadius: 30,
                                 backgroundColor: !isFR ? colors.primary : colors.grey2,
                             }}
-                            onPress={handleOnLanguageChange}
+                            onPress={() => handleOnLanguageChange('en')}
                         >
                             <Text>EN</Text>
                         </Button>
@@ -92,7 +93,7 @@ const SettingsScreen = () => {
                                 borderRadius: 30,
                                 backgroundColor: isFR ? colors.primary : colors.grey2,
                             }}
-                            onPress={handleOnLanguageChange}
+                            onPress={() => handleOnLanguageChange('fr')}
                         >
                             <Text>FR</Text>
                         </Button>

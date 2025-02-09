@@ -19,7 +19,7 @@
     "title": "Paramètres et informations",
     "language": "Langue de l'application",
     "about": "À propos",
-    "about_text": "Cette application a été créée aider les Montréalais à trouver des patinoires près de chez eux. Les données sont fournies par la Ville de Montréal et mises à jour toutes les 15 minutes. Si vous avez des commentaires ou des suggestions, n'hésitez pas à nous contacter.",
+    "about_text": "Cette application a été créée pour aider les Montréalais à trouver des patinoires près de chez eux. Les données sont fournies par la Ville de Montréal et mises à jour toutes les 15 minutes. Si vous avez des commentaires ou des suggestions, n'hésitez pas à nous contacter.",
     "privacy": "Toutes les données utilisateurs sont stockées localement sur votre appareil et ne sont pas partagées avec des tiers.",
     "disclaimer": "Les données affichées dans cette application sont fournies par la Ville de Montréal et ne sont pas garanties. L'application n'est pas affiliée à la Ville de Montréal.",
     "version": "Version"
@@ -30,6 +30,22 @@
   "since": "Depuis le {{date}}",
   "schedules": "Horaires",
   "services": "Services",
+  "services_enum": {
+    "PICKLEBALL": "Terrain de pickleball",
+    "FREE_PARKING": "Stationnement gratuit",
+    "FAMILY_CHANGING_ROOM": "Vestiaire familial",
+    "PLAYGROUND_KIDS": "Module de jeu pour enfants",
+    "PLAYGROUND_TODDLERS": "Module de jeu pour tout-petits",
+    "TOILETS": "Toilettes",
+    "HEATED_CHALET": "Roulotte ou chalet chauffé",
+    "BIKE_RACK": "Support à vélo",
+    "CHANGING_TABLE": "Table à langer",
+    "DRINKING_FOUNTAIN": "Fontaine d'eau potable",
+    "CHANGING_ROOM": "Vestiaire",
+    "PAID_PARKING": "Stationnement ($)",
+    "FREE_WIFI": "Wi-Fi gratuit",
+    "SNACK_BAR": "Casse-croûte"
+  },
   "rink_details": {
     "conditions": "Conditions",
     "name": "Nom",

@@ -1,5 +1,5 @@
 import React, { FunctionComponent, RefObject, useCallback, useEffect, useMemo, useRef } from "react";
-import { ActivityIndicator, Dimensions, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, Dimensions, Platform, Pressable, SafeAreaView, ScrollView, StyleSheet, Text, useColorScheme, View } from "react-native";
 import { NavigationProp, useFocusEffect, useNavigation } from "@react-navigation/native";
 import { RootStackParamList } from "./types";
 import { Rink } from "../models/Rink";
@@ -52,6 +52,11 @@ export const RinkListScreen = ({ }) => {
     }
 
 
+    const isDarkMode = useColorScheme() === "dark";
+    const isIOS = Platform.OS === 'ios';
+    const buttonBackground = isDarkMode ? colors.white : colors.grey5;
+
+
     return <>
         <MapRinkView style={styles.map} onRinkPress={handleOnRinkPressed} />
 
@@ -60,15 +65,15 @@ export const RinkListScreen = ({ }) => {
                 style={styles.buttonContainer}
             >
                 <Button icon={{
-                    name: 'settings-sharp',
-                    type: 'ionicon',
-                    color: colors.white,
+                    name: 'info-outline',
+                    type: 'material',
+                    color: buttonBackground,
                     size: 30,
                 }}
                     onPress={handleOnSettingsButtonPressed}
                     buttonStyle={{
                         borderRadius: 30,
-                        backgroundColor:'transparent',
+                        backgroundColor: 'transparent',
                     }} />
             </View>
             <ActionSheet

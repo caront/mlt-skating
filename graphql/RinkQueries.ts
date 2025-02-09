@@ -9,6 +9,8 @@ export const GET_RINKS = gql`
           name
           type
           description
+          description_fr
+          description_en
           rink_name
           longitude
           latitude
@@ -51,12 +53,16 @@ export const GET_RINKS_BY_ID = gql`
           name
           type
           description
+          description_fr
+          description_en
           rink_name
           longitude
           latitude
           services
           schedules
           information
+          information_fr
+          information_en
           address
           districts {
             name

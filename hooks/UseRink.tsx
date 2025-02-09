@@ -12,7 +12,9 @@ interface UseRinkReturn {
 
 const buildRink = (data: any): RinkWithDistrictAndConditionLastUpdate | null => {
     try {
-        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, public_static_map_url, address, schedules, services, information } = data;
+        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, public_static_map_url, address, schedules, services, information,
+            description_fr, description_en, information_fr, information_en
+        } = data;
         if (conditionsCollection.edges.length === 0) {
             return {
                 ...defaultRinkWithDistrictAndConditionLastUpdate,
@@ -24,7 +26,11 @@ const buildRink = (data: any): RinkWithDistrictAndConditionLastUpdate | null => 
                 longitude,
                 latitude,
                 rink_name,
-                public_url: public_static_map_url
+                public_url: public_static_map_url,
+                description_fr,
+                description_en,
+                information_fr,
+                information_en
             }
         }
 
@@ -76,7 +82,14 @@ const buildRink = (data: any): RinkWithDistrictAndConditionLastUpdate | null => 
             updatedAt: conditionsCollection.edges[0].node.updated_at,
             isFav: false,
             public_url: public_static_map_url,
-            address, schedules: JSON.parse(schedules), services, information
+            address,
+            schedules: JSON.parse(schedules),
+            services,
+            information,
+            description_fr,
+            description_en,
+            information_fr,
+            information_en
         }
     }
     catch (e) {

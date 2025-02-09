@@ -9,6 +9,8 @@ import Chip from '../shared/Chip';
 import { use } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import dayjs from 'dayjs';
+import { decode } from 'html-entities';
+import { getI18nField } from '../../utils/i18nHelper';
 
 interface RinkInformationsProps {
     rink: RinkWithDistrictAndConditionLastUpdate;
@@ -23,12 +25,12 @@ const useStyles = () => {
             gap: 5,
             color: colors.grey5,
         },
-        information : {
+        information: {
             display: 'flex',
             flexDirection: 'column',
             gap: 5,
             color: colors.grey5,
-            paddingHorizontal: 20,
+            paddingHorizontal: 10,
             textAlign: 'justify',
         }
     })
@@ -63,11 +65,11 @@ const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
                 <OpenChips condition={rink} />
             </View>
             <InformationContainer
-                title={rink.description}
+                title={getI18nField(rink, "description")}
                 titleIcon={<Icon name='ice-skating' size={20} color={colors.grey0} type="material" />}
             >
-                <Text style={styles.information}>{rink.information}</Text>
-                {hasService && <Chip title={t('services')}  subTitle={rink.services?.join(' - ')} />}
+                <Text style={styles.information}>{decode(getI18nField(rink, 'information'))}</Text>
+                {hasService && <Chip title={t('services')} subTitle={rink.services?.map(service => t(`services_enum.${service}`)).join(' - ')} />}
                 {hasSchedules && <Chip title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />}
             </InformationContainer>
 

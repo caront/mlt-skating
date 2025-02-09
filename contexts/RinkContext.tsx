@@ -43,7 +43,7 @@ export const RinkContext = createContext<RinkContextType>(defaultDistritContext)
 const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
 
     return Promise.all(rinks.map(async (rink: any): Promise<RinkWithCondition> => {
-        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection } = rink;
+        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, description_fr, description_en } = rink;
         if (conditionsCollection.edges.length === 0) {
             return {
                 ...defaultCondition,
@@ -57,7 +57,9 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
                 rink_name,
                 lastUpdate: new Date().toISOString(),
                 isFav: false,
-                public_url: undefined
+                public_url: undefined,
+                description_fr,
+                description_en
             }
         }
 
@@ -80,7 +82,9 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
             watered,
             resurfaced,
             isFav: false,
-            public_url: undefined
+            public_url: undefined,
+            description_fr,
+            description_en
         }
     }));
 

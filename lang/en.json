@@ -19,7 +19,7 @@
     "title": "Settings and Information",
     "language": "App Language",
     "about": "About",
-    "about_text": "This app was created to help Montrealers find rinks near them. The data is provided by the City of Montreal and updated every 15 minutes. If you have any feedback or suggestions, feel free to contact us.",
+    "about_text": "This app was created to help Montrealers to find rinks near them. The data is provided by the City of Montreal and updated every 15 minutes. If you have any feedback or suggestions, feel free to contact us.",
     "privacy": "All user data is stored locally on your device and is not shared with third parties.",
     "disclaimer": "The data displayed in this app is provided by the City of Montreal and is not guaranteed. This app is not affiliated with the City of Montreal.",
     "version": "Version"
@@ -30,6 +30,22 @@
   "since": "Since {{date}}",
   "schedules": "Schedules",
   "services": "Services",
+  "services_enum": {
+    "PICKLEBALL": "Pickleball Court",
+    "FREE_PARKING": "Free Parking",
+    "FAMILY_CHANGING_ROOM": "Family Changing Room",
+    "PLAYGROUND_KIDS": "Children's Playground",
+    "PLAYGROUND_TODDLERS": "Toddlers' Playground",
+    "TOILETS": "Toilets",
+    "HEATED_CHALET": "Heated Chalet or Trailer",
+    "BIKE_RACK": "Bike Rack",
+    "CHANGING_TABLE": "Changing Table",
+    "DRINKING_FOUNTAIN": "Drinking Fountain",
+    "CHANGING_ROOM": "Changing Room",
+    "PAID_PARKING": "Paid Parking ($)",
+    "FREE_WIFI": "Free Wi-Fi",
+    "SNACK_BAR": "Snack Bar"
+  },
   "rink_details": {
     "conditions": "Conditions",
     "name": "Name",
