@@ -59,7 +59,6 @@ export const RinkListScreen = ({ }) => {
             <View
                 style={styles.buttonContainer}
             >
-
                 <Button icon={{
                     name: 'settings-sharp',
                     type: 'ionicon',
