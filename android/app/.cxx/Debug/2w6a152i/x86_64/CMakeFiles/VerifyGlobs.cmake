@@ -143,6 +143,31 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/x86_64/CMakeFiles/cmake.verify_globs")
 endif()
 
+# react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/*.cpp")
+set(OLD_GLOB
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/RNGoogleMobileAdsSpec-generated.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
+# react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
+file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/*.cpp")
+set(OLD_GLOB
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ComponentDescriptors.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/EventEmitters.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/Props.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/RNGoogleMobileAdsSpecJSI-generated.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/ShadowNodes.cpp"
+  "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/react/renderer/components/RNGoogleMobileAdsSpec/States.cpp"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  file(TOUCH_NOCREATE "/Users/tcaron/Documents/caront/mlt-skating/android/app/.cxx/Debug/2w6a152i/x86_64/CMakeFiles/cmake.verify_globs")
+endif()
+
 # react_codegen_SRCS at /Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt:9 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/*.cpp")
 set(OLD_GLOB

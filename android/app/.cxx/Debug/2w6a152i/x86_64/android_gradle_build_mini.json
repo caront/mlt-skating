@@ -5,6 +5,7 @@
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@react-native-picker/picker/android/src/main/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/@shopify/flash-list/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/CMakeLists.txt",
+    "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-google-mobile-ads/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-permissions/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/CMakeLists.txt",
     "/Users/tcaron/Documents/caront/mlt-skating/node_modules/react-native-safe-area-context/android/src/main/jni/CMakeLists.txt",
@@ -89,6 +90,11 @@
         "/Users/tcaron/.gradle/caches/8.10.2/transforms/858d20a696a2e235b0938bc76ab60098/transformed/react-android-0.76.5-debug/prefab/modules/jsi/libs/android.x86_64/libjsi.so",
         "/Users/tcaron/.gradle/caches/8.10.2/transforms/858d20a696a2e235b0938bc76ab60098/transformed/react-android-0.76.5-debug/prefab/modules/reactnative/libs/android.x86_64/libreactnative.so"
       ]
+    },
+    "react_codegen_RNGoogleMobileAdsSpec::@c00c605517d10bc7886c": {
+      "artifactName": "react_codegen_RNGoogleMobileAdsSpec",
+      "abi": "x86_64",
+      "runtimeFiles": []
     },
     "react_codegen_rnasyncstorage::@1596841e19ec5b9eeffe": {
       "artifactName": "react_codegen_rnasyncstorage",
