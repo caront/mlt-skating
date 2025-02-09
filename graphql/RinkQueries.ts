@@ -5,6 +5,7 @@ export const GET_RINKS = gql`
     rinksCollection(first: $first, after: $after) {
       edges {
         node {
+          is_active
           id
           name
           type
@@ -49,6 +50,7 @@ export const GET_RINKS_BY_ID = gql`
     rinksCollection(filter: { id: { eq: $rinkId } }) {
       edges {
         node {
+          is_active
           id
           name
           type

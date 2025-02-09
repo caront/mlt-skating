@@ -40,10 +40,13 @@ const defaultDistritContext: RinkContextType = {
 
 export const RinkContext = createContext<RinkContextType>(defaultDistritContext);
 
-const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
+const buildRinks = async (rawRinks: any): Promise<RinkWithCondition[]> => {
 
-    return Promise.all(rinks.map(async (rink: any): Promise<RinkWithCondition> => {
-        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, description_fr, description_en } = rink;
+    const rinks = await Promise.all(rawRinks.map(async (rink: any): Promise<RinkWithCondition | null> => {
+        const { is_active, id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, description_fr, description_en } = rink;
+        if (!is_active) {
+            return null;
+        }
         if (conditionsCollection.edges.length === 0) {
             return {
                 ...defaultCondition,
@@ -87,7 +90,7 @@ const buildRinks = (rinks: any): Promise<RinkWithCondition[]> => {
             description_en
         }
     }));
-
+    return rinks.filter((rink) => rink !== null) as RinkWithCondition[];
 };
 
 export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
