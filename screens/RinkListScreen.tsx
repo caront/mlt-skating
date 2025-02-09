@@ -13,6 +13,7 @@ import ButtonIcon from "../components/shared/ButtonIcon";
 import LoadingFullScreen from "../components/shared/LoadingFullScreen";
 import { NativeViewGestureHandler } from 'react-native-gesture-handler';
 import { useRinks } from "../hooks/UseRinks";
+import { Button } from "@rneui/base";
 
 export const RinkListScreen = ({ }) => {
     const { rinks, loading, error } = useRinks();
@@ -46,10 +47,31 @@ export const RinkListScreen = ({ }) => {
         </SafeAreaView>
     }
 
+    const handleOnSettingsButtonPressed = () => {
+        navigation.navigate('Settings');
+    }
+
 
     return <>
         <MapRinkView style={styles.map} onRinkPress={handleOnRinkPressed} />
+
         <SafeAreaView style={{ position: 'absolute', top: 24, left: 0, right: 0, bottom: 0, backgroundColor: 'transparent' }} pointerEvents="box-none">
+            <View
+                style={styles.buttonContainer}
+            >
+
+                <Button icon={{
+                    name: 'settings-sharp',
+                    type: 'ionicon',
+                    color: colors.white,
+                    size: 30,
+                }}
+                    onPress={handleOnSettingsButtonPressed}
+                    buttonStyle={{
+                        borderRadius: 30,
+                        backgroundColor:'transparent',
+                    }} />
+            </View>
             <ActionSheet
                 ref={actionSheetRef}
                 isModal={false}
@@ -62,7 +84,7 @@ export const RinkListScreen = ({ }) => {
                 useBottomSafeAreaPadding={false}
                 containerStyle={{ backgroundColor: 'transparent', elevation: 0, borderRadius: 30 }}
             >
-                <View style={[styles.list, { height: Dimensions.get('screen').height, backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 16}]}>
+                <View style={[styles.list, { height: Dimensions.get('screen').height, backgroundColor: colors.background, borderRadius: 30, padding: 10, paddingTop: 16 }]}>
                     <RinksFilters isMapVisible={false} />
                     <RinkList onRinkPress={handleOnRinkPressed} style={styles.list} />
                 </View>
@@ -109,11 +131,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         gap: 10,
     },
-    bottomButtonContainer: {
+    buttonContainer: {
         position: 'absolute',
-        bottom: 50,
+        top: 50,
         left: 0,
-        right: 0,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',

@@ -26,6 +26,8 @@ import { I18NProvider } from './lang/i18n';
 import { CityProvider } from './contexts/CityContext';
 import { RinkGroupProvider } from './contexts/RinkGroupContext';
 import AdsProvider from './utils/AdsProvider';
+import SettingsScreen from './screens/SettingsScreen';
+import AboutScreen from './screens/AboutScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -105,6 +107,16 @@ function App(): React.JSX.Element {
                             <Stack.Screen
                               name="RinkInformation"
                               component={RinkInformationScreen}
+                              options={{ headerShown: false, title: 'RinkInformation' }}
+                            />
+                             <Stack.Screen
+                              name="Settings"
+                              component={SettingsScreen}
+                              options={{ headerShown: false, title: 'RinkInformation' }}
+                            />
+                             <Stack.Screen
+                              name="About"
+                              component={AboutScreen}
                               options={{ headerShown: false, title: 'RinkInformation' }}
                             />
                           </Stack.Navigator>

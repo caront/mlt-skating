@@ -9,7 +9,8 @@ export type RinkInformationScreenProps = NativeStackScreenProps<
 export type RootStackParamList = {
   RinkList: undefined;
   RinkInformation: { rink: Rink };
-  AboutScreen: undefined;
+  About: undefined;
+  Settings: undefined;
 };
 
 declare global {

@@ -42,3 +42,5 @@ const AboutScreen = () => {
         </SafeAreaView>
     );
 }
+
+export default AboutScreen;

@@ -15,6 +15,15 @@
     "filter_by_distict": "Filtrer par arrondissement",
     "filter_by_distict_hint": "Sélectionner un ou plusieurs arrondissements"
   },
+  "settings": {
+    "title": "Paramètres et informations",
+    "language": "Langue de l'application",
+    "about": "À propos",
+    "about_text": "Cette application a été créée par des bénévoles pour aider les Montréalais à trouver des patinoires près de chez eux. Les données sont fournies par la Ville de Montréal et mises à jour toutes les 15 minutes. Si vous avez des commentaires ou des suggestions, n'hésitez pas à nous contacter.",
+    "privacy": "Toutes les données utilisateurs sont stockées localement sur votre appareil et ne sont pas partagées avec des tiers.",
+    "disclaimer": "Les données affichées dans cette application sont fournies par la Ville de Montréal et ne sont pas garanties. L'application n'est pas affiliée à la Ville de Montréal.",
+    "version": "Version"
+  },
   "done": "Terminé",
   "open": "Ouvert",
   "close": "Fermé",
@@ -25,11 +34,11 @@
     "conditions": "Conditions",
     "name": "Nom",
     "ice_quality_title": "Qualité de la glace",
-    "ice_quality" : {
-      "EXCELLENTE" : "Excellente",
-      "GOOD" : "Bonne",
-      "BAD" : "Mauvaise",
-      "NA" : "Inconnue"
+    "ice_quality": {
+      "EXCELLENTE": "Excellente",
+      "GOOD": "Bonne",
+      "BAD": "Mauvaise",
+      "NA": "Inconnue"
     },
     "cleared": {
       "yes": "Déneigée",
@@ -54,7 +63,7 @@
   "open_google_maps": "Ouvrir dans Google Maps",
   "history": "Historique",
   "last_update": "Dernière mise à jour {{date}}",
-  "date_format" : {
+  "date_format": {
     "date": "DD/MM/YYYY",
     "time": "HH:mm",
     "today": "Aujourd'hui",
