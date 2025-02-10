@@ -66,18 +66,11 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
     const colors = useColors();
     const scale = useSharedValue<number>(0);
 
-    // useEffect(() => {
-    //     scale.value = isDrawerVisible ? withSpring(1) : withSpring(0);
-    // }, [isDrawerVisible]);
 
     const handleSearchParamButtonClicked = () => {
         console.log('handleSearchParamButtonClicked', { isDrawerVisible });
         setIsDrawerVisible(!isDrawerVisible);
     }
-
-    // const animatedStyles = useAnimatedStyle(() => ({
-    //     transform: [{ scaleY: scale.value }],
-    // }));
 
     const handleSearchTermChanged = (search: string) => {
         dispatch({ type: 'SEARCH_RINK_NAME', payload: search });
@@ -113,9 +106,6 @@ const RinksFilters = ({ style }: RinksFiltersProps) => {
                     }}
                     onPress={handleRefrehLocation} />
                 <SearchBar
-                    value={options.name}
-                    onChangeText={handleSearchTermChanged}
-                    placeholder={t('search.search_placeholder')}
                 />
                 <ButtonIcon
                     height={55}

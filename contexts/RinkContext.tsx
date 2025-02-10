@@ -9,12 +9,14 @@ import { getFavorites, isRinkFavorite, saveFavoriteStatus } from "../utils/favor
 import { Log } from "../utils/logs";
 import { useLocates } from "../hooks/UseLocation";
 import { getDistanceBetweenCoordinates } from "../utils/distance";
+import { supabase } from "../supabase";
+import { PostgrestError } from "@supabase/supabase-js";
 
 export type RinkContextType = {
     rinks: RinkWithCondition[];
     favRinks: RinkWithCondition[];
     loading: boolean;
-    error: Error | ApolloError | undefined;
+    error: Error | ApolloError | PostgrestError | undefined;
     options: RinkSearchOption;
     dispatch: React.Dispatch<Action>;
     refresh: () => void;
@@ -93,53 +95,44 @@ const buildRinks = async (rawRinks: any): Promise<RinkWithCondition[]> => {
     return rinks.filter((rink) => rink !== null) as RinkWithCondition[];
 };
 
+const fetchRinks = async (search: RinkSearchOption): Promise<RinkWithCondition[]> => {
+    const { name, location: { longitude, latitude }, onlyFavorite } = search;
+    const { data, error } = await supabase.rpc('search_rinks', {
+        q: name,
+        longitude_search: longitude,
+        latitude_search: latitude
+    });
+
+    if (error) {
+        throw error;
+    }
+
+    const rinks = await Promise.all(data.map(async (rink: any): Promise<RinkWithCondition> => {
+        const isFav = await isRinkFavorite(rink.id);
+        const { conditions, district_name } = rink;
+        return {
+            ...rink,
+            ...conditions,
+            condition: conditions.ice_condition,
+            isFav,
+            district: {
+                name: district_name
+            },
+        }
+    }));
+    return rinks.filter((rink) => !onlyFavorite || rink.isFav);
+};
+
 export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
-    const { isLocationEnabled, location } = useLocates();
-    const [sourceRinks, setSourceRinks] = useState<RinkWithCondition[]>([]);
     const [rinks, setRinks] = useState<RinkWithCondition[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<ApolloError | undefined>(undefined);
-    const [loadRinks] = useLazyQuery(GET_RINKS);
+    const [error, setError] = useState<Error | ApolloError | PostgrestError | undefined>(undefined);
 
     const [rinkFocus, setRinkFocus] = useState<Rink | undefined>(undefined);
-
 
     const [options, dispatch] = useReducer(
         rinkReducer,
         defaultSearchOption)
-
-    const fetchAllRinks = async () => {
-        let allRinks: any[] = [];
-        let hasNextPage = true;
-        let after: string | null = null;
-
-        while (hasNextPage) {
-            const { data, error } = await loadRinks({
-                variables: {
-                    first: 30, // Number of items per page
-                    after,     // Cursor for the next page
-                },
-            });
-
-            if (error) {
-                setError(error);
-                setLoading(false);
-                return;
-            }
-
-            const { edges, pageInfo } = data.rinksCollection;
-
-            // Add current page rinks to the list
-            allRinks = [...allRinks, ...edges.map((edge: any) => edge.node)];
-
-            // Update pagination variables
-            hasNextPage = pageInfo.hasNextPage;
-            after = pageInfo.endCursor;
-        }
-
-        setSourceRinks(await syncIsFavorite(await buildRinks(allRinks)));
-        setLoading(false);
-    };
 
     const syncIsFavorite = async (rinks: RinkWithCondition[]) => {
         const favorites = await getFavorites();
@@ -150,69 +143,29 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
         return rinks
     }
 
-    useEffect(() => {
-        fetchAllRinks();
-    }, []);
-
-
-    useEffect(() => {
-        if (!isLocationEnabled) return;
-        sourceRinks.forEach((rink) => {
-            rink.distance = getDistanceBetweenCoordinates(location, rink);
-        });
-        setSourceRinks(sourceRinks.sort((a, b) => (a.distance ?? 0) - (b.distance ?? 0)));
-    }, [location, isLocationEnabled]);
-
-    const filters = async () => {
-        setLoading(true);
-        try {
-            let filteredRinks = sourceRinks;
-            if (options.onlyOpen) {
-                filteredRinks = filteredRinks.filter((rink) => rink.open);
-            }
-            if (options.name !== '') {
-                filteredRinks = filteredRinks.filter((rink) =>
-                    StringCleaner(rink.name).toUpperCase().includes(StringCleaner(options.name as string).toUpperCase())
-                );
-            }
-            if (options.districts !== undefined && options.districts.length > 0) {
-                filteredRinks = filteredRinks.filter((rink) => {
-                    if (options.districts === undefined)
-                        return true;
-                    return options.districts.includes(rink.district.id);
-                }
-
-                );
-            }
-            if (options.conditions !== undefined && options.conditions.length > 0) {
-                filteredRinks = filteredRinks.filter((rink) => {
-                    if (options.conditions === undefined)
-                        return true;
-                    return options.conditions.includes(rink.condition);
-                });
-            }
-            if (options.onlyFavorite === true) {
-                const favoriteRinks = await getFavorites();
-                filteredRinks = filteredRinks.filter((rink) => rink.id in favoriteRinks);
-            }
-            setRinks(filteredRinks.sort((a, b) => a.name.localeCompare(b.name)));
-        }
-        catch (e) {
-            console.log(e);
-        }
-        finally {
-            setLoading(false);
-        }
-    };
-
     React.useEffect(() => {
-        if (sourceRinks.length === 0 || loading) return;
-        filters();
-    }, [options, sourceRinks]);
+        fetchRinks(options).then((rinks) => {
+                setRinks(rinks);
+                setLoading(false);
+            }
+            ).catch((e) => {
+                setError(e);
+                setLoading(false);
+            }).finally
+            (() => setLoading(false));
+    }, [options]);
 
 
     const refresh = () => {
-        fetchAllRinks().then(() => Log.info("Rinks refreshed"));
+        fetchRinks(options).then((rinks) => {
+                setRinks(rinks);
+                setLoading(false);
+            }
+            ).catch((e) => {
+                setError(e);
+                setLoading(false);
+            }).finally
+            (() => setLoading(false));
     }
 
     const resetOptions = () => {
@@ -224,11 +177,6 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
             syncIsFavorite(rinks).then((rinks) => setRinks(rinks))
         );
     }
-
-    React.useEffect(() => {
-        if (rinks.length === 0)
-            setRinks(sourceRinks);
-    }, [sourceRinks]);
 
     return (
         <RinkContext.Provider value={{

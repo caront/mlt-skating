@@ -18,12 +18,9 @@ import { Button } from "@rneui/base";
 const SNAP_POINTS_FROM_TOP = [30, 50, 80];
 
 export const RinkListScreen = ({ }) => {
-    const { rinks, loading, error } = useRinks();
-    const [isShowFav, setIsShowFav] = React.useState(false);
+    const { loading, error } = useRinks();
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
-
-    const [index, setIndex] = React.useState(0);
 
     const actionSheetRef = useRef<ActionSheetRef>(null);
 
@@ -31,12 +28,6 @@ export const RinkListScreen = ({ }) => {
         if (actionSheetRef && actionSheetRef.current)
             actionSheetRef.current?.show();
     }, [actionSheetRef.current]);
-
-    useEffect(() => {
-        if (actionSheetRef && actionSheetRef.current)
-            actionSheetRef.current?.snapToIndex(index);
-    }, [index]);
-
 
 
     const handleOnRinkPressed = (rink: Rink) => {
@@ -58,9 +49,6 @@ export const RinkListScreen = ({ }) => {
     const isIOS = Platform.OS === 'ios';
     const buttonBackground = isDarkMode && isIOS ? colors.white : colors.grey5;
 
-
-
-   
     return <>
         <MapRinkView style={{ height: `75%` }} onRinkPress={handleOnRinkPressed} />
 

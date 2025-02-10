@@ -1,18 +1,14 @@
 import { Icon } from "@rneui/themed";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button, Platform } from "react-native";
 import { useColors } from "../../colors";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 import { BlurView } from "@react-native-community/blur";
 import { useTheme } from "@react-navigation/native";
-
-interface SearchBarProps {
-    value: string;
-    onChangeText: (text: string) => void;
-    placeholder?: string;
-    // setClicked: (clicked: boolean) => void;
-}
-
+import { useDebounce } from "use-debounce";
+import { useRink } from "../../hooks/UseRink";
+import { useRinks } from "../../hooks/UseRinks";
+import { useTranslation } from "react-i18next";
 
 const useStyles = () => {
     const colors = useColors();
@@ -44,15 +40,24 @@ const useStyles = () => {
     });
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder }) => {
+const SearchBar: React.FC = ({ }) => {
+    const { t } = useTranslation();
+    const { dispatch } = useRinks();
     const styles = useStyles();
     const colors = useColors();
-    const isDarkMode = useTheme().dark;
     const isAndroid = Platform.OS === 'android';
-    const showClearIcon = value !== "" && value !== undefined && value !== null;
+    const [text, setText] = useState("");
+    const [debouncedText] = useDebounce(text, 250);
+    const showClearIcon = debouncedText !== "" && debouncedText !== undefined && debouncedText !== null;
 
+    const handleSearchTermChanged = (search: string) => {
+        dispatch({ type: 'SEARCH_RINK_NAME', payload: search });
+    };
 
-    return (
+    useEffect(() => {
+        handleSearchTermChanged(debouncedText);
+    }, [debouncedText]);
+  return (
         <View style={[styles.container, isAndroid ? { backgroundColor: colors.white, borderRadius: 30 } : {}]}>
             <Icon
                 name="search"
@@ -64,13 +69,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ value, onChangeText, placeholder 
             <TextInput
                 style={[styles.input]}
                 placeholderTextColor={colors.grey3}
-                placeholder={placeholder ? placeholder : "Search..."}
-                value={value}
-                onChangeText={onChangeText}
+                placeholder={t('search.search_placeholder')}
+                value={text}
+                onChangeText={setText}
             />
             {showClearIcon && (
                 <Icon name="close" type='material' size={20} color={colors.grey5} style={styles.clearIcon} onPress={() => {
-                    onChangeText("")
+                    setText("")
                 }} />
             )}
         </View>

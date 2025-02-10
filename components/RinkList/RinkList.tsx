@@ -121,7 +121,6 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
 
     const randomRotation = Math.floor(rink.id * 10) - 60;
 
-    // Log.info('RinkItemList', index );
 
     return <View style={styles.column}>
         <Ads display={index !== 0 && index % 10 === 0} style={{ marginBottom: 16 }} />
@@ -143,25 +142,11 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
                     <Text>{t(`rink_details.ice_quality.${rink.condition}`)}</Text>
                     <Circle color={conditionColor(rink.condition)} size={10} />
                 </View>
-                {false && <View style={[styles.row, { gap: 5 }]}>
-                    <Text> {rink.distance}</Text>
-                    <Text>km</Text>
-                </View>
-                }
             </View>
         </TouchableOpacity>
     </View>
 
 }
-
-// const Adds: React.FC<{ show: boolean }> = ({ show }) => {
-//     const colors = useColors();
-
-//     if (show) {
-//         return <View style={{ height: 55, marginBottom: 16, width: '100%', backgroundColor: colors.error }} />
-//     }
-//     return <View style={{ height: 0 }} />
-// }
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);

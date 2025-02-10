@@ -40,6 +40,16 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
     const styles = useStyle();
     const colors = useColors();
 
+    // useEffect(() => {
+    //     if (mapRef.current && location) {
+    //         Log.debug("Animating to region");
+    //         mapRef.current.getCamera().then((camera) => {
+    //             Log.debug(JSON.stringify(camera, null, 4));
+    //         });
+    //         // console.log(mapRef.current.getCamera());
+    //     }
+    // }, [mapRef.current])
+
     useEffect(() => {
         if (mapRef.current && location) {
             Log.debug("Animating to region");
@@ -54,6 +64,7 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
     const handleOnRinkClick = (rink: Rink) => {
         onRinkPress(rink);
     };
+
 
     return (
         <>

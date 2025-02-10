@@ -1,3 +1,15 @@
+export type LocationSearch = {
+  latitude: number;
+  longitude: number;
+  elevation: number;
+};
+
+const defaultLocation = {
+  latitude: 45.5019,
+  longitude: -73.5674,
+  elevation: 0,
+};
+
 export type Action =
   | { type: "RESET_OPTIONS" }
   | { type: "SEARCH_RINK_NAME"; payload: string }
@@ -5,7 +17,11 @@ export type Action =
   | { type: "SEARCH_RINK_OPEN"; payload: boolean }
   | { type: "SEARCH_RINK_DISTRICT"; payload: number[] }
   | { type: "SEARCH_RINK_TYPE"; payload: string[] }
-  | { type: "SEARCH_RINK_CONDITION"; payload: string[] };
+  | { type: "SEARCH_RINK_CONDITION"; payload: string[] }
+  | {
+      type: "SEARCH_RINK_POSITION";
+      payload: LocationSearch;
+    };
 
 export type RinkSearchOption = {
   name: string;
@@ -14,6 +30,7 @@ export type RinkSearchOption = {
   districts: number[];
   type: string[];
   conditions: string[];
+  location: LocationSearch;
 };
 
 export const defaultSearchOption: RinkSearchOption = {
@@ -23,6 +40,11 @@ export const defaultSearchOption: RinkSearchOption = {
   districts: [],
   type: [],
   conditions: [],
+  location: {
+    latitude: 0,
+    longitude: 0,
+    elevation: 0,
+  },
 };
 
 export const rinkReducer = (

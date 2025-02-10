@@ -109,14 +109,9 @@ function App(): React.JSX.Element {
                               component={RinkInformationScreen}
                               options={{ headerShown: false, title: 'RinkInformation' }}
                             />
-                             <Stack.Screen
+                            <Stack.Screen
                               name="Settings"
                               component={SettingsScreen}
-                              options={{ headerShown: false, title: 'RinkInformation' }}
-                            />
-                             <Stack.Screen
-                              name="About"
-                              component={AboutScreen}
                               options={{ headerShown: false, title: 'RinkInformation' }}
                             />
                           </Stack.Navigator>
