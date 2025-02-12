@@ -17,6 +17,7 @@ const resources = {
 };
 
 const initalizeI18Next = (language: 'fr' | 'en') => {
+  console.log("initalizeI18Next", language);
   i18n.use(initReactI18next).init({
     debug: true,
     resources,
@@ -34,7 +35,6 @@ export const I18NProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     getSavedLanguage().then((language: string) => {
       initalizeI18Next(language as 'fr' | 'en');
     });
-
   }, []);
   return <>{children}</>
 };

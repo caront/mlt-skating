@@ -13,7 +13,6 @@ export const getI18nField = (obj: any, key: string) => {
 
 export const setSavedLanguage = async (language: string) => {
     await AsyncStorage.setItem('LANGUAGE', language);
-    console.log('saved');
 }
 
 export const getSavedLanguage = async () => {
