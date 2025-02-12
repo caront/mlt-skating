@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Log } from "./logs";
 import mobileAds from 'react-native-google-mobile-ads';
 import { check, request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 
@@ -17,11 +16,11 @@ const initAds = async () => {
         // An array of test device IDs to allow.
         testDeviceIdentifiers: ['EMULATOR'],
     })
-    Log.debug('Ads configured');
+    console.log('Ads configured');
 
     await mobileAds().initialize();
 
-    Log.debug('Ads initialized');
+    console.log('Ads initialized');
 }
 
 const AdsProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {

@@ -1,6 +1,5 @@
 import { DOMParser } from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
 import { createClient } from "jsr:@supabase/supabase-js@2";
-import { scheduler } from "node:timers/promises";
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
 const SUPABASE_KEY = Deno.env.get("SUPABASE_KEY");
 if (!SUPABASE_URL || !SUPABASE_KEY) {

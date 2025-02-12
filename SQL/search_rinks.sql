@@ -38,7 +38,7 @@ WITH RINK_DISTANCE AS (
     INNER JOIN public.districts d ON d.id = rinks.district_id
     WHERE 
         rinks.is_active = TRUE
-        AND rinks.name ILIKE CONCAT('%', q, '%') -- Corrected search filter
+        AND rinks.name ILIKE CONCAT('%', q, '%')
 ),
 RINK_CONDITION AS (
     SELECT DISTINCT ON (conditions.rink_id) 

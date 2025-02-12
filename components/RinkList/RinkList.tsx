@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useMemo, useRef } from 'react';
+import React, { FunctionComponent, Suspense, useEffect, useMemo, useRef } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
 import { ECondition, Rink, RinkWithCondition } from '../../models/Rink';
 import { cleanColor, conditionColor, resurfacedColor, useColors } from '../../colors';
@@ -8,8 +8,6 @@ import Animated, { SharedTransition, useAnimatedStyle, useSharedValue, withSprin
 import { BlurView } from "@react-native-community/blur";
 import PropertyChip from '../shared/PropertyChip';
 import Circle from '../shared/Circle';
-// import { isFavorite } from '../../utils/favoritesUtils';
-import { Log } from '../../utils/logs';
 import { useLocates } from '../../hooks/UseLocation';
 import { useTranslation } from 'react-i18next';
 import { useRinkGroups } from '../../hooks/UseRinkGroup';
@@ -112,7 +110,6 @@ const useStyles = () => {
 const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
     const { t } = useTranslation();
     const colors = useColors();
-    const { isLocationEnabled } = useLocates();
     const styles = useStyles();
 
     const handlePress = () => {
@@ -139,9 +136,13 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
                     <Circle color={rink.open ? colors.success : colors.error} size={10} />
                 </View>
                 <View style={[styles.row, { gap: 5 }]}>
-                    <Text>{t(`rink_details.ice_quality.${rink.condition}`)}</Text>
-                    <Circle color={conditionColor(rink.condition)} size={10} />
+                    <Text>{t(`rink_details.ice_quality.${rink.iceQuality}`)}</Text>
+                    <Circle color={conditionColor(rink.iceQuality)} size={10} />
                 </View>
+                {rink.distance && <View style={[styles.row, { gap: 5 }]}>
+                    <Text>{(rink.distance / 1000).toFixed(2)} km</Text>
+                </View>
+                }
             </View>
         </TouchableOpacity>
     </View>
@@ -150,8 +151,10 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const [isRefreshing, setIsRefreshing] = React.useState(false);
-    const { rinkFocus, refresh, rinks } = useRinks();
+    const { t } = useTranslation();
+    const { loading, refresh, rinks } = useRinks();
     const flatRinkRef = useRef<RNFlatList>(null);
+    const colors = useColors();
 
     const styles = useStyles();
 
@@ -165,8 +168,18 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
         setIsRefreshing(false);
     }, [rinks]);
 
-    return (
+    const isEmpty = useMemo(() => {
+        return rinks.length === 0 && !loading;
+    }, [rinks]);
+
+    return (<Suspense fallback={<LoadingFullScreen loading={true} />}>
         <View style={[styles.container, style]}>
+            {isEmpty &&
+                <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5, padding: 28 }}>
+                    <Icon name="snowflake" type="fontisto" size={23} color={colors.grey3} />
+                    <Text style={{ color: colors.grey3 }}>{t('empty_rinks')}</Text>
+                </View>
+            }
             <FlatList
                 data={rinks}
                 ref={flatRinkRef}
@@ -184,6 +197,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                 renderItem={({ item: rink, index }) => <RinkGroupItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
+    </Suspense>
     );
 };
 

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Condition, ECondition, Rink, RinkHistory } from '../../models/Rink';
+import { Condition, ConditionList, ECondition, Rink, RinkWithCondition } from '../../models/Rink';
 import { ActivityIndicator, FlatList, Dimensions, Text, TouchableOpacity, View } from 'react-native';
 import { StyleSheet } from 'react-native';
 import { useColors } from '../../colors';
 import Dayjs from 'dayjs';
-import { useRinkConditionsHistory } from '../../hooks/UseRinkConditionsHistory';
 import Carousel, { ICarouselInstance } from 'react-native-reanimated-carousel';
 import { useSharedValue } from 'react-native-reanimated';
 import ConditionTimeLine from '../ConditionTimeline';
@@ -15,7 +14,7 @@ import InformationContainer from '../shared/InformationContainer';
 import { useTranslation } from 'react-i18next';
 
 interface RinkHistoryListProps {
-    rink: Rink;
+    rink: ConditionList;
 }
 
 const useStyles = () => {
@@ -32,27 +31,13 @@ const useStyles = () => {
 }
 
 const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }) => {
-    const {t} = useTranslation();
-    const { loading, error, conditions } = useRinkConditionsHistory(rink.id);
-    const width = Dimensions.get('window').width;
+    const { t } = useTranslation();
+    const { conditions } = rink;
     const styles = useStyles();
-    const [progress, setProgress] = useState<number>(0);
-    const ref = React.useRef<ICarouselInstance>(null);
     const colors = useColors();
 
 
 
-    if (loading) {
-        return <InformationContainer style={styles.container}>
-            <ActivityIndicator style={{ marginVertical: 16 }} />
-        </InformationContainer>
-    }
-
-    if (error) {
-        return <InformationContainer style={styles.container}>
-            <Text>{error.message}</Text>
-        </InformationContainer>
-    }
 
     if (conditions.length === 0) {
         return <InformationContainer style={styles.container}>
@@ -64,7 +49,7 @@ const RinkHistoryList: React.FunctionComponent<RinkHistoryListProps> = ({ rink }
         <InformationContainer
             title={t('history')}
             titleIcon={<Icon name='access-time' color={colors.grey0} size={20} type='material' />}
-         style={styles.container}>
+            style={styles.container}>
             <ConditionTimeLine conditions={conditions} />
         </InformationContainer>
     );

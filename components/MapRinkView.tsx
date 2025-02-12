@@ -5,7 +5,6 @@ import { useColors } from '../colors';
 import { Platform, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 import { useRinks } from '../hooks/UseRinks';
-import { Log } from '../utils/logs';
 import { Button } from '@rneui/themed';
 import { useLocates } from '../hooks/UseLocation';
 
@@ -40,19 +39,8 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
     const styles = useStyle();
     const colors = useColors();
 
-    // useEffect(() => {
-    //     if (mapRef.current && location) {
-    //         Log.debug("Animating to region");
-    //         mapRef.current.getCamera().then((camera) => {
-    //             Log.debug(JSON.stringify(camera, null, 4));
-    //         });
-    //         // console.log(mapRef.current.getCamera());
-    //     }
-    // }, [mapRef.current])
-
     useEffect(() => {
         if (mapRef.current && location) {
-            Log.debug("Animating to region");
             mapRef.current.animateToRegion({
                 ...location,
                 latitudeDelta: 0.0922,
@@ -71,8 +59,6 @@ const MapRinkView: React.FC<MapRinkViewProps> = ({ onRinkPress, style }) => {
             <MapView
                 ref={mapRef}
                 loadingEnabled={true}
-                onMapLoaded={() => Log.debug("Map loaded")}
-                onMapReady={() => Log.debug("Map ready")}
                 style={[styles.map, style]}
                 initialRegion={{
                     ...location,

@@ -32,6 +32,7 @@ const useStyles = () => {
             color: colors.grey5,
             paddingHorizontal: 10,
             textAlign: 'justify',
+            fontSize: 16,
         }
     })
 }
@@ -69,8 +70,8 @@ const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
                 titleIcon={<Icon name='ice-skating' size={20} color={colors.grey0} type="material" />}
             >
                 <Text style={styles.information}>{decode(getI18nField(rink, 'information'))}</Text>
-                {hasService && <Chip title={t('services')} subTitle={rink.services?.map(service => t(`services_enum.${service}`)).join(' - ')} />}
-                {hasSchedules && <Chip title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />}
+                {hasService && <Chip containerStyle={{ paddingHorizontal: -10 }} title={t('services')} subTitle={rink.services?.map(service => t(`services_enum.${service}`)).join(' - ')} />}
+                {hasSchedules && <Chip containerStyle={{ paddingHorizontal: -10 }} title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />}
             </InformationContainer>
 
         </>

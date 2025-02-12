@@ -1,109 +1,78 @@
 import { ApolloError, useQuery } from "@apollo/client";
-import React from "react";
-import { defaultRinkWithDistrictAndConditionLastUpdate, ECondition, RinkWithDistrictAndConditionLastUpdate } from "../models/Rink";
+import React, { useEffect } from "react";
+import { Condition, defaultRinkWithDistrictAndConditionLastUpdate, ECondition, RinkWithDistrictAndConditionLastUpdate } from "../models/Rink";
 import { GET_RINK_HISTORY } from "../graphql/RinkConditionsQueries";
 import { GET_RINKS_BY_ID } from "../graphql/RinkQueries";
+import { supabase } from "../supabase";
+import { isRinkFavorite } from "../utils/favoritesUtils";
+import { PostgrestError } from "@supabase/supabase-js";
 
 interface UseRinkReturn {
     loading: boolean;
-    error: Error | ApolloError | undefined;
+    error: Error | ApolloError | PostgrestError | undefined;
     rink: RinkWithDistrictAndConditionLastUpdate | null;
 }
 
-const buildRink = (data: any): RinkWithDistrictAndConditionLastUpdate | null => {
-    try {
-        const { id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, public_static_map_url, address, schedules, services, information,
-            description_fr, description_en, information_fr, information_en
-        } = data;
-        if (conditionsCollection.edges.length === 0) {
-            return {
-                ...defaultRinkWithDistrictAndConditionLastUpdate,
-                id,
-                name,
-                type,
-                description,
-                district,
-                longitude,
-                latitude,
-                rink_name,
-                public_url: public_static_map_url,
-                description_fr,
-                description_en,
-                information_fr,
-                information_en
-            }
-        }
+export const useRink = (rinkId: number): UseRinkReturn => {
+    const [rink, setRink] = React.useState<RinkWithDistrictAndConditionLastUpdate | null>(null);
+    const [loading, setLoading] = React.useState(false);
+    const [error, setError] = React.useState<Error | ApolloError | undefined>(undefined);
 
-        let lastTimeWatered = null;
-        let lastTimeResurfaced = null
-        let lastTimeCleared = null
-        let lastTimeOpen = null
-        let openSince = null
-
-        for (let idx = conditionsCollection.edges.length - 1; idx >= 0; idx--) {
-            const { open, condition, cleared, watered, resurfaced, updated_at } = conditionsCollection.edges[idx].node;
-            if (open) {
-                lastTimeOpen = updated_at
-                if (openSince === null) {
-                    openSince = updated_at
-                }
-            }
-            if (cleared) {
-                lastTimeCleared = updated_at
-            }
-            if (watered) {
-                lastTimeWatered = updated_at
-            }
-            if (resurfaced) {
-                lastTimeResurfaced = updated_at
-            }
+    const fetchErinkById = async (rinkId: number): Promise<RinkWithDistrictAndConditionLastUpdate | null> => {
+        const { data, error } = await supabase.rpc('get_rink', { rink_id: rinkId });
+        if (error) {
+            throw error;
         }
+        if (data.length !== 1) {
+            throw new Error('Rink not found');
+        }
+        const isFav = await isRinkFavorite(rinkId);
+
+        console.log('isFav', isFav, rinkId);
+        const rawRink = data[0];
+        const { conditions_history: conditions, ...rink } = rawRink;
+
+        const condition_history: Condition[] = (conditions || []).map((c: any): Condition => ({
+            ...c,
+            updatedAt: c.updated_at,
+            iceQuality: c.ice_quality as ECondition,
+
+        })).slice(0, 15);
+        const condition: Condition = condition_history.length > 0 ? condition_history[0] : {
+            open: false,
+            cleared: false,
+            watered: false,
+            resurfaced: false,
+            updatedAt: '',
+            iceQuality: ECondition.NA,
+        } as Condition;
+
+        condition['id'] = rinkId;
 
         return {
-            id,
-            name,
-            type,
-            description,
-            lastUpdate: conditionsCollection.edges[0].node.updated_at,
-            district,
-            longitude,
-            latitude,
-            rink_name,
-            cleared: conditionsCollection.edges[0].node.cleared,
-            open: conditionsCollection.edges[0].node.open,
-            condition: conditionsCollection.edges[0].node.condition,
-            watered: conditionsCollection.edges[0].node.watered,
-            resurfaced: conditionsCollection.edges[0].node.resurfaced,
-            lastTimeCleared,
-            lastTimeOpen,
-            lastTimeResurfaced,
-            lastTimeWatered,
-            openSince,
-            updatedAt: conditionsCollection.edges[0].node.updated_at,
-            isFav: false,
-            public_url: public_static_map_url,
-            address,
-            schedules: JSON.parse(schedules),
-            services,
-            information,
-            description_fr,
-            description_en,
-            information_fr,
-            information_en
-        }
+            ...rink,
+            isFav,
+            ...condition,
+            conditions: condition_history,
+            updatedAt: rawRink.updated_at,
+            lastTimeCleared: rawRink.last_cleared_true,
+            lastTimeOpen: rawRink.last_open_true,
+            lastTimeResurfaced: rawRink.last_resurfaced_true,
+            lastTimeWatered: rawRink.last_watered_true,
+        };
     }
-    catch (e) {
-        console.log(e);
-    }
-    return null;
-}
 
-export const useRink = (rinkId: number): UseRinkReturn => {
-    const { data, loading, error } = useQuery(GET_RINKS_BY_ID, {
-        variables: { rinkId }
-    });
+    useEffect(() => {
+        setLoading(true);
+        fetchErinkById(rinkId).then((rink) => {
+            setRink(rink);
+        }).catch((e) => {
+            setError(e);
+        }).finally(() => {
+            setLoading(false);
+        });
+    }, []);
 
-    const rink = loading || error ? null : buildRink(data?.rinksCollection.edges[0].node);
 
-    return { loading: false, error: undefined, rink };
+    return { loading, error, rink };
 };

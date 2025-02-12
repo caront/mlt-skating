@@ -52,10 +52,15 @@ export interface RinkWithCondition extends Rink, Condition {}
 
 export interface RinkWithDistrictAndConditionLastUpdate
   extends Rink,
-    ConditionAndLastUpdate {}
+    ConditionAndLastUpdate,
+    ConditionList {}
 
 export interface RinkList {
   rinks: Rink[];
+}
+
+export interface ConditionList {
+  conditions: Condition[];
 }
 
 export interface Condition {
@@ -64,17 +69,8 @@ export interface Condition {
   cleared: boolean;
   watered: boolean;
   resurfaced: boolean;
-  condition: ECondition;
+  iceQuality: ECondition;
   updatedAt: string;
-}
-
-export interface RinkHistory {
-  date: string;
-  open: boolean;
-  cleared: boolean;
-  watered: boolean;
-  resurfaced: boolean;
-  condition: string;
 }
 
 export enum ECondition {
@@ -110,7 +106,7 @@ export const defaultCondition: Condition = {
   cleared: false,
   watered: false,
   resurfaced: false,
-  condition: ECondition.NA,
+  iceQuality: ECondition.NA,
   updatedAt: "",
 };
 
@@ -138,4 +134,5 @@ export const defaultRinkWithDistrictAndConditionLastUpdate: RinkWithDistrictAndC
     lastTimeResurfaced: null,
     lastTimeWatered: null,
     openSince: null,
+    conditions: []
   };

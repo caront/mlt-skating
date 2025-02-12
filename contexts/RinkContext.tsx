@@ -6,7 +6,6 @@ import { Action, RinkSearchOption, defaultSearchOption, rinkReducer } from "../r
 import { StringCleaner } from "../utils/stringCleaner";
 import dayjs from "dayjs";
 import { getFavorites, isRinkFavorite, saveFavoriteStatus } from "../utils/favoritesUtils";
-import { Log } from "../utils/logs";
 import { useLocates } from "../hooks/UseLocation";
 import { getDistanceBetweenCoordinates } from "../utils/distance";
 import { supabase } from "../supabase";
@@ -22,8 +21,6 @@ export type RinkContextType = {
     refresh: () => void;
     resetOptions: () => void;
     setRinkFavorite: (id: number, isFav: boolean) => void;
-    rinkFocus: Rink | undefined;
-    setRinkFocus: (rink: Rink) => void;
 };
 
 const defaultDistritContext: RinkContextType = {
@@ -36,67 +33,14 @@ const defaultDistritContext: RinkContextType = {
     refresh: () => { },
     resetOptions: () => { },
     setRinkFavorite: (id: number, isFav: boolean) => { },
-    rinkFocus: undefined,
-    setRinkFocus: (rink: Rink) => { },
 };
 
 export const RinkContext = createContext<RinkContextType>(defaultDistritContext);
 
-const buildRinks = async (rawRinks: any): Promise<RinkWithCondition[]> => {
-
-    const rinks = await Promise.all(rawRinks.map(async (rink: any): Promise<RinkWithCondition | null> => {
-        const { is_active, id, name, type, description, districts: district, longitude, latitude, rink_name, conditionsCollection, description_fr, description_en } = rink;
-        if (!is_active) {
-            return null;
-        }
-        if (conditionsCollection.edges.length === 0) {
-            return {
-                ...defaultCondition,
-                id,
-                name,
-                type,
-                description,
-                district,
-                longitude,
-                latitude,
-                rink_name,
-                lastUpdate: new Date().toISOString(),
-                isFav: false,
-                public_url: undefined,
-                description_fr,
-                description_en
-            }
-        }
-
-        const { open, condition, cleared, watered, resurfaced, updated_at } = conditionsCollection.edges[0].node;
-
-        return {
-            id,
-            name,
-            type,
-            description,
-            lastUpdate: updated_at,
-            updatedAt: updated_at,
-            district,
-            longitude,
-            latitude,
-            rink_name,
-            cleared,
-            open,
-            condition,
-            watered,
-            resurfaced,
-            isFav: false,
-            public_url: undefined,
-            description_fr,
-            description_en
-        }
-    }));
-    return rinks.filter((rink) => rink !== null) as RinkWithCondition[];
-};
 
 const fetchRinks = async (search: RinkSearchOption): Promise<RinkWithCondition[]> => {
     const { name, location: { longitude, latitude }, onlyFavorite } = search;
+
     const { data, error } = await supabase.rpc('search_rinks', {
         q: name,
         longitude_search: longitude,
@@ -113,7 +57,7 @@ const fetchRinks = async (search: RinkSearchOption): Promise<RinkWithCondition[]
         return {
             ...rink,
             ...conditions,
-            condition: conditions.ice_condition,
+            iceQuality: conditions.ice_condition,
             isFav,
             district: {
                 name: district_name
@@ -127,8 +71,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     const [rinks, setRinks] = useState<RinkWithCondition[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<Error | ApolloError | PostgrestError | undefined>(undefined);
-
-    const [rinkFocus, setRinkFocus] = useState<Rink | undefined>(undefined);
+    const { location } = useLocates();
 
     const [options, dispatch] = useReducer(
         rinkReducer,
@@ -145,26 +88,38 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
 
     React.useEffect(() => {
         fetchRinks(options).then((rinks) => {
-                setRinks(rinks);
-                setLoading(false);
-            }
-            ).catch((e) => {
-                setError(e);
-                setLoading(false);
-            }).finally
+            setRinks(rinks);
+            setLoading(false);
+        }
+        ).catch((e) => {
+            setError(e);
+            setLoading(false);
+        }).finally
             (() => setLoading(false));
     }, [options]);
 
 
+    React.useEffect(() => {
+        fetchRinks({ ...options, location }).then((rinks) => {
+            setRinks(rinks);
+            setLoading(false);
+        }
+        ).catch((e) => {
+            setError(e);
+            setLoading(false);
+        }).finally
+            (() => setLoading(false));
+    }, [location]);
+
     const refresh = () => {
         fetchRinks(options).then((rinks) => {
-                setRinks(rinks);
-                setLoading(false);
-            }
-            ).catch((e) => {
-                setError(e);
-                setLoading(false);
-            }).finally
+            setRinks(rinks);
+            setLoading(false);
+        }
+        ).catch((e) => {
+            setError(e);
+            setLoading(false);
+        }).finally
             (() => setLoading(false));
     }
 
@@ -173,9 +128,11 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     }
 
     const setRinkFav = async (id: number, isFav: boolean) => {
-        saveFavoriteStatus(id, isFav).then(() =>
-            syncIsFavorite(rinks).then((rinks) => setRinks(rinks))
-        );
+        saveFavoriteStatus(id, isFav).then(() => {
+            const rinkIndex = rinks.findIndex((rink) => rink.id === id);
+            rinks[rinkIndex].isFav = isFav;
+            setRinks(rinks);
+        });
     }
 
     return (
@@ -188,9 +145,7 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
             error,
             refresh,
             resetOptions,
-            setRinkFavorite: setRinkFav,
-            rinkFocus,
-            setRinkFocus
+            setRinkFavorite: setRinkFav
         }}>
             {children}
         </RinkContext.Provider>

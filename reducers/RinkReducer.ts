@@ -1,13 +1,11 @@
 export type LocationSearch = {
   latitude: number;
   longitude: number;
-  elevation: number;
 };
 
 const defaultLocation = {
   latitude: 45.5019,
   longitude: -73.5674,
-  elevation: 0,
 };
 
 export type Action =
@@ -40,11 +38,7 @@ export const defaultSearchOption: RinkSearchOption = {
   districts: [],
   type: [],
   conditions: [],
-  location: {
-    latitude: 0,
-    longitude: 0,
-    elevation: 0,
-  },
+  location: defaultLocation,
 };
 
 export const rinkReducer = (

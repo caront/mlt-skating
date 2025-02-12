@@ -57,7 +57,8 @@ const SearchBar: React.FC = ({ }) => {
     useEffect(() => {
         handleSearchTermChanged(debouncedText);
     }, [debouncedText]);
-  return (
+
+    return (
         <View style={[styles.container, isAndroid ? { backgroundColor: colors.white, borderRadius: 30 } : {}]}>
             <Icon
                 name="search"

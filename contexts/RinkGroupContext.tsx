@@ -8,7 +8,7 @@ import { defaultRinkWithCondition, RinkWithCondition } from "../models/Rink";
 import { isRinkFavorite } from "../utils/favoritesUtils";
 import { StringCleaner } from "../utils/stringCleaner";
 import { getDistanceBetweenCoordinates } from "../utils/distance";
-import { Log } from "../utils/logs";
+import Log from "../utils/logs";
 
 
 export type RinkGroupContextType = {

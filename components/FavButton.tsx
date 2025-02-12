@@ -17,6 +17,8 @@ const FavButton: React.FC<FavButtonProps> = ({ rink }) => {
     const colors = useColors();
     const scale = useSharedValue(1);
 
+    console.log("rink.id", rink.id);
+
     const animatedStyle = useAnimatedStyle(() => {
         return {
             transform: [{ scale: scale.value }],

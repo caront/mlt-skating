@@ -6,7 +6,6 @@ import Circle from "./shared/Circle";
 import { Condition, ECondition } from "../models/Rink";
 import dayjs, { Dayjs } from "dayjs";
 import { Icon } from "@rneui/themed";
-import Chip from "./shared/Chip";
 
 
 type ConditionTimeLineProps = {
@@ -41,7 +40,7 @@ const ConditionTimeLine: React.FC<ConditionTimeLineProps> = ({ conditions }) => 
                     <View style={{flexDirection: 'row', gap: 5}}>
                         <Circle color={item.open ? colors.success : colors.error} size={20} />
                         <Icon
-                            containerStyle={{ backgroundColor: conditionColor(item.condition), height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
+                            containerStyle={{ backgroundColor: conditionColor(item.iceQuality), height: 20, width: 20, borderRadius: 30, justifyContent: 'center', alignItems: 'center' }}
                             name={'snowflake-4'} size={12} color='white' type={'fontisto'} />
                     </View>
 

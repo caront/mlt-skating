@@ -86,7 +86,6 @@ export const RinkListScreen = ({ }) => {
                 </View>
             </ActionSheet>
         </SafeAreaView >
-        <LoadingFullScreen loading={loading} />
     </>
 };
 
@@ -114,8 +113,8 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 8,
     },
     list: {
-        paddingHorizontal: 10,
-        gap: 10,
+        paddingHorizontal: 5,
+        gap: 16,
     },
     map: {
         height: '75%'

@@ -13,7 +13,7 @@ import BlurIconButton from './shared/BlurButton';
 import ButtonIcon from './shared/ButtonIcon';
 import { useLocates } from '../hooks/UseLocation';
 import Animated, { SlideInUp, SlideOutUp, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated';
-import { Log } from '../utils/logs';
+import Log from '../utils/logs';
 import { useTranslation } from 'react-i18next';
 
 

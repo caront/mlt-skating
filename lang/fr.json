@@ -2,6 +2,7 @@
   "rink": "Patinoire",
   "rink_name": "Nom de la patinoire",
   "rinks": "Patinoires",
+  "empty_rinks": "Aucune patinoire trouvée",
   "rinks_list": "Liste des patinoires",
   "rinks_search_placeholder": "Rechercher une patinoire",
   "rinks_map": "Carte des patinoires",

@@ -12,11 +12,11 @@ import { useTranslation } from "react-i18next";
 
 const IceConditions: FunctionComponent<{ condition: ConditionAndLastUpdate }> = ({ condition }) => {
     const { t } = useTranslation();
-    const conditionsColor = conditionColor(condition.condition);
+    const conditionsColor = conditionColor(condition.iceQuality);
 
     return <Chip
         title={t('rink_details.ice_quality_title')}
-        subTitle={t(`rink_details.ice_quality.${condition.condition}`)}
+        subTitle={t(`rink_details.ice_quality.${condition.iceQuality}`)}
         background={conditionsColor}
         icon={<Icon name={'snowflake-4'} size={15} color='white' type={'fontisto'} />}
         containerStyle={{ marginVertical: 5 }} />

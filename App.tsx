@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import {
   SafeAreaView,
   StatusBar,
@@ -20,7 +20,6 @@ import { RinkProvider } from './contexts/RinkContext';
 import { lightColors, darkColors } from './theme';
 import { configureReanimatedLogger, ReanimatedLogLevel } from 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import LogProvider from './utils/logs';
 import { LocateProvider } from './contexts/LocateContext';
 import { I18NProvider } from './lang/i18n';
 import { CityProvider } from './contexts/CityContext';
@@ -86,46 +85,45 @@ const useStyle = () => {
 function App(): React.JSX.Element {
   const theme = buildTheme();
   return (
-    <LogProvider>
-      <I18NProvider>
-        <AdsProvider>
-
-          <GraphqlProvider>
-            <ThemeProvider theme={theme}>
-              <SafeAreaProvider>
-                <GestureHandlerRootView>
-                  <LocateProvider>
-                    <DistrictProvider>
-                      <RinkProvider>
-                        <Navigation>
-                          <Stack.Navigator>
-                            <Stack.Screen
-                              name="RinkList"
-                              component={RinkListScreen}
-                              options={{ headerShown: false, title: 'Rinks' }}
-                            />
-                            <Stack.Screen
-                              name="RinkInformation"
-                              component={RinkInformationScreen}
-                              options={{ headerShown: false, title: 'RinkInformation' }}
-                            />
-                            <Stack.Screen
-                              name="Settings"
-                              component={SettingsScreen}
-                              options={{ headerShown: false, title: 'RinkInformation' }}
-                            />
-                          </Stack.Navigator>
-                        </Navigation>
-                      </RinkProvider>
-                    </DistrictProvider>
-                  </LocateProvider>
-                </GestureHandlerRootView>
-              </SafeAreaProvider>
-            </ThemeProvider>
-          </GraphqlProvider>
-        </AdsProvider>
-      </I18NProvider>
-    </LogProvider >
+    <StrictMode>
+        <I18NProvider>
+          <AdsProvider>
+            <GraphqlProvider>
+              <ThemeProvider theme={theme}>
+                <SafeAreaProvider>
+                  <GestureHandlerRootView>
+                    <LocateProvider>
+                      <DistrictProvider>
+                        <RinkProvider>
+                          <Navigation>
+                            <Stack.Navigator>
+                              <Stack.Screen
+                                name="RinkList"
+                                component={RinkListScreen}
+                                options={{ headerShown: false, title: 'Rinks' }}
+                              />
+                              <Stack.Screen
+                                name="RinkInformation"
+                                component={RinkInformationScreen}
+                                options={{ headerShown: false, title: 'RinkInformation' }}
+                              />
+                              <Stack.Screen
+                                name="Settings"
+                                component={SettingsScreen}
+                                options={{ headerShown: false, title: 'RinkInformation' }}
+                              />
+                            </Stack.Navigator>
+                          </Navigation>
+                        </RinkProvider>
+                      </DistrictProvider>
+                    </LocateProvider>
+                  </GestureHandlerRootView>
+                </SafeAreaProvider>
+              </ThemeProvider>
+            </GraphqlProvider>
+          </AdsProvider>
+        </I18NProvider>
+    </StrictMode>
   );
 }
 

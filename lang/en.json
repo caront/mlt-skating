@@ -2,6 +2,7 @@
   "rink": "Rink",
   "rink_name": "Rink Name",
   "rinks": "Rinks",
+  "empty_rinks": "No rinks found",
   "rinks_list": "List of Rinks",
   "rinks_search_placeholder": "Search for a rink",
   "rinks_map": "Rink Map",

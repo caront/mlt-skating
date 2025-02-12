@@ -69,8 +69,7 @@ const useStyle = () => {
     });
 }
 
-const RinkInformationHeader: FunctionComponent<{ rink: Rink }> = ({ rink }) => {
-    const [isFav, setIsFav] = React.useState(false);
+const RinkInformationHeader: FunctionComponent<{ rink: Rink, loadingOrError: boolean }> = ({ rink, loadingOrError = false }) => {
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
     const styles = useStyle();
@@ -93,33 +92,29 @@ const RinkInformationHeader: FunctionComponent<{ rink: Rink }> = ({ rink }) => {
             </Button>
             <Text style={{ flexWrap: 'wrap', maxWidth: '75%' }}>{rink.name}</Text>
         </View>
-        <FavButton rink={rink} />
+        {!loadingOrError && <FavButton rink={rink} />}
     </View>
 }
 
 const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ route }) => {
-    const { rink: { id, name } } = route.params;
+    const { rink: { id } } = route.params;
     const { rink, error, loading } = useRink(id);
     const styles = useStyle();
 
     if (loading || !rink) {
-        return <SafeAreaView style={styles.container}>
-            <RinkInformationHeader rink={route.params.rink} />
-            <LoadingFullScreen loading={loading} />
-        </SafeAreaView>
+        return <LoadingFullScreen loading={loading} />
     }
 
     if (error) {
         return <SafeAreaView style={styles.container}>
-            <RinkInformationHeader rink={route.params.rink} />
+            <RinkInformationHeader rink={route.params.rink} loadingOrError={true} />
             <Text>{rink === null ? 'error fetch Rink info' : error?.message}</Text>
         </SafeAreaView>
     }
 
-
     return <SafeAreaView>
-        <RinkInformationHeader rink={rink} />
-        <ScrollView >
+        <RinkInformationHeader rink={rink} loadingOrError={false} />
+        <ScrollView>
             <View style={styles.container}>
                 <RinkInformations rink={rink} />
                 <RinkConditions rink={rink} />
