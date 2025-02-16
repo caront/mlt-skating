@@ -1,18 +1,9 @@
-import { createClient } from "jsr:@supabase/supabase-js@2";
-
+import supabase from "../supabase.ts";
 // Supabase configuration
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
-const SUPABASE_KEY = Deno.env.get("SUPABASE_KEY");
+
 const GOOGLE_MAPS_API_KEY = Deno.env.get("GOOGLE_MAPS_API_KEY");
 
-if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error("Missing Supabase credentials in environment variables.");
-  Deno.exit(1);
-}
-
 const BUCKET_NAME = "static-maps";
-
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 interface StaticMap {
   id: number;
@@ -178,9 +169,7 @@ async function updateRinkStaticMap(
 }
 
 export async function updateRinkMaps() {
-  const { data: rinks, error } = await supabase
-    .from("rinks")
-    .select("id");
+  const { data: rinks, error } = await supabase.from("rinks").select("id");
   if (error) {
     console.error("Error fetching rinks:", error);
     return;

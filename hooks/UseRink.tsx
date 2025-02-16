@@ -53,6 +53,7 @@ export const useRink = (rinkId: number): UseRinkReturn => {
             ...rink,
             isFav,
             ...condition,
+            public_url: rawRink.public_static_map_url,
             conditions: condition_history,
             updatedAt: rawRink.updated_at,
             lastTimeCleared: rawRink.last_cleared_true,
