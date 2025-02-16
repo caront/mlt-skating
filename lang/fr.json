@@ -9,6 +9,7 @@
   "rink_number_zero": "Aucune patinoire",
   "rink_number_one": "Une patinoire",
   "rink_number_other": "{{count}} patinoires",
+  "error_fetching_rinks": "Erreur lors de la récupération des patinoires",
   "search": {
     "search": "Rechercher",
     "search_placeholder": "Recherche",

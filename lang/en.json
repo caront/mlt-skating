@@ -9,6 +9,7 @@
   "rink_number_zero": "No rinks",
   "rink_number_one": "One rink",
   "rink_number_other": "{{count}} rinks",
+  "error_fetching_rinks": "Error fetching rinks",
   "search": {
     "search": "Search",
     "search_placeholder": "Search",

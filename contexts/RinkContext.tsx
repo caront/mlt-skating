@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useReducer, useState } from "react";
 import { ApolloError, useLazyQuery } from "@apollo/client";
-import { defaultCondition, Rink, RinkWithCondition } from "../models/Rink";
+import { defaultCondition, ECondition, Rink, RinkWithCondition } from "../models/Rink";
 import { GET_RINKS } from "../graphql/RinkQueries";
 import { Action, RinkSearchOption, defaultSearchOption, rinkReducer } from "../reducers/RinkReducer";
 import { StringCleaner } from "../utils/stringCleaner";
@@ -13,7 +13,6 @@ import { PostgrestError } from "@supabase/supabase-js";
 
 export type RinkContextType = {
     rinks: RinkWithCondition[];
-    favRinks: RinkWithCondition[];
     loading: boolean;
     error: Error | ApolloError | PostgrestError | undefined;
     options: RinkSearchOption;
@@ -25,7 +24,6 @@ export type RinkContextType = {
 
 const defaultDistritContext: RinkContextType = {
     rinks: [],
-    favRinks: [],
     loading: true,
     error: undefined,
     dispatch: () => { },
@@ -48,23 +46,32 @@ const fetchRinks = async (search: RinkSearchOption): Promise<RinkWithCondition[]
     });
 
     if (error) {
+        console.error("Error fetching rinks", error);
         throw error;
     }
 
-    const rinks = await Promise.all(data.map(async (rink: any): Promise<RinkWithCondition> => {
-        const isFav = await isRinkFavorite(rink.id);
-        const { conditions, district_name } = rink;
-        return {
-            ...rink,
-            ...conditions,
-            iceQuality: conditions.ice_condition,
-            isFav,
-            district: {
-                name: district_name
-            },
+    const rinks = await Promise.all(data.map(async (rink: any): Promise<RinkWithCondition | undefined> => {
+        try {
+            const isFav = await isRinkFavorite(rink.id);
+            const { conditions, district_name } = rink;
+            return {
+                ...rink,
+                ...conditions,
+                iceQuality: conditions ? conditions.ice_condition : ECondition.NA,
+                isFav,
+                district: {
+                    name: district_name
+                },
+            }
         }
+        catch (ex) {
+            console.error("Error fetching rinks", ex);
+        }
+        return undefined
     }));
-    return rinks.filter((rink) => !onlyFavorite || rink.isFav);
+    return rinks
+        .filter((rink) => rinks !== undefined)
+        .filter((rink) => !onlyFavorite || rink.isFav);
 };
 
 export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
@@ -138,7 +145,6 @@ export const RinkProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }
     return (
         <RinkContext.Provider value={{
             rinks,
-            favRinks: rinks.filter((rink) => rink.isFav),
             options,
             dispatch,
             loading,

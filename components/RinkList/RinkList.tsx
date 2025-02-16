@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Suspense, useEffect, useMemo, useRef } from 'react';
+import React, { FunctionComponent, Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, StyleProp, ViewStyle, RefreshControl, Platform } from 'react-native';
 import { ECondition, Rink, RinkWithCondition } from '../../models/Rink';
 import { cleanColor, conditionColor, resurfacedColor, useColors } from '../../colors';
@@ -150,12 +150,10 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
 }
 
 const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
+    const { loading, refresh, rinks, error } = useRinks();
+    const colors = useColors();
     const [isRefreshing, setIsRefreshing] = React.useState(false);
     const { t } = useTranslation();
-    const { loading, refresh, rinks } = useRinks();
-    const flatRinkRef = useRef<RNFlatList>(null);
-    const colors = useColors();
-
     const styles = useStyles();
 
     const onRinkListRefresh = () => {
@@ -164,6 +162,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
         refresh();
     }
 
+
     React.useEffect(() => {
         setIsRefreshing(false);
     }, [rinks]);
@@ -171,6 +170,14 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
     const isEmpty = useMemo(() => {
         return rinks.length === 0 && !loading;
     }, [rinks]);
+
+    if (error) {
+        return <View style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 5, padding: 28 }}>
+            <Icon name="snowflake" type="fontisto" size={23} color={colors.grey3} />
+            <Text style={{ color: colors.grey3 }}>{t('error_fetching_rinks')}</Text>
+        </View>
+    }
+
 
     return (<Suspense fallback={<LoadingFullScreen loading={true} />}>
         <View style={[styles.container, style]}>
@@ -182,7 +189,6 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
             }
             <FlatList
                 data={rinks}
-                ref={flatRinkRef}
                 ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
                 keyExtractor={(item) => item.id.toString()}
                 refreshControl={

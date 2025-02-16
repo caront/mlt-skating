@@ -18,27 +18,20 @@ import { Button } from "@rneui/base";
 const SNAP_POINTS_FROM_TOP = [30, 50, 80];
 
 export const RinkListScreen = ({ }) => {
-    const { loading, error } = useRinks();
     const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const colors = useColors();
-
     const actionSheetRef = useRef<ActionSheetRef>(null);
 
     useEffect(() => {
         if (actionSheetRef && actionSheetRef.current)
             actionSheetRef.current?.show();
-    }, [actionSheetRef.current]);
+    }, [actionSheetRef, actionSheetRef.current]);
 
 
     const handleOnRinkPressed = (rink: Rink) => {
         navigation.navigate('RinkInformation', { rink });
     }
 
-    if (error) {
-        return <SafeAreaView style={styles.container}>
-            <Text>{error.message}</Text>
-        </SafeAreaView>
-    }
 
     const handleOnSettingsButtonPressed = () => {
         navigation.navigate('Settings');
