@@ -1,4 +1,4 @@
-import { City } from "./cityModel";
+import { City } from "./city.ts";
 import supabase from "../../supabase.ts";
 
 export async function getCities(): Promise<City[]> {

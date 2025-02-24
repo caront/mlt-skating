@@ -6,12 +6,24 @@ import { GET_RINKS_BY_ID } from "../graphql/RinkQueries";
 import { supabase } from "../supabase";
 import { isRinkFavorite } from "../utils/favoritesUtils";
 import { PostgrestError } from "@supabase/supabase-js";
+import { Schedule } from "../models/RinkGroup";
 
 interface UseRinkReturn {
     loading: boolean;
     error: Error | ApolloError | PostgrestError | undefined;
     rink: RinkWithDistrictAndConditionLastUpdate | null;
 }
+
+
+const days = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+    'Sunday',
+]
 
 export const useRink = (rinkId: number): UseRinkReturn => {
     const [rink, setRink] = React.useState<RinkWithDistrictAndConditionLastUpdate | null>(null);
@@ -28,7 +40,6 @@ export const useRink = (rinkId: number): UseRinkReturn => {
         }
         const isFav = await isRinkFavorite(rinkId);
 
-        console.log('isFav', isFav, rinkId);
         const rawRink = data[0];
         const { conditions_history: conditions, ...rink } = rawRink;
 
@@ -48,11 +59,28 @@ export const useRink = (rinkId: number): UseRinkReturn => {
         } as Condition;
 
         condition['id'] = rinkId;
+        console.log('schedule', rawRink.schedules);
+        const schedule = days.map((day): Schedule => {
+            const schedule = rawRink.schedules.find((s: any) => s.dayOfWeek === day || s.dayOfWeek === 'ALL');
+            if (schedule) {
+                return {
+                    dayOfWeek: day,
+                    opens: schedule.opens,
+                    closes: schedule.closes,
+                };
+            }
+            return {
+                dayOfWeek: day,
+                opens: '00:00',
+                closes: '23:59',
+            }
+        });
 
         return {
             ...rink,
             isFav,
             ...condition,
+            schedules: schedule,
             public_url: rawRink.public_static_map_url,
             conditions: condition_history,
             updatedAt: rawRink.updated_at,

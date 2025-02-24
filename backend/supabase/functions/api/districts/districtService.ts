@@ -2,7 +2,7 @@ import { District } from "./distirct.ts";
 import supabase from "../../supabase.ts";
 
 export async function getDistricts(): Promise<District[]> {
-  const { data, error } = await supabase.from("districts").select("*");
+  const { data, error } = await supabase().from("districts").select("*");
   if (error) {
     throw error;
   }
@@ -10,7 +10,7 @@ export async function getDistricts(): Promise<District[]> {
 }
 
 export async function getDistrict(id: number): Promise<District | undefined> {
-  const { data, error } = await supabase
+  const { data, error } = await supabase()
     .from("districts")
     .select("*")
     .eq("id", id);
@@ -23,7 +23,7 @@ export async function getDistrict(id: number): Promise<District | undefined> {
 export async function getDistrictByCode(
   code: string
 ): Promise<District | undefined> {
-  const { data, error } = await supabase
+  const { data, error } = await supabase()
     .from("districts")
     .select("*")
     .eq("code", code);
@@ -34,7 +34,7 @@ export async function getDistrictByCode(
 }
 
 export async function getCityDistricts(cityId: number): Promise<District[]> {
-  const { data, error } = await supabase
+  const { data, error } = await supabase()
     .from("districts")
     .select("*")
     .eq("city_id", cityId);
@@ -45,7 +45,7 @@ export async function getCityDistricts(cityId: number): Promise<District[]> {
 }
 
 export async function createDistrict(district: District): Promise<District> {
-  const { data, error } = await supabase
+  const { data, error } = await supabase()
     .from("districts")
     .insert([district])
     .select("*");
@@ -56,7 +56,7 @@ export async function createDistrict(district: District): Promise<District> {
 }
 
 export async function updateDistrict(district: District): Promise<District> {
-  const { data, error } = await supabase
+  const { data, error } = await supabase()
     .from("districts")
     .update(district)
     .eq("id", district.id)
@@ -68,7 +68,7 @@ export async function updateDistrict(district: District): Promise<District> {
 }
 
 export async function deleteDistrict(id: number): Promise<void> {
-  const { error } = await supabase.from("districts").delete().eq("id", id);
+  const { error } = await supabase().from("districts").delete().eq("id", id);
   if (error) {
     throw error;
   }

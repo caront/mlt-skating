@@ -14,8 +14,10 @@ export interface Rink {
   information: string;
   information_fr: string;
   information_en: string;
+  address: string;
   schedules?: Schedule[];
   services?: string[];
+  is_active: boolean;
 }
 
 export interface Schedule {

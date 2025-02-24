@@ -37,33 +37,18 @@ const useStyles = () => {
     })
 }
 
-const days = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
-]
 
 const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
     const { t } = useTranslation();
     const styles = useStyles();
     const colors = useColors();
 
-    const today = dayjs().get('day');
-    const todayName = days[today];
-
     const hasService = (rink.services ?? []).length > 0;
-    const hasSchedules = (rink.schedules ?? []).length > 0;
-
-    const scheduleValue = rink.schedules?.find((schedule) => schedule.dayOfWeek === todayName);
 
     return (
         <>
             <View style={styles.container}>
-                <OpenChips condition={rink} />
+                <OpenChips rink={rink} />
             </View>
             <InformationContainer
                 title={getI18nField(rink, "description")}
@@ -71,7 +56,7 @@ const RinkInformations: React.FC<RinkInformationsProps> = ({ rink }) => {
             >
                 <Text style={styles.information}>{decode(getI18nField(rink, 'information'))}</Text>
                 {hasService && <Chip containerStyle={{ paddingHorizontal: -10 }} title={t('services')} subTitle={rink.services?.map(service => t(`services_enum.${service}`)).join(' - ')} />}
-                {hasSchedules && <Chip containerStyle={{ paddingHorizontal: -10 }} title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />}
+                {/* {hasSchedules && <Chip containerStyle={{ paddingHorizontal: -10 }} title={t('schedules')} subTitle={`${scheduleValue?.opens} - ${scheduleValue?.closes}`} />} */}
             </InformationContainer>
 
         </>

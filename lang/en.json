@@ -28,6 +28,9 @@
   },
   "done": "Done",
   "open": "Open",
+  "will_open": "Open at {{opens}}",
+  "was_open": "Close at {{closes}}",
+  "open_hours": "Open from {{opens}} to {{closes}}",
   "close": "Closed",
   "since": "Since {{date}}",
   "schedules": "Schedules",
@@ -46,7 +49,9 @@
     "CHANGING_ROOM": "Changing Room",
     "PAID_PARKING": "Paid Parking ($)",
     "FREE_WIFI": "Free Wi-Fi",
-    "SNACK_BAR": "Snack Bar"
+    "SNACK_BAR": "Snack Bar",
+    "SKATE_RENTAL": "Skate Rental",
+    "SKATE_SHARPENING": "Skate Sharpening"
   },
   "rink_details": {
     "conditions": "Conditions",
@@ -83,7 +88,7 @@
   "last_update": "Last updated {{date}}",
   "date_format": {
     "date": "MM/DD/YYYY",
-    "time": "HH:mm",
+    "time": "hh:mm",
     "today": "Today",
     "yesterday": "Yesterday",
     "today_at": "Today at {{time}}",

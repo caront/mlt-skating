@@ -11,15 +11,19 @@ const CONDITIONS = {
   Excellente: ECondition.Excellente,
   Bonne: ECondition.Good,
   Mauvaise: ECondition.Bad,
+  Moyenne: ECondition.Good,
+  Acceptable: ECondition.Good,
+  Poor: ECondition.Bad,
+  "Non disponible": ECondition.NA,
   "N/A": ECondition.NA,
 };
 
 interface RinkCondition {
   updated_at: string;
   open: boolean;
-  cleared: boolean;
-  watered: boolean;
-  resurfaced: boolean;
+  cleared?: boolean;
+  watered?: boolean;
+  resurfaced?: boolean;
   condition: ECondition;
 }
 
@@ -27,7 +31,7 @@ async function getRinkLastCondition(
   rinkId: string
 ): Promise<RinkCondition | null> {
   const { data: rinkLastCondition, error: rinkLastConditionError } =
-    await supabase
+    await  supabase()
       .from("conditions")
       .select()
       .eq("rink_id", rinkId)

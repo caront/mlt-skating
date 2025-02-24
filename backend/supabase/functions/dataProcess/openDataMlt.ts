@@ -1,7 +1,12 @@
 import { parse } from "https://deno.land/x/xml/mod.ts";
 import DayJs from "npm:dayjs@1.11.13";
 import supabase from "../supabase.ts";
-import { RinkCondition, CONDITIONS, ECondition, getRinkLastCondition } from "./utils.ts";
+import {
+  RinkCondition,
+  CONDITIONS,
+  ECondition,
+  getRinkLastCondition,
+} from "./utils.ts";
 
 const DATA_URL =
   "https://donnees.montreal.ca/dataset/patinoires/resource/5b1244bd-7b92-436b-8a84-2fab1ea802a4/proxy";
@@ -17,7 +22,6 @@ type RinkOpenData = {
   resurface: string | null;
   condition: string;
 };
-
 
 // Function to fetch XML data and parse it into JSON
 async function fetchXMLData(url: string): Promise<any> {
@@ -73,17 +77,18 @@ const syncData = async (rinkId: string, rinkUpdateParam: any) => {
     rinkConditionCreatedTime.isAfter(DayJs(lastRinkCondition.updated_at));
 
   if (hasToInsertNewConditions) {
-    const { data: newCondition, error: newConditionError } = await supabase
+    const { data: newCondition, error: newConditionError } = await  supabase()
       .from("conditions")
       .insert([
         {
           ...rinkCondition,
           rink_id: rinkId,
         },
-      ]).select('*');
+      ])
+      .select("*");
 
     if (newConditionError) {
-      throw new Error("Error inserting new condition");
+      throw new Error(`Error inserting new condition ${newConditionError} `);
     }
     console.log("New condition inserted", newCondition);
   }

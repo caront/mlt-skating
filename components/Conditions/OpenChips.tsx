@@ -8,9 +8,10 @@ import { useColors } from '../../colors';
 import Circle from '../shared/Circle';
 import { useTranslation } from 'react-i18next';
 import { DateFormat } from '../../utils/dateFormat';
+import dayjs from 'dayjs';
 
 interface OpenChipsProps {
-    condition: ConditionAndLastUpdate;
+    rink: RinkWithDistrictAndConditionLastUpdate;
 }
 
 const useStyles = () => {
@@ -29,23 +30,53 @@ const useStyles = () => {
         row: {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'space-between',
+            gap: 5,
             alignItems: 'center',
+            justifyContent: 'space-between',
         },
         status: {
             fontSize: 18,
             color: colors.white
         },
+        hours: {
+            fontSize: 12,
+            color: colors.white
+        }
     })
 }
 
-const OpenChips: React.FC<OpenChipsProps> = ({ condition }) => {
+const OpenChips: React.FC<OpenChipsProps> = ({ rink }) => {
     const colors = useColors();
     const styles = useStyles();
     const { t } = useTranslation();
 
-    return <View style={[styles.container, { backgroundColor: condition.open ? colors.success : colors.error }]} >
-        <Text style={styles.status} >{t(condition.open ? 'open' : 'close')}</Text>
+    const today = dayjs().get('day');
+
+    const schedule = rink.schedules[today];
+
+    const isCurrenlyOpen = (): {
+        wasOpen: boolean;
+        isNowOpen: boolean;
+        willBeOpen: boolean;
+    } => {
+        const now = dayjs();
+        const opens = dayjs(schedule.opens, 'HH:mm');
+        const closes = dayjs(schedule.closes, 'HH:mm');
+        return {
+            wasOpen: now.isAfter(closes) && now.isAfter(opens),
+            isNowOpen: now.isAfter(opens) && now.isBefore(closes),
+            willBeOpen: now.isBefore(opens) && now.isBefore(closes)
+        }
+    }
+
+    // const color = isCurrenlyOpen().isNowOpen ? colors. : colors.success;
+
+console.log('schedule', isCurrenlyOpen());
+    return <View style={[styles.container, { backgroundColor: rink.open ? isCurrenlyOpen() ? colors.warning : colors.success : colors.error }]} >
+        <Text style={styles.status} >{t(rink.open ? 'open' : 'close')}</Text>
+        {<View style={styles.row} >
+            <Text style={styles.hours} >{t('open_hours', { opens: schedule.opens, closes: schedule.closes })}</Text>
+        </View>}
     </View>
 }
 

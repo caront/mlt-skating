@@ -1,3 +1,3 @@
-import syncRinkConditions from "./dataProcess";
+import syncRinkConditions from "./supabase/functions/dataProcess/index.ts";
 
 syncRinkConditions();

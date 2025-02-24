@@ -6,7 +6,7 @@ import { SUPABASE_KEY, SUPABASE_URL } from "@env"
 
 const supabaseUrl = SUPABASE_URL;
 const supabaseAnonKey = SUPABASE_KEY;
-
+console.log('SUPABASE_URL', supabaseUrl);
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     storage: AsyncStorage,

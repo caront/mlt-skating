@@ -10,7 +10,7 @@ export interface Rink extends Coordinate, WithStaticMap {
   district: District;
   lastUpdate: string;
   isFav: boolean;
-  schedules?: Schedule[];
+  schedules: Schedule[];
   services?: string[];
   information?: string;
 
@@ -98,6 +98,7 @@ export const defaultRink: Rink = {
   public_url: "",
   description_fr: "",
   description_en: "",
+  schedules: []
 };
 
 export const defaultCondition: Condition = {

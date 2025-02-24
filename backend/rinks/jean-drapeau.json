@@ -1,0 +1,31 @@
+{
+  "name": "Patinoire naturelle du parc Jean-Drapeau",
+  "description": "Patinoire de patin libre",
+  "type": "PPL",
+  "rink_name": "Patinoire naturelle du parc Jean-Drapeau",
+  "district_id": 58,
+  "latitude": 45.510854,
+  "longitude": -73.536764,
+  "description_en": "Free skating area",
+  "information": "Annexée au sentier des patineurs, la patinoire naturelle offre une grande glace de forme rectangulaire qui viendra bonifier l'expérience sur le site. Malgré que la patinoire naturelle ne soit pas réfrigérée, la glace sera entretenue cet hiver en dépit des caprices occasionnels de dame nature.",
+  "information_en": "Annexed to the skaters' trail, the natural skating rink offers a large rectangular ice surface that will enhance the experience on the site. Although the natural ice rink won't be refrigerated, the ice will be maintained throughout the winter, despite the occasional whims of Mother Nature.",
+  "address": "Montreal, QC H3C 4G8",
+  "services": [
+    "CHANGING_ROOM",
+    "TOILETS",
+    "HEATED_CHALET",
+    "SKATE_RENTAL",
+    "SKATE_SHARPENING"
+  ],
+  "schedules": [{
+    "dayOfWeek": "ALL",
+    "opens": "10:00",
+    "closes": "23:00"
+  }],
+  "updater": {
+    "type": "JEAN_DRAPEAU",
+    "update_params": {
+      "rink_name": "Natural ice rink"
+    }
+  }
+}
