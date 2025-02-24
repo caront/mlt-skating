@@ -1,10 +1,9 @@
-import supabase from "../supabase";
+import supabase from "../supabase.ts";
 import syncOpenDataMLT from "./openDataMlt.ts";
 import syncParcJeanDrapeau from "./parcJeanDrapeau.ts";
 
-// deno-lint-ignore no-explicit-any
 const dataUpdater: {
-  [key: string]: (rinkID: string, rinkParam: any) => Promise<void>;
+  [key: string]: (rinkID: string, rinkParam: object) => Promise<void>;
 } = {
   OPEN_DATA_MLT: syncOpenDataMLT,
   JEAN_DRAPEAU: syncParcJeanDrapeau,

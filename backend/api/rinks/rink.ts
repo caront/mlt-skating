@@ -16,6 +16,7 @@ export interface Rink {
   information_en: string;
   schedules?: Schedule[];
   services?: string[];
+  is_active: boolean;
 }
 
 export interface Schedule {

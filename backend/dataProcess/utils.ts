@@ -11,15 +11,18 @@ const CONDITIONS = {
   Excellente: ECondition.Excellente,
   Bonne: ECondition.Good,
   Mauvaise: ECondition.Bad,
+  Moyenne: ECondition.Good,
+  Acceptable: ECondition.Good,
+  "Non disponible": ECondition.NA,
   "N/A": ECondition.NA,
 };
 
 interface RinkCondition {
   updated_at: string;
   open: boolean;
-  cleared: boolean;
-  watered: boolean;
-  resurfaced: boolean;
+  cleared?: boolean;
+  watered?: boolean;
+  resurfaced?: boolean;
   condition: ECondition;
 }
 

@@ -1,39 +1,49 @@
-import DayJs from "npm:dayjs@1.11.13";
-import { ECondition, RinkCondition } from "./utils.ts";
-import axiod from "https://deno.land/x/axiod/mod.ts";
+import DayJs from "https://esm.sh/dayjs@1.11.10";
+import customParseFormat from "https://esm.sh/dayjs@1.11.10/plugin/customParseFormat.js";
+import {
+  RinkCondition,
+  CONDITIONS,
+  ECondition,
+  getRinkLastCondition,
+} from "./utils.ts";
+import {
+  DOMParser,
+  HTMLDocument,
+} from "https://deno.land/x/deno_dom/deno-dom-wasm.ts";
+import supabase from "../supabase.ts";
 
-const DATA_URL =
-  "https://www.parcjeandrapeau.com/fr/sentier-des-patineurs-patinoire-patin-glace-activite-hiver-montreal";
-const fetchJeanDrapeauPage = async (
-  retries = 1
-): Promise<Document | null | undefined> => {
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const pageResponse = await axiod.get(DATA_URL, {
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          "Accept-Language": "en-US,en;q=0.9",
-        },
-      });
-      console.log(pageResponse);
-      const content = await pageResponse.data;
+DayJs.extend(customParseFormat);
 
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(content, "text/html");
-      return doc;
-    } catch (error) {
-      if (attempt === retries) {
-        throw error;
-      }
-      console.warn(`Attempt ${attempt} failed. Retrying...`);
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second before retrying
-    }
+async function fetchWithCurl() {
+  const command = new Deno.Command("curl", {
+    args: [
+      "-s", // Silent mode: no progress bar
+      "-A",
+      "Mozilla/5.0", // User-Agent to mimic a browser
+      "https://www.parcjeandrapeau.com/en/skaters-trail-skating-rink-ice-skate-activity-winter-montreal/",
+    ],
+    stdout: "piped",
+    stderr: "piped",
+  });
+
+  const { stdout, stderr } = await command.output();
+
+  if (stderr.length) {
+    throw new Error("Curl Error: " + new TextDecoder().decode(stderr));
+  }
+  return new TextDecoder().decode(stdout);
+}
+
+async function fetchJeanDrapeauPage(): Promise<HTMLDocument | null> {
+  try {
+    const response = await fetchWithCurl();
+    return new DOMParser().parseFromString(response, "text/html");
+  } catch (error) {
+    console.error("Fetch Error:", error);
   }
   return null;
-};
-
-const getRinkInfo = (doc: Document, rinkName: string) => {
+}
+const getRinkInfo = (doc: HTMLDocument, rinkName: string) => {
   const rinkHeader = Array.from(doc.querySelectorAll("h4")).find(
     (h4) => h4.textContent && h4.textContent.includes(rinkName)
   );
@@ -60,8 +70,25 @@ const getRinkInfo = (doc: Document, rinkName: string) => {
       ? lastUpdateElement.textContent.trim()
       : null;
 
-  return { openStatus, condition, entretien, lastUpdate };
+  const parsedLastUpdate = lastUpdate ? parseLastUpdate(lastUpdate) : DayJs();
+  return {
+    open: openStatus === "Opened",
+    condition:
+      condition in CONDITIONS
+        ? CONDITIONS[condition as keyof typeof CONDITIONS]
+        : ECondition.NA,
+    entretien: entretien === "Resurfaced",
+    lastUpdate: parsedLastUpdate,
+  };
 };
+
+const parseLastUpdate = (lastUpdate: string) => {
+  const format = "[Updated on] MMMM D, YYYY [at] h:mm A.";
+
+  const parsed = DayJs(lastUpdate, format, "en", false);
+  return parsed;
+};
+
 
 async function fetchRinkConditionFromPage(
   rinkName: string
@@ -74,41 +101,42 @@ async function fetchRinkConditionFromPage(
   if (!rinkInfo) {
     throw new Error(`Rink info for ${rinkName} not found`);
   }
-  const { openStatus, condition, entretien, lastUpdate } = rinkInfo;
+  const { open, condition, entretien, lastUpdate } = rinkInfo;
 
-  console.log("Rink info", { openStatus, condition, entretien, lastUpdate });
 
   return {
-    updated_at: DayJs().toISOString(),
-    open: true,
-    cleared: entretien === "Oui",
-    watered: true,
-    resurfaced: true,
-    condition: ECondition.NA,
+    updated_at: lastUpdate.toISOString(),
+    open,
+    cleared: entretien,
+    watered: entretien,
+    resurfaced: entretien,
+    condition,
   };
 }
 
 // deno-lint-ignore no-explicit-any
-const syncData = async (_rinkId: string, _rinkUpdateParam: any) => {
-//   const condition = await fetchRinkConditionFromPage(rinkUpdateParam.rink_name);
-  //   const lastRinkCondition = await getRinkLastCondition(rinkId);
-  //   const hasToInsertNewConditions =
-  //     !lastRinkCondition ||
-  //     rinkConditionCreatedTime.isAfter(DayJs(lastRinkCondition.updated_at));
-  //   if (hasToInsertNewConditions) {
-  //     const { data: newCondition, error: newConditionError } = await supabase
-  //       .from("conditions")
-  //       .insert([
-  //         {
-  //           ...rinkCondition,
-  //           rink_id: rinkId,
-  //         },
-  //       ]).select('*');
-  //     if (newConditionError) {
-  //       throw new Error("Error inserting new condition");
-  //     }
-  //     console.log("New condition inserted", newCondition);
-  //   }
+const syncData = async (rinkId: string, rinkUpdateParam: any) => {
+  const condition = await fetchRinkConditionFromPage(rinkUpdateParam.rink_name);
+  const lastRinkCondition = await getRinkLastCondition(rinkId);
+
+  const rinkConditionCreatedTime = DayJs(condition.updated_at);
+    const hasToInsertNewConditions =
+      !lastRinkCondition ||
+      rinkConditionCreatedTime.isAfter(DayJs(lastRinkCondition.updated_at));
+    if (hasToInsertNewConditions) {
+      const { data: newCondition, error: newConditionError } = await supabase
+        .from("conditions")
+        .insert([
+          {
+            ...condition,
+            rink_id: rinkId,
+          },
+        ]).select('*');
+      if (newConditionError) {
+        throw newConditionError;
+      }
+      console.log("New condition inserted", newCondition);
+    }
 };
 
 export default syncData;
