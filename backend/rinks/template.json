@@ -1,0 +1,21 @@
+{
+  "name": "string",
+  "description": "string",
+  "type": "string",
+  "rink_name": "string",
+  "district_id": "number",
+  "latitude": "number",
+  "longitude": "number",
+  "description_en": "string",
+  "information": "string",
+  "information_en": "string",
+  "address": "string",
+  "services": ["string"],
+  "schedules": {
+    "dayOfWeek": "string",
+    "opens": "string",
+    "closes": "string",
+    "validFrom": "string",
+    "validThrough": "string"
+  }
+}

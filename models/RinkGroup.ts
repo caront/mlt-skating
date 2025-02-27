@@ -5,8 +5,6 @@ export interface Schedule {
   dayOfWeek: string;
   opens: string;
   closes: string;
-  validFrom: string;
-  validThrough: string;
 }
 
 export interface RinkGroup extends Coordinate {

@@ -1,0 +1,28 @@
+{
+  "name": "Royalmount",
+  "description": "Aire de patinage libre",
+  "type": "PPL",
+  "rink_name": "ROYALMOUNT",
+  "latitude": 45.501437,
+  "longitude": -73.668107,
+  "district_id": 59,
+  "description_en": "Free skating area",
+  "information": "Découvrez la magie de l’hiver à la patinoire de ROYALMOUNT, située dans notre magnifique parc urbain. ",
+  "information_en": "Discover the magic of winter at ROYALMOUNT's skating rink, located in the Urban Park. ",
+  "address": "5050 chemin de la Côte-de-Liesse, Mont-Royal, QC H4P 0C9",
+  "services": [
+    "PAID_PARKING",
+    "CHANGING_ROOM",
+    "TOILETS",
+    "HEATED_CHALET",
+    "SKATE_RENTAL",
+    "SKATE_SHARPENING"
+  ],
+  "schedules": [
+    {
+      "dayOfWeek": "ALL",
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  ]
+}

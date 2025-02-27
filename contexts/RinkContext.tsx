@@ -43,7 +43,7 @@ const fetchRinks = async (search: RinkSearchOption): Promise<RinkWithCondition[]
         q: name,
         longitude_search: longitude,
         latitude_search: latitude
-    });
+    })
 
     if (error) {
         console.error("Error fetching rinks", error);

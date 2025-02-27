@@ -13,6 +13,7 @@ const CONDITIONS = {
   Mauvaise: ECondition.Bad,
   Moyenne: ECondition.Good,
   Acceptable: ECondition.Good,
+  Poor: ECondition.Bad,
   "Non disponible": ECondition.NA,
   "N/A": ECondition.NA,
 };
@@ -30,7 +31,7 @@ async function getRinkLastCondition(
   rinkId: string
 ): Promise<RinkCondition | null> {
   const { data: rinkLastCondition, error: rinkLastConditionError } =
-    await supabase
+    await  supabase()
       .from("conditions")
       .select()
       .eq("rink_id", rinkId)

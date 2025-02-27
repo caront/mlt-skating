@@ -77,7 +77,7 @@ const syncData = async (rinkId: string, rinkUpdateParam: any) => {
     rinkConditionCreatedTime.isAfter(DayJs(lastRinkCondition.updated_at));
 
   if (hasToInsertNewConditions) {
-    const { data: newCondition, error: newConditionError } = await supabase
+    const { data: newCondition, error: newConditionError } = await  supabase()
       .from("conditions")
       .insert([
         {

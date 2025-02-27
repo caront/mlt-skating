@@ -28,6 +28,9 @@
   },
   "done": "Terminé",
   "open": "Ouvert",
+  "will_open": "Ouverture à {{opens}}",
+  "was_open": "Fermer à {{closes}}",
+  "open_hours": "Ouvert de {{opens}} à {{closes}}",
   "close": "Fermé",
   "since": "Depuis le {{date}}",
   "schedules": "Horaires",
@@ -46,7 +49,9 @@
     "CHANGING_ROOM": "Vestiaire",
     "PAID_PARKING": "Stationnement ($)",
     "FREE_WIFI": "Wi-Fi gratuit",
-    "SNACK_BAR": "Casse-croûte"
+    "SNACK_BAR": "Casse-croûte",
+    "SKATE_RENTAL": "Location de patins",
+    "SKATE_SHARPENING": "Aiguisage de patins"
   },
   "rink_details": {
     "conditions": "Conditions",

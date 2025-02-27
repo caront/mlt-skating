@@ -1,5 +1,5 @@
-import supabase from "../supabase.ts";
-// Supabase configuration
+import supabase from "../supabase/functions/supabase.ts";
+// supabase() configuration
 
 const GOOGLE_MAPS_API_KEY = Deno.env.get("GOOGLE_MAPS_API_KEY");
 
@@ -24,7 +24,7 @@ async function getStaticMap(
 
   const cacheKey = `${latitude}-${longitude}`;
 
-  const { data: dbEntry, error: dbError } = await supabase
+  const { data: dbEntry, error: dbError } = await supabase()
     .from("static-map")
     .select("*")
     .eq("cache_key", cacheKey)
@@ -39,7 +39,7 @@ async function getStaticMap(
     return dbEntry;
   }
 
-  const { data: existingFile, error: fileCheckError } = await supabase.storage
+  const { data: existingFile, error: fileCheckError } = await supabase().storage
     .from(BUCKET_NAME)
     .list("", { search: encodeURIComponent(cacheKey) });
 
@@ -48,7 +48,7 @@ async function getStaticMap(
   }
 
   if (existingFile && existingFile.length > 0) {
-    const { data: dbEntry, error: dbError } = await supabase
+    const { data: dbEntry, error: dbError } = await supabase()
       .from("static-map")
       .select("*")
       .eq("cache_key", cacheKey)
@@ -75,8 +75,8 @@ async function getStaticMap(
   // Get the image buffer
   const imageBuffer = await googleResponse.arrayBuffer();
 
-  // Save the image to the Supabase Storage bucket
-  const { data: uploadData, error: uploadError } = await supabase.storage
+  // Save the image to the supabase() Storage bucket
+  const { data: uploadData, error: uploadError } = await supabase().storage
     .from(BUCKET_NAME)
     .upload(encodeURIComponent(cacheKey), new Uint8Array(imageBuffer), {
       contentType: "image/png",
@@ -90,7 +90,7 @@ async function getStaticMap(
   }
 
   // Generate the public URL for the uploaded file
-  const { data: publicUrlData } = supabase.storage
+  const { data: publicUrlData } = supabase().storage
     .from(BUCKET_NAME)
     .getPublicUrl(uploadData.path);
 
@@ -103,7 +103,7 @@ async function getStaticMap(
 
   console.log("Public URL:", publicUrl);
 
-  const { data, error: dbInsertError } = await supabase
+  const { data, error: dbInsertError } = await supabase()
     .from("static-map")
     .insert([
       {
@@ -126,7 +126,7 @@ async function updateRinkStaticMap(
   rinkType: "rinks" | "rink_groups"
 ) {
   try {
-    const { data: rinkData, error: rinkError } = await supabase
+    const { data: rinkData, error: rinkError } = await supabase()
       .from(rinkType)
       .select("latitude, longitude")
       .eq("id", rinkId)
@@ -150,7 +150,7 @@ async function updateRinkStaticMap(
       return;
     }
 
-    const { error: updateError } = await supabase
+    const { error: updateError } = await supabase()
       .from(rinkType)
       .update({
         public_static_map_url: staticMap.public_url,
@@ -169,7 +169,7 @@ async function updateRinkStaticMap(
 }
 
 export async function updateRinkMaps() {
-  const { data: rinks, error } = await supabase.from("rinks").select("id");
+  const { data: rinks, error } = await supabase().from("rinks").select("id");
   if (error) {
     console.error("Error fetching rinks:", error);
     return;
@@ -185,5 +185,3 @@ export async function updateRinkMaps() {
     rinks.map((rink: any) => updateRinkStaticMap(rink.id, "rinks"))
   );
 }
-
-await updateRinkMaps();
