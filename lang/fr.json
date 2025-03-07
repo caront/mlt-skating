@@ -35,6 +35,8 @@
   "since": "Depuis le {{date}}",
   "schedules": "Horaires",
   "services": "Services",
+  "closest_rinks_title": "Patinoires les plus proches",
+  "closest_rinks_zero": "Aucune patinoire autour",
   "services_enum": {
     "PICKLEBALL": "Terrain de pickleball",
     "FREE_PARKING": "Stationnement gratuit",

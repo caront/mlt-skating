@@ -1,14 +1,19 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Rink, RinkWithCondition } from "../models/Rink";
 
-export type RinkInformationScreenProps = NativeStackScreenProps<
+// export type RinkInformationScreenProps = NativeStackScreenProps<
+//   RootStackParamList,
+//   "RinkInformation"
+// >;
+
+export type RinkInformationScreenProps = NativeStackNavigationProp<
   RootStackParamList,
-  "RinkInformation"
+  "RinkInformationScreen"
 >;
 
 export type RootStackParamList = {
   RinkList: undefined;
-  RinkInformation: { rink: Rink };
+  RinkInformationScreen: { rink: Rink };
   About: undefined;
   Settings: undefined;
 };

@@ -29,7 +29,7 @@ export const RinkListScreen = ({ }) => {
 
 
     const handleOnRinkPressed = (rink: Rink) => {
-        navigation.navigate('RinkInformation', { rink });
+        navigation.navigate('RinkInformationScreen', { rink });
     }
 
 

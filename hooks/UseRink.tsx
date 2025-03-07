@@ -15,7 +15,7 @@ interface UseRinkReturn {
 }
 
 
-const days = [
+const DAYS = [
     'Monday',
     'Tuesday',
     'Wednesday',
@@ -59,15 +59,25 @@ export const useRink = (rinkId: number): UseRinkReturn => {
         } as Condition;
 
         condition['id'] = rinkId;
-        console.log('schedule', rawRink.schedules);
-        const schedule = days.map((day): Schedule => {
-            const schedule = rawRink.schedules.find((s: any) => s.dayOfWeek === day || s.dayOfWeek === 'ALL');
-            if (schedule) {
+
+        const schedule = DAYS.map((day: string): Schedule => {
+            try {
+                const schedule = (rawRink.schedules || []).find((s: any) => s.dayOfWeek === day || s.dayOfWeek === 'ALL');
+                if (schedule) {
+                    return {
+                        dayOfWeek: day,
+                        opens: schedule.opens,
+                        closes: schedule.closes,
+                    };
+                }
                 return {
                     dayOfWeek: day,
-                    opens: schedule.opens,
-                    closes: schedule.closes,
-                };
+                    opens: '00:00',
+                    closes: '23:59',
+                }
+            }
+            catch (e) {
+                console.log(e);
             }
             return {
                 dayOfWeek: day,

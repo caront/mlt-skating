@@ -5,10 +5,11 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { useColors } from '../colors';
 import GoBack from '../components/Navigation/GoBack';
 import { useTranslation } from 'react-i18next';
-import { Button, Switch } from '@rneui/themed';
+import { Button, Icon, Switch } from '@rneui/themed';
 import { version } from '../package.json'
 import ExternalLibraries from '../components/Navigation/ExternalLib';
 import { setSavedLanguage } from '../utils/i18nHelper';
+import InformationContainer from '../components/shared/InformationContainer';
 
 const useStyles = () => {
     const colors = useColors();
@@ -74,43 +75,52 @@ const SettingsScreen = () => {
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
                 <GoBack title={t('settings.title')} />
-                <View style={styles.row}>
-                    <Text>{t('settings.language')}</Text>
-                    <View style={styles.switch}>
-                        <Button
-                            buttonStyle={{
-                                width: 64,
-                                borderRadius: 30,
-                                backgroundColor: !isFR ? colors.primary : colors.grey2,
-                            }}
-                            onPress={() => handleOnLanguageChange('en')}
-                        >
-                            <Text>EN</Text>
-                        </Button>
-                        <Button
-                            buttonStyle={{
-                                width: 64,
-                                borderRadius: 30,
-                                backgroundColor: isFR ? colors.primary : colors.grey2,
-                            }}
-                            onPress={() => handleOnLanguageChange('fr')}
-                        >
-                            <Text>FR</Text>
-                        </Button>
+                <InformationContainer
+                    title={t('settings.title')}
+                    titleIcon={<Icon name='settings' size={20} color={colors.grey0} type="material" />}
+                >
+                    <View style={styles.row}>
+                        <Text>{t('settings.language')}</Text>
+                        <View style={styles.switch}>
+                            <Button
+                                buttonStyle={{
+                                    width: 64,
+                                    borderRadius: 30,
+                                    backgroundColor: !isFR ? colors.primary : colors.grey2,
+                                }}
+                                onPress={() => handleOnLanguageChange('en')}
+                            >
+                                <Text>EN</Text>
+                            </Button>
+                            <Button
+                                buttonStyle={{
+                                    width: 64,
+                                    borderRadius: 30,
+                                    backgroundColor: isFR ? colors.primary : colors.grey2,
+                                }}
+                                onPress={() => handleOnLanguageChange('fr')}
+                            >
+                                <Text>FR</Text>
+                            </Button>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.about}>
-                    <Text style={styles.aboutTitle}>{t('settings.about')}</Text>
-                    <Text style={styles.aboutContent}>{t('settings.about_text')}</Text>
-                    <Text style={styles.aboutContent}>{t('settings.disclaimer')}</Text>
-                    <Text style={styles.aboutContent}>{t('settings.privacy')}</Text>
-                </View>
+                </InformationContainer>
+                <InformationContainer
+                    title={t('settings.about')}
+                    titleIcon={<Icon name='info' size={20} color={colors.grey0} type="material" />}
+                >
+                    <View style={styles.about}>
+                        <Text style={styles.aboutContent}>{t('settings.about_text')}</Text>
+                        <Text style={styles.aboutContent}>{t('settings.disclaimer')}</Text>
+                        <Text style={styles.aboutContent}>{t('settings.privacy')}</Text>
+                    </View>
+                </InformationContainer>
             </View>
             <View style={styles.row}>
                 <Text style={styles.version}>{t('settings.version')}</Text>
                 <Text style={styles.version}>{version}</Text>
             </View>
-        </SafeAreaView>
+        </SafeAreaView >
     );
 }
 

@@ -6,7 +6,7 @@ import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import RinkHistoryList from "../components/Rinks/RinkHistoryList";
 import Animated from "react-native-reanimated";
 import { Rink, RinkWithCondition } from "../models/Rink";
-import { CommonActions, NavigationProp, useNavigation } from "@react-navigation/native";
+import { CommonActions, NavigationProp, RouteProp, useNavigation, useRoute } from "@react-navigation/native";
 import { Button } from "@rneui/themed";
 import { useColors } from "../colors";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -20,6 +20,8 @@ import RinkConditions from "../components/Rinks/RinkCondition";
 import RinkInformations from "../components/Rinks/RinkInformations";
 import LoadingFullScreen from "../components/shared/LoadingFullScreen";
 import Ads from "../components/shared/Ads";
+import ClosestRinks from "../components/Rinks/ClosestRinks";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 const useStyle = () => {
     const colors = useColors();
@@ -96,9 +98,12 @@ const RinkInformationHeader: FunctionComponent<{ rink: Rink, loadingOrError: boo
     </View>
 }
 
-const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ route }) => {
-    const { rink: { id } } = route.params;
-    const { rink, error, loading } = useRink(id);
+type Props = NativeStackScreenProps<RootStackParamList, 'RinkInformationScreen'>;
+
+const RinkInformationScreen: FunctionComponent<Props> = ({ }) => {
+    const { params } = useRoute<RouteProp<RootStackParamList, "RinkInformationScreen">>();
+    const { rink : rinkParam } = params;
+    const { rink, error, loading } = useRink(rinkParam.id);
     const styles = useStyle();
 
     if (loading || !rink) {
@@ -107,7 +112,7 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
 
     if (error) {
         return <SafeAreaView style={styles.container}>
-            <RinkInformationHeader rink={route.params.rink} loadingOrError={true} />
+            <RinkInformationHeader rink={rinkParam} loadingOrError={true} />
             <Text>{rink === null ? 'error fetch Rink info' : error?.message}</Text>
         </SafeAreaView>
     }
@@ -118,6 +123,7 @@ const RinkInformationScreen: FunctionComponent<RinkInformationScreenProps> = ({ 
             <View style={styles.container}>
                 <RinkInformations rink={rink} />
                 <RinkConditions rink={rink} />
+                <ClosestRinks rink={rink} />
                 <RinkMapInformation rink={rink} />
                 <Ads display />
                 <RinkHistoryList rink={rink} />

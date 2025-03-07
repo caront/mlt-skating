@@ -35,6 +35,8 @@
   "since": "Since {{date}}",
   "schedules": "Schedules",
   "services": "Services",
+  "closest_rinks_title": "Closest Rinks",
+  "closest_rinks_zero": "No rinks around",
   "services_enum": {
     "PICKLEBALL": "Pickleball Court",
     "FREE_PARKING": "Free Parking",

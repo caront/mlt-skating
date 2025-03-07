@@ -107,10 +107,11 @@ const useStyles = () => {
     });
 }
 
-const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
+export const RinkItemList = ({ rink, onRinkPress, index }: { rink: RinkWithCondition, onRinkPress: (rink: Rink) => void, index: number }) => {
     const { t } = useTranslation();
     const colors = useColors();
     const styles = useStyles();
+
 
     const handlePress = () => {
         onRinkPress(rink);
@@ -129,7 +130,7 @@ const RinkGroupItemList = ({ rink, onRinkPress, index }: { rink: RinkWithConditi
             }
             <Text style={styles.rinkName}>{rink.name}</Text>
             <Text style={styles.rinkDecription}>{getI18nField(rink, 'description')}</Text>
-            <Text style={styles.district}>{rink.district.name}</Text>
+            {styles.district && <Text style={styles.district}>{rink.district.name}</Text>}
             <View style={styles.row}>
                 <View style={[styles.row, { gap: 5 }]}>
                     <Text>{t(rink.open ? 'open' : 'close')}</Text>
@@ -200,7 +201,7 @@ const RinkList: FunctionComponent<RinkListProps> = ({ onRinkPress, style }) => {
                     />
                 }
                 scrollEnabled
-                renderItem={({ item: rink, index }) => <RinkGroupItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
+                renderItem={({ item: rink, index }) => <RinkItemList index={index} rink={rink} onRinkPress={onRinkPress} />}
             />
         </View>
     </Suspense>

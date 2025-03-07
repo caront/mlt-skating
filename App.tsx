@@ -6,7 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, NavigationContainerRefWithCurrent, useNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RinkListScreen } from './screens/RinkListScreen';
 import RinkInformationScreen from './screens/RinkInformationScreen';
@@ -46,6 +46,7 @@ const buildTheme = () => {
 const Navigation: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   const { theme } = useTheme();
   const colors = useColors();
+
   return (
     <NavigationContainer
       theme={{
@@ -84,48 +85,53 @@ const useStyle = () => {
 
 function App(): React.JSX.Element {
   const theme = buildTheme();
+
   return (
     <StrictMode>
-        <I18NProvider>
-          <AdsProvider>
-            <GraphqlProvider>
-              <ThemeProvider theme={theme}>
-                <SafeAreaProvider>
-                  <GestureHandlerRootView>
-                    <LocateProvider>
-                      <DistrictProvider>
-                        <RinkProvider>
-                          <Navigation>
-                            <Stack.Navigator>
-                              <Stack.Screen
-                                name="RinkList"
-                                component={RinkListScreen}
-                                options={{ headerShown: false, title: 'Rinks' }}
-                              />
-                              <Stack.Screen
-                                name="RinkInformation"
-                                component={RinkInformationScreen}
-                                options={{ headerShown: false, title: 'RinkInformation' }}
-                              />
-                              <Stack.Screen
-                                name="Settings"
-                                component={SettingsScreen}
-                                options={{ headerShown: false, title: 'RinkInformation' }}
-                              />
-                            </Stack.Navigator>
-                          </Navigation>
-                        </RinkProvider>
-                      </DistrictProvider>
-                    </LocateProvider>
-                  </GestureHandlerRootView>
-                </SafeAreaProvider>
-              </ThemeProvider>
-            </GraphqlProvider>
-          </AdsProvider>
-        </I18NProvider>
+      <I18NProvider>
+        <AdsProvider>
+          <GraphqlProvider>
+            <ThemeProvider theme={theme}>
+              <SafeAreaProvider>
+                <GestureHandlerRootView>
+                  <LocateProvider>
+                    <DistrictProvider>
+                      <RinkProvider>
+                        <Navigation>
+                          <Stack.Navigator>
+                            <Stack.Screen
+                              name="RinkList"
+                              component={RinkListScreen}
+                              options={{ headerShown: false, title: 'Rinks' }}
+                            />
+                            <Stack.Screen
+                              name="RinkInformationScreen"
+                              component={RinkInformationScreen}
+                              options={{ headerShown: false, title: 'RinkInformation' }}
+                            />
+                            <Stack.Screen
+                              name="Settings"
+                              component={SettingsScreen}
+                              options={{ headerShown: false, title: 'RinkInformation' }}
+                            />
+                          </Stack.Navigator>
+                        </Navigation>
+                      </RinkProvider>
+                    </DistrictProvider>
+                  </LocateProvider>
+                </GestureHandlerRootView>
+              </SafeAreaProvider>
+            </ThemeProvider>
+          </GraphqlProvider>
+        </AdsProvider>
+      </I18NProvider>
     </StrictMode>
   );
 }
 
 
 export default App;
+
+function useLogger(navigationRef: NavigationContainerRefWithCurrent<ReactNavigation.RootParamList>) {
+  throw new Error('Function not implemented.');
+}
